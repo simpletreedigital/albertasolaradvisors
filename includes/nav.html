@@ -1,7 +1,7 @@
 <nav class="gnav" id="gnav" role="navigation" aria-label="Main navigation">
   <div class="gnav-inner">
     <a href="/" class="gnav-logo" aria-label="Alberta Solar Advisors home">
-      <img src="/images/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" width="200" height="46">
+      <img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" width="200" height="46">
     </a>
     <button class="gnav-burger" id="gnav-burger" aria-expanded="false" aria-controls="gnav-mobile" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -9,7 +9,7 @@
     <ul class="gnav-list" role="list">
       <li class="gnav-item" id="drop-bills">
         <button class="gnav-btn" onclick="toggleDrop('drop-bills')" aria-expanded="false" aria-haspopup="true">
-          Bill Breakdown <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          Bill Breakdown <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
         </button>
         <ul class="gnav-drop" role="list">
           <li><a href="/case-study/" class="gnav-drop-link">Bill Breakdown Overview</a></li>
@@ -20,7 +20,7 @@
       </li>
       <li class="gnav-item" id="drop-financing">
         <button class="gnav-btn" onclick="toggleDrop('drop-financing')" aria-expanded="false" aria-haspopup="true">
-          Financing <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          Financing <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
         </button>
         <ul class="gnav-drop" role="list">
           <li><a href="/financing/" class="gnav-drop-link">Financing Overview</a></li>
@@ -30,7 +30,7 @@
       </li>
       <li class="gnav-item" id="drop-incentives">
         <button class="gnav-btn" onclick="toggleDrop('drop-incentives')" aria-expanded="false" aria-haspopup="true">
-          Incentives <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          Incentives <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
         </button>
         <ul class="gnav-drop" role="list">
           <li><a href="/incentives/" class="gnav-drop-link">Incentives Overview</a></li>
@@ -40,12 +40,24 @@
           <li><a href="/blog/" class="gnav-drop-link">Updates</a></li>
         </ul>
       </li>
+      <li class="gnav-item" id="drop-locations">
+        <button class="gnav-btn" onclick="toggleDrop('drop-locations')" aria-expanded="false" aria-haspopup="true">
+          Locations <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+        </button>
+        <ul class="gnav-drop" role="list">
+          <li><a href="/locations/" class="gnav-drop-link">All Locations</a></li>
+          <li><a href="/locations/edmonton/" class="gnav-drop-link">Edmonton</a></li>
+          <li><a href="/locations/calgary/" class="gnav-drop-link">Calgary</a></li>
+          <li><a href="/locations/red-deer/" class="gnav-drop-link">Red Deer</a></li>
+          <li><a href="/locations/lethbridge/" class="gnav-drop-link">Lethbridge</a></li>
+          <li><a href="/locations/airdrie/" class="gnav-drop-link">Airdrie</a></li>
+        </ul>
+      </li>
       <li class="gnav-item"><a href="/about/" class="gnav-link">About Us</a></li>
       <li class="gnav-item"><a href="/contact/" class="gnav-link">Contact Us</a></li>
     </ul>
     <button class="gnav-cta" onclick="openSurvey()" aria-label="Get your free solar estimate">Get your free estimate</button>
   </div>
-  <!-- Mobile menu -->
   <div class="gnav-mobile" id="gnav-mobile" role="dialog" aria-label="Mobile navigation">
     <ul role="list">
       <li><a href="/case-study/">Bill Breakdown</a></li>
@@ -57,54 +69,61 @@
       <li><a href="/financing/ceip/">CEIP Loan</a></li>
       <li><a href="/financing/greener-homes-loan/">Greener Homes Loan</a></li>
       <li class="mob-divider"></li>
-      <li><a href="/incentives/">Incentives</a></li>
+      <li><a href="/incentives/">Incentives Overview</a></li>
       <li><a href="/incentives/net-billing/">Net Billing</a></li>
       <li><a href="/incentives/the-solar-club/">The Solar Club</a></li>
       <li class="mob-divider"></li>
+      <li><a href="/locations/">All Locations</a></li>
+      <li><a href="/locations/edmonton/">Edmonton</a></li>
+      <li><a href="/locations/calgary/">Calgary</a></li>
+      <li><a href="/locations/red-deer/">Red Deer</a></li>
+      <li><a href="/locations/lethbridge/">Lethbridge</a></li>
+      <li><a href="/locations/airdrie/">Airdrie</a></li>
+      <li class="mob-divider"></li>
+      <li><a href="/services/">Services</a></li>
       <li><a href="/about/">About Us</a></li>
       <li><a href="/contact/">Contact Us</a></li>
-      <li><a href="/blog/">Updates / Blog</a></li>
-      <li class="mob-divider"></li>
-      <li><a href="/locations/edmonton/">Edmonton Solar</a></li>
-      <li><a href="/locations/calgary/">Calgary Solar</a></li>
-      <li><a href="/locations/red-deer/">Red Deer Solar</a></li>
-      <li class="mob-cta"><button onclick="openSurvey()">Get your free estimate</button></li>
+      <li><a href="/blog/">Blog</a></li>
     </ul>
+    <div class="mob-cta">
+      <button onclick="openSurvey()">Get your free estimate</button>
+    </div>
   </div>
 </nav>
-
 <script>
 function toggleDrop(id){
-  var items=document.querySelectorAll('.gnav-item');
-  items.forEach(function(item){
-    if(item.id===id){
-      var isOpen=item.classList.contains('open');
-      item.classList.toggle('open',!isOpen);
-      var btn=item.querySelector('button');
-      if(btn)btn.setAttribute('aria-expanded',String(!isOpen));
-    }else{
-      item.classList.remove('open');
-      var btn=item.querySelector('button');
-      if(btn)btn.setAttribute('aria-expanded','false');
-    }
+  document.querySelectorAll('.gnav-item').forEach(function(item){
+    if(item.id===id){var o=item.classList.toggle('open');var b=item.querySelector('button[aria-haspopup]');if(b)b.setAttribute('aria-expanded',String(o));}
+    else{item.classList.remove('open');var b=item.querySelector('button[aria-haspopup]');if(b)b.setAttribute('aria-expanded','false');}
   });
 }
 document.addEventListener('click',function(e){
   if(!e.target.closest('.gnav-item')){
-    document.querySelectorAll('.gnav-item.open').forEach(function(item){
-      item.classList.remove('open');
-      var btn=item.querySelector('button');
-      if(btn)btn.setAttribute('aria-expanded','false');
+    document.querySelectorAll('.gnav-item.open').forEach(function(i){
+      i.classList.remove('open');var b=i.querySelector('button[aria-haspopup]');if(b)b.setAttribute('aria-expanded','false');
     });
   }
 });
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){
-    document.querySelectorAll('.gnav-item.open').forEach(function(item){
-      item.classList.remove('open');
-      var btn=item.querySelector('button');
-      if(btn)btn.setAttribute('aria-expanded','false');
+    document.querySelectorAll('.gnav-item.open').forEach(function(i){
+      i.classList.remove('open');var b=i.querySelector('button[aria-haspopup]');if(b)b.setAttribute('aria-expanded','false');
     });
   }
 });
+(function(){
+  var burger=document.getElementById('gnav-burger'),mob=document.getElementById('gnav-mobile');
+  if(!burger||!mob)return;
+  burger.addEventListener('click',function(){
+    var o=mob.classList.toggle('open');burger.setAttribute('aria-expanded',String(o));
+  });
+  document.querySelectorAll('#gnav-mobile a').forEach(function(a){
+    a.addEventListener('click',function(){mob.classList.remove('open');burger.setAttribute('aria-expanded','false');});
+  });
+  var path=window.location.pathname.replace(/\/$/,'');
+  document.querySelectorAll('.gnav-link,.gnav-drop-link').forEach(function(a){
+    var hp=(a.getAttribute('href')||'').replace(/\/$/,'');
+    if(hp&&hp===path)a.classList.add('active');
+  });
+})();
 </script>

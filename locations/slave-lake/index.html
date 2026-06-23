@@ -7,12 +7,14 @@
   <meta name="description" content="Solar panels in Slave Lake, Alberta. ATCO Electric net billing at retail rate. Get a transparent solar proposal for your Slave Lake home today.">
   <link rel="canonical" href="https://alberta-solar.org/locations/slave-lake/">
   <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/includes/site.css">
   <script src="/includes/nav-footer-loader.js"></script>
   <style>
-    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;}
+    :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.65;}
+    body{font-family:var(--font-body);color:var(--text);line-height:1.65;}
     main{padding-top:68px;}
     .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:72px 24px 60px;}
     .hero-inner{max-width:860px;margin:0 auto;}
@@ -21,12 +23,12 @@
     .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.2;margin-bottom:16px;}
     .hero h1 span{color:var(--teal);}
     .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:680px;margin-bottom:28px;}
-    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;}
-    .btn-teal{background:var(--teal);color:var(--dark);}
+    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:50px;font-family:var(--font-head);font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid var(--blue);transition:background .2s,color .2s;}
+    .btn-teal{background:var(--teal);color:var(--dark);border-color:var(--teal);}
     section{padding:56px 24px;}
     .container{max-width:900px;margin:0 auto;}
-    h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--dark);margin-bottom:16px;}
-    h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:8px;}
+    h2{font-family:var(--font-head);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:#1a2744;margin-bottom:16px;}
+    h3{font-family:var(--font-head);font-size:1.15rem;font-weight:700;color:#1a2744;margin-bottom:8px;}
     p{margin-bottom:16px;}
     .highlight-box{background:#eff6ff;border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;}
     .ceip-badge{display:inline-block;padding:6px 14px;border-radius:20px;font-size:.85rem;font-weight:700;margin-bottom:20px;}
@@ -52,12 +54,12 @@
     .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
     .cta-strip h2{color:#fff;margin-bottom:12px;}
     .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
-    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
     .sv-overlay.open{display:flex;}
-    .sv-box{background:#fff;border-radius:12px;width:min(680px,96vw);max-height:90vh;overflow:hidden;position:relative;display:flex;flex-direction:column;}
-    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
-    .sv-head span{font-weight:700;}
-    .sv-close{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+    .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
+    .sv-head{background:#01214a;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+    .sv-head span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
     .sv-body{flex:1;overflow-y:auto;}
     .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
   </style>
@@ -65,7 +67,7 @@
 <body>
 <div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
   <div class="sv-box">
-    <div class="sv-head"><span>Get Your Solar Estimate</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-head"><span>Get a Solar Proposal &amp; Apply for Incentives</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
     <div class="sv-body">
       <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
       <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
@@ -108,7 +110,7 @@
     </div>
   </div>
 
-  <section style="background:#f9fafb;">
+  <section style="background:var(--light-bg);">
     <div class="container">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-list">
@@ -128,7 +130,7 @@
     </div>
   </section>
 
-  <section style="background:#f9fafb;">
+  <section style="background:var(--light-bg);">
     <div class="container map-wrap">
       <h2 style="margin-bottom:20px;">Our Slave Lake Service Area</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d303582.861022972!2d-113.4927372!3d53.5266805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021d48003c3b1%3A0x7dbca523cf95d7f4!2sAlberta%20Solar%20Advisors!5e0!3m2!1sen!2sus!4v1782235123789!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Alberta Solar Advisors service area map"></iframe>
