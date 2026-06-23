@@ -1,0 +1,10 @@
+/* survey-popup shared snippet - paste into each page's <style> */
+.sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;align-items:center;justify-content:center;padding:20px}
+.sv-overlay.open{display:flex}
+.sv-modal{background:#fff;border-radius:14px;width:100%;max-width:620px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 25px 60px rgba(0,0,0,.25)}
+.sv-modal-head{background:var(--dark);padding:18px 22px;display:flex;align-items:center;justify-content:space-between}
+.sv-modal-head h2{color:#fff;font-size:1rem;font-weight:600;margin:0}
+.sv-close{background:none;border:none;color:rgba(255,255,255,.7);font-size:1.4rem;cursor:pointer;padding:4px 8px;line-height:1;transition:color .15s}
+.sv-close:hover{color:#fff}
+.sv-modal-body{flex:1;overflow:auto;padding:0}
+.sv-modal-body iframe{display:block;width:100%;border:none;min-height:520px}

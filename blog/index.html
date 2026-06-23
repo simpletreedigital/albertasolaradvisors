@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Energy Blog for Alberta Homeowners &mdash; Alberta Solar Advisors</title>
+  <meta name="description" content="Solar energy insights for Alberta homeowners. CEIP program updates, net billing explained, real installation results, and guides to evaluating solar quotes.">
+  <link rel="canonical" href="https://alberta-solar.org/blog/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <script src="/includes/nav-footer-loader.js"></script>
+  <style>
+    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.65;}
+    main{padding-top:68px;}
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:64px 24px 52px;}
+    .hero-inner{max-width:860px;margin:0 auto;}
+    .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
+    .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;line-height:1.2;margin-bottom:12px;}
+    .hero p{font-size:1.05rem;color:rgba(255,255,255,.8);max-width:640px;}
+    section{padding:56px 24px;}
+    .container{max-width:900px;margin:0 auto;}
+    .post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px;margin-top:32px;}
+    .post-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--text);display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s;}
+    .post-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.09);transform:translateY(-2px);}
+    .post-thumb{height:160px;background:linear-gradient(135deg,var(--dark),#1a3a5c);display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
+    .post-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:8px;}
+    .post-meta{font-size:.78rem;color:var(--muted);}
+    .post-card h2{font-size:1.05rem;font-weight:800;color:var(--dark);margin:0;line-height:1.35;}
+    .post-card p{font-size:.9rem;color:var(--muted);margin:0;flex:1;}
+    .post-tag{display:inline-block;background:#eff6ff;color:var(--blue);padding:3px 10px;border-radius:10px;font-size:.75rem;font-weight:700;}
+    .read-more{color:var(--blue);font-weight:700;font-size:.85rem;margin-top:auto;}
+    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
+    .cta-strip h2{color:#fff;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .btn-primary{display:inline-block;background:var(--teal);color:var(--dark);padding:14px 28px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay.open{display:flex;}
+    .sv-box{background:#fff;border-radius:12px;width:min(680px,96vw);max-height:90vh;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+    .sv-head span{font-weight:700;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+    .sv-body{flex:1;overflow-y:auto;}
+    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+  </style>
+</head>
+<body>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get Your Solar Estimate</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
+      <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
+    </div>
+  </div>
+</div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Blog</div>
+      <h1>Solar Energy Insights for Alberta Homeowners</h1>
+      <p>CEIP program updates, net billing explained, real installation results, and straightforward guides to evaluating solar quotes in Alberta.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="post-grid">
+
+        <a href="/blog/ceip-november-2025/" class="post-card">
+          <div class="post-thumb">&#127775;</div>
+          <div class="post-body">
+            <span class="post-tag">Incentives</span>
+            <div class="post-meta">November 2025</div>
+            <h2>CEIP Update: Which Alberta Cities Are Open Right Now</h2>
+            <p>A current breakdown of CEIP status across Alberta municipalities, including which cities are accepting applications and which have paused their programs.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/blog/solar-panels-in-snow/" class="post-card">
+          <div class="post-thumb">&#10052;</div>
+          <div class="post-body">
+            <span class="post-tag">Production</span>
+            <div class="post-meta">October 2025</div>
+            <h2>Solar Panels in Snow: What Actually Happens to Alberta Production in Winter</h2>
+            <p>The honest answer about winter solar output in Alberta, what the numbers look like from real installations, and why the annual economics still work.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/blog/how-to-vet-solar-installers/" class="post-card">
+          <div class="post-thumb">&#128269;</div>
+          <div class="post-body">
+            <span class="post-tag">Buyer's Guide</span>
+            <div class="post-meta">September 2025</div>
+            <h2>How to Vet a Solar Installer in Alberta: 7 Questions to Ask Before You Sign</h2>
+            <p>What separates a trustworthy Alberta solar installer from one that will disappear after the deposit. The questions that matter, and the answers to watch out for.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/blog/3-key-ideas/" class="post-card">
+          <div class="post-thumb">&#128161;</div>
+          <div class="post-body">
+            <span class="post-tag">Fundamentals</span>
+            <div class="post-meta">August 2025</div>
+            <h2>3 Ideas That Change How Alberta Homeowners Think About Solar</h2>
+            <p>Most solar confusion comes from a few persistent misconceptions. Here are three reframes that make the Alberta solar decision much clearer.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/blog/albertas-net-metering-future/" class="post-card">
+          <div class="post-thumb">&#9889;</div>
+          <div class="post-body">
+            <span class="post-tag">Policy</span>
+            <div class="post-meta">July 2025</div>
+            <h2>Alberta's Net Billing Future: What the Export Restriction Changes Mean for Solar Owners</h2>
+            <p>Changes to Alberta's electricity export rules heading into 2026. What's changing, what isn't, and what it means if you're considering solar in the next 12 months.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/blog/how-much-runway-greener-homes/" class="post-card">
+          <div class="post-thumb">&#127973;</div>
+          <div class="post-body">
+            <span class="post-tag">Financing</span>
+            <div class="post-meta">June 2025</div>
+            <h2>Greener Homes Loan Is Ended: What Alberta Homeowners Should Use Instead</h2>
+            <p>The Canada Greener Homes Loan program is no longer accepting applications. Here are the financing alternatives available for Alberta solar installations right now.</p>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <h2>Ready to See the Numbers for Your Home?</h2>
+    <p>A free estimate takes about 10 minutes and gives you a site-specific savings model with no obligation.</p>
+    <button class="btn-primary" onclick="openSurvey()">Get My Free Solar Estimate</button>
+  </div>
+</main>
+<script>
+function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
+(function(){
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
+  function getParam(n){return new URLSearchParams(window.location.search).get(n)||''}
+  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
+  var iframe=document.getElementById('sv-iframe');
+  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
+    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
+    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
+  });
+})();
+</script>
+</body>
+</html>

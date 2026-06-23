@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Net Billing Alberta — Solar Export Credits | Alberta Solar Advisors</title>
+  <meta name="description" content="Learn how Alberta's net billing program lets solar homeowners earn retail-rate credits for excess power exported to the grid. Save thousands annually.">
+  <link rel="canonical" href="https://alberta-solar.org/incentives/net-billing/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <script src="/includes/nav-footer-loader.js"></script>
+  <style>
+    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.65;}
+    main{padding-top:68px;}
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:72px 24px 60px;}
+    .hero-inner{max-width:860px;margin:0 auto;}
+    .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
+    .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+    .breadcrumb a:hover{color:#fff;}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.2;margin-bottom:16px;}
+    .hero h1 span{color:var(--teal);}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:680px;margin-bottom:28px;}
+    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;}
+    .btn-primary:hover{background:#1648c0;}
+    .btn-teal{background:var(--teal);color:var(--dark);}
+    .btn-teal:hover{background:#12a8b2;}
+    section{padding:56px 24px;}
+    .container{max-width:900px;margin:0 auto;}
+    h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--dark);margin-bottom:16px;}
+    h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:8px;}
+    p{margin-bottom:16px;}
+    .highlight-box{background:#eff6ff;border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;}
+    .highlight-box strong{color:var(--blue);}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px;}
+    @media(max-width:640px){.two-col{grid-template-columns:1fr;}}
+    .card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;}
+    .card h3{color:var(--blue);}
+    .steps{counter-reset:step;display:flex;flex-direction:column;gap:24px;margin-top:24px;}
+    .step{display:flex;gap:20px;align-items:flex-start;}
+    .step-num{flex-shrink:0;width:40px;height:40px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;}
+    .step-body h3{margin-bottom:6px;}
+    .faq-list{display:flex;flex-direction:column;gap:0;}
+    .faq-item{border-bottom:1px solid var(--border);}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-size:1rem;font-weight:700;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q:after{content:'+';font-size:1.4rem;color:var(--blue);transition:transform .2s;}
+    .faq-item.open .faq-q:after{transform:rotate(45deg);}
+    .faq-a{display:none;padding:0 0 18px;color:var(--text);}
+    .faq-item.open .faq-a{display:block;}
+    .rate-table{width:100%;border-collapse:collapse;margin-top:20px;}
+    .rate-table th{background:var(--dark);color:#fff;padding:12px 16px;text-align:left;font-size:.9rem;}
+    .rate-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:.95rem;}
+    .rate-table tr:nth-child(even) td{background:#f9fafb;}
+    .badge{display:inline-block;background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:20px;font-size:.8rem;font-weight:700;}
+    .badge-warn{background:#fef3c7;color:#92400e;}
+    .case-study{background:var(--dark);color:#fff;padding:48px 40px;border-radius:16px;margin:40px 0;}
+    .cs-label{font-size:.75rem;font-weight:800;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:12px;}
+    .case-study h3{font-size:1.3rem;margin-bottom:24px;color:#fff;}
+    .cs-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    @media(max-width:640px){.cs-cols{grid-template-columns:1fr;}}
+    .cs-col strong{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+    .cs-col p{color:rgba(255,255,255,.85);font-size:.95rem;margin:0;}
+    .cs-disclaimer{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:20px;font-style:italic;}
+    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
+    .cta-strip h2{color:#fff;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay.open{display:flex;}
+    .sv-box{background:#fff;border-radius:12px;width:min(680px,96vw);max-height:90vh;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+    .sv-head span{font-weight:700;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+    .sv-body{flex:1;overflow-y:auto;}
+    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+    .img-responsive{max-width:100%;height:auto;border-radius:8px;margin:24px 0;}
+  </style>
+</head>
+<body>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get Your Solar Estimate</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
+      <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
+    </div>
+  </div>
+</div>
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/incentives/">Incentives</a> &rsaquo; Net Billing</div>
+      <h1>Alberta Net Billing:<br><span>Get Paid for the Solar You Generate</span></h1>
+      <p>Alberta's micro-generation regulation lets grid-connected solar owners export surplus electricity and receive retail-rate credits on their bill. It's one of the most valuable solar incentives in Canada.</p>
+      <button class="btn-primary" onclick="openSurvey()">See How Much You Can Save</button>
+    </div>
+  </div>
+
+  <section style="background:#f9fafb;">
+    <div class="container">
+      <h2>What Is Net Billing in Alberta?</h2>
+      <p>When your solar panels produce more electricity than your home is using at that moment, the surplus flows out to the Alberta grid. Under the province's <strong>Micro-Generation Regulation (AR 27/2008)</strong>, your utility must credit that export at the same retail rate you pay for power you draw from the grid.</p>
+      <p>This is a meaningful distinction from older net metering models in other provinces, where exports are credited at a lower wholesale rate. In Alberta, you export at retail and import at retail. A kilowatt-hour exported has the same dollar value as a kilowatt-hour consumed.</p>
+      <div class="highlight-box">
+        <strong>Key rule:</strong> Unused credits roll forward month-to-month for up to 12 months, then reset to zero. The strategy is to generate large surpluses in the high-sun summer months and draw those credits down through the lower-production winter months.
+      </div>
+      <p>Alberta's all-in electricity rate sits around <strong>18 cents per kWh</strong> when you factor in distribution, transmission, admin fees, and local access fees. That's the rate your credits are valued at. A typical 8 kW system producing 10,200 kWh per year, with roughly 40% exported, generates credits worth over $730 annually from export alone.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>How the Credit System Works</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Monthly Bill Credit</h3>
+          <p>Your utility tracks how much energy you send to the grid each month. That amount is multiplied by your current retail rate and applied as a credit against your bill. If your credit exceeds your charges, the surplus rolls to the next month.</p>
+        </div>
+        <div class="card">
+          <h3>Annual True-Up</h3>
+          <p>Credits accumulate for 12 months. At the end of your billing year, any remaining unused credit is forfeited. This makes it important to right-size your system so you're not over-generating by a wide margin year-round.</p>
+        </div>
+        <div class="card">
+          <h3>Rate Variability</h3>
+          <p>Alberta uses a deregulated electricity market. Your retail rate floats with the market. Export credits are calculated at whatever your rate is in any given billing period, not locked to a fixed feed-in tariff.</p>
+        </div>
+        <div class="card">
+          <h3>System Size Limit</h3>
+          <p>The Micro-Generation Regulation applies to systems up to 5 MW. For residential use, this is not a practical constraint. Most home installations are 6 to 12 kW, well within the micro-generation threshold.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f9fafb;">
+    <div class="container">
+      <h2>Alberta Export Rates by Utility</h2>
+      <p>The rate your credits are valued at depends on your electricity retailer. Most Albertans on regulated rate option (RRO) or a fixed-rate contract see the following approximate structure. Rates fluctuate monthly on RRO.</p>
+      <table class="rate-table">
+        <thead>
+          <tr><th>Component</th><th>Approximate Range</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Energy charge</td><td>6 to 12 cents/kWh</td><td>Varies with AESO pool price</td></tr>
+          <tr><td>Distribution charge</td><td>3 to 5 cents/kWh</td><td>Varies by wire owner (EPCOR, ENMAX, FortisAlberta)</td></tr>
+          <tr><td>Transmission charge</td><td>~1.5 cents/kWh</td><td>Province-wide standard</td></tr>
+          <tr><td>Local access fee</td><td>~1 cent/kWh</td><td>Municipal levy</td></tr>
+          <tr><td>Admin/rider fees</td><td>~1 cent/kWh</td><td>Varies by retailer</td></tr>
+          <tr><td><strong>All-in effective rate</strong></td><td><strong>~16 to 20 cents/kWh</strong></td><td>This is what your export credit is worth</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px;font-size:.9rem;color:var(--muted);">Source: AESO, EPCOR, ENMAX published rate schedules. Rates as of early 2026; subject to change.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Getting Connected: The Interconnection Process</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>System Design and Permits</h3>
+            <p>Your installer submits permit drawings to your municipality (Edmonton, Calgary, or your city/county). Most Alberta municipalities issue solar permits within 1 to 3 weeks. Your installer handles this on your behalf.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Interconnection Application</h3>
+            <p>Your installer applies to your wire owner (distribution utility) for interconnection. This is EPCOR in Edmonton, ENMAX in Calgary, and FortisAlberta in most rural and suburban areas. Approval typically takes 2 to 6 weeks.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Meter Upgrade</h3>
+            <p>Your utility installs a bidirectional meter that tracks both how much energy you consume and how much you export. There is typically no cost to the homeowner for the meter upgrade in Alberta.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Installation and Inspection</h3>
+            <p>Panels and inverter are installed. A provincial electrical inspector signs off on the work. Your installer coordinates this inspection.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h3>Activation and Billing Start</h3>
+            <p>Once approved, your system goes live and your utility starts tracking export credits on your next billing cycle. You'll see the credit line appear on your bill.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="case-study">
+    <div class="container">
+      <div class="cs-label">Client Case Study</div>
+      <h3>8 kW System in Sherwood Park: Turning Summer Surplus into Winter Savings</h3>
+      <div class="cs-cols">
+        <div class="cs-col"><strong>The Situation</strong><p>A homeowner in Sherwood Park with a 2,300 sq ft home was spending $2,400 per year on electricity. Their south-facing roof with minimal shading made them a strong candidate for solar. They were most concerned about whether the system would produce enough value in Alberta's shorter winter days.</p></div>
+        <div class="cs-col"><strong>Our Approach</strong><p>We modeled an 8 kW system producing approximately 10,200 kWh annually. Summer months generate 1,200 to 1,400 kWh surplus that rolls forward as net billing credits. We demonstrated that by October, the credit bank covers most of the higher winter consumption months.</p></div>
+        <div class="cs-col"><strong>The Outcome</strong><p>After installation, the homeowner's net annual electricity cost dropped from $2,400 to under $400, an $2,000+ annual saving. The 12-month credit cycle worked as modeled, with roughly $180 in summer surplus credits carried into December and January.</p></div>
+      </div>
+      <p class="cs-disclaimer">Client name changed. Results vary based on individual circumstances. Prior results do not guarantee similar outcomes.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2>Net Billing vs. the Solar Club: Which Is Better?</h2>
+      <p>Some ENMAX customers in Calgary have access to <a href="/incentives/the-solar-club/">the Solar Club rate program</a>, which replaces the standard time-of-use billing with a high/low seasonal rate structure. For most Alberta homeowners outside Calgary, net billing under the standard micro-generation framework is the applicable program.</p>
+      <table class="rate-table">
+        <thead>
+          <tr><th>Feature</th><th>Net Billing (All Alberta)</th><th>Solar Club (ENMAX only)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Who qualifies</td><td>Any Alberta grid-connected solar owner</td><td>ENMAX customers in Calgary</td></tr>
+          <tr><td>Export credit rate</td><td>Retail rate (~18 cents/kWh avg)</td><td>High rate $0.30/kWh (summer); low $0.0877/kWh (winter)</td></tr>
+          <tr><td>Credit rollover</td><td>12 months</td><td>Billed monthly, no rollover pool</td></tr>
+          <tr><td>Enrollment</td><td>Automatic on interconnection</td><td>Must opt-in with ENMAX</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section style="background:#f9fafb;">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Does Alberta's net billing apply if I have a battery storage system?</button>
+          <div class="faq-a"><p>Yes. If your battery discharges to the grid, that export is also credited at retail rate. However, most homeowners with battery storage prioritize keeping surplus in the battery for self-consumption rather than exporting. The net billing regulation doesn't distinguish between panel export and battery export.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What happens to my unused credits at the end of 12 months?</button>
+          <div class="faq-a"><p>They are forfeited. This is the most important design consideration when sizing an Alberta solar system. A system that generates a large annual surplus may be leaving money on the table. The goal is to size the system so annual production closely matches annual consumption, with modest summer surplus that draws down through winter.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can I use net billing if I'm on EPCOR in Edmonton?</button>
+          <div class="faq-a"><p>Yes. EPCOR administers net billing for Edmonton customers under the provincial Micro-Generation Regulation. You don't need to do anything special beyond the standard interconnection application. EPCOR installs the bidirectional meter as part of the approval process, at no charge to you.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is the export credit rate the same as what I pay per kWh?</button>
+          <div class="faq-a"><p>Yes, that's the core benefit of Alberta's net billing framework. Credits are valued at your retail rate, which includes energy, distribution, transmission, and local access fees. This distinguishes Alberta from jurisdictions that credit only the wholesale energy component, which would be significantly lower.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do I need to tell my electricity retailer before installing solar?</button>
+          <div class="faq-a"><p>You don't need retailer approval, but your wire owner (EPCOR, ENMAX, or FortisAlberta) must approve your interconnection before you can go live. Your installer submits this application. The retailer will be notified automatically when your bidirectional meter is activated and will update your billing accordingly.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Stack Net Billing with Other Alberta Incentives</h2>
+      <p>Net billing works alongside every other incentive available to Alberta solar owners. There is no requirement to choose between programs. A complete incentive stack for an Alberta homeowner might look like this:</p>
+      <ul style="margin:16px 0 16px 20px;display:flex;flex-direction:column;gap:10px;">
+        <li><strong><a href="/financing/ceip/">CEIP financing</a></strong> (where available): 0% to 3.75% municipal loan up to $50,000 paid back through property taxes, removing the upfront capital barrier entirely.</li>
+        <li><strong>Net billing credits:</strong> Retail-rate export credits offsetting 80% to 100% of annual electricity costs for a well-sized system.</li>
+        <li><strong><a href="/incentives/the-solar-club/">Solar Club (ENMAX customers):</a></strong> High-rate summer export at $0.30/kWh for Calgary homeowners who opt in.</li>
+        <li><strong>Federal ITC:</strong> 30% investment tax credit for commercial installations and eligible residential systems.</li>
+      </ul>
+      <p>Learn more about the full picture on our <a href="/incentives/">Alberta solar incentives overview page</a>.</p>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <h2>Find Out What Net Billing Means for Your Bill</h2>
+    <p>We model your home's production, export, and credit drawdown based on your actual usage and roof profile. Get a transparent solar proposal with real Alberta numbers.</p>
+    <button class="btn-primary btn-teal" onclick="openSurvey()">Get My Free Solar Estimate</button>
+  </div>
+</main>
+
+<script>
+function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
+(function(){
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
+  function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}
+  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
+  var iframe=document.getElementById('sv-iframe');
+  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
+    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
+    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
+  });
+})();
+document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){var item=this.closest('.faq-item');item.classList.toggle('open');});});
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Alberta's net billing apply if I have a battery storage system?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your battery discharges to the grid, that export is also credited at retail rate. Most homeowners with battery storage prioritize self-consumption over export, but the regulation covers both."}},{"@type":"Question","name":"What happens to my unused credits at the end of 12 months?","acceptedAnswer":{"@type":"Answer","text":"They are forfeited. The goal is to size the system so annual production closely matches annual consumption, with modest summer surplus that draws down through winter."}}]}</script>
+</body>
+</html>

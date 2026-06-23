@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Panels Medicine Hat &mdash; Alberta Solar Advisors</title>
+  <meta name="description" content="Solar panels in Medicine Hat, Alberta. CEIP financing open. Among the highest solar irradiance in the province. Get a transparent solar proposal for your Medicine Hat home today.">
+  <link rel="canonical" href="https://alberta-solar.org/locations/medicine-hat/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <script src="/includes/nav-footer-loader.js"></script>
+  <style>
+    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.65;}
+    main{padding-top:68px;}
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:72px 24px 60px;}
+    .hero-inner{max-width:860px;margin:0 auto;}
+    .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
+    .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.2;margin-bottom:16px;}
+    .hero h1 span{color:var(--teal);}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:680px;margin-bottom:28px;}
+    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;}
+    .btn-teal{background:var(--teal);color:var(--dark);}
+    section{padding:56px 24px;}
+    .container{max-width:900px;margin:0 auto;}
+    h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--dark);margin-bottom:16px;}
+    h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:8px;}
+    p{margin-bottom:16px;}
+    .highlight-box{background:#eff6ff;border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;}
+    .ceip-badge{display:inline-block;padding:6px 14px;border-radius:20px;font-size:.85rem;font-weight:700;margin-bottom:20px;}
+    .ceip-open{background:#d1fae5;color:#065f46;}
+    .ceip-paused{background:#fef3c7;color:#92400e;}
+    .faq-list{display:flex;flex-direction:column;gap:0;}
+    .faq-item{border-bottom:1px solid var(--border);}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-size:1rem;font-weight:700;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q:after{content:'+';font-size:1.4rem;color:var(--blue);transition:transform .2s;}
+    .faq-item.open .faq-q:after{transform:rotate(45deg);}
+    .faq-a{display:none;padding:0 0 18px;}
+    .faq-item.open .faq-a{display:block;}
+    .case-study{background:var(--dark);color:#fff;padding:48px 40px;border-radius:16px;margin:40px 0;}
+    @media(max-width:640px){.case-study{padding:28px 20px;}}
+    .cs-label{font-size:.75rem;font-weight:800;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:12px;}
+    .case-study h3{font-size:1.3rem;margin-bottom:24px;color:#fff;}
+    .cs-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    @media(max-width:640px){.cs-cols{grid-template-columns:1fr;}}
+    .cs-col strong{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+    .cs-col p{color:rgba(255,255,255,.85);font-size:.95rem;margin:0;}
+    .cs-disclaimer{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:20px;font-style:italic;}
+    .map-wrap iframe{width:100%;height:380px;border:0;border-radius:12px;display:block;}
+    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
+    .cta-strip h2{color:#fff;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay.open{display:flex;}
+    .sv-box{background:#fff;border-radius:12px;width:min(680px,96vw);max-height:90vh;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+    .sv-head span{font-weight:700;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+    .sv-body{flex:1;overflow-y:auto;}
+    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+  </style>
+</head>
+<body>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get Your Solar Estimate</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
+      <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
+    </div>
+  </div>
+</div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/locations/">Locations</a> &rsaquo; Medicine Hat</div>
+      <h1>Solar Panels Medicine Hat:<br><span>CEIP Open, Top Solar Hours in Alberta</span></h1>
+      <p>Medicine Hat is one of Alberta's best locations for solar. The city consistently ranks among the highest in provincial solar irradiance hours, CEIP financing is currently open, and the flat electricity export landscape means strong net billing returns year-round.</p>
+      <button class="btn-primary" onclick="openSurvey()">Get My Free Medicine Hat Solar Estimate</button>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="ceip-badge ceip-open">&#10003; CEIP Open in Medicine Hat</div>
+      
+      <h2>Why Medicine Hat Is One of Alberta's Best Solar Cities</h2>
+      <p>With roughly 330+ sunny days per year, Medicine Hat sits at the top of Alberta's solar resource map. That translates directly into higher annual production from any given system size. An 8 kW system here commonly produces 10,800 kWh or more annually, about 6% above the Edmonton-area average, which compounds meaningfully over a 25-year system life.</p>
+      <p>The city's CEIP program is currently open, offering 3.75% financing through the municipal property tax roll. Electricity distribution in most of the city is handled by Medicine Hat's own municipal utility, which manages net billing locally. Export credits are applied at retail rate, and the favorable sun hours mean more of your production turns into banked credits during peak summer months.</p>
+      <h2 style="margin-top:40px;">Medicine Hat CEIP Application</h2>
+      <p>Medicine Hat's CEIP is administered through the <a href='https://ceip.abmunis.ca/' target='_blank' rel='noopener'>ceip.abmunis.ca</a> portal. Applications require a qualified solar proposal from an approved installer. Our team prepares the documentation and manages the application from submission through approval. Typical processing time is 2 to 4 weeks.</p>
+      <p>Building permits for solar are issued by the City of Medicine Hat Planning and Development Services. Our team handles all permit preparation and submission as part of the installation process.</p>
+    </div>
+  </section>
+
+  <div class="case-study">
+    <div class="container">
+      <div class="cs-label">Local Case Study</div>
+      <h3>Medicine Hat: 9.2 kW, CEIP-Financed, Highest-Production Year in Client Portfolio</h3>
+      <div class="cs-cols">
+        <div class="cs-col"><strong>The Situation</strong><p>A homeowner in Medicine Hat, 2,600 sq ft home, south-facing rear roof with no shading. Pre-solar electricity spend: $2,700 per year. Municipal utility service. CEIP open at time of installation.</p></div>
+        <div class="cs-col"><strong>Our Approach</strong><p>9.2 kW system, 23 x 400W panels. CEIP at 3.75% over 20 years, monthly tax addition of $167. Projected annual production: 11,500 kWh, saving $2,070 in electricity costs. Net positive from day one.</p></div>
+        <div class="cs-col"><strong>The Outcome</strong><p>Actual year-one production came in at 11,720 kWh, above projection. Annual electricity savings: $2,109. Net benefit after CEIP payments: $105 in year one, growing as electricity rates rise. Break-even projected at year 11.</p></div>
+      </div>
+      <p class="cs-disclaimer">Client name changed. Results vary based on individual circumstances. Prior results do not guarantee similar outcomes.</p>
+    </div>
+  </div>
+
+  <section style="background:#f9fafb;">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q">Is CEIP open in Medicine Hat?</button><div class="faq-a"><p>Yes. Medicine Hat's CEIP is currently accepting applications. We prepare your qualified solar proposal and support the ceip.abmunis.ca application from start to finish.</p></div></div><div class="faq-item"><button class="faq-q">Who handles electricity distribution and net billing in Medicine Hat?</button><div class="faq-a"><p>Medicine Hat operates its own municipal electric utility, separate from EPCOR and FortisAlberta. The city's utility manages net billing and micro-generation interconnection for local solar customers.</p></div></div><div class="faq-item"><button class="faq-q">Does the higher sun exposure in Medicine Hat make solar more valuable?</button><div class="faq-a"><p>Yes. With more annual sunlight hours than most of the province, a given system size produces more electricity here than it would in Edmonton or Calgary. That means a faster payback and higher lifetime savings for the same upfront investment.</p></div></div><div class="faq-item"><button class="faq-q">What building permits are required for solar in Medicine Hat?</button><div class="faq-a"><p>A building permit from City of Medicine Hat Planning and Development Services is required. Our team handles all permit documentation. Typical turnaround is 1 to 3 weeks.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Nearby Cities We Also Serve</h2>
+      <p>We also serve homeowners in nearby <a href="/locations/lethbridge/">Lethbridge</a>, <a href="/locations/calgary/">Calgary</a>, and <a href="/locations/red-deer/">Red Deer</a>.</p>
+      <h2 style="margin-top:32px;">Helpful Local Resources</h2>
+      <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+        <li><a href="https://www.medicinehat.ca/city-services/sustainable-community/climate-action/clean-energy-improvement-program/" target="_blank" rel="noopener">City of Medicine Hat — CEIP</a></li><li><a href="https://www.medicinehat.ca/city-services/utilities/electric/" target="_blank" rel="noopener">Medicine Hat Electric Utility</a></li><li><a href="https://mhacchamber.com/" target="_blank" rel="noopener">Medicine Hat Chamber of Commerce</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="background:#f9fafb;">
+    <div class="container map-wrap">
+      <h2 style="margin-bottom:20px;">Our Medicine Hat Service Area</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d303582.861022972!2d-113.4927372!3d53.5266805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021d48003c3b1%3A0x7dbca523cf95d7f4!2sAlberta%20Solar%20Advisors!5e0!3m2!1sen!2sus!4v1782235123789!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Alberta Solar Advisors service area map"></iframe>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <h2>Get Your Free Medicine Hat Solar Proposal</h2>
+    <p>CEIP is open in Medicine Hat right now, and your local sun hours mean stronger returns than almost anywhere else in the province.</p>
+    <button class="btn-primary btn-teal" onclick="openSurvey()">Get My Free Solar Estimate</button>
+  </div>
+</main>
+<script>
+function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
+(function(){
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
+  function getParam(n){return new URLSearchParams(window.location.search).get(n)||''}
+  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
+  var iframe=document.getElementById('sv-iframe');
+  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
+    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
+    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
+  });
+})();
+document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});
+</script>
+</body>
+</html>

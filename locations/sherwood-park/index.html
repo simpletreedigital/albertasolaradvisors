@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Panels Sherwood Park &mdash; Alberta Solar Advisors</title>
+  <meta name="description" content="Solar panels in Sherwood Park, Alberta. Strathcona County CEIP financing is open. FortisAlberta net billing. Get a transparent solar proposal for your Sherwood Park home today.">
+  <link rel="canonical" href="https://alberta-solar.org/locations/sherwood-park/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <script src="/includes/nav-footer-loader.js"></script>
+  <style>
+    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.65;}
+    main{padding-top:68px;}
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:72px 24px 60px;}
+    .hero-inner{max-width:860px;margin:0 auto;}
+    .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
+    .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.2;margin-bottom:16px;}
+    .hero h1 span{color:var(--teal);}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:680px;margin-bottom:28px;}
+    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;}
+    .btn-teal{background:var(--teal);color:var(--dark);}
+    section{padding:56px 24px;}
+    .container{max-width:900px;margin:0 auto;}
+    h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--dark);margin-bottom:16px;}
+    h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:8px;}
+    p{margin-bottom:16px;}
+    .highlight-box{background:#eff6ff;border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;}
+    .ceip-badge{display:inline-block;padding:6px 14px;border-radius:20px;font-size:.85rem;font-weight:700;margin-bottom:20px;}
+    .ceip-open{background:#d1fae5;color:#065f46;}
+    .ceip-paused{background:#fef3c7;color:#92400e;}
+    .faq-list{display:flex;flex-direction:column;gap:0;}
+    .faq-item{border-bottom:1px solid var(--border);}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-size:1rem;font-weight:700;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q:after{content:'+';font-size:1.4rem;color:var(--blue);transition:transform .2s;}
+    .faq-item.open .faq-q:after{transform:rotate(45deg);}
+    .faq-a{display:none;padding:0 0 18px;}
+    .faq-item.open .faq-a{display:block;}
+    .case-study{background:var(--dark);color:#fff;padding:48px 40px;border-radius:16px;margin:40px 0;}
+    @media(max-width:640px){.case-study{padding:28px 20px;}}
+    .cs-label{font-size:.75rem;font-weight:800;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:12px;}
+    .case-study h3{font-size:1.3rem;margin-bottom:24px;color:#fff;}
+    .cs-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    @media(max-width:640px){.cs-cols{grid-template-columns:1fr;}}
+    .cs-col strong{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
+    .cs-col p{color:rgba(255,255,255,.85);font-size:.95rem;margin:0;}
+    .cs-disclaimer{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:20px;font-style:italic;}
+    .map-wrap iframe{width:100%;height:380px;border:0;border-radius:12px;display:block;}
+    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
+    .cta-strip h2{color:#fff;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay.open{display:flex;}
+    .sv-box{background:#fff;border-radius:12px;width:min(680px,96vw);max-height:90vh;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+    .sv-head span{font-weight:700;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+    .sv-body{flex:1;overflow-y:auto;}
+    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+  </style>
+</head>
+<body>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get Your Solar Estimate</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
+      <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
+    </div>
+  </div>
+</div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/locations/">Locations</a> &rsaquo; Sherwood Park</div>
+      <h1>Solar Panels Sherwood Park:<br><span>Strathcona County CEIP Open</span></h1>
+      <p>Sherwood Park homeowners sit in one of Alberta's better solar markets right now. Strathcona County's CEIP is accepting applications, FortisAlberta handles net billing credits at retail rate, and newer subdivisions throughout the area offer excellent south-facing roof exposure.</p>
+      <button class="btn-primary" onclick="openSurvey()">Get My Free Sherwood Park Solar Estimate</button>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="ceip-badge ceip-open">&#10003; CEIP Open in Strathcona County</div>
+      
+      <h2>Why Sherwood Park Is a Strong Solar Candidate</h2>
+      <p>Sherwood Park is the urban service area within Strathcona County, just east of Edmonton. The county's CEIP program is currently open, offering 3.75% financing repaid through the property tax bill. Most homes in the area are on FortisAlberta's distribution network, which administers net billing at the full retail rate, currently around 18 cents per kWh all-in.</p>
+      <p>Subdivisions like Summerwood, Emerald Hills, and Mills Haven feature modern housing stock with open roof planes well suited for solar. A standard 8 kW system in this area produces approximately 10,200 kWh annually, saving a typical household $1,836 per year on electricity. With CEIP financing, monthly payments on that system often run below the monthly electricity savings from day one.</p>
+      <h2 style="margin-top:40px;">Strathcona County CEIP Application</h2>
+      <p>Applications for Strathcona County's CEIP are submitted through the <a href='https://ceip.abmunis.ca/' target='_blank' rel='noopener'>ceip.abmunis.ca</a> portal. The process requires a qualified solar proposal from an approved installer. Our team prepares CEIP-ready documentation and manages the application on your behalf. Approval typically takes 2 to 4 weeks.</p>
+      <p>Building permits for solar are issued by Strathcona County Planning and Development Services. Our team handles permit submission as part of every installation, so you don't need to navigate the process yourself.</p>
+    </div>
+  </section>
+
+  <div class="case-study">
+    <div class="container">
+      <div class="cs-label">Local Case Study</div>
+      <h3>Summerwood Sherwood Park: 8.4 kW, CEIP-Financed, Day-One Positive Cash Flow</h3>
+      <div class="cs-cols">
+        <div class="cs-col"><strong>The Situation</strong><p>A homeowner in Summerwood, Sherwood Park with a 2,400 sq ft home on FortisAlberta service. Pre-solar electricity spend: $2,520 per year. South-facing rear roof slope with no significant shading from neighbouring structures.</p></div>
+        <div class="cs-col"><strong>Our Approach</strong><p>8.4 kW system, 21 x 400W panels on the rear slope. Strathcona County CEIP at 3.75% over 20 years, monthly tax addition of $153. Projected monthly electricity savings: $196. Net positive from the first payment.</p></div>
+        <div class="cs-col"><strong>The Outcome</strong><p>Year-one electricity savings of $2,160. Net annual benefit after CEIP payments: $324. Full system cost break-even projected at year 12.</p></div>
+      </div>
+      <p class="cs-disclaimer">Client name changed. Results vary based on individual circumstances. Prior results do not guarantee similar outcomes.</p>
+    </div>
+  </div>
+
+  <section style="background:#f9fafb;">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q">Is Strathcona County CEIP open for Sherwood Park homes?</button><div class="faq-a"><p>Yes. Strathcona County's CEIP is currently accepting applications. We prepare your solar proposal and support the ceip.abmunis.ca submission from start to finish.</p></div></div><div class="faq-item"><button class="faq-q">Does Sherwood Park use FortisAlberta or EPCOR for electricity distribution?</button><div class="faq-a"><p>Most of Sherwood Park is on FortisAlberta's distribution network. FortisAlberta manages the micro-generation interconnection and net billing credits for solar customers in the area.</p></div></div><div class="faq-item"><button class="faq-q">What permits are required for solar installation in Sherwood Park?</button><div class="faq-a"><p>A building permit from Strathcona County Planning and Development Services is required. Our team prepares and submits all permit documentation. Turnaround is typically 1 to 3 weeks.</p></div></div><div class="faq-item"><button class="faq-q">Can I add battery storage to a CEIP application in Sherwood Park?</button><div class="faq-a"><p>Yes. Strathcona County's CEIP covers eligible clean energy upgrades including battery storage. If you're bundling solar and battery in one project, both can be included in the loan, up to the $50,000 program maximum.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Nearby Cities We Also Serve</h2>
+      <p>We also serve homeowners in nearby <a href="/locations/edmonton/">Edmonton</a>, <a href="/locations/st-albert/">St. Albert</a>, and <a href="/locations/airdrie/">Airdrie</a>.</p>
+      <h2 style="margin-top:32px;">Helpful Local Resources</h2>
+      <ul style="margin:12px 0 0 20px;display:flex;flex-direction:column;gap:8px;">
+        <li><a href="https://www.strathcona.ca/projects-construction-development/cleaner-energy-improvement-program/" target="_blank" rel="noopener">Strathcona County — CEIP</a></li><li><a href="https://www.fortisalberta.com/my-account/billing-rates/micro-generation" target="_blank" rel="noopener">FortisAlberta — Micro-Generation</a></li><li><a href="https://sherwoodparkchamber.com/" target="_blank" rel="noopener">Sherwood Park Chamber of Commerce</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="background:#f9fafb;">
+    <div class="container map-wrap">
+      <h2 style="margin-bottom:20px;">Our Sherwood Park Service Area</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d303582.861022972!2d-113.4927372!3d53.5266805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021d48003c3b1%3A0x7dbca523cf95d7f4!2sAlberta%20Solar%20Advisors!5e0!3m2!1sen!2sus!4v1782235123789!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Alberta Solar Advisors service area map"></iframe>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <h2>Get Your Free Sherwood Park Solar Proposal</h2>
+    <p>Strathcona County CEIP is open right now. We'll walk you through exactly what the financing payment vs. electricity savings looks like for your specific home.</p>
+    <button class="btn-primary btn-teal" onclick="openSurvey()">Get My Free Solar Estimate</button>
+  </div>
+</main>
+<script>
+function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
+(function(){
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
+  function getParam(n){return new URLSearchParams(window.location.search).get(n)||''}
+  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
+  var iframe=document.getElementById('sv-iframe');
+  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
+    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
+    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
+  });
+})();
+document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});
+</script>
+</body>
+</html>

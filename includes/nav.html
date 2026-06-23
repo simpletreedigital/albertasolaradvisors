@@ -1,0 +1,158 @@
+<nav class="gnav" id="gnav" role="navigation" aria-label="Main navigation">
+  <div class="gnav-inner">
+    <a href="/" class="gnav-logo" aria-label="Alberta Solar Advisors home">
+      <img src="/images/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" width="200" height="46">
+    </a>
+    <button class="gnav-burger" id="gnav-burger" aria-expanded="false" aria-controls="gnav-mobile" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="gnav-list" role="list">
+      <li class="gnav-item" id="drop-bills">
+        <button class="gnav-btn" onclick="toggleDrop('drop-bills')" aria-expanded="false" aria-haspopup="true">
+          Bill Breakdown <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="gnav-drop" role="list">
+          <li><a href="/case-study/" class="gnav-drop-link">Bill Breakdown Overview</a></li>
+          <li><a href="/case-study/beaumont/" class="gnav-drop-link">Case Study – Beaumont</a></li>
+          <li><a href="/case-study/edmonton/" class="gnav-drop-link">Case Study – Edmonton</a></li>
+          <li><a href="/case-study/airdrie/" class="gnav-drop-link">Case Study – Airdrie</a></li>
+        </ul>
+      </li>
+      <li class="gnav-item" id="drop-financing">
+        <button class="gnav-btn" onclick="toggleDrop('drop-financing')" aria-expanded="false" aria-haspopup="true">
+          Financing <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="gnav-drop" role="list">
+          <li><a href="/financing/" class="gnav-drop-link">Financing Overview</a></li>
+          <li><a href="/financing/ceip/" class="gnav-drop-link">CEIP Loan</a></li>
+          <li><a href="/financing/greener-homes-loan/" class="gnav-drop-link">Canada Greener Homes Loan</a></li>
+        </ul>
+      </li>
+      <li class="gnav-item" id="drop-incentives">
+        <button class="gnav-btn" onclick="toggleDrop('drop-incentives')" aria-expanded="false" aria-haspopup="true">
+          Incentives <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="gnav-drop" role="list">
+          <li><a href="/incentives/" class="gnav-drop-link">Incentives Overview</a></li>
+          <li><a href="/financing/ceip/" class="gnav-drop-link">CEIP Loan</a></li>
+          <li><a href="/incentives/net-billing/" class="gnav-drop-link">Net Billing</a></li>
+          <li><a href="/incentives/the-solar-club/" class="gnav-drop-link">The Solar Club</a></li>
+          <li><a href="/blog/" class="gnav-drop-link">Updates</a></li>
+        </ul>
+      </li>
+      <li class="gnav-item"><a href="/about/" class="gnav-link">About Us</a></li>
+      <li class="gnav-item"><a href="/contact/" class="gnav-link">Contact Us</a></li>
+    </ul>
+    <button class="gnav-cta" onclick="openSurvey()" aria-label="Get your free solar estimate">Get your free estimate</button>
+  </div>
+  <!-- Mobile menu -->
+  <div class="gnav-mobile" id="gnav-mobile" role="dialog" aria-label="Mobile navigation">
+    <ul role="list">
+      <li><a href="/case-study/">Bill Breakdown</a></li>
+      <li><a href="/case-study/beaumont/">Case Study – Beaumont</a></li>
+      <li><a href="/case-study/edmonton/">Case Study – Edmonton</a></li>
+      <li><a href="/case-study/airdrie/">Case Study – Airdrie</a></li>
+      <li class="mob-divider"></li>
+      <li><a href="/financing/">Financing Overview</a></li>
+      <li><a href="/financing/ceip/">CEIP Loan</a></li>
+      <li><a href="/financing/greener-homes-loan/">Greener Homes Loan</a></li>
+      <li class="mob-divider"></li>
+      <li><a href="/incentives/">Incentives</a></li>
+      <li><a href="/incentives/net-billing/">Net Billing</a></li>
+      <li><a href="/incentives/the-solar-club/">The Solar Club</a></li>
+      <li class="mob-divider"></li>
+      <li><a href="/about/">About Us</a></li>
+      <li><a href="/contact/">Contact Us</a></li>
+      <li><a href="/blog/">Updates / Blog</a></li>
+      <li class="mob-divider"></li>
+      <li><a href="/locations/edmonton/">Edmonton Solar</a></li>
+      <li><a href="/locations/calgary/">Calgary Solar</a></li>
+      <li><a href="/locations/red-deer/">Red Deer Solar</a></li>
+      <li class="mob-cta"><button onclick="openSurvey()">Get your free estimate</button></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+:root {
+  --blue:#1a56db;
+  --teal:#16bdca;
+  --dark:#0d1b2a;
+  --white:#fff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --nav-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:#fff;padding-top:var(--nav-h)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font:inherit}
+
+.gnav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--dark);height:var(--nav-h)}
+.gnav-inner{max-width:1200px;margin:0 auto;padding:0 20px;height:100%;display:flex;align-items:center;gap:8px}
+.gnav-logo img{height:38px;width:auto}
+.gnav-list{display:flex;align-items:center;gap:4px;margin-left:auto}
+.gnav-item{position:relative}
+.gnav-link,.gnav-btn{color:rgba(255,255,255,.88);font-size:.88rem;font-weight:500;padding:8px 12px;border-radius:6px;transition:color .15s,background .15s;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.gnav-link:hover,.gnav-btn:hover,.gnav-link.active{color:#fff;background:rgba(255,255,255,.08)}
+.gnav-drop{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px;min-width:210px;box-shadow:0 8px 30px rgba(0,0,0,.12);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;transform:translateX(-50%) translateY(-4px)}
+.gnav-item.open .gnav-drop{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.gnav-drop-link{display:block;padding:9px 14px;border-radius:6px;font-size:.85rem;color:var(--text);transition:background .12s}
+.gnav-drop-link:hover{background:#f3f4f6}
+.gnav-cta{margin-left:8px;background:var(--blue);color:#fff;font-size:.85rem;font-weight:600;padding:9px 18px;border-radius:8px;transition:background .15s;white-space:nowrap}
+.gnav-cta:hover{background:#1648c7}
+.gnav-burger{display:none;flex-direction:column;gap:5px;padding:8px;margin-left:auto}
+.gnav-burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .2s,opacity .2s}
+.gnav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.gnav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.gnav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.gnav-mobile{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:var(--dark);overflow-y:auto;padding:20px;transform:translateX(100%);transition:transform .25s cubic-bezier(.4,0,.2,1);z-index:999}
+.gnav-mobile.open{transform:translateX(0)}
+.gnav-mobile ul{display:flex;flex-direction:column;gap:2px}
+.gnav-mobile a{display:block;color:rgba(255,255,255,.88);padding:12px 16px;border-radius:8px;font-size:1rem;transition:background .12s}
+.gnav-mobile a:hover{background:rgba(255,255,255,.08);color:#fff}
+.mob-divider{height:1px;background:rgba(255,255,255,.1);margin:8px 0}
+.mob-cta button{width:100%;background:var(--blue);color:#fff;font-size:1rem;font-weight:600;padding:14px;border-radius:10px;margin-top:12px}
+@media(max-width:860px){
+  .gnav-list,.gnav-cta{display:none}
+  .gnav-burger{display:flex}
+}
+</style>
+<script>
+function toggleDrop(id){
+  var items=document.querySelectorAll('.gnav-item');
+  items.forEach(function(item){
+    if(item.id===id){
+      var isOpen=item.classList.contains('open');
+      item.classList.toggle('open',!isOpen);
+      var btn=item.querySelector('button');
+      if(btn)btn.setAttribute('aria-expanded',String(!isOpen));
+    }else{
+      item.classList.remove('open');
+      var btn=item.querySelector('button');
+      if(btn)btn.setAttribute('aria-expanded','false');
+    }
+  });
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.gnav-item')){
+    document.querySelectorAll('.gnav-item.open').forEach(function(item){
+      item.classList.remove('open');
+      var btn=item.querySelector('button');
+      if(btn)btn.setAttribute('aria-expanded','false');
+    });
+  }
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    document.querySelectorAll('.gnav-item.open').forEach(function(item){
+      item.classList.remove('open');
+      var btn=item.querySelector('button');
+      if(btn)btn.setAttribute('aria-expanded','false');
+    });
+  }
+});
+</script>

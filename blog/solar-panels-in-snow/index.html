@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Panels in Snow: What Actually Happens to Alberta Production in Winter &mdash; Alberta Solar Advisors</title>
+  <meta name="description" content="The honest picture of winter solar production in Alberta. What snow coverage does to output, how self-clearing panels behave, and why the annual economics still work.">
+  <link rel="canonical" href="https://alberta-solar.org/blog/solar-panels-in-snow/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <script src="/includes/nav-footer-loader.js"></script>
+  <style>
+    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.75;}
+    main{padding-top:68px;}
+    .post-hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:64px 24px 52px;}
+    .post-hero-inner{max-width:780px;margin:0 auto;}
+    .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
+    .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+    .post-tag{display:inline-block;background:rgba(22,189,202,.2);color:var(--teal);padding:4px 12px;border-radius:12px;font-size:.78rem;font-weight:700;margin-bottom:14px;}
+    .post-hero h1{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;line-height:1.25;margin-bottom:16px;}
+    .post-meta{font-size:.85rem;color:rgba(255,255,255,.6);}
+    .post-body{max-width:780px;margin:0 auto;padding:48px 24px 64px;}
+    .post-body h2{font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:800;color:var(--dark);margin:40px 0 14px;}
+    .post-body h3{font-size:1.1rem;font-weight:700;color:var(--dark);margin:28px 0 10px;}
+    .post-body p{margin-bottom:20px;}
+    .post-body ul,.post-body ol{margin:0 0 20px 24px;display:flex;flex-direction:column;gap:8px;}
+    .post-body li{font-size:1rem;}
+    .highlight-box{background:#eff6ff;border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:28px 0;}
+    .highlight-box p{margin:0;}
+    .data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.95rem;}
+    .data-table th{background:var(--dark);color:#fff;padding:10px 14px;text-align:left;font-weight:700;}
+    .data-table td{padding:10px 14px;border-bottom:1px solid var(--border);}
+    .data-table tr:nth-child(even) td{background:#f9fafb;}
+    .cta-inline{background:var(--blue);color:#fff;padding:28px 32px;border-radius:12px;margin:36px 0;}
+    .cta-inline h3{color:#fff;margin-bottom:8px;}
+    .cta-inline p{color:rgba(255,255,255,.85);margin-bottom:16px;}
+    .btn-teal{display:inline-block;background:var(--teal);color:var(--dark);padding:12px 24px;border-radius:8px;font-weight:700;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;}
+    .related-posts{background:#f9fafb;padding:48px 24px;}
+    .related-inner{max-width:780px;margin:0 auto;}
+    .related-inner h2{font-size:1.3rem;font-weight:800;color:var(--dark);margin-bottom:20px;}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+    .related-card{border:1px solid var(--border);border-radius:10px;padding:16px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:6px;}
+    .related-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.08);}
+    .related-card h4{font-size:.9rem;font-weight:700;color:var(--dark);margin:0;}
+    .related-card span{font-size:.8rem;color:var(--blue);font-weight:700;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay.open{display:flex;}
+    .sv-box{background:#fff;border-radius:12px;width:min(680px,96vw);max-height:90vh;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+    .sv-head span{font-weight:700;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+    .sv-body{flex:1;overflow-y:auto;}
+    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+  </style>
+</head>
+<body>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get Your Solar Estimate</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
+      <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
+    </div>
+  </div>
+</div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main>
+  <div class="post-hero">
+    <div class="post-hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Solar Panels in Snow</div>
+      <div class="post-tag">Production</div>
+      <h1>Solar Panels in Snow: What Actually Happens to Alberta Production in Winter</h1>
+      <div class="post-meta">October 2025 &bull; Alberta Solar Advisors</div>
+    </div>
+  </div>
+  <div class="post-body">
+    
+<p>Winter production is the most common concern we hear from Alberta homeowners considering solar. The short answer: yes, output drops in winter, sometimes significantly. The longer answer is that this is already built into every legitimate solar proposal, and the annual economics account for it.</p>
+
+<h2>What Snow Actually Does to Solar Output</h2>
+<p>Heavy, wet snow covering the panels brings production to near-zero for however long it sits. That's just physics. The good news is that most residential solar panels are installed on sloped roofs, which means snow typically slides off within 1 to 3 days of accumulation, especially with the freeze-thaw cycles Alberta sees in late fall and early spring.</p>
+<p>Light, dry snow, which is more common in Alberta's colder months, often blows off or melts quickly from the panel surface. The panel surface is dark and smooth, and even weak winter sun heats it enough to clear light accumulations faster than you might expect.</p>
+<p>The bigger production factor in winter isn't snow coverage, it's shorter daylight hours and lower sun angle. December in Edmonton gives you roughly 7.5 hours of daylight versus 17+ in June. Solar panels are producing at a fraction of their summer output simply because of the position and duration of the sun, independent of snow.</p>
+
+<h2>Monthly Production: What Real Alberta Systems Show</h2>
+<table class="data-table">
+  <tr><th>Month</th><th>Approx. Production (8 kW system)</th><th>vs. Annual Average</th></tr>
+  <tr><td>January</td><td>360 kWh</td><td>-65%</td></tr>
+  <tr><td>February</td><td>540 kWh</td><td>-47%</td></tr>
+  <tr><td>March</td><td>820 kWh</td><td>-20%</td></tr>
+  <tr><td>April</td><td>1,020 kWh</td><td>0%</td></tr>
+  <tr><td>May</td><td>1,180 kWh</td><td>+16%</td></tr>
+  <tr><td>June</td><td>1,280 kWh</td><td>+25%</td></tr>
+  <tr><td>July</td><td>1,260 kWh</td><td>+24%</td></tr>
+  <tr><td>August</td><td>1,140 kWh</td><td>+12%</td></tr>
+  <tr><td>September</td><td>860 kWh</td><td>-16%</td></tr>
+  <tr><td>October</td><td>560 kWh</td><td>-45%</td></tr>
+  <tr><td>November</td><td>360 kWh</td><td>-65%</td></tr>
+  <tr><td>December</td><td>300 kWh</td><td>-71%</td></tr>
+</table>
+<p>These are approximate figures based on Edmonton-area installations. The important thing to notice: the summer months produce significantly more than the annual average, which helps offset the low winter months. Net billing with 12-month credit rollover is designed for exactly this pattern.</p>
+
+<h2>Why Net Billing Makes Winter Production Work</h2>
+<p>Alberta's net billing framework gives you 12-month credit rollover. Excess production in May, June, July, and August doesn't disappear, it rolls forward as a credit against your bill. When December comes and your system is producing 300 kWh instead of 1,260 kWh, you're drawing down those banked summer credits rather than buying grid power at full retail rate.</p>
+<p>The system is designed to be evaluated annually, not monthly. A well-sized Alberta solar installation typically covers 80 to 100% of annual household electricity consumption when you account for the full seasonal cycle.</p>
+
+<h2>Should You Clear Snow Off Panels?</h2>
+<p>Usually not necessary, and potentially risky if you're dealing with roof access. Most panel manufacturers recommend against using tools on the panel surface. The economic impact of waiting a day or two for panels to self-clear is minor in the context of a 25-year system, and the risk of panel or personal injury from roof access in winter conditions isn't worth it.</p>
+<div class="highlight-box"><p>A useful rule of thumb: if snow is going to slide off on its own within 48 hours, the production loss is minimal. If a heavy wet snow event is forecast to sit for a week, a gentle clear with a soft roof rake from ground level may be worthwhile. But don't stress about day-to-day winter accumulation.</p></div>
+
+    <div class="cta-inline">
+      <h3>Ready to See the Numbers for Your Home?</h3>
+      <p>Get a free site-specific estimate with projected savings, financing options, and break-even timeline, no pressure, no obligation.</p>
+      <button class="btn-teal" onclick="openSurvey()">Get My Free Solar Estimate</button>
+    </div>
+  </div>
+  <div class="related-posts">
+    <div class="related-inner">
+      <h2>More from the Blog</h2>
+      <div class="related-grid">
+        <a href="/blog/ceip-november-2025/" class="related-card"><h4>CEIP Update: Which Alberta Cities Are Open Right Now</h4><span>Incentives &rarr;</span></a><a href="/blog/how-to-vet-solar-installers/" class="related-card"><h4>How to Vet a Solar Installer in Alberta</h4><span>Buyer's Guide &rarr;</span></a><a href="/blog/3-key-ideas/" class="related-card"><h4>3 Ideas That Change How Alberta Homeowners Think About Solar</h4><span>Fundamentals &rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
+(function(){
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
+  function getParam(n){return new URLSearchParams(window.location.search).get(n)||''}
+  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
+  var iframe=document.getElementById('sv-iframe');
+  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
+    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
+    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
+  });
+})();
+</script>
+</body>
+</html>

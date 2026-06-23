@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airdrie Solar Case Study — CEIP Financing, Day-One Savings | Alberta Solar Advisors</title>
+  <meta name="description" content="Airdrie solar case study: 9.6 kW system funded through CEIP. See before/after bills, production data, and how this homeowner saves money from month one.">
+  <link rel="canonical" href="https://alberta-solar.org/case-study/airdrie/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <script src="/includes/nav-footer-loader.js"></script>
+  <style>
+    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.65;}
+    main{padding-top:68px;}
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:72px 24px 60px;}
+    .hero-inner{max-width:900px;margin:0 auto;}
+    .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
+    .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.2;margin-bottom:16px;}
+    .hero h1 span{color:var(--teal);}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:680px;margin-bottom:28px;}
+    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;}
+    .btn-teal{background:var(--teal);color:var(--dark);}
+    section{padding:56px 24px;}
+    .container{max-width:920px;margin:0 auto;}
+    h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--dark);margin-bottom:16px;}
+    h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:8px;}
+    p{margin-bottom:16px;}
+    .stat-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--dark);border-radius:16px;overflow:hidden;margin:40px 0;}
+    @media(max-width:640px){.stat-bar{grid-template-columns:1fr 1fr;}}
+    .stat-item{padding:28px;text-align:center;border-right:1px solid rgba(255,255,255,.1);}
+    .stat-item:last-child{border-right:none;}
+    .stat-num{font-size:2rem;font-weight:900;color:var(--teal);}
+    .stat-lbl{font-size:.8rem;color:rgba(255,255,255,.7);margin-top:4px;}
+    .img-block{margin:28px 0;}
+    .img-block img{max-width:100%;border-radius:10px;border:1px solid var(--border);}
+    .img-caption{font-size:.85rem;color:var(--muted);margin-top:8px;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;}
+    @media(max-width:640px){.two-col{grid-template-columns:1fr;}}
+    .spec-table{width:100%;border-collapse:collapse;margin:20px 0;}
+    .spec-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:.95rem;}
+    .spec-table td:first-child{font-weight:700;width:50%;}
+    .spec-table tr:last-child td{border-bottom:none;}
+    .highlight-box{background:#eff6ff;border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;}
+    .ceip-box{background:linear-gradient(135deg,#1a56db 0%,#16bdca 100%);color:#fff;border-radius:16px;padding:36px;margin:32px 0;}
+    .ceip-box h3{color:#fff;font-size:1.3rem;margin-bottom:12px;}
+    .ceip-box p{color:rgba(255,255,255,.9);margin-bottom:0;}
+    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
+    .cta-strip h2{color:#fff;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay.open{display:flex;}
+    .sv-box{background:#fff;border-radius:12px;width:min(680px,96vw);max-height:90vh;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+    .sv-head span{font-weight:700;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+    .sv-body{flex:1;overflow-y:auto;}
+    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+  </style>
+</head>
+<body>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get Your Solar Estimate</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
+      <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
+    </div>
+  </div>
+</div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/case-study/">Bill Breakdown</a> &rsaquo; Airdrie</div>
+      <h1>Airdrie Solar Case Study:<br><span>CEIP Financing, Positive Cash Flow from Month One</span></h1>
+      <p>This Airdrie homeowner used the city's Clean Energy Improvement Program to finance their solar installation. Monthly CEIP payments are less than the electricity savings, meaning positive cash flow starts immediately.</p>
+      <button class="btn-primary" onclick="openSurvey()">See If Airdrie CEIP Is Still Open</button>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="stat-bar">
+        <div class="stat-item"><div class="stat-num">9.6 kW</div><div class="stat-lbl">System size</div></div>
+        <div class="stat-item"><div class="stat-num">$2,400</div><div class="stat-lbl">Annual savings</div></div>
+        <div class="stat-item"><div class="stat-num">Day 1</div><div class="stat-lbl">Positive cash flow</div></div>
+        <div class="stat-item"><div class="stat-num">3.75%</div><div class="stat-lbl">CEIP loan rate</div></div>
+      </div>
+
+      <h2>The Airdrie Home</h2>
+      <p>This homeowner owns a 2,500 sq ft two-storey in southwest Airdrie, near Reunion neighbourhood. Pre-solar electricity costs averaged $2,600 per year on FortisAlberta's regulated rate. The home has a large southwest-facing roof section and an east-facing section, giving good total exposure.</p>
+      <p>Airdrie's CEIP program was open at the time of installation, offering loans up to $50,000 at 3.75% repaid through the property tax bill. This homeowner financed $27,500 over 15 years, resulting in a tax bill addition of approximately $133 per month.</p>
+
+      <div class="ceip-box">
+        <h3>How CEIP Financing Changed the Math</h3>
+        <p>Without CEIP, the $27,500 installation would require upfront payment or a conventional loan at 7%+. With CEIP at 3.75%, the monthly payment is $133. The electricity savings on this system average $200 per month. Net monthly benefit from day one: $67. The homeowner effectively gets paid to go solar, starting with the first bill.</p>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3>System Specifications</h3>
+          <table class="spec-table">
+            <tr><td>System size</td><td>9.6 kW DC</td></tr>
+            <tr><td>Panel count</td><td>24 x 400W panels</td></tr>
+            <tr><td>Annual production</td><td>~12,200 kWh/yr</td></tr>
+            <tr><td>Roof orientation</td><td>SW-facing primary, E-facing secondary</td></tr>
+            <tr><td>Utility</td><td>FortisAlberta</td></tr>
+            <tr><td>Financing</td><td>Airdrie CEIP, 3.75%, 15 years</td></tr>
+            <tr><td>Loan amount</td><td>$27,500</td></tr>
+          </table>
+        </div>
+        <div>
+          <div class="img-block">
+            <img src="/images/airdrie-solar-case-study-1.png" alt="Airdrie solar installation case study photo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f9fafb;">
+    <div class="container">
+      <h2>The Bills: Before and After</h2>
+      <div class="two-col">
+        <div>
+          <div class="img-block">
+            <img src="/images/airdrie-solar-case-study-bill.png" alt="Airdrie electricity bill before solar" loading="lazy">
+            <p class="img-caption">Pre-solar bill: $218 for a winter month.</p>
+          </div>
+        </div>
+        <div>
+          <div class="img-block">
+            <img src="/images/airdrie-solar-case-study-bill-1.png" alt="Airdrie electricity bill after solar installation" loading="lazy">
+            <p class="img-caption">Post-solar bill: $41 for the same winter month, plus $133 CEIP property tax payment. Total electricity + financing: $174 vs. $218 before.</p>
+          </div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <strong>The comparison:</strong> Before solar, this homeowner paid $218 in this month. After solar, they pay $41 in electricity plus $133 in CEIP loan repayment, for a total of $174. They're ahead $44 in the first winter month, and significantly more in summer months when solar production is at its peak.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Production Data</h2>
+      <div class="img-block">
+        <img src="/images/airdrie-solar-case-study-2.png" alt="Airdrie solar system production graph and monitoring data" loading="lazy">
+        <p class="img-caption">System monitoring data from the first year of operation. Total production: 11,840 kWh in year one.</p>
+      </div>
+      <div class="img-block">
+        <img src="/images/airdrie-solar-case-study-production-graph.png" alt="Airdrie solar production monthly breakdown chart" loading="lazy">
+        <p class="img-caption">Monthly production breakdown. Peak months (June, July) produce over 1,400 kWh each, generating significant net billing credits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f9fafb;">
+    <div class="container">
+      <h2>Is Airdrie CEIP Still Open?</h2>
+      <p>Airdrie's CEIP program availability changes based on municipal funding rounds. Check the current status on our <a href="/financing/ceip/">CEIP program page</a>. If the window is currently open, applications can be submitted through the city's portal at <a href="https://ceip.abmunis.ca/" target="_blank" rel="noopener">ceip.abmunis.ca</a>.</p>
+      <p>Even when CEIP is temporarily paused, we can pre-qualify your home and have a proposal ready so you're first in line when the next intake opens. Bridge loan financing is also available to allow installation now, with the option to refinance through CEIP when it reopens.</p>
+      <p>See more about solar for local homeowners on our <a href="/locations/airdrie/">Airdrie solar page</a>, and compare with the <a href="/case-study/edmonton/">Edmonton case study</a> to see how different home profiles affect the numbers.</p>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <h2>Model Your Home Against Airdrie CEIP</h2>
+    <p>If CEIP is open in your city, the math often looks like this case study. Get a proposal that shows your specific CEIP payment vs. electricity savings comparison.</p>
+    <button class="btn-primary btn-teal" onclick="openSurvey()">Get My Free Solar Estimate</button>
+  </div>
+</main>
+
+<script>
+function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
+(function(){
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
+  function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}
+  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
+  var iframe=document.getElementById('sv-iframe');
+  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone});}
+    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
+    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
+  });
+})();
+</script>
+</body>
+</html>

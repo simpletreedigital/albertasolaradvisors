@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Services &mdash; Alberta Solar Advisors</title>
+  <meta name="description" content="Solar panel installation, battery storage, and duct sealing for Alberta homeowners. Transparent proposals, CEIP-ready documentation, and no-pressure estimates.">
+  <link rel="canonical" href="https://alberta-solar.org/services/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <script src="/includes/nav-footer-loader.js"></script>
+  <style>
+    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.65;}
+    main{padding-top:68px;}
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:72px 24px 60px;}
+    .hero-inner{max-width:860px;margin:0 auto;}
+    .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
+    .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.2;margin-bottom:16px;}
+    .hero h1 span{color:var(--teal);}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:680px;margin-bottom:28px;}
+    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;}
+    .btn-teal{background:var(--teal);color:var(--dark);}
+    section{padding:56px 24px;}
+    .container{max-width:960px;margin:0 auto;}
+    h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--dark);margin-bottom:16px;}
+    h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:8px;}
+    p{margin-bottom:16px;}
+    .service-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px;margin-top:32px;}
+    .svc-card{border:1px solid var(--border);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px;}
+    .svc-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--blue),var(--teal));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;}
+    .svc-card h3{font-size:1.2rem;margin:0;}
+    .svc-card p{color:var(--muted);font-size:.95rem;margin:0;flex:1;}
+    .svc-card a{display:inline-block;background:var(--blue);color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;align-self:flex-start;}
+    .process-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px;margin-top:28px;}
+    .step{display:flex;flex-direction:column;gap:10px;}
+    .step-num{width:40px;height:40px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0;}
+    .step h4{font-size:1rem;font-weight:700;color:var(--dark);margin:0;}
+    .step p{font-size:.9rem;color:var(--muted);margin:0;}
+    .trust-bar{background:var(--dark);color:#fff;padding:40px 24px;}
+    .trust-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+    @media(max-width:640px){.trust-inner{grid-template-columns:1fr 1fr;}}
+    .trust-inner strong{display:block;font-size:1.6rem;font-weight:800;color:var(--teal);}
+    .trust-inner span{font-size:.85rem;color:rgba(255,255,255,.75);}
+    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
+    .cta-strip h2{color:#fff;margin-bottom:12px;}
+    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay.open{display:flex;}
+    .sv-box{background:#fff;border-radius:12px;width:min(680px,96vw);max-height:90vh;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;}
+    .sv-head span{font-weight:700;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1;}
+    .sv-body{flex:1;overflow-y:auto;}
+    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+  </style>
+</head>
+<body>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get Your Solar Estimate</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
+      <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
+    </div>
+  </div>
+</div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Services</div>
+      <h1>What We Install<br><span>for Alberta Homeowners</span></h1>
+      <p>Solar panels, battery storage, and duct sealing, all scoped specifically for Alberta's climate, utilities, and available financing programs. Every proposal includes a transparent breakdown of costs, savings, and payback timeline before you commit to anything.</p>
+      <button class="btn-primary" onclick="openSurvey()">Get My Free Estimate</button>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>We focus on clean energy upgrades that make financial sense for Alberta homeowners given current electricity rates, available incentive programs, and local climate conditions.</p>
+      <div class="service-cards">
+
+        <div class="svc-card">
+          <div class="svc-icon">&#9728;</div>
+          <h3>Solar Panel Installation</h3>
+          <p>Rooftop and ground-mount solar for residential homes across Alberta. We handle everything from proposal through permit, utility interconnection, and activation. CEIP-ready documentation included where applicable.</p>
+          <a href="/services/">Learn More</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">&#128267;</div>
+          <h3>Battery Storage</h3>
+          <p>Home battery systems that store excess solar production for evening and overnight use, or provide backup power during outages. Eligible for inclusion in CEIP financing in most participating municipalities.</p>
+          <a href="/services/battery-storage/">Learn More</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">&#127968;</div>
+          <h3>Duct Sealing</h3>
+          <p>Air sealing for forced-air duct systems that reduces heating and cooling losses before you size a solar system. Reducing load first means a smaller system delivers the same result, improving the economics of the whole project.</p>
+          <a href="/services/duct-sealing/">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <div><strong>1,355+</strong><span>Homes Installed</span></div>
+      <div><strong>12</strong><span>Cities Served</span></div>
+      <div><strong>$45,000+</strong><span>Avg. Lifetime Savings</span></div>
+      <div><strong>25 yr</strong><span>Panel Warranty</span></div>
+    </div>
+  </div>
+
+  <section style="background:#f9fafb;">
+    <div class="container">
+      <h2>How the Process Works</h2>
+      <p>From first contact to system activation, here is what to expect when you work with us.</p>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Free Estimate</h4>
+          <p>We collect your electricity bill details and roof information and build a site-specific production and savings model. No obligation, no sales pressure.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Proposal Review</h4>
+          <p>You receive a transparent proposal with system size, projected production, annual savings, financing options, and break-even timeline, all explained line by line.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Permits and CEIP</h4>
+          <p>We handle building permit submission and, where applicable, CEIP application documentation. You don't need to navigate municipal processes yourself.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>Installation</h4>
+          <p>Our crews install the system, typically in one to two days for a standard rooftop installation. All electrical work is performed by licensed electricians.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <h4>Interconnection</h4>
+          <p>We coordinate with your utility for net billing interconnection approval and activation. You start receiving credits for exported power as soon as the utility completes their process.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <h4>Ongoing Monitoring</h4>
+          <p>Your system includes production monitoring so you can verify output against projections. We're available for any performance questions after activation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <h2>Ready to See What the Numbers Look Like for Your Home?</h2>
+    <p>Start with a free estimate. We'll show you a site-specific savings model before you make any decisions.</p>
+    <button class="btn-primary btn-teal" onclick="openSurvey()">Get My Free Solar Estimate</button>
+  </div>
+</main>
+<script>
+function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
+(function(){
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
+  function getParam(n){return new URLSearchParams(window.location.search).get(n)||''}
+  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
+  var iframe=document.getElementById('sv-iframe');
+  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
+    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
+    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
+  });
+})();
+</script>
+</body>
+</html>

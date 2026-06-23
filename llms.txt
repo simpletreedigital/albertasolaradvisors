@@ -1,0 +1,56 @@
+# Alberta Solar Advisors
+
+> Residential solar installation for Alberta homeowners. Transparent proposals, CEIP-ready documentation, and no-pressure estimates.
+
+Alberta Solar Advisors is a lead generation brand operated by Simple Tree Digital on behalf of Orizon Energy Inc., a residential solar installer serving 12 cities across Alberta. The brand focuses on helping homeowners understand solar economics, available financing programs, and the installation process before committing to anything.
+
+## Core Facts
+
+- 1,355+ Alberta homes and businesses served
+- Average savings: up to $3,000/year, $45,000+ over system lifetime
+- Standard 8 kW system: ~$25,000, ~10,200 kWh/year production
+- Alberta all-in electricity rate: ~18 cents/kWh, ~2.5% annual escalation
+- Break-even: typically years 11-13 with CEIP, 13-15 without
+- Phone: (825) 602-5155
+- Email: Info@mail.solar-resource.org
+- Booking: book.alberta-solar.org
+
+## Service Cities
+
+Edmonton, Calgary, Red Deer, Lethbridge, Airdrie, St. Albert, Sherwood Park, Spruce Grove, Medicine Hat, Grande Prairie, Fort McMurray, Slave Lake
+
+## Key Financing Programs
+
+- CEIP (Clean Energy Improvement Program): 3.75% property tax financing, up to $50,000, 20-year term
+  - Currently open: Edmonton, Lethbridge, Airdrie, St. Albert, Medicine Hat, Strathcona County
+  - Currently paused: Calgary, Spruce Grove, Grande Prairie
+  - Portal: ceip.abmunis.ca
+- ENMAX Solar Club (Calgary only): $0.30/kWh export May-Oct, $0.0877/kWh Nov-Apr
+- Alberta Net Billing: retail rate credits (~18 cents/kWh), 12-month rollover, all distributors
+
+## Electricity Distributors by City
+
+- EPCOR: Edmonton, St. Albert
+- FortisAlberta: Red Deer, Lethbridge, Airdrie, Sherwood Park, Spruce Grove, Grande Prairie
+- ENMAX: Calgary
+- ATCO Electric: Fort McMurray, Slave Lake, northern regions
+- Municipal utility: Medicine Hat
+
+## Pages
+
+- /: Homepage with overview, financing table, case study teasers, service area grid
+- /financing/: Financing options overview with ROI chart
+- /financing/ceip/: CEIP program detail, city status table, application guide
+- /financing/greener-homes-loan/: Greener Homes Loan (ended), alternatives
+- /incentives/: Incentives overview
+- /incentives/net-billing/: Net billing framework, rate tables, FAQs
+- /incentives/the-solar-club/: ENMAX Solar Club detail, rate cards
+- /case-study/: Case study overview
+- /case-study/edmonton/: 8.4 kW, year-12 break-even
+- /case-study/airdrie/: 9.6 kW, CEIP-financed, day-one positive cash flow
+- /case-study/beaumont/: 12 kW ground mount, net-zero electricity
+- /locations/: All 12 service cities with CEIP status
+- /services/: Solar panels, battery storage, duct sealing
+- /blog/: Solar energy insights for Alberta homeowners
+- /about/: Team, stats, local focus
+- /contact/: Inline survey, map, contact details
