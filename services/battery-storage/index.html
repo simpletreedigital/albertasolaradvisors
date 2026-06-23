@@ -15,17 +15,6 @@
     :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
     *{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:var(--font-body);color:var(--text);line-height:1.65;}
-
-    .hero{position:relative;overflow:hidden;}
-    .hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.13;pointer-events:none;}
-    .hero-inner,.hero-content,.breadcrumb,.hero h1,.hero p,.hero .btn-primary,.btn-primary,.ceip-badge,.hero-cta{position:relative;z-index:1;}
-    .hero-original{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:72px 24px 60px;}
-    .hero-inner{max-width:860px;margin:0 auto;}
-    .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
-    .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
-    .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.2;margin-bottom:16px;}
-    .hero h1 span{color:var(--teal);}
-    .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:680px;margin-bottom:28px;}
     .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:50px;font-family:var(--font-head);font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid var(--blue);transition:background .2s,color .2s;}
     .btn-teal{background:var(--teal);color:var(--dark);border-color:var(--teal);}
     section{padding:56px 24px;}
@@ -60,9 +49,90 @@
     .sv-body{flex:1;overflow-y:auto;}
     .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
   
-    .hero{position:relative;overflow:hidden;}
-    .hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.13;pointer-events:none;}
-    .hero-inner,.hero-content,.breadcrumb,.hero h1,.hero p,.hero .btn-primary,.btn-primary,.ceip-badge,.hero-cta{position:relative;z-index:1;}
+    /* ── Shared inner-page hero ── */
+    .page-hero {
+      background: #EEF2FF;
+      min-height: 500px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      overflow: hidden;
+    }
+    .page-hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 56px 48px 56px 56px;
+    }
+    .page-hero-trust {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .page-hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .85rem;
+      font-weight: 500;
+      color: #313E5C;
+    }
+    .page-hero-trust-check {
+      width: 18px; height: 18px;
+      background: #3455A5;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .page-hero-trust-check svg { width: 10px; height: 10px; }
+    .breadcrumb {
+      font-size: .8rem;
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+    .breadcrumb a { color: #3455A5; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .page-hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: #1a2744;
+      margin-bottom: 16px;
+    }
+    .page-hero h1 span { color: #3455A5; }
+    .page-hero .hero-sub {
+      font-size: .97rem;
+      color: #4b5563;
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+    .page-hero-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 48px 40px 0;
+    }
+    .page-hero-img-circle {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 460px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #d0daf0;
+    }
+    .page-hero-img-circle img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+    }
+    @media (max-width: 860px) {
+      .page-hero { grid-template-columns: 1fr; min-height: auto; }
+      .page-hero-content { padding: 48px 24px 32px; }
+      .page-hero-img { padding: 0 24px 40px; }
+      .page-hero-img-circle { max-width: 100%; aspect-ratio: 16/9; border-radius: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -77,15 +147,33 @@
 </div>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
-  <div class="hero">
-  <div class="hero-bg" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png');" aria-hidden="true"></div>
-    <div class="hero-inner">
+    <div class="page-hero">
+    <div class="page-hero-content">
       <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/services/">Services</a> &rsaquo; Battery Storage</div>
+      <div class="page-hero-trust">
+        <div class="page-hero-trust-item">
+          <div class="page-hero-trust-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
+          CEIP eligible in most cities
+        </div>
+        <div class="page-hero-trust-item">
+          <div class="page-hero-trust-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
+          Evening and backup coverage
+        </div>
+      </div>
       <h1>Home Battery Storage<br><span>for Alberta Homeowners</span></h1>
-      <p>A home battery system paired with solar captures excess daytime production and makes it available in the evening, overnight, or during a grid outage. In Alberta, battery storage is eligible for CEIP financing in most participating municipalities, and can be bundled into the same loan as your solar installation.</p>
-      <button class="btn-primary" onclick="openSurvey()">Get My Free Battery Storage Estimate</button>
+      <p class="hero-sub">Pair battery storage with solar for evening coverage and backup power. Eligible for CEIP financing in most participating municipalities.</p>
+      <div>
+        <button class="btn-primary" onclick="openSurvey()">See Battery Storage Options</button>
+      </div>
+    </div>
+    <div class="page-hero-img">
+      <div class="page-hero-img-circle">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png" alt="Home battery storage paired with solar panels Alberta residential installation backup power" loading="eager">
+      </div>
     </div>
   </div>
+
+
 
   <section>
     <div class="container">
