@@ -15,8 +15,11 @@
     :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
     *{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:var(--font-body);color:var(--text);line-height:1.65;}
-    main{padding-top:68px;}
-    .hero{background:linear-gradient(135deg,#374151 0%,#1f2937 100%);color:#fff;padding:72px 24px 60px;}
+
+    .hero{position:relative;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.13;pointer-events:none;}
+    .hero-inner,.hero-content,.breadcrumb,.hero h1,.hero p,.hero .btn-primary,.btn-primary,.ceip-badge,.hero-cta{position:relative;z-index:1;}
+    .hero-original{background:linear-gradient(135deg,#374151 0%,#1f2937 100%);color:#fff;padding:72px 24px 60px;}
     .hero-inner{max-width:860px;margin:0 auto;}
     .breadcrumb{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
     .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
@@ -58,6 +61,10 @@
     .tl-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);}
     .tl-date{flex-shrink:0;width:100px;font-weight:700;color:var(--blue);font-size:.9rem;}
     .tl-body p{margin:0;font-size:.95rem;}
+  
+    .hero{position:relative;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.13;pointer-events:none;}
+    .hero-inner,.hero-content,.breadcrumb,.hero h1,.hero p,.hero .btn-primary,.btn-primary,.ceip-badge,.hero-cta{position:relative;z-index:1;}
   </style>
 </head>
 <body>
@@ -73,6 +80,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
   <div class="hero">
+  <div class="hero-bg" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png');" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/financing/">Financing</a> &rsaquo; Greener Homes Loan</div>
       <div class="badge-ended">Program Ended</div>

@@ -182,6 +182,143 @@
     </div>
   </section>
 
+
+  <section style="padding:0 20px 56px;">
+    <div class="sec-inner" style="max-width:1100px;padding:0;">
+
+<section class="ab-solar-incentives" aria-label="Solar incentives by Alberta city">
+  <style>
+    .ab-solar-incentives{--bg:#0b1020;--card:#121a35;--muted-c:#8ea0c2;--text-c:#f5f7ff;--accent:#3ddc97;--accent-2:#00c2ff;--danger:#ff6b6b;--ok:#67e8a5;--warn:#ffd271;--chip:#1c2444;--brd:#273056;--shad:0 8px 24px rgba(0,0,0,.25);--rad:14px}
+    .ab-solar-incentives{font-family:Inter,system-ui,-apple-system,sans-serif;color:var(--text-c);background:linear-gradient(180deg,#0b1020 0%,#0b1226 100%);padding:28px;border-radius:20px}
+    .absi-row{display:grid;gap:16px}
+    @media(min-width:900px){.absi-row{grid-template-columns:1.2fr .8fr;align-items:start}}
+    .absi-heading h2{color:var(--text-c);margin:0 0 6px;font-size:clamp(18px,2.5vw,26px);letter-spacing:.2px;font-family:'Montserrat',sans-serif}
+    .absi-heading p{margin:0;color:var(--muted-c);font-size:12px;line-height:1.5}
+    .absi-controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .absi-search{position:relative;flex:1 1 180px}
+    .absi-search input{width:100%;background:var(--card);border:1px solid var(--brd);color:var(--text-c);padding:10px 12px 10px 34px;border-radius:12px;outline:none;font-size:13px;box-sizing:border-box}
+    .absi-search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:.6}
+    .absi-chips{display:flex;flex-wrap:wrap;gap:7px}
+    .absi-chip{background:var(--chip);border:1px solid var(--brd);color:var(--text-c);padding:8px 12px;border-radius:999px;font-size:12px;cursor:pointer;user-select:none;transition:.15s}
+    .absi-chip[aria-pressed="true"]{background:linear-gradient(90deg,var(--accent) 0%,var(--accent-2) 100%);color:#07121a;border-color:transparent}
+    .absi-table-wrap{margin-top:14px;background:var(--card);border:1px solid var(--brd);border-radius:16px;box-shadow:var(--shad);overflow:auto;max-height:340px}
+    table.absi{width:100%;border-collapse:separate;border-spacing:0;min-width:680px}
+    .absi th,.absi td{padding:9px 12px;border-bottom:1px solid var(--brd);font-size:12px}
+    .absi th{position:sticky;top:0;background:#131d3a;text-align:left;font-weight:600;z-index:1}
+    .absi th button{all:unset;cursor:pointer;color:var(--text-c);font-size:12px}
+    .absi th button[aria-sort="asc"]::after{content:" ▲";font-size:10px}
+    .absi th button[aria-sort="desc"]::after{content:" ▼";font-size:10px}
+    .absi-status{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid}
+    .absi-status.open{background:rgba(61,220,151,.13);color:var(--ok);border-color:rgba(61,220,151,.3)}
+    .absi-status.paused{background:rgba(255,210,113,.1);color:var(--warn);border-color:rgba(255,210,113,.3)}
+    .absi-status.closed{background:rgba(255,107,107,.1);color:var(--danger);border-color:rgba(255,107,107,.3)}
+    .absi-status::before{content:"●";font-size:8px}
+    .absi-cards{display:grid;gap:12px;margin-top:16px}
+    @media(min-width:700px){.absi-cards{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1100px){.absi-cards{grid-template-columns:repeat(3,1fr)}}
+    .absi-card{background:var(--card);border:1px solid var(--brd);border-radius:14px;padding:14px;box-shadow:var(--shad);display:flex;flex-direction:column;gap:8px}
+    .absi-card-header{display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .absi-card h3{margin:0;font-size:15px;color:var(--text-c);font-weight:700;font-family:'Montserrat',sans-serif}
+    .absi-small{color:var(--muted-c);font-size:12px;line-height:1.4;margin:0}
+    .absi-list{margin:4px 0 0;padding-left:16px;font-size:12px;color:var(--muted-c);line-height:1.6}
+    .absi-hr{height:1px;background:var(--brd);border:0;margin:4px 0}
+    .absi-stat-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+    .absi-stat{background:#0e1630;border:1px solid var(--brd);border-radius:8px;padding:3px 8px;font-size:11px;color:var(--muted-c)}
+    .absi-stat span{color:var(--text-c);font-weight:600}
+    .absi-notes-card{background:var(--card);border:1px solid var(--brd);border-radius:14px;padding:14px;box-shadow:var(--shad)}
+    .absi-notes-card h3{margin:0 0 8px;font-size:14px;font-family:'Montserrat',sans-serif}
+    .absi-legend{margin-top:10px;display:flex;flex-direction:column;gap:6px}
+    .absi-legend-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--muted-c)}
+    .absi-legend-dot{flex-shrink:0;margin-top:3px;width:8px;height:8px;border-radius:50%}
+    .dot-open{background:var(--ok)}.dot-paused{background:var(--warn)}.dot-closed{background:var(--danger)}
+    .absi-count-row{display:flex;gap:8px;margin-top:12px}
+    .absi-count{flex:1;background:#0e1630;border:1px solid var(--brd);border-radius:10px;padding:8px;text-align:center}
+    .absi-count .num{font-size:20px;font-weight:700;line-height:1;font-family:'Montserrat',sans-serif}
+    .absi-count .lbl{font-size:11px;color:var(--muted-c);margin-top:2px}
+    .num-open{color:var(--ok)}.num-paused{color:var(--warn)}.num-closed{color:var(--danger)}
+    tr:last-child td{border-bottom:0}
+    tr:hover td{background:rgba(255,255,255,.03)}
+  </style>
+
+  <div class="absi-row">
+    <div>
+      <div class="absi-heading">
+        <h2>Alberta CEIP Status Matrix</h2>
+        <p>Last verified: May 13, 2026 — Status sourced directly from official municipal pages. Status changes fast; speak with our solar advisors for the latest info.</p>
+      </div>
+      <div class="absi-controls" role="group" aria-label="Filters">
+        <div class="absi-search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4a7 7 0 1 1 0 14A7 7 0 0 1 11 4Zm9 17-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="absi-search" type="search" placeholder="Search city…" aria-label="Search by city name"/>
+        </div>
+        <div class="absi-chips">
+          <button class="absi-chip" data-filter="open" aria-pressed="false">Open only</button>
+          <button class="absi-chip" data-filter="ceip" aria-pressed="false">CEIP available</button>
+          <button class="absi-chip" data-filter="commercial" aria-pressed="false">Commercial</button>
+          <button class="absi-chip" data-filter="rebate" aria-pressed="false">Has rebate</button>
+        </div>
+      </div>
+      <div class="absi-table-wrap" role="region" aria-label="City comparison table">
+        <table class="absi" id="absi-table">
+          <thead><tr>
+            <th><button data-sort="city" aria-sort="none">City</button></th>
+            <th><button data-sort="ceip" aria-sort="none">CEIP Status</button></th>
+            <th><button data-sort="rate" aria-sort="none">Rate</button></th>
+            <th><button data-sort="rebate" aria-sort="none">Max Rebate</button></th>
+            <th><button data-sort="commercial" aria-sort="none">Comm.</button></th>
+            <th><button data-sort="verified" aria-sort="none">Verified</button></th>
+          </tr></thead>
+          <tbody id="absi-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="absi-notes-card">
+        <h3>Status Key</h3>
+        <div class="absi-legend">
+          <div class="absi-legend-item"><div class="absi-legend-dot dot-open"></div><div><strong style="color:var(--ok)">Open</strong> — Accepting new applications now.</div></div>
+          <div class="absi-legend-item"><div class="absi-legend-dot dot-paused"></div><div><strong style="color:var(--warn)">Paused / Waitlist</strong> — At capacity or temporarily paused.</div></div>
+          <div class="absi-legend-item"><div class="absi-legend-dot dot-closed"></div><div><strong style="color:var(--danger)">Closed</strong> — No longer accepting applications.</div></div>
+        </div>
+        <div class="absi-count-row" id="absi-counts"></div>
+        <hr class="absi-hr" style="margin-top:12px"/>
+        <p class="absi-small">Always verify directly on the municipality's CEIP page before applying. Calgary residential intake reopens <strong style="color:var(--warn)">September 22, 2026</strong>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="absi-cards" id="absi-cards"></div>
+
+  <script type="application/json" id="absi-data">[{"city":"Airdrie","ceip":{"active":false,"status":"paused","rate":2.75,"max_term":25,"min_project":5000,"notes":"PAUSED — at capacity. Waitlist open; processed first-come, first-served."},"rebate":{"active":true,"amount":3100,"notes":"Stacked bonus for bundled upgrades"},"commercial":false,"verified":"2026-05-13","summary":"At capacity with waitlist open. Low rate and bundled upgrade bonuses available when funding opens.","tips":["Join waitlist at airdrie.ca CEIP page","Prepare EnerGuide evaluation while waiting"]},{"city":"Banff","ceip":{"active":true,"status":"open","rate":3.00,"max_term":25,"min_project":7500,"notes":"Open. Launched March 2025. Up to $20k incentive for qualifying deep-retrofit CEIP projects."},"rebate":{"active":true,"amount":9000,"notes":"$450/kW residential up to 20 kW ($9k max)."},"commercial":false,"verified":"2026-05-13","summary":"Generous solar rebates alongside active CEIP.","tips":["Anticipate Parks Canada design review","Confirm FortisAlberta microgeneration steps"]},{"city":"Beaumont","ceip":{"active":false,"status":"paused","rate":3.50,"max_term":20,"min_project":3000,"notes":"PAUSED — at capacity. Waitlist open."},"rebate":{"active":true,"amount":1100,"notes":"$400 base + $700 for 30% energy reduction"},"commercial":false,"verified":"2026-05-13","summary":"Program full; waitlist is open.","tips":["Join waitlist now","Prepare EnerGuide evaluation in the meantime"]},{"city":"Calgary","ceip":{"active":false,"status":"paused","rate":5.70,"max_term":20,"min_project":3000,"notes":"PAUSED — Residential reopens September 22, 2026. Commercial CEIP launched March 2026."},"rebate":{"active":false,"amount":null,"notes":"Up to 10% incentive on project costs when open"},"commercial":true,"verified":"2026-05-13","summary":"Residential closed until Sept 22. Commercial CEIP is now live.","tips":["Complete EnerGuide and get quotes now","Commercial owners: apply for Commercial CEIP now"]},{"city":"Canmore","ceip":{"active":true,"status":"open","rate":2.70,"max_term":20,"min_project":3000,"notes":"Open. $500 incentive for completed projects."},"rebate":{"active":true,"amount":500,"notes":"$500 for completed projects; solar rebate lottery Feb–March annually"},"commercial":false,"verified":"2026-05-13","summary":"CEIP open with one of AB's lowest rates.","tips":["Stack CEIP with Canmore's residential solar incentive if timelines align"]},{"city":"Cold Lake","ceip":{"active":true,"status":"open","rate":3.10,"max_term":20,"min_project":3000,"notes":"Open. $580 rebate for completed projects."},"rebate":{"active":true,"amount":580,"notes":"$580 applied directly to CEIP tax"},"commercial":false,"verified":"2026-05-13","summary":"Actively accepting applications with a solid rebate incentive.","tips":["Confirm FortisAlberta interconnection paperwork early"]},{"city":"Devon","ceip":{"active":false,"status":"closed","rate":4.00,"max_term":25,"min_project":3000,"notes":"CLOSED as of January 31, 2026. No new applications or waitlist accepted."},"rebate":{"active":false,"amount":null,"notes":"$1,100 incentive no longer accessible"},"commercial":false,"verified":"2026-05-13","summary":"Program permanently closed.","tips":["Redirect Devon clients to Spruce Grove or Edmonton"]},{"city":"Drayton Valley","ceip":{"active":true,"status":"open","rate":4.16,"max_term":20,"min_project":3000,"notes":"Open. $350 incentive for completed projects."},"rebate":{"active":true,"amount":350,"notes":"$350 tax incentive for completed projects"},"commercial":false,"verified":"2026-05-13","summary":"Open with the highest rate among current AB programs.","tips":["Rate is annual-review — lock in before potential changes"]},{"city":"Edmonton","ceip":{"active":true,"status":"open","rate":6.00,"max_term":20,"min_project":3000,"notes":"Open. Current 2026 rate is 6%. Min 3 upgrades for residential."},"rebate":{"active":true,"amount":4000,"notes":"MURB solar rebate: $0.50/W up to $4,000 per dwelling"},"commercial":true,"verified":"2026-05-13","summary":"Broad eligibility including commercial and MURBs.","tips":["Submit EPCOR site plans early","Commercial: ASHRAE Level 2 audit required"]},{"city":"Grande Prairie","ceip":{"active":false,"status":"closed","rate":3.00,"max_term":25,"min_project":3000,"notes":"CLOSED as of April 28, 2026. Final year of funding — no reopening planned."},"rebate":{"active":false,"amount":null,"notes":"$500 incentive no longer accessible"},"commercial":false,"verified":"2026-05-13","summary":"Permanently closed. Final tranche exhausted April 28.","tips":["Redirect GP clients to Cold Lake or Edmonton"]},{"city":"Jasper","ceip":{"active":true,"status":"open","rate":3.00,"max_term":25,"min_project":3000,"notes":"Open. Special provisions for 2024 wildfire rebuild properties."},"rebate":{"active":false,"amount":null,"notes":"No standalone municipal rebate"},"commercial":false,"verified":"2026-05-13","summary":"Open with dedicated wildfire-rebuild allocation.","tips":["Wildfire rebuild: email hello@myceip.ca before submitting"]},{"city":"Lethbridge","ceip":{"active":false,"status":"paused","rate":2.83,"max_term":25,"min_project":3000,"notes":"PAUSED — at capacity. Waitlist open."},"rebate":{"active":true,"amount":1350,"notes":"$1,350 for completed projects"},"commercial":false,"verified":"2026-05-13","summary":"At capacity with waitlist open. Strong rate and rebate combination.","tips":["Join waitlist — email sign-up on city's CEIP page"]},{"city":"Medicine Hat","ceip":{"active":true,"status":"open","rate":3.25,"max_term":20,"min_project":3000,"notes":"Open. 6.6% rebate on financed costs; 10.2% for pre-1990 homes."},"rebate":{"active":true,"amount":null,"notes":"6.6% of financed project costs; 10.2% for pre-1990 homes"},"commercial":false,"verified":"2026-05-13","summary":"Active with strong percentage-based rebates.","tips":["Pre-1990 homes qualify for SmartFit 10.2% incentive","Stack with HAT Smart for maximum savings"]},{"city":"Okotoks","ceip":{"active":false,"status":"paused","rate":3.00,"max_term":20,"min_project":3000,"notes":"PAUSED — at capacity. Waitlist open."},"rebate":{"active":false,"amount":null,"notes":"$500 incentive for first 39 projects — exhausted"},"commercial":false,"verified":"2026-05-13","summary":"At capacity with waitlist open.","tips":["Join waitlist on the Town of Okotoks CEIP page"]},{"city":"Red Deer","ceip":{"active":false,"status":"closed","rate":null,"max_term":null,"min_project":null,"notes":"Not participating in CEIP. No bylaw passed."},"rebate":{"active":false,"amount":null,"notes":"No municipal rebate"},"commercial":false,"verified":"2026-05-13","summary":"Not in CEIP. Standard FortisAlberta micro-generation path applies.","tips":["FortisAlberta interconnection directly","Explore private financing options"]},{"city":"Spruce Grove","ceip":{"active":true,"status":"open","rate":3.50,"max_term":20,"min_project":3000,"notes":"Open — reopened April 14, 2026. 7.5% rebate on financed project costs."},"rebate":{"active":true,"amount":null,"notes":"7.5% of financed project costs"},"commercial":false,"verified":"2026-05-13","summary":"Freshly reopened April 14. One of the most generous rebate structures in Alberta.","tips":["Reopened April 14 — apply now before this tranche fills"]},{"city":"St. Albert","ceip":{"active":false,"status":"paused","rate":null,"max_term":20,"min_project":3000,"notes":"PAUSED — at capacity. Waitlist open. $1,400 incentive when funding available."},"rebate":{"active":false,"amount":1400,"notes":"$1,400 incentive when open"},"commercial":false,"verified":"2026-05-13","summary":"At capacity with active waitlist. $1,400 incentive is one of Alberta's highest.","tips":["Join the waitlist at stalbert.ca CEIP page"]},{"city":"Strathcona County","ceip":{"active":false,"status":"paused","rate":null,"max_term":20,"min_project":3000,"notes":"PAUSED as of February 13, 2026. Waitlist open. 5% incentive on project costs."},"rebate":{"active":false,"amount":null,"notes":"5% of project costs; not currently accessible"},"commercial":false,"verified":"2026-05-13","summary":"At capacity since February 2026. Waitlist is open.","tips":["Join waitlist at strathcona.ca CEIP page"]},{"city":"Sturgeon County","ceip":{"active":false,"status":"paused","rate":3.00,"max_term":20,"min_project":3000,"notes":"PAUSED residential — at capacity. Commercial program is OPEN."},"rebate":{"active":true,"amount":null,"notes":"5% of approved project costs"},"commercial":true,"verified":"2026-05-13","summary":"Residential at capacity but commercial CEIP is open.","tips":["Commercial: apply now — commercial program is active","Residential: join waitlist at sturgeoncounty.ca"]},{"city":"Taber","ceip":{"active":true,"status":"open","rate":null,"max_term":20,"min_project":3000,"notes":"Open. $400 base rebate + $500 additional for Solar PV projects."},"rebate":{"active":true,"amount":900,"notes":"$400 base + $500 Solar PV bonus = up to $900 for solar"},"commercial":false,"verified":"2026-05-13","summary":"Open with strong solar-specific incentive.","tips":["Solar PV projects qualify for the full $900 combined incentive"]},{"city":"Westlock","ceip":{"active":true,"status":"open","rate":null,"max_term":20,"min_project":3000,"notes":"Open. New application system activated April 30, 2026. $500 incentive."},"rebate":{"active":true,"amount":500,"notes":"$500 rebate for completed projects"},"commercial":false,"verified":"2026-05-13","summary":"Open with updated application system as of May 2026.","tips":["New CEIP portal launched April 30"]},{"city":"Wetaskiwin","ceip":{"active":true,"status":"open","rate":3.20,"max_term":20,"min_project":5000,"notes":"Open. $650 rebate for completed projects. Minimum project $5,000."},"rebate":{"active":true,"amount":650,"notes":"$650 rebate applied to CEIP tax on completion"},"commercial":false,"verified":"2026-05-13","summary":"Open with confirmed rate and solid rebate.","tips":["Minimum project is $5,000 — higher than most AB municipalities"]}]</script>
+
+  <script>
+  (()=>{
+    const $=(s,e=document)=>e.querySelector(s);
+    const $$=(s,e=document)=>Array.from(e.querySelectorAll(s));
+    const raw=JSON.parse($("#absi-data").textContent);
+    const tbody=$("#absi-tbody"),cardsEl=$("#absi-cards"),countsEl=$("#absi-counts");
+    const chips=$$(".absi-chip"),search=$("#absi-search");
+    const state={open:false,ceip:false,commercial:false,rebate:false,q:""};
+    let sortKey="city",sortDir="asc";
+    function money(v){if(v==null)return"—";return v>=1000?"$"+(v/1000).toFixed(1)+"k":"$"+v;}
+    function si(d){const s=d.ceip.status;return s==="open"?{cls:"open",lbl:"Open"}:s==="paused"?{cls:"paused",lbl:"Paused/Waitlist"}:{cls:"closed",lbl:"Closed"};}
+    function rateStr(d){return d.ceip.rate?d.ceip.rate.toFixed(2)+"%":"TBC";}
+    function renderTable(rows){tbody.innerHTML=rows.map(r=>{const s=si(r);return`<tr><td><strong>${r.city}</strong></td><td><span class="absi-status ${s.cls}">${s.lbl}</span></td><td>${rateStr(r)}</td><td>${r.rebate.active?money(r.rebate.amount):"—"}</td><td style="color:${r.commercial?"var(--ok)":"var(--muted-c)"}">${r.commercial?"Yes":"No"}</td><td style="color:var(--muted-c);font-size:11px">${r.verified}</td></tr>`;}).join("");}
+    function renderCards(rows){cardsEl.innerHTML=rows.map(r=>{const s=si(r);return`<article class="absi-card"><div class="absi-card-header"><h3>${r.city}</h3><span class="absi-status ${s.cls}">${s.lbl}</span></div><p class="absi-small">${r.summary}</p><div class="absi-stat-row"><div class="absi-stat">Rate <span>${rateStr(r)}</span></div><div class="absi-stat">Term <span>${r.ceip.max_term?r.ceip.max_term+"y":"—"}</span></div><div class="absi-stat">Rebate <span>${r.rebate.active?money(r.rebate.amount):"None"}</span></div><div class="absi-stat">Comm. <span>${r.commercial?"Yes":"No"}</span></div></div><hr class="absi-hr"/><p class="absi-small" style="color:var(--warn)">${r.ceip.notes}</p><ul class="absi-list">${r.tips.map(t=>`<li>${t}</li>`).join("")}</ul></article>`;}).join("");}
+    function renderCounts(rows){const o=rows.filter(r=>r.ceip.status==="open").length,p=rows.filter(r=>r.ceip.status==="paused").length,c=rows.filter(r=>r.ceip.status==="closed").length;countsEl.innerHTML=`<div class="absi-count"><div class="num num-open">${o}</div><div class="lbl">Open</div></div><div class="absi-count"><div class="num num-paused">${p}</div><div class="lbl">Paused</div></div><div class="absi-count"><div class="num num-closed">${c}</div><div class="lbl">Closed</div></div>`;}
+    function matches(d){if(state.q&&!d.city.toLowerCase().includes(state.q))return false;if(state.open&&d.ceip.status!=="open")return false;if(state.ceip&&d.ceip.status==="closed")return false;if(state.commercial&&!d.commercial)return false;if(state.rebate&&!d.rebate.active)return false;return true;}
+    function getSortVal(d){switch(sortKey){case"rate":return d.ceip.rate??(sortDir==="asc"?999:-999);case"rebate":return d.rebate.active?(d.rebate.amount||0):-1;case"ceip":return d.ceip.status==="open"?2:d.ceip.status==="paused"?1:0;case"commercial":return d.commercial?1:0;case"verified":return Date.parse(d.verified||"1970-01-01");default:return d.city.toLowerCase();}}
+    function apply(){const rows=raw.filter(matches).sort((a,b)=>{const va=getSortVal(a),vb=getSortVal(b);return va<vb?(sortDir==="asc"?-1:1):va>vb?(sortDir==="asc"?1:-1):0;});renderTable(rows);renderCards(rows);}
+    chips.forEach(btn=>{btn.addEventListener("click",()=>{const k=btn.dataset.filter,on=btn.getAttribute("aria-pressed")!=="true";btn.setAttribute("aria-pressed",String(on));state[k]=on;apply();});});
+    search.addEventListener("input",()=>{state.q=search.value.toLowerCase();apply();});
+    $$("th button").forEach(b=>{b.addEventListener("click",()=>{const k=b.dataset.sort;if(sortKey===k){sortDir=sortDir==="asc"?"desc":"asc";}else{sortKey=k;sortDir="asc";}$$("th button").forEach(x=>x.setAttribute("aria-sort","none"));b.setAttribute("aria-sort",sortDir);apply();});});
+    renderCounts(raw);apply();
+  })();
+  </script>
+</section>
+
+    </div>
+  </section>
+
   <section class="faq">
     <div class="sec-inner">
       <div class="sec-label">Common Questions</div>

@@ -15,8 +15,11 @@
     :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
     *{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:var(--font-body);color:var(--text);line-height:1.65;}
-    main{padding-top:68px;}
-    .hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
+
+    .hero{position:relative;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.13;pointer-events:none;}
+    .hero-inner,.hero-content,.breadcrumb,.hero h1,.hero p,.hero .btn-primary,.btn-primary,.ceip-badge,.hero-cta{position:relative;z-index:1;}
+    .hero-original{background:linear-gradient(135deg,var(--dark) 0%,#1a2f4e 100%);color:#fff;padding:56px 24px 48px;text-align:center;}
     .hero h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;margin-bottom:12px;}
     .hero h1 span{color:var(--teal);}
     .hero p{font-size:1.05rem;color:rgba(255,255,255,.85);max-width:560px;margin:0 auto;}
@@ -41,12 +44,17 @@
     .social-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;}
     .social-link{display:flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:.9rem;font-weight:600;}
     .social-link:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
+  
+    .hero{position:relative;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.13;pointer-events:none;}
+    .hero-inner,.hero-content,.breadcrumb,.hero h1,.hero p,.hero .btn-primary,.btn-primary,.ceip-badge,.hero-cta{position:relative;z-index:1;}
   </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
   <div class="hero">
+  <div class="hero-bg" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png');" aria-hidden="true"></div>
     <h1>Get Your <span>Free Solar Estimate</span></h1>
     <p>Fill out the form below or call us directly. We'll build a transparent proposal based on your actual roof and usage, not industry averages.</p>
   </div>
