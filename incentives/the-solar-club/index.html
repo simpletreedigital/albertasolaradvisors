@@ -1,170 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Solar Club Rate — ENMAX Solar Program Calgary | Alberta Solar Advisors</title>
-  <meta name="description" content="The Solar Club is ENMAX's electricity rate for Calgary solar owners. Earn $0.30/kWh for summer exports. See how it stacks up against standard net billing.">
+  <title>The Solar Club™ — Alberta's Premium Solar Electricity Rate Plan | Alberta Solar Advisors</title>
+  <meta name="description" content="The Solar Club™ gives Calgary solar homeowners $0.30/kWh for summer exports and $0.0877/kWh in winter. Learn how to accelerate your ROI by 3-4 years.">
   <link rel="canonical" href="https://alberta-solar.org/incentives/the-solar-club/">
-  <link rel="icon" type="image/png" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
+  <link rel="icon" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
+  <meta property="og:title" content="The Solar Club™ — Alberta's Premium Solar Electricity Rate Plan">
+  <meta property="og:description" content="The Solar Club™ gives Calgary solar homeowners $0.30/kWh for summer exports. Learn how to maximize your solar ROI.">
+  <meta property="og:image" content="https://alberta-solar.org/wp-content/uploads/2025/06/solar-club-electricity-rates.png">
+  <meta property="og:url" content="https://alberta-solar.org/incentives/the-solar-club/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/includes/site.css">
   <script src="/includes/nav-footer-loader.js"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKGNP59');</script>
   <style>
-    :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:var(--font-body);color:var(--text);line-height:1.65;}
-    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:50px;font-family:var(--font-head);font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid var(--blue);transition:background .2s,color .2s;}
-    .btn-teal{background:var(--teal);color:var(--dark);border-color:var(--teal);}
-    section{padding:56px 24px;}
-    .container{max-width:900px;margin:0 auto;}
-    h2{font-family:var(--font-head);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:#1a2744;margin-bottom:16px;}
-    h3{font-family:var(--font-head);font-size:1.15rem;font-weight:700;color:#1a2744;margin-bottom:8px;}
-    p{margin-bottom:16px;}
-    .highlight-box{background:#eff6ff;border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;}
-    .rate-card{background:var(--dark);color:#fff;border-radius:16px;padding:40px;text-align:center;margin:32px 0;}
-    .rate-card h3{color:var(--teal);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
-    .rate-big{font-size:3.5rem;font-weight:900;color:#fff;line-height:1;}
-    .rate-sub{font-size:.95rem;color:rgba(255,255,255,.7);margin-top:8px;}
-    .rate-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0;}
-    @media(max-width:600px){.rate-grid{grid-template-columns:1fr;}}
-    .rate-season{background:#fff;border:2px solid var(--border);border-radius:12px;padding:28px;text-align:center;}
-    .rate-season.high{border-color:var(--teal);}
-    .season-label{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
-    .season-rate{font-size:2.5rem;font-weight:900;color:var(--blue);line-height:1;}
-    .season-detail{font-size:.9rem;color:var(--muted);margin-top:8px;}
-    .rate-table{width:100%;border-collapse:collapse;margin-top:20px;}
-    .rate-table th{background:var(--dark);color:#fff;padding:12px 16px;text-align:left;font-size:.9rem;}
-    .rate-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:.95rem;}
-    .rate-table tr:nth-child(even) td{background:var(--light-bg);}
-    .faq-list{display:flex;flex-direction:column;gap:0;}
-    .faq-item{border-bottom:1px solid var(--border);}
-    .faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-size:1rem;font-weight:700;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-    .faq-q:after{content:'+';font-size:1.4rem;color:var(--blue);transition:transform .2s;}
-    .faq-item.open .faq-q:after{transform:rotate(45deg);}
-    .faq-a{display:none;padding:0 0 18px;}
-    .faq-item.open .faq-a{display:block;}
-    .case-study{background:var(--dark);color:#fff;padding:48px 40px;border-radius:16px;margin:40px 0;}
-    .cs-label{font-size:.75rem;font-weight:800;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:12px;}
-    .case-study h3{font-size:1.3rem;margin-bottom:24px;color:#fff;}
-    .cs-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-    @media(max-width:640px){.cs-cols{grid-template-columns:1fr;}}
-    .cs-col strong{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
-    .cs-col p{color:rgba(255,255,255,.85);font-size:.95rem;margin:0;}
-    .cs-disclaimer{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:20px;font-style:italic;}
-    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
-    .cta-strip h2{color:#fff;margin-bottom:12px;}
-    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
-    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
-    .sv-overlay.open{display:flex;}
-    .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
-    .sv-head{background:#01214a;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
-    .sv-head span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;}
-    .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
-    .sv-body{flex:1;overflow-y:auto;}
-    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
-    .img-block{margin:24px 0;}
-    .img-block img{max-width:100%;border-radius:8px;}
-    .img-caption{font-size:.85rem;color:var(--muted);margin-top:8px;}
-  
-    /* ── Shared inner-page hero ── */
-    .page-hero {
-      background: #EEF2FF;
-      min-height: 500px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      overflow: hidden;
-    }
-    .page-hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 56px 48px 56px max(40px, calc((100vw - 1200px) / 2 + 40px));
-    }
-    .page-hero-trust {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-    .page-hero-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: .85rem;
-      font-weight: 500;
-      color: #313E5C;
-    }
-    .page-hero-trust-check {
-      width: 18px; height: 18px;
-      background: #3455A5;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .page-hero-trust-check svg { width: 10px; height: 10px; }
-    .breadcrumb {
-      font-size: .8rem;
-      color: #6b7280;
-      margin-bottom: 14px;
-    }
-    .breadcrumb a { color: #3455A5; text-decoration: none; }
-    .breadcrumb a:hover { text-decoration: underline; }
-    .page-hero h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
-      font-weight: 800;
-      line-height: 1.15;
-      color: #1a2744;
-      margin-bottom: 16px;
-    }
-    .page-hero h1 span { color: #3455A5; }
-    .page-hero .hero-sub {
-      font-size: .97rem;
-      color: #4b5563;
-      line-height: 1.7;
-      margin-bottom: 28px;
-      max-width: 480px;
-    }
-    .page-hero-img {
-      position: relative;
-      overflow: hidden;
-      min-height: 420px;
-    }
-    .page-hero-img img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      display: block;
-    }
-    /* Remove circle wrapper - full bleed image */
-    .page-hero-img-circle {
-      position: absolute;
-      inset: 0;
-      border-radius: 0;
-      overflow: hidden;
-      background: none;
-    }
-    .page-hero-img-circle img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 30%;
-    }
-    @media (max-width: 860px) {
-      .page-hero { grid-template-columns: 1fr; min-height: auto; }
-      .page-hero-content { padding: 48px 24px 32px; }
-      .page-hero-img { min-height: 240px; position: relative; }
-    }
+  :root{--blue:#3455A5;--dark:#01214A;--text:#313E5C;--muted:#6b7280;--white:#fff;--hero-bg:#EEF2FF;--alt-bg:#F3F8FF;--cta-bg:#F3F5FA;--border:#E5E6EA;--font:'Montserrat',sans-serif;--font-btn:'Inter',sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font);color:var(--text);line-height:1.65;}
+  img{max-width:100%;height:auto;display:block;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  ul{list-style:none;}
+  p{margin-bottom:1em;}
+  p:last-child{margin-bottom:0;}
+  .inner{max-width:1200px;margin:0 auto;padding:0 40px;}
+  @media(max-width:900px){.inner{padding:0 24px;}}
+  .btn{display:inline-block;font-family:var(--font-btn);font-size:15px;font-weight:600;background:var(--blue);color:#fff;border:1px solid var(--blue);border-radius:50px;padding:14px 32px;cursor:pointer;transition:background .2s,color .2s;line-height:1.2;}
+  .btn:hover{background:#fff;color:var(--blue);}
+  .sec-title{font-family:var(--font);font-size:32px;font-weight:700;color:var(--dark);margin-bottom:12px;line-height:1.2;}
+  .sec-title span{color:var(--blue);}
+  .sec-sub{font-family:var(--font);font-size:16px;font-weight:400;color:var(--text);line-height:1.65;}
+  /* HERO */
+  .page-hero{background:var(--hero-bg);display:grid;grid-template-columns:1fr 1fr;min-height:480px;overflow:hidden;position:relative;}
+  .page-hero-left{padding:80px 60px 80px max(40px,calc((100vw - 1200px)/2 + 40px));display:flex;flex-direction:column;justify-content:flex-start;position:relative;z-index:1;}
+  .page-hero-right{position:relative;overflow:hidden;}
+  .page-hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+  .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.08;pointer-events:none;}
+  .breadcrumb{font-size:13px;color:rgba(1,33,74,.55);margin-bottom:16px;}
+  .breadcrumb a{color:var(--blue);}
+  .hero-trust{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .hero-trust-item{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--text);}
+  .hero-check{width:20px;height:20px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .hero-check svg{width:10px;height:8px;}
+  .page-hero h1{font-family:var(--font);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--dark);line-height:1.1;margin-bottom:18px;}
+  .page-hero h1 span{color:var(--blue);}
+  .page-hero .hero-sub{font-size:18px;font-weight:400;color:var(--text);margin-bottom:28px;line-height:1.7;max-width:520px;}
+  @media(max-width:860px){.page-hero{grid-template-columns:1fr;min-height:auto;}.page-hero-left{padding:48px 24px 40px;}.page-hero-right{min-height:260px;position:relative;}}
+  /* SECTIONS */
+  .sec{padding:60px 0;}
+  .sec--white{background:#fff;}
+  .sec--alt{background:var(--alt-bg);}
+  .sec--dark{background:var(--dark);color:#fff;}
+  .sec--cta{background:var(--cta-bg);position:relative;overflow:hidden;padding:70px 0;text-align:center;}
+  .sec--cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.07;pointer-events:none;}
+  /* RATE CARDS */
+  .rate-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0;}
+  .rate-card{border-radius:16px;padding:32px;text-align:center;}
+  .rate-card.high{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2px solid #10b981;}
+  .rate-card.low{background:linear-gradient(135deg,var(--hero-bg),#dbeafe);border:2px solid var(--blue);}
+  .rate-card .rate{font-family:var(--font);font-size:3rem;font-weight:800;line-height:1;margin-bottom:8px;}
+  .rate-card.high .rate{color:#10b981;}
+  .rate-card.low .rate{color:var(--blue);}
+  .rate-card h3{font-family:var(--font);font-size:18px;font-weight:700;color:var(--dark);margin-bottom:8px;}
+  .rate-card p{font-size:14px;color:var(--muted);line-height:1.6;margin:0;}
+  @media(max-width:640px){.rate-cards{grid-template-columns:1fr;}}
+  /* CONTENT */
+  .content-body h2{font-family:var(--font);font-size:26px;font-weight:700;color:var(--dark);margin:32px 0 14px;line-height:1.25;}
+  .content-body h3{font-family:var(--font);font-size:20px;font-weight:600;color:var(--dark);margin:20px 0 10px;}
+  .content-body p{font-size:16px;color:var(--text);line-height:1.75;}
+  .check-list{display:flex;flex-direction:column;gap:8px;margin:12px 0;}
+  .check-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--text);line-height:1.55;}
+  .check-list li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;}
+  .cross-list li::before{content:'✗';color:#ef4444;}
+  .highlight-box{background:var(--hero-bg);border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:20px 0;}
+  .highlight-box p{margin:0;font-size:.95rem;line-height:1.7;}
+  /* COMPARE */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px;}
+  .compare-col{display:flex;flex-direction:column;gap:14px;}
+  .compare-col img{width:100%;border-radius:8px;border:1px solid var(--border);}
+  .compare-col h3{font-family:var(--font);font-size:22px;font-weight:600;color:var(--text);}
+  .compare-col h3 span{color:var(--blue);}
+  .compare-col ul{display:flex;flex-direction:column;gap:8px;}
+  .compare-col li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text);line-height:1.5;}
+  .bad li::before{content:'✗';color:#ef4444;font-weight:700;flex-shrink:0;}
+  .good li::before{content:'✓';color:#10b981;font-weight:700;flex-shrink:0;}
+  @media(max-width:680px){.compare-grid{grid-template-columns:1fr;}}
+  /* STEPS */
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:30px;}
+  .step-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:40px;margin:10px;display:flex;flex-direction:column;gap:14px;}
+  .step-card img{width:64px;height:64px;object-fit:contain;}
+  .step-card h3{font-size:22px;font-weight:600;color:var(--text);line-height:1.3;}
+  .step-card p{font-size:16px;color:var(--muted);margin:0;line-height:1.65;}
+  @media(max-width:768px){.steps-grid{grid-template-columns:1fr;}}
+  /* ICONS */
+  .icons-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;}
+  .icon-item{margin:10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;}
+  .icon-item img{width:72px;height:72px;object-fit:contain;}
+  .icon-item h3{font-size:20px;font-weight:600;color:var(--text);line-height:1.3;}
+  @media(max-width:680px){.icons-grid{grid-template-columns:repeat(2,1fr);}}
+  /* TRUST */
+  .trust-bar-section{background:#fff;padding:32px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .trust-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;}
+  .trust-item-box{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;}
+  .trust-item-box img{width:52px;height:52px;object-fit:contain;}
+  .trust-item-box span{font-size:11px;font-weight:600;color:var(--text);line-height:1.3;}
+  @media(max-width:768px){.trust-grid{grid-template-columns:repeat(3,1fr);}}
+  /* FAQ */
+  .faq-list{display:flex;flex-direction:column;gap:0;margin-top:28px;}
+  .faq-item{border-bottom:1px solid var(--border);}
+  .faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 0;font-size:1rem;font-weight:700;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--font);}
+  .faq-q::after{content:'+';font-size:1.4rem;color:var(--blue);transition:transform .2s;}
+  .faq-item.open .faq-q::after{transform:rotate(45deg);}
+  .faq-a{display:none;padding:0 0 18px;font-size:.95rem;color:var(--muted);line-height:1.7;}
+  .faq-item.open .faq-a{display:block;}
+  /* POPUP */
+  .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
+  .sv-overlay.open{display:flex;}
+  .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
+  .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+  .sv-head span{font-family:var(--font);font-weight:700;font-size:.9rem;}
+  .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
+  .sv-body{flex:1;overflow-y:auto;}
+  .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
   </style>
 </head>
 <body>
 <div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
   <div class="sv-box">
-    <div class="sv-head"><span>Get a Solar Proposal &amp; Apply for Incentives</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-head"><span>Get a Solar Quote &amp; Sign Up for The Solar Club</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
     <div class="sv-body">
       <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
       <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
@@ -173,162 +139,242 @@
 </div>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
-    <div class="page-hero">
-    <div class="page-hero-content">
-      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/incentives/">Incentives</a> &rsaquo; The Solar Club</div>
-      <div class="page-hero-trust">
-        <div class="page-hero-trust-item">
-          <div class="page-hero-trust-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
-          $0.30/kWh May–Oct export rate
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2025/06/solar-club-electricity-rates.png')"></div>
+  <div class="page-hero-left">
+    <div class="breadcrumb"><a href="/">Home</a> › <a href="/incentives/">Incentives</a> › The Solar Club™</div>
+    <div class="hero-trust">
+      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>$0.30/kWh export rate May through October</div>
+      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>Switch rates seasonally — no penalties, 10 days notice</div>
+    </div>
+    <h1>The Solar Club™<br><span>Alberta's Premium Solar Rate Plan</span></h1>
+    <p class="hero-sub">The Solar Club™ gives Alberta solar producers the power to switch between two electricity rates based on the season — maximizing credits when you export and minimizing costs when you import.</p>
+    <button class="btn" onclick="openSurvey()">Get a Solar Quote &amp; Sign Up for The Solar Club</button>
+  </div>
+  <div class="page-hero-right">
+    <img src="https://alberta-solar.org/wp-content/uploads/2024/06/iPhone-14-15-Pro-Max-2.webp" alt="Solar Club Alberta app mobile solar homeowner rate plan" loading="eager" fetchpriority="high">
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<section class="trust-bar-section">
+  <div class="inner">
+    <div class="trust-grid">
+      <div class="trust-item-box"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-1.png" alt="Licensed solar installers Alberta Calgary ENMAX Solar Club" loading="lazy"><span>Licensed Installers</span></div>
+      <div class="trust-item-box"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-2.png" alt="Transparent solar proposals Alberta" loading="lazy"><span>Transparent Proposals</span></div>
+      <div class="trust-item-box"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-3.png" alt="Solar Club ENMAX Alberta approved" loading="lazy"><span>Solar Club Experts</span></div>
+      <div class="trust-item-box"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-4.png" alt="1355 Alberta homes solar served" loading="lazy"><span>1,355+ Homes Served</span></div>
+      <div class="trust-item-box"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-5.png" alt="Net billing experts Alberta Solar Club" loading="lazy"><span>Net Billing Experts</span></div>
+      <div class="trust-item-box"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-6.png" alt="Free solar estimate Alberta no obligation" loading="lazy"><span>Free Estimate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RATE CARDS + WHAT IS IT -->
+<section class="sec sec--white">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start">
+      <div class="content-body">
+        <h2>What is The Solar Club™?</h2>
+        <p>The Solar Club™ is a special electricity rate plan for Alberta solar homeowners that allows you to <strong>switch between two electricity rates</strong> based on the season. Both the import and export sides of your bill use the same selected rate during a billing cycle.</p>
+        <p>Available through select Alberta electricity retailers, it's designed to maximize the value of your solar exports during peak production months and minimize your import costs during low-production winter months.</p>
+        <div class="rate-cards">
+          <div class="rate-card high">
+            <div class="rate">$0.30</div>
+            <p style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:4px">per kWh</p>
+            <h3>High Rate</h3>
+            <p>Summer months (approx. March–October) when you're exporting more than you use. Build credits fast during peak solar production.</p>
+          </div>
+          <div class="rate-card low">
+            <div class="rate">$0.0877</div>
+            <p style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:4px">per kWh</p>
+            <h3>Low Rate</h3>
+            <p>Winter months (approx. October–March) when you're importing from the grid. Minimize electricity costs during low-production months.</p>
+          </div>
         </div>
-        <div class="page-hero-trust-item">
-          <div class="page-hero-trust-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
-          ENMAX Calgary customers only
+        <div class="highlight-box">
+          <p>You can toggle between rates by submitting a quick request through your Solar Club™ retailer's website. Most homeowners switch to the high rate around <strong>March or April</strong> and drop back to the low rate in <strong>October or November</strong>, aligning with solar production cycles.</p>
         </div>
       </div>
-      <h1>ENMAX Solar Club:<br><span>Calgary's Premium Export Rate</span></h1>
-      <p class="hero-sub">Solar Club members earn $0.30/kWh for exports from May through October. That's nearly double the standard net billing rate during peak production months.</p>
       <div>
-        <button class="btn-primary" onclick="openSurvey()">See Solar Club Savings for My Home</button>
-      </div>
-    </div>
-    <div class="page-hero-img">
-      <div class="page-hero-img-circle">
-        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png" alt="Calgary ENMAX Solar Club high export rate solar panels residential T2P T3A neighbourhood" loading="eager">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/06/solar-club-rates.jpg" alt="Solar Club Alberta seasonal electricity rate plan summer winter switching" loading="lazy" style="width:100%;border-radius:12px;margin-bottom:20px;">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/06/solar-club-electricity-rates.png" alt="Solar Club electricity rates based on season Alberta ENMAX" loading="lazy" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+        <p style="font-size:12px;color:var(--muted);margin-top:8px;font-style:italic">Solar Club™ seasonal rate structure — higher export rates in summer, lower import rates in winter.</p>
       </div>
     </div>
   </div>
+</section>
 
-
-
-  <section style="background:var(--light-bg);">
-    <div class="container">
-      <h2>What Is the Solar Club?</h2>
-      <p>The Solar Club is a time-of-use electricity rate offered by <a href="https://www.enmax.com/home/plans/solar" target="_blank" rel="noopener">ENMAX</a> specifically for customers with solar panels. Instead of being billed under the standard residential rate, Solar Club customers pay and receive credits under a seasonal high/low structure designed to maximize the value of summer solar production.</p>
-      <p>Calgary receives some of the highest solar irradiance in Canada, thanks to its elevation and geographic position. The Solar Club rate structure aligns with that production profile: the highest export credit rate applies during the summer months when your panels are generating the most.</p>
-
-      <div class="rate-grid">
-        <div class="rate-season high">
-          <div class="season-label">High Season (May to Oct)</div>
-          <div class="season-rate">$0.30</div>
-          <div class="season-detail">per kWh for exports to grid</div>
-        </div>
-        <div class="rate-season">
-          <div class="season-label">Low Season (Nov to Apr)</div>
-          <div class="season-rate">$0.0877</div>
-          <div class="season-detail">per kWh for exports to grid</div>
-        </div>
+<!-- ELIGIBILITY + WHEN TO SWITCH -->
+<section class="sec sec--alt">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+      <div class="content-body">
+        <h2>Who Should Join the Solar Club™?</h2>
+        <p>The Solar Club™ works best for homes that generate <strong>70% or more</strong> of their annual electricity needs from solar. These homes typically export surplus electricity in summer, allowing them to build valuable credits at the high $0.30/kWh rate.</p>
+        <p>If your system offsets less than 70% of your usage, you may not export enough to benefit from the high rate — a standard fixed rate might make more sense.</p>
+        <h3>Eligibility Requirements</h3>
+        <ul class="check-list">
+          <li>Be a micro-generator under 150 kW</li>
+          <li>Use a bi-directional cumulative meter (not an interval meter)</li>
+          <li>Not in Medicine Hat, Peigan REA, Ermineskin REA, Wild Rose REA, Lakeland REA, North Parkland Power REA, or Blue Mountain Power Co-op</li>
+          <li>A charitable donation to your local food bank is encouraged</li>
+        </ul>
+        <div class="highlight-box"><p><strong>Not sure if you qualify?</strong> We can review your utility situation and solar quote to confirm Solar Club™ eligibility before you install. Fill out our form and we'll check for you.</p></div>
       </div>
-
-      <div class="highlight-box">
-        <strong>Important:</strong> These rates apply to your <em>exports</em>. The rate you pay for electricity you consume from the grid is also adjusted under the Solar Club structure, separate from standard ENMAX rates. Review your ENMAX Solar Club agreement for current consumption rate details before enrolling.
+      <div class="content-body">
+        <h2>When Should I Switch Rates?</h2>
+        <p>The general rule is simple:</p>
+        <ul class="check-list" style="margin-bottom:16px">
+          <li>If your home is <strong>exporting more electricity than it's using</strong> → switch to the high rate ($0.30/kWh)</li>
+          <li>If you're <strong>consuming more than you're producing</strong> → switch to the low rate ($0.0877/kWh)</li>
+        </ul>
+        <p>Most Alberta homes with well-sized solar setups hit net-export status by <strong>spring</strong> and revert by <strong>fall</strong>. The program allows rate switching with just <strong>10 days' notice, no penalties</strong>. Your retailer may even send email reminders in spring and fall.</p>
+        <h3>Pre-Solar Rate</h3>
+        <p>You can pre-enroll in the Solar Club™ as soon as you've signed a solar installation contract — <strong>even before your panels are turned on</strong>. During the waiting period (up to 180 days), you'll be placed on a pre-solar rate of <strong>$0.065/kWh</strong>.</p>
+        <h3>Are Rates the Same Across Retailers?</h3>
+        <p>Yes — all participating Solar Club™ retailers offer the same high and low energy rates. However, <strong>monthly admin fees vary</strong>, so it's worth comparing retailers. Some offer signup incentives — contact us for the latest referral codes.</p>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Solar Club vs. Standard Net Billing</h2>
-      <p>For Calgary homeowners deciding between Solar Club and standard net billing, the right choice depends on your system size and consumption profile. Here's how the two programs compare.</p>
-      <table class="rate-table">
-        <thead>
-          <tr><th>Feature</th><th>Solar Club (ENMAX)</th><th>Standard Net Billing</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Available to</td><td>ENMAX customers in Calgary</td><td>All Alberta solar owners</td></tr>
-          <tr><td>Summer export rate</td><td>$0.30/kWh (May to Oct)</td><td>~18 cents/kWh (retail, varies)</td></tr>
-          <tr><td>Winter export rate</td><td>$0.0877/kWh (Nov to Apr)</td><td>~18 cents/kWh (retail, varies)</td></tr>
-          <tr><td>Credit rollover</td><td>No rollover pool</td><td>12-month rollover</td></tr>
-          <tr><td>Best for</td><td>High summer exporters, large systems</td><td>Year-round balance, smaller systems</td></tr>
-          <tr><td>Enrollment</td><td>Must opt-in with ENMAX</td><td>Automatic on interconnection</td></tr>
-        </tbody>
-      </table>
-      <p style="margin-top:20px;">If your system exports a large surplus in May through October, the Solar Club's $0.30/kWh rate can significantly outperform standard net billing during those months. However, because there is no 12-month credit rollover, any credits not used in the current billing period don't carry forward. The two programs require careful modeling against your actual usage profile to determine which yields better annual economics.</p>
-    </div>
-  </section>
-
-  <div class="case-study">
-    <div class="container">
-      <div class="cs-label">Client Case Study</div>
-      <h3>Solar Club vs. Net Billing: An Elbow Park Calgary Homeowner Runs the Numbers</h3>
-      <div class="cs-cols">
-        <div class="cs-col"><strong>The Situation</strong><p>A Calgary homeowner in Elbow Park with a 10 kW south-facing system was generating a large summer surplus. Under standard ENMAX net billing, summer credits were rolling over but not being fully consumed before the annual true-up, resulting in some forfeiture.</p></div>
-        <div class="cs-col"><strong>Our Approach</strong><p>We modeled the homeowner's monthly production and consumption data against both rate structures. The Solar Club's $0.30/kWh summer rate applied to their June and July export surplus alone represented an additional $340 compared to standard net billing credits, even accounting for the lack of credit rollover.</p></div>
-        <div class="cs-col"><strong>The Outcome</strong><p>After enrolling in Solar Club, the homeowner's annual net electricity benefit improved by approximately $290. The high summer export rate more than compensated for the loss of the 12-month credit rollover that standard net billing provides.</p></div>
-      </div>
-      <p class="cs-disclaimer">Client name changed. Results vary based on individual circumstances. Prior results do not guarantee similar outcomes.</p>
     </div>
   </div>
+</section>
 
-  <section>
-    <div class="container">
-      <h2>How to Enroll in the Solar Club</h2>
-      <p>The Solar Club is an optional rate program. You don't automatically get enrolled when you go solar in Calgary. Here's the process:</p>
-      <ol style="margin:16px 0 16px 20px;display:flex;flex-direction:column;gap:12px;">
-        <li>Complete your solar installation and receive interconnection approval from ENMAX.</li>
-        <li>Contact ENMAX directly to request enrollment in the Solar Club rate.</li>
-        <li>ENMAX will review your installation and confirm eligibility (must be an ENMAX electricity customer with an approved grid-connected solar system).</li>
-        <li>Your billing will switch to the Solar Club rate structure on your next billing cycle.</li>
-      </ol>
-      <p>We recommend requesting the Solar Club rate schedule from ENMAX before deciding to enroll. Review the consumption rates alongside the export rates to model your full-year economics. Our team can help you run the comparison.</p>
-    </div>
-  </section>
+<!-- HOW IT HELPS -->
+<section class="sec sec--white">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:start">
+      <div class="content-body">
+        <h2>Why Choose the Solar Club™?</h2>
+        <p>Here's a simple example to show the power of the Solar Club™:</p>
+        <ul class="check-list" style="margin-bottom:20px">
+          <li>Your home uses 8,000 kWh per year</li>
+          <li>Your solar system produces 8,000 kWh per year</li>
+          <li>In summer, you export 2,000 kWh → credit built at $0.30/kWh = <strong>$600 credit</strong></li>
+          <li>In winter, you import 2,000 kWh at $0.0877/kWh = <strong>$175.40 cost</strong></li>
+          <li>Net result: $600 credit more than covers $175 winter import + fixed fees</li>
+        </ul>
+        <p>The difference in rates, combined with rollover credit, <strong>boosts your solar ROI by 3–4 years</strong> and flattens seasonal billing swings.</p>
 
-  <section style="background:var(--light-bg);">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q">Is the Solar Club available outside Calgary?</button>
-          <div class="faq-a"><p>No. The Solar Club is exclusive to ENMAX customers, and ENMAX is the utility serving Calgary. Homeowners in Edmonton (EPCOR service area), or rural areas served by FortisAlberta, are not eligible. Those homeowners use standard net billing under the provincial Micro-Generation Regulation.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Can I switch back to standard net billing if Solar Club doesn't work for me?</button>
-          <div class="faq-a"><p>You should confirm this directly with ENMAX at the time you enroll. Rate program switching policies can change, so understanding the opt-out terms before enrolling is important if you have any uncertainty about whether Solar Club is the right fit.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Does the Solar Club work with battery storage?</button>
-          <div class="faq-a"><p>The Solar Club rate applies to electricity flowing in and out of your meter, which includes battery discharge to the grid. However, if you have battery storage, you may prefer to use your battery for self-consumption rather than grid export, particularly during winter months when the Solar Club's low-season rate is $0.0877/kWh. Model your battery dispatch strategy against both rate options before committing.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Is the Solar Club rate guaranteed to stay at $0.30/kWh?</button>
-          <div class="faq-a"><p>Rates are set by ENMAX and can change. The $0.30/kWh high-season rate has been stable for several years, but it is not regulated by the province in the same way as standard net billing credits. Review the current rate schedule directly with ENMAX and ask whether any rate adjustments are planned when you enroll.</p></div>
-        </div>
+        <h2>Can I Get $0 Power Bills?</h2>
+        <p>You absolutely can — if your solar system covers 100% or more of your annual energy needs. Here's how:</p>
+        <ul class="check-list" style="margin-bottom:16px">
+          <li>In summer, export excess energy at the high rate and build credit</li>
+          <li>That credit can be applied toward everything on your electricity bill, including fixed fees</li>
+          <li>Extra credits roll over month-to-month</li>
+        </ul>
+        <p>Many Alberta homes report $0 bills from May through September — and some see it stretch into the fall.</p>
+
+        <h2>What About All Those "Other Fees"?</h2>
+        <p>In Alberta, fees like transmission, distribution, and local access charges are <em>mostly variable</em> — tied to how much electricity you use. When your solar production offsets your usage, you reduce these fees too. And when you export electricity at the Solar Club™ high rate, you build credits that can be applied to cover these charges.</p>
+        <div class="highlight-box"><p><strong>Yes — solar helps reduce "other fees" too.</strong> The Solar Club™ high-rate credits can effectively wipe out your entire electricity bill, including the line items most people think are unavoidable.</p></div>
+
+        <h2>Who Funds the High Rate?</h2>
+        <p>The Solar Club™ high rate is made possible through the <a href="https://www.aeso.ca/" target="_blank" rel="noopener">Alberta Electric System Operator (AESO)</a>, which helps balance grid supply. The rate is determined by each Solar Club™ retailer under Alberta's Microgeneration Regulation. One key rule: the buy and sell rate must match during a billing cycle.</p>
+
+        <h2>Will the Solar Club™ Always Be Available?</h2>
+        <p>The Microgeneration Regulation could change in the future, and there's no guarantee the Solar Club™ will remain unchanged. That said, there are no known plans to alter or phase out the program. Installing sooner ensures your interconnection is established under current terms.</p>
+      </div>
+      <div>
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/09/enmax-monthly-electricity-rates.png" alt="ENMAX monthly electricity rates chart Solar Club Alberta" loading="lazy" style="width:100%;border-radius:12px;border:1px solid var(--border);margin-bottom:20px;">
+        <p style="font-size:12px;color:var(--muted);font-style:italic;margin-bottom:24px">ENMAX electricity rates — the Solar Club™ high-rate ($0.30/kWh) is significantly above standard market rates.</p>
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/06/solar-club-electricity-rates.png" alt="Solar Club seasonal rate calendar Alberta spring fall switching" loading="lazy" style="width:100%;border-radius:12px;">
       </div>
     </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>More Alberta Solar Incentives</h2>
-      <p>The Solar Club is one piece of a broader incentive picture available to Calgary homeowners. See the full overview on our <a href="/incentives/">Alberta solar incentives page</a>, and explore how <a href="/financing/ceip/">CEIP financing</a> can remove the upfront cost of installation entirely.</p>
-    </div>
-  </section>
-
-  <div class="cta-strip">
-    <h2>See If Solar Club Is Right for Your Calgary Home</h2>
-    <p>We'll model your system against both Solar Club and standard net billing rates so you can see exactly which program puts more money back in your pocket.</p>
-    <button class="btn-primary btn-teal" onclick="openSurvey()">Get My Free Solar Estimate</button>
   </div>
+</section>
+
+<!-- COMPARE -->
+<section class="sec sec--alt">
+  <div class="inner">
+    <h2 class="sec-title">Offset Your Energy Costs <span>the Solar Club™</span></h2>
+    <p class="sec-sub">No matter what, you're likely to spend around $30,000 on electricity over the next 10 years. The difference? With the Solar Club™, that money goes toward owning your own energy system and can accelerate ROI by 3–4 years.</p>
+    <div class="compare-grid">
+      <div class="compare-col bad">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25065-1.webp" alt="Home without solar high electricity bills Alberta ENMAX" loading="lazy">
+        <h3>Your home <span> without solar energy</span></h3>
+        <ul><li><strong>$250</strong> average monthly electricity bill</li><li><strong>10-Year Cost:</strong> $30,000 (and rising)</li><li><strong>Continued dependence</strong> on utility companies</li><li><strong>No long-term savings</strong> or added home value</li></ul>
+      </div>
+      <div class="compare-col good">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066.webp" alt="Home with Solar Club net billing low electricity bill Alberta Calgary" loading="lazy">
+        <h3>Your home with <span>solar net billing</span></h3>
+        <ul><li><strong>No Upfront Cost</strong> CEIP solar loan option</li><li><strong>$0.30/kWh</strong> export credits May–October</li><li><strong>Ownership</strong> of your power generation system</li><li><strong>20+ years</strong> of low cost electricity after payback</li><li><strong>Protection</strong> against future rate hikes</li><li><strong>Energy independence</strong> and savings</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 STEPS -->
+<section class="sec sec--white" style="padding:30px 0 40px">
+  <div class="inner">
+    <div style="padding:20px 0"><h2 class="sec-title">Maximize your energy savings <span>in three simple steps</span></h2></div>
+    <div class="steps-grid">
+      <div class="step-card"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25065-1.svg" alt="" loading="lazy"><h3>Request your free solar savings estimate</h3><p>An energy consultant will help design the perfect system for your home's unique energy needs and confirm Solar Club™ eligibility.</p></div>
+      <div class="step-card"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066-2.svg" alt="" loading="lazy"><h3>Create your personalized solar investment plan</h3><p>We model your Solar Club™ savings alongside CEIP financing to show you the actual month-by-month cash flow for your home.</p></div>
+      <div class="step-card"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066-3.svg" alt="" loading="lazy"><h3>Let our expert solar team handle the rest</h3><p>From Solar Club™ enrollment to installation and rate switch timing — our experts guide you every step of the way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec--alt">
+  <div class="inner">
+    <h2 class="sec-title">Solar Club™ <span>Frequently Asked Questions</span></h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">Is the Solar Club™ the same as net billing?</button><div class="faq-a">No — net billing is the provincial regulation that allows micro-generators to earn retail-rate credits for exports. The Solar Club™ is a specific retail rate plan offered by select Alberta retailers that <em>enhances</em> those credits by providing a higher seasonal rate of $0.30/kWh during summer export months.</div></div>
+      <div class="faq-item"><button class="faq-q">Can I join the Solar Club™ before my panels are installed?</button><div class="faq-a">Yes. You can pre-enroll as soon as you've signed a solar installation contract. During the waiting period (up to 180 days), you'll be on a pre-solar rate of $0.065/kWh. Once your system activates, you automatically transition to the Solar Club™ low rate unless you specify otherwise.</div></div>
+      <div class="faq-item"><button class="faq-q">What retailers offer the Solar Club™?</button><div class="faq-a">Multiple Alberta retail electricity providers participate in the Solar Club™ program. All offer the same $0.30/kWh high rate and $0.0877/kWh low rate, but monthly admin fees and signup incentives vary. Contact us for current retailer comparisons and any available referral codes.</div></div>
+      <div class="faq-item"><button class="faq-q">How do I switch between the high and low rate?</button><div class="faq-a">You submit a rate switch request through your retailer's website or customer portal. A 10-day notice period applies. Most retailers also offer email reminders in spring and fall to help you time the switch correctly based on your system's production patterns.</div></div>
+      <div class="faq-item"><button class="faq-q">What if I switch to the high rate and then have a cloudy month?</button><div class="faq-a">The rate applies to both your imports and exports in that billing cycle. If you switch to the $0.30/kWh rate and end up consuming more than you produce, you'll pay $0.30/kWh for any grid electricity consumed. This is why timing your rate switches carefully — aligned with your actual export/import status — is important.</div></div>
+      <div class="faq-item"><button class="faq-q">Is the Solar Club™ available outside Calgary?</button><div class="faq-a">Yes. The Solar Club™ is available to ENMAX customers in the Calgary distribution area, but other participating retailers may serve additional Alberta regions. Eligibility excludes customers in rural co-ops: Medicine Hat, Peigan REA, Ermineskin REA, Wild Rose REA, Lakeland REA, North Parkland Power REA, and Blue Mountain Power Co-op.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEE INCENTIVES -->
+<section class="sec sec--alt">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center">
+      <div>
+        <h2 class="sec-title">See what incentives <span>your home qualifies for</span></h2>
+        <p class="sec-sub" style="margin-bottom:24px">Between the Solar Club™, CEIP financing, and net billing, Alberta homeowners have access to one of the strongest solar incentive stacks in Canada. Fill out our form to see exactly which programs apply to your home and utility.</p>
+        <button class="btn" onclick="openSurvey()">Get your free estimate</button>
+      </div>
+      <div><img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-01.png" alt="Edmonton Calgary Alberta solar installers residential rooftop installation" loading="lazy" style="width:100%;border-radius:12px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ICON ROW -->
+<section class="sec sec--white" style="padding:30px 0 40px">
+  <div class="inner">
+    <div class="icons-grid">
+      <div class="icon-item"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-18-1.svg" alt="" loading="lazy"><h3>Apply for Remaining Incentives</h3></div>
+      <div class="icon-item"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-3.svg" alt="" loading="lazy"><h3>Professional Installation from Licensed Installers</h3></div>
+      <div class="icon-item"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-4.svg" alt="" loading="lazy"><h3>Competitive Financing Options</h3></div>
+      <div class="icon-item"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-5.svg" alt="" loading="lazy"><h3>Own your Home Energy Source</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec--cta">
+  <div class="sec--cta-bg" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png')"></div>
+  <div class="inner" style="position:relative;z-index:1">
+    <h2 class="sec-title" style="text-align:center">Claim your <span>solar savings</span> before it's too late</h2>
+    <p class="sec-sub" style="text-align:center;margin:12px auto 28px;max-width:680px">Across Alberta we've helped over 1,355+ homes go solar. The Solar Club™ high rate won't last forever — install now to lock in today's terms.</p>
+    <div style="text-align:center"><button class="btn" onclick="openSurvey()">Get a Solar Quote &amp; Calculate Your Savings</button></div>
+  </div>
+</section>
 </main>
-
 <script>
+(function(){document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});})();
 function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
 function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
-(function(){
-  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
-  function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}
-  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
-  var iframe=document.getElementById('sv-iframe');
-  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
-  window.addEventListener('message',function(e){
-    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
-    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
-    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
-  });
-})();
-document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSurvey();});
+(function(){function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}var fr=document.getElementById('sv-iframe');if(fr){fr.addEventListener('load',function(){fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');});}window.addEventListener('message',function(e){if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(x){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',email:e.data.email,phone:e.data.phone,first_name:e.data.first_name,last_name:e.data.last_name});}if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}if(e.data&&e.data.type==='setHeight'){var f=document.getElementById('sv-iframe');if(f)f.style.height=e.data.height+'px';}});})();
 </script>
 </body>
 </html>

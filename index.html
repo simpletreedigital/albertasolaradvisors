@@ -96,10 +96,11 @@
   .gnav-inner {
     max-width: var(--max-w);
     margin: 0 auto;
-    padding: 0 var(--gutter);
+    padding: 0 40px;
     display: flex;
     align-items: center;
     gap: 8px;
+    width: 100%;
   }
   .gnav-logo img { height: 44px; width: auto; }
   /* Transparent nav links inside hero */
@@ -219,7 +220,7 @@
     overflow: hidden;
   }
   .hero-left {
-    padding: 100px var(--gutter) 160px;
+    padding: 100px 60px 160px max(40px, calc((100vw - 1200px) / 2 + 40px));
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -512,7 +513,7 @@
 <!-- NAV — absolute, transparent over hero -->
 <nav class="gnav" id="gnav">
   <div class="gnav-inner">
-    <a href="/" class="gnav-logo"><img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" width="200" height="46"></a>
+    <a href="/" class="gnav-logo" style="flex-shrink:0"><img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" style="height:44px;width:auto;max-width:200px;object-fit:contain"></a>
     <button class="gnav-burger" id="gnav-burger" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
     <ul class="gnav-links">
       <li class="gnav-item" id="drop-bills">

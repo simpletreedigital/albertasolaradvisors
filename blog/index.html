@@ -1,136 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solar Energy Blog for Alberta Homeowners &mdash; Alberta Solar Advisors</title>
-  <meta name="description" content="Solar energy insights for Alberta homeowners. CEIP program updates, net billing explained, real installation results, and guides to evaluating solar quotes.">
+  <title>Alberta Solar Blog — Updates, Tips & Incentive News | Alberta Solar Advisors</title>
+  <meta name="description" content="The latest news on Alberta solar incentives, net billing policy, CEIP program updates, and real homeowner case studies from Alberta Solar Advisors.">
   <link rel="canonical" href="https://alberta-solar.org/blog/">
-  <link rel="icon" type="image/png" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
+  <link rel="icon" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/includes/site.css">
   <script src="/includes/nav-footer-loader.js"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKGNP59');</script>
   <style>
-    :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:var(--font-body);color:var(--text);line-height:1.65;}
-    section{padding:56px 24px;}
-    .container{max-width:900px;margin:0 auto;}
-    .post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px;margin-top:32px;}
-    .post-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--text);display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s;}
-    .post-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.09);transform:translateY(-2px);}
-    .post-thumb{height:160px;background:linear-gradient(135deg,var(--dark),#1a3a5c);display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
-    .post-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:8px;}
-    .post-meta{font-size:.78rem;color:var(--muted);}
-    .post-card h2{font-size:1.05rem;font-weight:800;color:var(--dark);margin:0;line-height:1.35;}
-    .post-card p{font-size:.9rem;color:var(--muted);margin:0;flex:1;}
-    .post-tag{display:inline-block;background:#eff6ff;color:var(--blue);padding:3px 10px;border-radius:10px;font-size:.75rem;font-weight:700;}
-    .read-more{color:var(--blue);font-weight:700;font-size:.85rem;margin-top:auto;}
-    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
-    .cta-strip h2{color:#fff;margin-bottom:12px;}
-    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
-    .btn-primary{display:inline-block;background:var(--teal);color:var(--dark);padding:14px 28px;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;}
-    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
-    .sv-overlay.open{display:flex;}
-    .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
-    .sv-head{background:#01214a;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
-    .sv-head span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;}
-    .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
-    .sv-body{flex:1;overflow-y:auto;}
-    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
-  
-    /* ── Shared inner-page hero ── */
-    .page-hero {
-      background: #EEF2FF;
-      min-height: 500px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      overflow: hidden;
-    }
-    .page-hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 56px 48px 56px max(40px, calc((100vw - 1200px) / 2 + 40px));
-    }
-    .page-hero-trust {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-    .page-hero-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: .85rem;
-      font-weight: 500;
-      color: #313E5C;
-    }
-    .page-hero-trust-check {
-      width: 18px; height: 18px;
-      background: #3455A5;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .page-hero-trust-check svg { width: 10px; height: 10px; }
-    .breadcrumb {
-      font-size: .8rem;
-      color: #6b7280;
-      margin-bottom: 14px;
-    }
-    .breadcrumb a { color: #3455A5; text-decoration: none; }
-    .breadcrumb a:hover { text-decoration: underline; }
-    .page-hero h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
-      font-weight: 800;
-      line-height: 1.15;
-      color: #1a2744;
-      margin-bottom: 16px;
-    }
-    .page-hero h1 span { color: #3455A5; }
-    .page-hero .hero-sub {
-      font-size: .97rem;
-      color: #4b5563;
-      line-height: 1.7;
-      margin-bottom: 28px;
-      max-width: 480px;
-    }
-    .page-hero-img {
-      position: relative;
-      overflow: hidden;
-      min-height: 420px;
-    }
-    .page-hero-img img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      display: block;
-    }
-    /* Remove circle wrapper - full bleed image */
-    .page-hero-img-circle {
-      position: absolute;
-      inset: 0;
-      border-radius: 0;
-      overflow: hidden;
-      background: none;
-    }
-    .page-hero-img-circle img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 30%;
-    }
-    @media (max-width: 860px) {
-      .page-hero { grid-template-columns: 1fr; min-height: auto; }
-      .page-hero-content { padding: 48px 24px 32px; }
-      .page-hero-img { min-height: 240px; position: relative; }
-    }
+  :root{--blue:#3455A5;--dark:#01214A;--text:#313E5C;--muted:#6b7280;--hero-bg:#EEF2FF;--alt-bg:#F3F8FF;--border:#E5E6EA;--font:'Montserrat',sans-serif;--font-btn:'Inter',sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font);color:var(--text);line-height:1.65;}
+  img{max-width:100%;height:auto;display:block;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  ul{list-style:none;}
+  p{margin-bottom:1em;}
+  p:last-child{margin-bottom:0;}
+  .inner{max-width:1200px;margin:0 auto;padding:0 40px;}
+  @media(max-width:900px){.inner{padding:0 24px;}}
+  .btn{display:inline-block;font-family:var(--font-btn);font-size:15px;font-weight:600;background:var(--blue);color:#fff;border:1px solid var(--blue);border-radius:50px;padding:14px 32px;cursor:pointer;transition:background .2s,color .2s;}
+  .btn:hover{background:#fff;color:var(--blue);}
+  /* PAGE HEADER */
+  .page-header{background:var(--hero-bg);padding:80px 0 60px;}
+  .page-header h1{font-family:var(--font);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--dark);margin-bottom:12px;}
+  .page-header p{font-size:17px;color:var(--text);max-width:600px;}
+  /* BLOG GRID */
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:60px 0;}
+  .blog-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:box-shadow .2s;}
+  .blog-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.08);}
+  .blog-card-img{aspect-ratio:16/9;overflow:hidden;background:var(--alt-bg);}
+  .blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
+  .blog-card:hover .blog-card-img img{transform:scale(1.03);}
+  .blog-card-body{padding:24px;}
+  .blog-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:#EEF2FF;padding:4px 10px;border-radius:12px;margin-bottom:10px;}
+  .blog-card h2{font-family:var(--font);font-size:1.05rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px;}
+  .blog-card h2 a{color:inherit;}
+  .blog-card h2 a:hover{color:var(--blue);text-decoration:none;}
+  .blog-card p{font-size:.87rem;color:var(--muted);line-height:1.6;margin-bottom:14px;}
+  .blog-meta{font-size:.78rem;color:rgba(1,33,74,.4);font-weight:600;}
+  @media(max-width:860px){.blog-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:580px){.blog-grid{grid-template-columns:1fr;}}
+  /* CTA */
+  .cta-section{background:#F3F5FA;position:relative;overflow:hidden;padding:70px 0;text-align:center;}
+  .cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.07;pointer-events:none;}
+  .cta-inner{position:relative;z-index:1;}
+  .cta-inner h2{font-family:var(--font);font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;color:var(--dark);margin-bottom:12px;}
+  .cta-inner p{font-size:16px;color:var(--text);max-width:600px;margin:0 auto 28px;line-height:1.65;}
+  /* POPUP */
+  .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
+  .sv-overlay.open{display:flex;}
+  .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
+  .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+  .sv-head span{font-family:var(--font);font-weight:700;font-size:.9rem;}
+  .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
+  .sv-body{flex:1;overflow-y:auto;}
+  .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
   </style>
 </head>
 <body>
@@ -145,121 +75,107 @@
 </div>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
-    <div class="page-hero">
-    <div class="page-hero-content">
-      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Blog</div>
-      
-      <h1>Solar Energy Insights for<br><span>Alberta Homeowners</span></h1>
-      <p class="hero-sub">CEIP program updates, net billing explained, real installation results, and guides to evaluating solar quotes in Alberta.</p>
-      <div>
-        <button class="btn-primary" onclick="openSurvey()">Get My Free Solar Estimate</button>
-      </div>
-    </div>
-    <div class="page-hero-img">
-      <div class="page-hero-img-circle">
-        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png" alt="Alberta solar energy blog insights CEIP net billing homeowner guides Edmonton Calgary" loading="eager">
-      </div>
-    </div>
+
+<div class="page-header">
+  <div class="inner">
+    <h1>Alberta Solar Updates &amp; Resources</h1>
+    <p>The latest news on CEIP program status, net billing policy, Solar Club™ rates, and real homeowner case studies from across Alberta.</p>
   </div>
+</div>
 
+<div class="inner">
+  <div class="blog-grid">
 
-
-  <section>
-    <div class="container">
-      <div class="post-grid">
-
-        <a href="/blog/ceip-november-2025/" class="post-card">
-          <div class="post-thumb">&#127775;</div>
-          <div class="post-body">
-            <span class="post-tag">Incentives</span>
-            <div class="post-meta">November 2025</div>
-            <h2>CEIP Update: Which Alberta Cities Are Open Right Now</h2>
-            <p>A current breakdown of CEIP status across Alberta municipalities, including which cities are accepting applications and which have paused their programs.</p>
-            <span class="read-more">Read more &rarr;</span>
-          </div>
-        </a>
-
-        <a href="/blog/solar-panels-in-snow/" class="post-card">
-          <div class="post-thumb">&#10052;</div>
-          <div class="post-body">
-            <span class="post-tag">Production</span>
-            <div class="post-meta">October 2025</div>
-            <h2>Solar Panels in Snow: What Actually Happens to Alberta Production in Winter</h2>
-            <p>The honest answer about winter solar output in Alberta, what the numbers look like from real installations, and why the annual economics still work.</p>
-            <span class="read-more">Read more &rarr;</span>
-          </div>
-        </a>
-
-        <a href="/blog/how-to-vet-solar-installers/" class="post-card">
-          <div class="post-thumb">&#128269;</div>
-          <div class="post-body">
-            <span class="post-tag">Buyer's Guide</span>
-            <div class="post-meta">September 2025</div>
-            <h2>How to Vet a Solar Installer in Alberta: 7 Questions to Ask Before You Sign</h2>
-            <p>What separates a trustworthy Alberta solar installer from one that will disappear after the deposit. The questions that matter, and the answers to watch out for.</p>
-            <span class="read-more">Read more &rarr;</span>
-          </div>
-        </a>
-
-        <a href="/blog/3-key-ideas/" class="post-card">
-          <div class="post-thumb">&#128161;</div>
-          <div class="post-body">
-            <span class="post-tag">Fundamentals</span>
-            <div class="post-meta">August 2025</div>
-            <h2>3 Ideas That Change How Alberta Homeowners Think About Solar</h2>
-            <p>Most solar confusion comes from a few persistent misconceptions. Here are three reframes that make the Alberta solar decision much clearer.</p>
-            <span class="read-more">Read more &rarr;</span>
-          </div>
-        </a>
-
-        <a href="/blog/albertas-net-metering-future/" class="post-card">
-          <div class="post-thumb">&#9889;</div>
-          <div class="post-body">
-            <span class="post-tag">Policy</span>
-            <div class="post-meta">July 2025</div>
-            <h2>Alberta's Net Billing Future: What the Export Restriction Changes Mean for Solar Owners</h2>
-            <p>Changes to Alberta's electricity export rules heading into 2026. What's changing, what isn't, and what it means if you're considering solar in the next 12 months.</p>
-            <span class="read-more">Read more &rarr;</span>
-          </div>
-        </a>
-
-        <a href="/blog/how-much-runway-greener-homes/" class="post-card">
-          <div class="post-thumb">&#127973;</div>
-          <div class="post-body">
-            <span class="post-tag">Financing</span>
-            <div class="post-meta">June 2025</div>
-            <h2>Greener Homes Loan Is Ended: What Alberta Homeowners Should Use Instead</h2>
-            <p>The Canada Greener Homes Loan program is no longer accepting applications. Here are the financing alternatives available for Alberta solar installations right now.</p>
-            <span class="read-more">Read more &rarr;</span>
-          </div>
-        </a>
-
+    <article class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/05/ceip_featured_image-scaled.png" alt="CEIP program Alberta municipalities solar financing November 2025 update" loading="lazy">
       </div>
-    </div>
-  </section>
+      <div class="blog-card-body">
+        <span class="blog-tag">Program Update</span>
+        <h2><a href="/blog/ceip-november-2025/">CEIP Program Status: November 2025 Update — Which Alberta Cities Are Open</a></h2>
+        <p>A full breakdown of which municipalities have open CEIP programs, which are on waitlist, and which have closed. Updated for 2025.</p>
+        <div class="blog-meta">November 2025</div>
+      </div>
+    </article>
 
-  <div class="cta-strip">
-    <h2>Ready to See the Numbers for Your Home?</h2>
-    <p>A free estimate takes about 10 minutes and gives you a site-specific savings model with no obligation.</p>
-    <button class="btn-primary" onclick="openSurvey()">Get My Free Solar Estimate</button>
+    <article class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/09/Solar_Panels_And_Snow.jpg" alt="Solar panels winter snow Alberta how panels perform in cold climate" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">How Solar Works</span>
+        <h2><a href="/blog/solar-panels-in-snow/">Solar Panels in Snow: How Alberta Systems Perform in Winter</a></h2>
+        <p>Alberta winters are real — but so is winter solar production. Here's what to expect from your system between November and March.</p>
+        <div class="blog-meta">September 2025</div>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-01.png" alt="How to vet solar installers Alberta licensed certified checklist" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Buyer's Guide</span>
+        <h2><a href="/blog/how-to-vet-solar-installers/">How to Vet Solar Installers in Alberta: A Homeowner's Checklist</a></h2>
+        <p>Not all solar companies are equal. Here's exactly what to ask, what to verify, and what red flags to avoid before signing anything.</p>
+        <div class="blog-meta">August 2025</div>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/10/airdrie-solar-case-study-production-graph.png" alt="Alberta net metering future policy changes 2026 solar credits" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Policy</span>
+        <h2><a href="/blog/albertas-net-metering-future/">Alberta's Net Billing Future: What Homeowners Need to Know</a></h2>
+        <p>Retail-rate net billing has made Alberta solar among the best in Canada. We look at what could change and why acting now makes sense.</p>
+        <div class="blog-meta">October 2025</div>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/05/financial-model-ROI-comparison-chart-alberta-solar-org.png" alt="3 key ideas solar investment Alberta ROI payback savings" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Education</span>
+        <h2><a href="/blog/3-key-ideas/">3 Things That Determine Whether Solar Is Worth It in Alberta</a></h2>
+        <p>Roof orientation, electricity usage, and the net billing rate. Understand these three and you can evaluate any solar quote accurately.</p>
+        <div class="blog-meta">July 2025</div>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/05/greener-homes-loan-whats-left.jpg" alt="Canada Greener Homes Loan ended what replaced it CEIP Simple Bridge 2025" loading="lazy">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Financing</span>
+        <h2><a href="/blog/how-much-runway-greener-homes/">The Canada Greener Homes Loan Has Ended — Here's What Replaced It</a></h2>
+        <p>The federal interest-free loan is done. We explain the CEIP and Simple Bridge programs that have filled the gap for Alberta homeowners.</p>
+        <div class="blog-meta">June 2025</div>
+      </div>
+    </article>
+
   </div>
+</div>
+
+<section class="cta-section">
+  <div class="cta-bg" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png')"></div>
+  <div class="inner cta-inner">
+    <h2>Get Your Free Alberta Solar Estimate</h2>
+    <p>Ready to get real numbers for your home? Our team provides transparent, no-pressure solar proposals tailored to your specific property and local incentives.</p>
+    <button class="btn" onclick="openSurvey()">Get My Free Solar Estimate</button>
+  </div>
+</section>
 </main>
 <script>
 function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
 function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
-(function(){
-  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
-  function getParam(n){return new URLSearchParams(window.location.search).get(n)||''}
-  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
-  var iframe=document.getElementById('sv-iframe');
-  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
-  window.addEventListener('message',function(e){
-    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
-    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
-    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
-  });
-})();
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSurvey();});
+(function(){function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}var fr=document.getElementById('sv-iframe');if(fr){fr.addEventListener('load',function(){fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');});}window.addEventListener('message',function(e){if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(x){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',email:e.data.email,phone:e.data.phone,first_name:e.data.first_name,last_name:e.data.last_name});}if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}if(e.data&&e.data.type==='setHeight'){var f=document.getElementById('sv-iframe');if(f)f.style.height=e.data.height+'px';}});})();
 </script>
 </body>
 </html>

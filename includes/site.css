@@ -49,13 +49,14 @@ p:last-child { margin-bottom: 0; }
 .gnav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 40px;
   height: 100%;
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
 }
-.gnav-logo img { height: 44px; width: auto; }
+.gnav-logo img { height: 44px; width: auto; max-width: 200px; object-fit: contain; flex-shrink: 0; }
 .gnav-list { display: flex; align-items: center; gap: 2px; margin-left: auto; }
 .gnav-item { position: relative; }
 .gnav-link, .gnav-btn {
@@ -170,7 +171,7 @@ p:last-child { margin-bottom: 0; }
   padding-bottom: 30px;
 }
 .gf-brand { display: flex; flex-direction: column; gap: 14px; }
-.gf-brand img { height: 44px; width: auto; }
+.gf-brand img { height: 44px; width: auto; max-width: 200px; object-fit: contain; }
 .gf-nap { font-style: normal; font-family: var(--font); font-size: 14px; color: rgba(1,33,74,.65); line-height: 1.9; }
 .gf-nap a { color: rgba(1,33,74,.65); transition: color .15s; }
 .gf-nap a:hover { color: var(--blue); text-decoration: none; }
