@@ -1,0 +1,5 @@
+# Proxy local /images/* requests to the live WordPress site
+/images/* https://alberta-solar.org/wp-content/uploads/:splat 200
+
+# Proxy wp-content directly too for safety
+/wp-content/* https://alberta-solar.org/wp-content/:splat 200

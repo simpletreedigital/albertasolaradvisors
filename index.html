@@ -6,203 +6,172 @@
   <title>Get a Transparent Alberta Solar Quote - Alberta Solar Advisors</title>
   <meta name="description" content="Get the numbers for your home and determine if the investment is right for you by filling out our form.">
   <link rel="canonical" href="https://alberta-solar.org/">
-  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="icon" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
   <meta property="og:title" content="Get a Transparent Alberta Solar Quote - Alberta Solar Advisors">
   <meta property="og:description" content="Get the numbers for your home and determine if the investment is right for you by filling out our form.">
   <meta property="og:image" content="https://alberta-solar.org/wp-content/uploads/2025/09/banff-solar-home.jpg">
   <meta property="og:url" content="https://alberta-solar.org/">
   <meta property="og:type" content="website">
-
-  <!-- Google Fonts: Inter + Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- GTM -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKGNP59');</script>
 
   <style>
-  /* ══════════════════════════════════════════
-     TOKENS — match live site exactly
-  ══════════════════════════════════════════ */
+  /* ═══════════════════════════════════════════════
+     DESIGN TOKENS — from Elementor JSON export
+     Hero bg: #EEF2FF (light blue)
+     Section alt bg: #F3F8FF
+     Bottom CTA bg: #F3F5FA
+     Primary blue: #3455A5
+     Dark heading: #01214A
+     Body text: #313E5C
+     Font: Montserrat (headings, body) + Inter (buttons)
+     H1: 52px / 700
+     Section titles: 32px / 700
+     Card titles: 22px / 600
+     Icon titles: 20px / 600
+     Body text: 16-18px / 400
+     Button: Inter 15px / 600
+     Nav links: Montserrat 15px / 600 / #313E5C
+     Hero padding: top 100px bottom 160px
+  ═══════════════════════════════════════════════ */
   :root {
-    --blue:        #3455A5;   /* primary blue from .getestimatefree */
-    --blue-dark:   #2a4490;
-    --nav-text:    #313E5C;   /* nav link color */
-    --dark:        #01214a;   /* footer dark navy */
-    --text:        #1f2937;
-    --muted:       #6b7280;
-    --border:      #E5E6EA;
-    --white:       #ffffff;
-    --hero-bg:     #EEF2FF;   /* light blue hero background */
-    --light-bg:    #f8f9fb;
-    --teal:        #16bdca;
-    --font-body:   'Inter', sans-serif;
-    --font-head:   'Montserrat', sans-serif;
-    --nav-h:       72px;
+    --blue: #3455A5;
+    --dark: #01214A;
+    --text: #313E5C;
+    --muted: #6b7280;
+    --white: #ffffff;
+    --hero-bg: #EEF2FF;
+    --alt-bg: #F3F8FF;
+    --cta-bg: #F3F5FA;
+    --border: #E5E6EA;
+    --font-body: 'Montserrat', sans-serif;
+    --font-btn: 'Inter', sans-serif;
+    --nav-h: 72px;
+    --max-w: 1200px;
+    --gutter: 80px;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body {
-    font-family: var(--font-body);
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
+  body { font-family: var(--font-body); color: var(--text); background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
   img { max-width: 100%; height: auto; display: block; }
-  a { color: var(--blue); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  a { text-decoration: none; color: var(--blue); }
   ul { list-style: none; }
-  button { cursor: pointer; }
-  p { margin-bottom: 1em; }
+
+  /* ── Shared ── */
+  .inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
+  @media (max-width: 900px) { .inner { padding: 0 24px; } :root { --gutter: 24px; } }
+  p { margin-bottom: 1em; line-height: 1.65; }
   p:last-child { margin-bottom: 0; }
 
-  /* ── Utility ── */
-  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-  @media (max-width: 768px) { .wrap { padding: 0 20px; } }
-  .eyebrow {
-    display: block;
-    font-family: var(--font-head);
-    font-size: .7rem;
-    font-weight: 700;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin-bottom: 10px;
-  }
-  .section-title {
-    font-family: var(--font-head);
-    font-size: clamp(1.55rem, 3vw, 2.2rem);
-    font-weight: 800;
-    color: #1a2744;
-    line-height: 1.2;
-    margin-bottom: 16px;
-  }
-
-  /* ── Button — pill style matching live site ── */
+  /* ── Button — exact from JSON: Inter 15px/600, #3455A5 bg, pill ── */
   .btn {
     display: inline-block;
-    font-family: var(--font-head);
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid var(--blue);
-    border-radius: 50px;
-    padding: 14px 28px;
-    transition: background-color .25s, color .25s;
-    line-height: 1.2;
-  }
-  .btn-primary {
-    background-color: var(--blue);
-    color: #fff;
-    fill: #fff;
-  }
-  .btn-primary:hover {
-    background-color: #ffffff;
-    color: var(--blue);
-    text-decoration: none;
-  }
-  .btn-outline {
-    background: transparent;
-    color: var(--blue);
-    border-color: var(--blue);
-  }
-  .btn-outline:hover { background: var(--blue); color: #fff; }
-
-  /* ══════════════════════════════════════════
-     NAV — absolute over hero, transparent
-  ══════════════════════════════════════════ */
-  .gnav {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: transparent;
-    height: var(--nav-h);
-  }
-  .gnav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .gnav-logo img { height: 44px; width: auto; }
-  .gnav-list {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    margin-left: auto;
-  }
-  .gnav-item { position: relative; }
-  .gnav-link, .gnav-btn {
-    font-family: var(--font-head);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--nav-text);
-    padding: 8px 10px;
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: color .15s;
-  }
-  .gnav-link:hover, .gnav-btn:hover { color: var(--blue); text-decoration: none; }
-  .gnav-btn svg { width: 10px; height: 10px; }
-  .gnav-drop {
-    position: absolute;
-    top: calc(100% + 4px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 8px;
-    min-width: 220px;
-    box-shadow: 0 8px 30px rgba(0,0,0,.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .15s, transform .15s;
-    transform: translateX(-50%) translateY(-4px);
-  }
-  .gnav-item.open .gnav-drop {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
-  }
-  .gnav-drop a {
-    display: block;
-    font-family: var(--font-head);
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--nav-text);
-    padding: 9px 14px;
-    border-radius: 6px;
-    transition: background .12s;
-  }
-  .gnav-drop a:hover { background: #f3f4f6; text-decoration: none; }
-  .gnav-cta {
-    margin-left: 12px;
-    font-family: var(--font-head);
+    font-family: var(--font-btn);
     font-size: 15px;
     font-weight: 600;
     background: var(--blue);
     color: #fff;
     border: 1px solid var(--blue);
     border-radius: 50px;
-    padding: 10px 20px;
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .btn:hover { background: #fff; color: var(--blue); }
+
+  /* ═══════════════════════════════════════════════
+     NAV — absolute over hero, transparent
+     Elementor: padding top 10px bottom 10px, inside hero section padding-top 110px
+  ═══════════════════════════════════════════════ */
+  .gnav {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 10px 0;
+  }
+  .gnav-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .gnav-logo img { height: 44px; width: auto; }
+  /* Transparent nav links inside hero */
+  .gnav-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+  }
+  .gnav-link, .gnav-btn-link {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color .15s;
+    white-space: nowrap;
+  }
+  .gnav-link:hover, .gnav-btn-link:hover { color: var(--blue); }
+  .gnav-btn-link svg { width: 10px; height: 6px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; }
+  /* Dropdown */
+  .gnav-item { position: relative; }
+  .gnav-drop {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px;
+    min-width: 210px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.10);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s, transform .15s;
+  }
+  .gnav-item.open .gnav-drop { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+  .gnav-drop a {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    padding: 9px 14px;
+    border-radius: 6px;
+    transition: background .12s;
+  }
+  .gnav-drop a:hover { background: #f3f4f6; color: var(--blue); }
+  /* CTA button in nav */
+  .gnav-cta {
+    margin-left: 8px;
+    font-family: var(--font-btn);
+    font-size: 15px;
+    font-weight: 600;
+    background: var(--blue);
+    color: #fff;
+    border: 1px solid var(--blue);
+    border-radius: 50px;
+    padding: 10px 22px;
+    cursor: pointer;
     white-space: nowrap;
     transition: background .2s, color .2s;
-    cursor: pointer;
   }
   .gnav-cta:hover { background: #fff; color: var(--blue); }
+  /* Mobile */
   .gnav-burger {
     display: none;
     flex-direction: column;
@@ -211,14 +180,9 @@
     margin-left: auto;
     background: none;
     border: none;
+    cursor: pointer;
   }
-  .gnav-burger span {
-    display: block;
-    width: 22px; height: 2px;
-    background: var(--nav-text);
-    border-radius: 2px;
-    transition: transform .2s, opacity .2s;
-  }
+  .gnav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .2s, opacity .2s; }
   .gnav-mobile {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -230,541 +194,302 @@
     z-index: 99;
   }
   .gnav-mobile.open { transform: translateX(0); }
-  .gnav-mobile ul { display: flex; flex-direction: column; gap: 0; }
-  .gnav-mobile a {
-    display: block;
-    font-family: var(--font-head);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--nav-text);
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .mob-cta { margin-top: 24px; }
-  .mob-cta .btn { width: 100%; display: block; text-align: center; }
-  @media (max-width: 860px) {
-    .gnav-list, .gnav-cta { display: none; }
+  .gnav-mobile ul { display: flex; flex-direction: column; }
+  .gnav-mobile a { display: block; font-family: var(--font-body); font-size: .97rem; font-weight: 600; color: var(--text); padding: 13px 0; border-bottom: 1px solid var(--border); }
+  .gnav-mobile .mob-cta { margin-top: 20px; }
+  .gnav-mobile .mob-cta button { width: 100%; font-family: var(--font-btn); font-size: 15px; font-weight: 600; background: var(--blue); color: #fff; border: 1px solid var(--blue); border-radius: 50px; padding: 14px; cursor: pointer; }
+  @media (max-width: 900px) {
+    .gnav-links, .gnav-cta { display: none; }
     .gnav-burger { display: flex; }
   }
 
-  /* ── On non-hero pages nav needs a background ── */
-  .gnav--solid {
-    position: fixed;
-    background: #fff;
-    box-shadow: 0 1px 0 var(--border);
-  }
-  .gnav--solid .gnav-link,
-  .gnav--solid .gnav-btn { color: var(--nav-text); }
-
-  /* ══════════════════════════════════════════
-     HERO — light blue, image right with circle clip
-  ══════════════════════════════════════════ */
+  /* ═══════════════════════════════════════════════
+     HERO — light blue bg, 2-col, image right full bleed
+     Exact from JSON: outer padding top 110px (nav height)
+     Inner content: padding top 100px bottom 160px
+     H1: Montserrat 52px/700 color #01214A
+     Blue span: #3455A5
+  ═══════════════════════════════════════════════ */
   .hero {
     background: var(--hero-bg);
-    min-height: 680px;
+    padding-top: 110px; /* accounts for absolute nav */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: stretch;
+    min-height: 680px;
     overflow: hidden;
-    padding-top: var(--nav-h);
   }
-  .hero-content {
+  .hero-left {
+    padding: 100px var(--gutter) 160px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 60px 48px 60px 60px;
-    max-width: 620px;
+    justify-content: flex-start;
   }
-  .hero-trust {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 24px;
-  }
+  .hero-trust { display: flex; flex-direction: column; gap: 6px; margin-bottom: 28px; }
   .hero-trust-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: .88rem;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-size: 14px;
     font-weight: 500;
-    color: var(--nav-text);
+    color: var(--text);
   }
-  .hero-trust-check {
-    width: 18px; height: 18px;
+  .hero-check {
+    width: 20px; height: 20px;
     background: var(--blue);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
-  .hero-trust-check svg { width: 10px; height: 10px; }
+  .hero-check svg { width: 10px; height: 8px; }
   .hero h1 {
-    font-family: var(--font-head);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    line-height: 1.12;
-    color: #1a2744;
-    margin-bottom: 20px;
+    font-family: var(--font-body);
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 24px;
   }
   .hero h1 span { color: var(--blue); }
   .hero-body {
-    font-size: .97rem;
-    color: #4b5563;
-    line-height: 1.75;
-    margin-bottom: 14px;
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.7;
+    max-width: 520px;
   }
   .hero-note {
-    font-size: .88rem;
-    color: #6b7280;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text);
     margin-bottom: 32px;
     line-height: 1.6;
   }
-  .hero-note strong { color: var(--nav-text); font-weight: 600; }
-  .hero-note a { color: var(--blue); font-weight: 600; }
-  .hero-image {
+  .hero-note strong { font-weight: 700; }
+  .hero-note a { color: var(--blue); }
+  .hero-right {
     position: relative;
     overflow: hidden;
-    min-height: 520px;
   }
-  .hero-image img {
+  .hero-right img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    display: block;
-    position: absolute;
-    inset: 0;
+    object-position: center 20%;
   }
   @media (max-width: 860px) {
-    .hero {
-      grid-template-columns: 1fr;
-      min-height: auto;
-    }
-    .hero-content { padding: 48px 24px 36px; max-width: 100%; }
-    .hero-image { min-height: 260px; position: relative; }
+    .hero { grid-template-columns: 1fr; padding-top: 72px; min-height: auto; }
+    .hero-left { padding: 40px 24px 40px; }
+    .hero h1 { font-size: 32px; }
+    .hero-right { min-height: 260px; position: relative; }
   }
 
-  /* ══════════════════════════════════════════
-     TRUST BAR
-  ══════════════════════════════════════════ */
-  .trust-bar {
+  /* ═══════════════════════════════════════════════
+     FEATURES SECTION — bg #FFFFFF, padding 60px 0
+     Image left, 3 icon rows right
+  ═══════════════════════════════════════════════ */
+  .sec-features {
     background: #fff;
-    border-bottom: 1px solid var(--border);
-    padding: 16px 40px;
+    padding: 60px 0;
   }
-  .trust-bar-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 32px;
-    align-items: center;
-    justify-content: center;
-  }
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-body);
-    font-size: .82rem;
-    font-weight: 600;
-    color: var(--nav-text);
-  }
-  .trust-dot {
-    width: 9px; height: 9px;
-    background: var(--blue);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  /* ══════════════════════════════════════════
-     SECTION SHARED
-  ══════════════════════════════════════════ */
-  .section { padding: 80px 40px; }
-  .section--gray { background: var(--light-bg); }
-  @media (max-width: 768px) { .section { padding: 56px 20px; } }
-
-  /* ══════════════════════════════════════════
-     FEATURES — image left, 3 icon rows right
-  ══════════════════════════════════════════ */
   .features-grid {
-    max-width: 1100px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 420px 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
   }
-  .features-img img {
-    width: 100%;
-    border-radius: 14px;
-    display: block;
-  }
-  .features-list { display: flex; flex-direction: column; gap: 36px; }
+  .features-img img { width: 100%; border-radius: 12px; }
+  .features-list { display: flex; flex-direction: column; gap: 32px; }
   .feat-item { display: flex; gap: 18px; align-items: flex-start; }
   .feat-icon {
     width: 52px; height: 52px;
     background: var(--blue);
-    border-radius: 12px;
+    border-radius: 10px;
     flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
   }
-  .feat-icon svg { width: 26px; height: 26px; color: #fff; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  .feat-text h3 {
-    font-family: var(--font-head);
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #1a2744;
-    margin-bottom: 5px;
-  }
-  .feat-text p {
-    font-size: .9rem;
-    color: var(--muted);
-    line-height: 1.65;
-    margin: 0;
-  }
-  @media (max-width: 860px) {
-    .features-grid { grid-template-columns: 1fr; gap: 32px; }
-  }
+  .feat-icon svg { width: 26px; height: 26px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .feat-text h3 { font-family: var(--font-body); font-size: 16px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
+  .feat-text p { font-family: var(--font-body); font-size: 15px; font-weight: 400; color: var(--muted); margin: 0; line-height: 1.6; }
+  @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } .features-img { display: none; } }
 
-  /* ══════════════════════════════════════════
-     COMPARE — without vs with solar
-  ══════════════════════════════════════════ */
-  .compare-intro { max-width: 700px; margin: 0 0 40px; }
-  .compare-intro p { color: var(--muted); font-size: .97rem; margin-bottom: 0; }
-  .compare-cols {
+  /* ═══════════════════════════════════════════════
+     COMPARE — bg #F3F8FF, padding 60px 0
+     Section title: 32px/700, color #01214A, blue span
+     Card title: 22px/600, color #313E5C
+  ═══════════════════════════════════════════════ */
+  .sec-compare { background: var(--alt-bg); padding: 60px 0; }
+  .sec-title {
+    font-family: var(--font-body);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .sec-title span { color: var(--blue); }
+  .sec-sub {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text);
+    max-width: 680px;
+    line-height: 1.65;
+  }
+  .compare-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto;
+    margin-top: 40px;
   }
-  .compare-col {
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px;
-    background: #fff;
+  .compare-col { display: flex; flex-direction: column; gap: 16px; }
+  .compare-col img { width: 100%; border-radius: 8px; border: 1px solid var(--border); }
+  .compare-col h3 {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
   }
-  .compare-col-head {
-    display: flex; align-items: center; gap: 12px;
-    margin-bottom: 20px;
-  }
-  .compare-col-head h3 {
-    font-family: var(--font-head);
-    font-size: .97rem;
-    font-weight: 700;
-    color: #1a2744;
-    margin: 0;
-  }
-  .compare-bill-img {
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    margin-bottom: 20px;
-  }
-  .compare-list { display: flex; flex-direction: column; gap: 10px; }
-  .compare-list li {
-    display: flex; gap: 10px; align-items: flex-start;
-    font-size: .9rem; line-height: 1.5; color: var(--text);
-  }
-  .ci { flex-shrink: 0; font-size: .9rem; margin-top: 1px; }
-  .bad .ci { color: #ef4444; }
-  .good .ci { color: #10b981; }
-  @media (max-width: 680px) { .compare-cols { grid-template-columns: 1fr; } }
+  .compare-col h3 span { color: var(--blue); }
+  .compare-col ul { display: flex; flex-direction: column; gap: 8px; }
+  .compare-col li { display: flex; align-items: flex-start; gap: 8px; font-family: var(--font-body); font-size: 15px; color: var(--text); line-height: 1.5; }
+  .compare-col.bad li::before { content: '✗'; color: #ef4444; font-weight: 700; flex-shrink: 0; }
+  .compare-col.good li::before { content: '✓'; color: #10b981; font-weight: 700; flex-shrink: 0; }
+  @media (max-width: 680px) { .compare-grid { grid-template-columns: 1fr; } }
 
-  /* ══════════════════════════════════════════
-     3 STEPS
-  ══════════════════════════════════════════ */
-  .steps-wrap { max-width: 1100px; margin: 0 auto; }
-  .steps-head { margin-bottom: 48px; }
-  .steps-head h2 { color: #1a2744; }
+  /* ═══════════════════════════════════════════════
+     3 STEPS — bg #FFFFFF, padding top 30 bottom 40
+     Inner row padding 20px
+     Card: padding 40px all, margin 10px, bg white, border
+     Title: 22px/600 #313E5C, body 16px/400
+  ═══════════════════════════════════════════════ */
+  .sec-steps { background: #fff; padding: 30px 0 40px; }
+  .sec-steps-header { padding: 20px 0; }
   .steps-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 0;
+    margin-top: 30px;
   }
   .step-card {
     background: #fff;
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px 28px;
-  }
-  .step-num {
-    font-family: var(--font-head);
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--blue);
-    line-height: 1;
-    margin-bottom: 16px;
-  }
-  .step-card h3 {
-    font-family: var(--font-head);
-    font-size: 1rem;
-    font-weight: 700;
-    color: #1a2744;
-    margin-bottom: 10px;
-  }
-  .step-card p { font-size: .9rem; color: var(--muted); margin: 0; line-height: 1.65; }
-  @media (max-width: 680px) { .steps-grid { grid-template-columns: 1fr; } }
-
-  /* ══════════════════════════════════════════
-     CASE STUDIES
-  ══════════════════════════════════════════ */
-  .cs-wrap { max-width: 1100px; margin: 0 auto; }
-  .cs-layout {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 60px;
-    align-items: start;
-  }
-  .cs-content h2 { color: #1a2744; }
-  .cs-content p { color: var(--muted); line-height: 1.75; }
-  .cs-links { margin: 20px 0 28px; display: flex; flex-direction: column; gap: 10px; }
-  .cs-links li a {
-    display: flex; align-items: center; gap: 10px;
-    font-size: .95rem; font-weight: 600; color: var(--blue);
-  }
-  .cs-links li a::before {
-    content: '';
-    display: inline-block;
-    width: 6px; height: 6px;
-    background: var(--blue);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  .cs-links li a:hover { text-decoration: underline; }
-  .cs-img img {
-    width: 100%;
     border-radius: 12px;
-    border: 1px solid var(--border);
-  }
-  @media (max-width: 800px) {
-    .cs-layout { grid-template-columns: 1fr; }
-    .cs-img { order: -1; }
-  }
-
-  /* ══════════════════════════════════════════
-     WHY US
-  ══════════════════════════════════════════ */
-  .why-wrap { max-width: 1100px; margin: 0 auto; }
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 40px;
-  }
-  .why-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px 28px;
-  }
-  .why-num {
-    font-family: var(--font-head);
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--blue);
-    line-height: 1;
-    margin-bottom: 14px;
-  }
-  .why-card h3 {
-    font-family: var(--font-head);
-    font-size: 1rem;
-    font-weight: 700;
-    color: #1a2744;
-    margin-bottom: 10px;
-  }
-  .why-card p { font-size: .9rem; color: var(--muted); margin: 0; line-height: 1.65; }
-  @media (max-width: 680px) { .why-grid { grid-template-columns: 1fr; } }
-
-  /* ══════════════════════════════════════════
-     LEADING INSTALLATIONS
-  ══════════════════════════════════════════ */
-  .leading-wrap { max-width: 1100px; margin: 0 auto; }
-  .leading-layout {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 60px;
-    align-items: start;
-  }
-  .leading-content h2 { color: #1a2744; }
-  .leading-content p { color: var(--muted); line-height: 1.75; }
-  .leading-list { margin: 16px 0 20px; display: flex; flex-direction: column; gap: 10px; }
-  .leading-list li {
-    display: flex; align-items: flex-start; gap: 10px;
-    font-size: .95rem; color: var(--text);
-  }
-  .leading-list li::before {
-    content: '✓';
-    color: var(--blue);
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-  .leading-img img { width: 100%; border-radius: 14px; }
-  .icon-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 56px;
-    border-top: 1px solid var(--border);
-    padding-top: 48px;
-  }
-  .icon-tile {
-    display: flex; flex-direction: column; align-items: center;
-    text-align: center; gap: 12px;
-  }
-  .icon-tile-wrap {
-    width: 72px; height: 72px;
-    background: var(--hero-bg);
-    border-radius: 18px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 2rem;
-  }
-  .icon-tile span {
-    font-family: var(--font-head);
-    font-size: .8rem;
-    font-weight: 600;
-    color: var(--nav-text);
-    line-height: 1.4;
-  }
-  @media (max-width: 800px) {
-    .leading-layout { grid-template-columns: 1fr; }
-    .icon-row { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  /* ══════════════════════════════════════════
-     BOTTOM CTA + MAP
-  ══════════════════════════════════════════ */
-  .bottom-cta {
-    background: var(--blue);
-    padding: 80px 40px 0;
-  }
-  .bottom-cta-inner { max-width: 1100px; margin: 0 auto; }
-  .bottom-cta h2 {
-    font-family: var(--font-head);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 16px;
-  }
-  .bottom-cta p { color: rgba(255,255,255,.85); max-width: 680px; line-height: 1.75; margin-bottom: 32px; }
-  .btn-white {
-    background: #fff;
-    color: var(--blue);
-    border-color: #fff;
-    font-family: var(--font-head);
-    font-size: 15px;
-    font-weight: 700;
-    border-radius: 50px;
-    padding: 14px 32px;
-    display: inline-block;
-    margin-bottom: 56px;
-    transition: background .2s, color .2s;
-    cursor: pointer;
-    border: 1px solid #fff;
-  }
-  .btn-white:hover { background: var(--blue); color: #fff; }
-  .map-wrap { border-radius: 16px 16px 0 0; overflow: hidden; }
-  .map-wrap iframe { width: 100%; height: 420px; border: none; display: block; }
-
-  /* ══════════════════════════════════════════
-     FOOTER — white, Montserrat
-  ══════════════════════════════════════════ */
-  .gfooter {
-    background: #fff;
-    padding: 60px 40px 0;
-  }
-  .gf-top {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr 1fr;
-    gap: 40px;
-    padding-bottom: 30px;
-  }
-  .gf-brand { display: flex; flex-direction: column; gap: 14px; }
-  .gf-brand img { height: 44px; width: auto; }
-  .gf-nap {
-    font-style: normal;
-    font-family: var(--font-head);
-    font-size: .85rem;
-    color: rgba(1,33,74,.65);
-    line-height: 1.9;
-  }
-  .gf-nap a { color: rgba(1,33,74,.65); transition: color .15s; }
-  .gf-nap a:hover { color: var(--blue); text-decoration: none; }
-  .gf-social { display: flex; gap: 12px; margin-top: 4px; }
-  .gf-social a {
-    font-family: var(--font-head);
-    font-size: .78rem;
-    font-weight: 600;
-    color: rgba(1,33,74,.5);
-    transition: color .15s;
-  }
-  .gf-social a:hover { color: var(--blue); text-decoration: none; }
-  .gf-col h3 {
-    font-family: var(--font-head);
-    font-size: .75rem;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    color: rgba(1,33,74,.4);
-    margin-bottom: 14px;
-    font-weight: 700;
-  }
-  .gf-col ul { display: flex; flex-direction: column; gap: 8px; }
-  .gf-col a {
-    font-family: var(--font-head);
-    font-size: 15px;
-    font-weight: 600;
-    color: rgba(1,33,74,.6);
-    transition: color .15s;
-  }
-  .gf-col a:hover { color: var(--blue); text-decoration: none; }
-  .gf-bottom {
-    border-top: 1px solid var(--border);
-    padding: 20px 0 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .gf-bottom p {
-    font-family: var(--font-head);
-    font-size: .85rem;
-    font-weight: 500;
-    color: #4A4A4A;
-    margin: 0;
-  }
-  @media (max-width: 900px) { .gf-top { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) { .gf-top { grid-template-columns: 1fr; } }
-
-  /* ══════════════════════════════════════════
-     SURVEY POPUP
-  ══════════════════════════════════════════ */
-  .sv-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,.65);
-    z-index: 9999;
-    align-items: center; justify-content: center;
-  }
-  .sv-overlay.open { display: flex; }
-  .sv-box {
-    background: #fff;
-    border-radius: 14px;
-    width: min(680px, 96vw);
-    max-height: 90vh;
-    overflow: hidden;
+    padding: 40px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
   }
-  .sv-head {
-    background: #01214a;
-    color: #fff;
-    padding: 16px 20px;
+  .step-icon img { width: 64px; height: 64px; object-fit: contain; }
+  .step-card h3 { font-family: var(--font-body); font-size: 22px; font-weight: 600; color: var(--text); line-height: 1.3; }
+  .step-card p { font-family: var(--font-body); font-size: 16px; font-weight: 400; color: var(--muted); margin: 0; line-height: 1.65; }
+  @media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr; } }
+
+  /* ═══════════════════════════════════════════════
+     CASE STUDIES — bg #F3F8FF, padding 60px 0
+  ═══════════════════════════════════════════════ */
+  .sec-cases { background: var(--alt-bg); padding: 60px 0; }
+  .cases-layout { display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: start; }
+  .cases-links { margin: 20px 0; display: flex; flex-direction: column; gap: 10px; }
+  .cases-links li::before { content: '→'; color: var(--blue); font-weight: 700; margin-right: 8px; }
+  .cases-links a { font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--blue); }
+  .cases-img img { width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+  @media (max-width: 800px) { .cases-layout { grid-template-columns: 1fr; } }
+
+  /* ═══════════════════════════════════════════════
+     WHY US — bg #FFFFFF, same card pattern
+  ═══════════════════════════════════════════════ */
+  .sec-why { background: #fff; padding: 30px 0 40px; }
+
+  /* ═══════════════════════════════════════════════
+     LEADING — bg #F3F8FF, padding 60px 0
+  ═══════════════════════════════════════════════ */
+  .sec-leading { background: var(--alt-bg); padding: 60px 0; }
+  .leading-layout { display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: start; }
+  .leading-list { margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+  .leading-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 15px; color: var(--text); }
+  .leading-list li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+  .leading-img img { width: 100%; border-radius: 12px; }
+  @media (max-width: 800px) { .leading-layout { grid-template-columns: 1fr; } }
+
+  /* ═══════════════════════════════════════════════
+     ICON ROW — bg #FFFFFF, padding 30px 0 40px
+     4 cols, each: icon + title 20px/600 #313E5C
+     margin 10px on each item
+  ═══════════════════════════════════════════════ */
+  .sec-icons { background: #fff; padding: 30px 0 40px; }
+  .icons-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 30px; }
+  .icon-item {
+    margin: 10px;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-shrink: 0;
+    gap: 12px;
   }
-  .sv-head span { font-family: var(--font-head); font-weight: 700; font-size: .9rem; }
+  .icon-item img { width: 72px; height: 72px; object-fit: contain; margin: 0 auto; }
+  .icon-item h3 { font-family: var(--font-body); font-size: 20px; font-weight: 600; color: var(--text); line-height: 1.3; }
+  @media (max-width: 680px) { .icons-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ═══════════════════════════════════════════════
+     BOTTOM CTA — bg #F3F5FA, padding 70px 0
+     Title: 32px/700 #313E5C (with blue span)
+     Body: 16px/400
+  ═══════════════════════════════════════════════ */
+  .sec-cta { background: var(--cta-bg); padding: 70px 0 0; }
+  .cta-text { max-width: 760px; text-align: center; margin: 0 auto 40px; }
+  .cta-text .sec-title { text-align: center; }
+  .cta-text .sec-sub { margin: 12px auto 28px; }
+  .cta-text .btn { margin: 0 auto; display: block; width: fit-content; }
+  .map-wrap { margin-top: 40px; border-radius: 12px 12px 0 0; overflow: hidden; }
+  .map-wrap iframe { width: 100%; height: 400px; border: none; display: block; }
+
+  /* ═══════════════════════════════════════════════
+     FOOTER — bg #FFFFFF, padding 10px 0
+     Logo centered, links Montserrat 15px/600 #313E5C
+     Copyright Montserrat 16px/500
+  ═══════════════════════════════════════════════ */
+  .gfooter { background: #fff; }
+  .footer-top {
+    padding: 60px 0 30px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-brand { display: flex; flex-direction: column; gap: 14px; }
+  .footer-brand img { height: 44px; width: auto; }
+  .footer-nap { font-family: var(--font-body); font-size: 14px; color: rgba(1,33,74,.65); line-height: 1.8; font-style: normal; }
+  .footer-nap a { color: rgba(1,33,74,.65); transition: color .15s; }
+  .footer-nap a:hover { color: var(--blue); }
+  .footer-social { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  .footer-social a { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: rgba(1,33,74,.5); transition: color .15s; }
+  .footer-social a:hover { color: var(--blue); }
+  .footer-col h4 { font-family: var(--font-body); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(1,33,74,.4); margin-bottom: 14px; }
+  .footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+  .footer-col a { font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--text); transition: color .15s; }
+  .footer-col a:hover { color: var(--blue); }
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding: 20px 0 30px;
+    text-align: center;
+  }
+  .footer-bottom p { font-family: var(--font-body); font-size: 16px; font-weight: 500; color: #4A4A4A; }
+  @media (max-width: 860px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; padding: 40px 0 24px; } }
+  @media (max-width: 560px) { .footer-top { grid-template-columns: 1fr; } }
+
+  /* ── Survey popup ── */
+  .sv-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.65); z-index: 9999; align-items: center; justify-content: center; }
+  .sv-overlay.open { display: flex; }
+  .sv-box { background: #fff; border-radius: 14px; width: min(680px, 96vw); max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; }
+  .sv-head { background: var(--dark); color: #fff; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+  .sv-head span { font-family: var(--font-body); font-weight: 700; font-size: .9rem; }
   .sv-close { background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; line-height: 1; }
   .sv-body { flex: 1; overflow-y: auto; }
   .sv-body iframe { width: 100%; min-height: 520px; border: none; display: block; }
@@ -773,13 +498,10 @@
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- ══ SURVEY POPUP ══ -->
+<!-- Survey popup -->
 <div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
   <div class="sv-box">
-    <div class="sv-head">
-      <span>Get a Solar Proposal &amp; Apply for Incentives</span>
-      <button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button>
-    </div>
+    <div class="sv-head"><span>Get a Solar Proposal &amp; Apply for Incentives</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
     <div class="sv-body">
       <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
       <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
@@ -787,20 +509,14 @@
   </div>
 </div>
 
-<!-- ══ NAV ══ -->
+<!-- NAV — absolute, transparent over hero -->
 <nav class="gnav" id="gnav">
   <div class="gnav-inner">
-    <a href="/" class="gnav-logo" aria-label="Alberta Solar Advisors home">
-      <img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" width="200" height="46">
-    </a>
-    <button class="gnav-burger" id="gnav-burger" aria-expanded="false" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="gnav-list">
+    <a href="/" class="gnav-logo"><img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" width="200" height="46"></a>
+    <button class="gnav-burger" id="gnav-burger" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="gnav-links">
       <li class="gnav-item" id="drop-bills">
-        <button class="gnav-btn" onclick="toggleDrop('drop-bills')" aria-expanded="false">
-          Bill Breakdown <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
+        <button class="gnav-btn-link" onclick="toggleDrop('drop-bills')" aria-expanded="false" aria-haspopup="true">Bill Breakdown <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
         <ul class="gnav-drop">
           <li><a href="/case-study/">Bill Breakdown Overview</a></li>
           <li><a href="/case-study/beaumont/">Case Study – Beaumont</a></li>
@@ -809,9 +525,7 @@
         </ul>
       </li>
       <li class="gnav-item" id="drop-financing">
-        <button class="gnav-btn" onclick="toggleDrop('drop-financing')" aria-expanded="false">
-          Financing <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
+        <button class="gnav-btn-link" onclick="toggleDrop('drop-financing')" aria-expanded="false" aria-haspopup="true">Financing <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
         <ul class="gnav-drop">
           <li><a href="/financing/">Financing Overview</a></li>
           <li><a href="/financing/ceip/">CEIP Loan</a></li>
@@ -819,9 +533,7 @@
         </ul>
       </li>
       <li class="gnav-item" id="drop-incentives">
-        <button class="gnav-btn" onclick="toggleDrop('drop-incentives')" aria-expanded="false">
-          Incentives <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
+        <button class="gnav-btn-link" onclick="toggleDrop('drop-incentives')" aria-expanded="false" aria-haspopup="true">Incentives <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
         <ul class="gnav-drop">
           <li><a href="/incentives/">Incentives Overview</a></li>
           <li><a href="/financing/ceip/">CEIP Loan</a></li>
@@ -830,12 +542,11 @@
           <li><a href="/blog/">Updates</a></li>
         </ul>
       </li>
-      <li class="gnav-item"><a href="/about/" class="gnav-link">About Us</a></li>
-      <li class="gnav-item"><a href="/contact/" class="gnav-link">Contact Us</a></li>
+      <li><a href="/about/" class="gnav-link">About Us</a></li>
+      <li><a href="/contact/" class="gnav-link">Contact Us</a></li>
     </ul>
     <button class="gnav-cta" onclick="openSurvey()">Get your free estimate</button>
   </div>
-  <!-- Mobile -->
   <div class="gnav-mobile" id="gnav-mobile">
     <ul>
       <li><a href="/case-study/">Bill Breakdown</a></li>
@@ -850,79 +561,59 @@
       <li><a href="/about/">About Us</a></li>
       <li><a href="/contact/">Contact Us</a></li>
     </ul>
-    <div class="mob-cta">
-      <button class="btn btn-primary" onclick="openSurvey(); closeMobile();">Get your free estimate</button>
-    </div>
+    <div class="mob-cta"><button onclick="openSurvey()">Get your free estimate</button></div>
   </div>
 </nav>
 
 <main>
 
-  <!-- ══ HERO ══ -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-trust">
-        <div class="hero-trust-item">
-          <div class="hero-trust-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
-          No Upfront Cost CEIP Loan
-        </div>
-        <div class="hero-trust-item">
-          <div class="hero-trust-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
-          Some Albertans Save $45,000+ in Lifetime Electricity Costs
-        </div>
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
+        No Upfront Cost CEIP Loan
       </div>
-      <h1>Get a Transparent Solar Panel Alberta Quote</h1>
-      <p class="hero-body">Looking for a solar company in Alberta? We are a local community resource here to educate homeowners about various <a href="/incentives/">Alberta solar incentives</a> and <a href="/financing/">financing</a> options. Solar is expanding rapidly across Alberta. Local incentives and net billing programs help you create substantial monthly energy savings, regardless of seasonal changes. Serving greater <a href="/locations/edmonton/">Edmonton</a>, <a href="/locations/calgary/">Calgary</a>, Red Deer, Grand Prairie, and Southern Alberta.</p>
-      <p class="hero-note"><strong>The Canada Greener Homes Loan has ended. There is a new loan program called the CEIP and Simple Bridge.</strong> <a href="/financing/">Read more here.</a></p>
-      <div>
-        <button class="btn btn-primary" onclick="openSurvey()">Get Free Solar Estimate</button>
+      <div class="hero-trust-item">
+        <div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
+        Some Albertans Save $45,000+ in Lifetime Electricity Costs
       </div>
     </div>
-    <div class="hero-image">
-      <img src="https://alberta-solar.org/wp-content/uploads/2025/09/banff-solar-home.jpg" alt="Solar panels on Alberta home in Banff Alberta with mountain backdrop" loading="eager" fetchpriority="high">
-    </div>
-  </section>
-
-  <!-- ══ TRUST BAR ══ -->
-  <div class="trust-bar">
-    <div class="trust-bar-inner">
-      <div class="trust-item"><span class="trust-dot"></span>1,355+ Alberta homes served</div>
-      <div class="trust-item"><span class="trust-dot"></span>Licensed installer network</div>
-      <div class="trust-item"><span class="trust-dot"></span>Free no-obligation estimates</div>
-      <div class="trust-item"><span class="trust-dot"></span>Transparent, pressure-free process</div>
-      <div class="trust-item"><span class="trust-dot"></span>CEIP municipal financing</div>
-    </div>
+    <h1>Get a Transparent <span>Solar Panel Alberta Quote</span></h1>
+    <p class="hero-body">Looking for a solar company in Alberta? We are a local community resource here to educate homeowners about various <a href="/incentives/">Alberta solar incentives</a> and <a href="/financing/">financing</a> options. Solar is expanding rapidly across Alberta. Local incentives and net billing programs help you create substantial monthly energy savings, regardless of seasonal changes. Serving greater <a href="/locations/edmonton/">Edmonton</a>, <a href="/locations/calgary/">Calgary</a>, Red Deer, Grand Prairie, and Southern Alberta.</p>
+    <p class="hero-note"><strong>The Canada Greener Homes Loan has ended. There is a new loan program called the CEIP and Simple Bridge.</strong> <a href="/financing/">Read more here.</a></p>
+    <button class="btn" onclick="openSurvey()">Get Free Solar Estimate</button>
   </div>
+  <div class="hero-right">
+    <img src="https://alberta-solar.org/wp-content/uploads/2025/09/banff-solar-home.jpg" alt="Solar panels on Alberta home with mountain backdrop" loading="eager" fetchpriority="high">
+  </div>
+</section>
 
-  <!-- ══ FEATURES ══ -->
-  <section class="section">
+<!-- ═══ FEATURES ═══ -->
+<section class="sec-features">
+  <div class="inner">
     <div class="features-grid">
       <div class="features-img">
-        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png" alt="Alberta solar installation" loading="lazy">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png" alt="Alberta solar installation aerial view" loading="lazy">
       </div>
       <div class="features-list">
         <div class="feat-item">
-          <div class="feat-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          </div>
+          <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
           <div class="feat-text">
             <h3>Go solar without large upfront costs</h3>
             <p>Create immediate home energy savings, without large upfront or out-of-pocket expenses through the CEIP program.</p>
           </div>
         </div>
         <div class="feat-item">
-          <div class="feat-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
+          <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
           <div class="feat-text">
             <h3>Low interest solar ownership programs</h3>
             <p>Own your energy future with low interest financing through CEIP, allowing you to benefit from decades of minimized electricity costs.</p>
           </div>
         </div>
         <div class="feat-item">
-          <div class="feat-icon">
-            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
+          <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
           <div class="feat-text">
             <h3>Generate weather-proof energy savings</h3>
             <p>Leverage net billing programs and our expert system design to accelerate your ROI and offset seasonal weather changes.</p>
@@ -930,294 +621,275 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══ COMPARE ══ -->
-  <section class="section section--gray">
-    <div style="max-width:1100px;margin:0 auto;">
-      <span class="eyebrow">The Difference Solar Makes</span>
-      <h2 class="section-title">Get Quotes from Alberta Solar Companies</h2>
-      <div class="compare-intro">
-        <p>Choosing the right solar company in Alberta is the most important step toward energy independence. Our team, <strong>Alberta Solar Advisors</strong>, is committed to providing transparent, turn-key services across the province, from initial design to final connection.</p>
+<!-- ═══ GET QUOTES / COMPARE ═══ -->
+<section class="sec-compare">
+  <div class="inner">
+    <h2 class="sec-title">Get Quotes from <span>Alberta Solar</span> Companies</h2>
+    <p class="sec-sub">Choosing the right <strong>solar company in Alberta</strong> is the most important step toward energy independence. Our team, <strong>Alberta Solar Advisors</strong>, is committed to providing transparent, turn-key services across the province — from initial design to final connection.</p>
+    <div class="compare-grid">
+      <div class="compare-col bad">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25065-1.webp" alt="Home without solar energy high electricity bill" loading="lazy">
+        <h3>Your home <span> without solar energy</span></h3>
+        <ul>
+          <li><strong>$250</strong> average monthly electricity bill</li>
+          <li><strong>10-Year Cost:</strong> $30,000 (assuming no rate increases)</li>
+          <li><strong>Continued dependence</strong> on utility companies</li>
+          <li><strong>No long-term savings</strong> or added home value</li>
+        </ul>
       </div>
-      <div class="compare-cols">
-        <div class="compare-col bad">
-          <div class="compare-col-head">
-            <span style="font-size:1.4rem">⚠️</span>
-            <h3>Your home without solar energy</h3>
-          </div>
-          <img class="compare-bill-img" src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25065-1.webp" alt="Home without solar" loading="lazy">
-          <ul class="compare-list">
-            <li><span class="ci">✗</span><span><strong>$250</strong> average monthly electricity bill</span></li>
-            <li><span class="ci">✗</span><span><strong>10-Year Cost:</strong> $30,000 (assuming no rate increases)</span></li>
-            <li><span class="ci">✗</span><span><strong>Continued dependence</strong> on utility companies</span></li>
-            <li><span class="ci">✗</span><span><strong>No long-term savings</strong> or added home value</span></li>
-          </ul>
-        </div>
-        <div class="compare-col good">
-          <div class="compare-col-head">
-            <span style="font-size:1.4rem">☀️</span>
-            <h3>Your home with net billing solar energy</h3>
-          </div>
-          <img class="compare-bill-img" src="https://alberta-solar.org/wp-content/uploads/2025/05/example-solar-electric-bill-explanation-colors1000px.png" alt="Solar net billing bill" loading="lazy">
-          <ul class="compare-list">
-            <li><span class="ci">✓</span><span><strong>Low interest</strong> solar loan payments</span></li>
-            <li><span class="ci">✓</span><span><strong>Ownership</strong> of your power generation system</span></li>
-            <li><span class="ci">✓</span><span><strong>20+ years</strong> of low cost electricity after loan payoff</span></li>
-            <li><span class="ci">✓</span><span><strong>Protection</strong> against future rate hikes</span></li>
-            <li><span class="ci">✓</span><span><strong>Energy independence</strong> and savings</span></li>
-          </ul>
-        </div>
+      <div class="compare-col good">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/05/example-solar-electric-bill-explanation-colors1000px.png" alt="Home with solar net billing low electricity bill Alberta" loading="lazy">
+        <h3>Your home with <span> net billing solar energy</span></h3>
+        <ul>
+          <li><strong>Low interest</strong> solar loan payments</li>
+          <li><strong>Ownership</strong> of your power generation system</li>
+          <li><strong>20+ years</strong> of low cost electricity after loan payoff</li>
+          <li><strong>Protection</strong> against future rate hikes</li>
+          <li><strong>Energy independence</strong> and savings</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══ 3 STEPS ══ -->
-  <section class="section">
-    <div class="steps-wrap">
-      <div class="steps-head">
-        <span class="eyebrow">How It Works</span>
-        <h2 class="section-title">Year Around Low Bills with Solar Panels in Alberta</h2>
+<!-- ═══ 3 STEPS ═══ -->
+<section class="sec-steps">
+  <div class="inner">
+    <div class="sec-steps-header">
+      <h2 class="sec-title">Year Around Low Bills with <span>Solar Panels in Alberta</span></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25065-1.svg" alt="" loading="lazy"></div>
+        <h3>Get a Local Solar Quote</h3>
+        <p>An energy consultant will help design the perfect system for your home's unique energy needs.</p>
       </div>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">1</div>
-          <h3>Get a Local Solar Quote</h3>
-          <p>An energy consultant will help design the perfect system for your home's unique energy needs.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">2</div>
-          <h3>Create your personalized solar investment plan</h3>
-          <p>We offer a variety of financing options to make solar more affordable to fit your budget.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">3</div>
-          <h3>Let our expert solar team handle the rest</h3>
-          <p>From incentives applications, installation to activation, our experts are with you every step of the way.</p>
-        </div>
+      <div class="step-card">
+        <div class="step-icon"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066-2.svg" alt="" loading="lazy"></div>
+        <h3>Create your personalized solar investment plan</h3>
+        <p>We offer a variety of financing options to make solar more affordable to fit your budget.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066-3.svg" alt="" loading="lazy"></div>
+        <h3>Let our expert solar team handle the rest</h3>
+        <p>From incentives applications, installation to activation, our experts are with you every step of the way.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══ CASE STUDIES ══ -->
-  <section class="section section--gray">
-    <div class="cs-wrap">
-      <div class="cs-layout">
-        <div class="cs-content">
-          <span class="eyebrow">Real Homeowner Results</span>
-          <h2 class="section-title">Proof of Concept Alberta Case Studies</h2>
-          <p>The best way to understand the true financial impact of installing solar panels in Alberta is through real-life examples. We believe in transparency, that's why we provide detailed breakdowns of the financial journey for homeowners just like you across the province.</p>
-          <p>These proprietary Alberta solar case studies detail everything: the initial investment, the size of the loan (if applicable), the actual monthly savings achieved, and the precise estimated Return on Investment (ROI).</p>
-          <ul class="cs-links">
-            <li><a href="/case-study/edmonton/">Case Study: How an Edmonton family is saving $48k with solar</a></li>
-            <li><a href="/case-study/beaumont/">Case Study: Beaumont home saves $1,600/yr with solar</a></li>
-            <li><a href="/case-study/airdrie/">Case Study: Airdrie Family Breaks Even in 14 Years</a></li>
-          </ul>
-          <button class="btn btn-primary" onclick="openSurvey()">Get your free estimate</button>
-        </div>
-        <div class="cs-img">
-          <img src="https://alberta-solar.org/wp-content/uploads/2025/10/airdrie-solar-case-study-bill-1.png" alt="Alberta solar case study bill" loading="lazy">
-        </div>
+<!-- ═══ CASE STUDIES ═══ -->
+<section class="sec-cases">
+  <div class="inner">
+    <div class="cases-layout">
+      <div>
+        <h2 class="sec-title">Proof of Concept <span>Alberta Case Studies</span></h2>
+        <p class="sec-sub">The best way to understand the true financial impact of installing solar panels in Alberta is through real-life examples. We believe in transparency — that's why we provide detailed breakdowns of the financial journey for homeowners just like you.</p>
+        <p class="sec-sub" style="margin-top:12px">These proprietary Alberta solar case studies detail everything: the initial investment, the size of the loan (if applicable), the actual monthly savings achieved, and the precise estimated Return on Investment (ROI).</p>
+        <ul class="cases-links" style="margin-top:20px">
+          <li><a href="/case-study/edmonton/">Case Study: How an Edmonton family is saving $48k with solar</a></li>
+          <li><a href="/case-study/beaumont/">Case Study: Beaumont home saves $1,600/yr with solar</a></li>
+          <li><a href="/case-study/airdrie/">Case Study: Airdrie Family Breaks Even in 14 Years</a></li>
+        </ul>
+        <button class="btn" style="margin-top:24px" onclick="openSurvey()">Get your free estimate</button>
+      </div>
+      <div class="cases-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/10/airdrie-solar-case-study-bill-1.png" alt="Airdrie Alberta solar case study electricity bill net billing savings" loading="lazy">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══ WHY US ══ -->
-  <section class="section">
-    <div class="why-wrap">
-      <span class="eyebrow">Why Alberta Solar Advisors?</span>
-      <h2 class="section-title">Why Alberta Solar Advisors?</h2>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-num">1</div>
-          <h3>Fact-Checked Incentives</h3>
-          <p>Get the latest, accurate updates on programs like the CEIP and Net Billing, ensuring you maximize your return.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-num">2</div>
-          <h3>Vetted Installers Only</h3>
-          <p>We connect you with local, licensed, reputable, and top-rated Alberta solar installation companies that meet our strict quality and performance standards with 5 star reviews and proven customer data.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-num">3</div>
-          <h3>Transparent Solar Proposals</h3>
-          <p>Our goal is to provide a complete picture of your potential savings, lifecycle costs, and system performance without the pressure of a direct sale.</p>
-        </div>
+<!-- ═══ WHY US ═══ -->
+<section class="sec-why">
+  <div class="inner">
+    <div class="sec-steps-header">
+      <h2 class="sec-title">Why <span>Alberta Solar Advisors</span>?</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25065-1.svg" alt="" loading="lazy"></div>
+        <h3>Fact-Checked Incentives</h3>
+        <p>Get the latest, accurate updates on programs like the CEIP and Net Billing, ensuring you maximize your return.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066-2.svg" alt="" loading="lazy"></div>
+        <h3>Vetted Installers Only</h3>
+        <p>We connect you with local, licensed, reputable, and top-rated Alberta solar installation companies that meet our strict quality and performance standards with 5 star reviews and proven customer data.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066-3.svg" alt="" loading="lazy"></div>
+        <h3>Transparent Solar Proposals</h3>
+        <p>Our goal is to provide a complete picture of your potential savings, lifecycle costs, and system performance without the pressure of a direct sale.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══ LEADING INSTALLATIONS ══ -->
-  <section class="section section--gray">
-    <div class="leading-wrap">
-      <div class="leading-layout">
-        <div class="leading-content">
-          <span class="eyebrow">1,355+ Installations Province-Wide</span>
-          <h2 class="section-title">Leading Solar Panel Alberta Installations</h2>
-          <p>Going solar in Alberta doesn't have to be complicated. It's simple, get the numbers for your home! Check our useful pages like:</p>
-          <ul class="leading-list">
-            <li><a href="/incentives/">Alberta Solar Incentives</a></li>
-            <li><a href="/financing/">Solar Financing Options</a></li>
-            <li><a href="/case-study/">Net Billing Bill Breakdown</a></li>
-          </ul>
-          <p>Energy costs are expected to keep rising, but yours don't have to. Programs like the <a href="/financing/ceip/">CEIP</a> are set to renew in 2026 for cities like Calgary. Prepare now when new funding is available. Take the first step towards energy independence by getting your free, personalized solar savings estimate before it's too late.</p>
-          <ul class="leading-list" style="margin-top:16px;">
-            <li>Some homes may save $45,000+ in lifetime electricity costs</li>
-            <li>Protect your monthly finances from energy price increases</li>
-            <li>Offset up to 100% of your monthly energy usage</li>
-          </ul>
-          <div style="margin-top:28px;">
-            <button class="btn btn-primary" onclick="openSurvey()">Get your free estimate</button>
-          </div>
-        </div>
-        <div class="leading-img">
-          <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-01.png" alt="Edmonton solar installers" loading="lazy">
-        </div>
+<!-- ═══ LEADING INSTALLATIONS ═══ -->
+<section class="sec-leading">
+  <div class="inner">
+    <div class="cases-layout">
+      <div>
+        <h2 class="sec-title">Leading <span>Solar Panel Alberta</span> Installations</h2>
+        <p class="sec-sub">Going solar in Alberta doesn't have to be complicated. It's simple, get the numbers for your home! Check our useful pages like:</p>
+        <ul class="leading-list">
+          <li><a href="/incentives/">Alberta Solar Incentives</a></li>
+          <li><a href="/financing/">Solar Financing Options</a></li>
+          <li><a href="/case-study/">Net Billing Bill Breakdown</a></li>
+        </ul>
+        <p class="sec-sub" style="margin-top:16px">Energy costs are expected to keep rising, but yours don't have to. Programs like the <a href="/financing/ceip/">CEIP</a> are set to renew in 2026 for cities like Calgary. Prepare now when new funding is available. Take the first step towards energy independence by getting your free, personalized solar savings estimate before it's too late.</p>
+        <ul class="leading-list" style="margin-top:16px">
+          <li>Some homes may save $45,000+ in lifetime electricity costs</li>
+          <li>Protect your monthly finances from energy price increases</li>
+          <li>Offset up to 100% of your monthly energy usage</li>
+        </ul>
+        <button class="btn" style="margin-top:24px" onclick="openSurvey()">Get your free estimate</button>
       </div>
-      <div class="icon-row">
-        <div class="icon-tile">
-          <div class="icon-tile-wrap">🏛️</div>
-          <span>Apply for Local Incentives</span>
-        </div>
-        <div class="icon-tile">
-          <div class="icon-tile-wrap">🌿</div>
-          <span>Be Your Local Captain Planet</span>
-        </div>
-        <div class="icon-tile">
-          <div class="icon-tile-wrap">💡</div>
-          <span>Pay Year Around Low Bills with Net Billing</span>
-        </div>
-        <div class="icon-tile">
-          <div class="icon-tile-wrap">🏠</div>
-          <span>Own your home energy system</span>
-        </div>
+      <div class="leading-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-01.png" alt="Edmonton solar installers residential rooftop installation Alberta" loading="lazy">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══ BOTTOM CTA + MAP ══ -->
-  <section class="bottom-cta">
-    <div class="bottom-cta-inner">
-      <h2>Get a Transparent Solar Panel Estimate Today</h2>
-      <p>Across Alberta we've helped over 1,355+ homes and businesses go solar. The future of the CEIP runway and net billing solar programs are uncertain, don't wait to lock in your savings. Fill out our form today to receive a transparent solar panel Alberta quote that's personalized to your home and start your journey with a reliable solar company.</p>
-      <button class="btn-white" onclick="openSurvey()">Get a Free Solar Estimate for Your Home</button>
+<!-- ═══ ICON ROW ═══ -->
+<section class="sec-icons">
+  <div class="inner">
+    <div class="icons-grid">
+      <div class="icon-item">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-18-1.svg" alt="" loading="lazy">
+        <h3>Apply for<br>Local Incentives</h3>
+      </div>
+      <div class="icon-item">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-3.svg" alt="" loading="lazy">
+        <h3>Be Your Local Captain Planet</h3>
+      </div>
+      <div class="icon-item">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-4.svg" alt="" loading="lazy">
+        <h3>Pay Year Around Low Bills with Net Billing</h3>
+      </div>
+      <div class="icon-item">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-5.svg" alt="" loading="lazy">
+        <h3>Own your home<br>energy system</h3>
+      </div>
     </div>
-    <div class="map-wrap">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22432598.7876003!2d-113.7091615041791!3d60.736336996271326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021d48003c3b1%3A0x7dbca523cf95d7f4!2sAlberta%20Solar%20Advisors!5e0!3m2!1sen!2sus!4v1764127259408!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Alberta Solar Advisors service area"></iframe>
+  </div>
+</section>
+
+<!-- ═══ BOTTOM CTA + MAP ═══ -->
+<section class="sec-cta">
+  <div class="inner">
+    <div class="cta-text">
+      <h2 class="sec-title">Get a <span>Transparent Solar Panel Estimate</span> Today</h2>
+      <p class="sec-sub">Across Alberta we've helped over 1,355+ homes and businesses go solar. The future of the CEIP runway and net billing solar programs are uncertain, don't wait to lock in your savings. Fill out our form today to receive a transparent solar panel Alberta quote that's personalized to your home and start your journey with a reliable solar company.</p>
+      <button class="btn" onclick="openSurvey()">Get a Free Solar Estimate for Your Home</button>
     </div>
-  </section>
+  </div>
+  <div class="map-wrap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22432598.7876003!2d-113.7091615041791!3d60.736336996271326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021d48003c3b1%3A0x7dbca523cf95d7f4!2sAlberta%20Solar%20Advisors!5e0!3m2!1sen!2sus!4v1764127259408!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Alberta Solar Advisors service area"></iframe>
+  </div>
+</section>
 
 </main>
 
-<!-- ══ FOOTER ══ -->
+<!-- ═══ FOOTER ═══ -->
 <footer class="gfooter">
-  <div class="gf-top">
-    <div class="gf-brand">
-      <a href="/"><img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" height="44"></a>
-      <address class="gf-nap">
-        Edmonton, Alberta, Canada<br>
-        <a href="tel:+18256025155">(825) 602-5155</a><br>
-        Hours: Monday-Friday 9am-5pm
-      </address>
-      <div class="gf-social">
-        <a href="https://www.facebook.com/albertasolarhomeowners" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.instagram.com/albertasolarhomeowners/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.youtube.com/@albertasolaradvisors" target="_blank" rel="noopener">Youtube</a>
-        <a href="https://www.tiktok.com/@albertasolarhomeowners" target="_blank" rel="noopener">Tiktok</a>
-        <a href="https://www.linkedin.com/company/alberta-solar-homeowners/" target="_blank" rel="noopener">LinkedIn</a>
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/"><img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" height="44"></a>
+        <address class="footer-nap">Edmonton, Alberta, Canada<br><a href="tel:+18256025155">(825) 602-5155</a><br>Hours: Monday–Friday 9am–5pm</address>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/albertasolarhomeowners" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/albertasolarhomeowners/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@albertasolaradvisors" target="_blank" rel="noopener">Youtube</a>
+          <a href="https://www.tiktok.com/@albertasolarhomeowners" target="_blank" rel="noopener">Tiktok</a>
+          <a href="https://www.linkedin.com/company/alberta-solar-homeowners/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
-    </div>
-    <div class="gf-col">
-      <h3>Resources</h3>
-      <ul>
+      <div class="footer-col"><h4>Resources</h4><ul>
         <li><a href="/case-study/">Solar Bill Breakdown</a></li>
         <li><a href="/financing/">Solar Financing</a></li>
         <li><a href="/financing/ceip/">CEIP Loan</a></li>
-        <li><a href="/case-study/edmonton/">Solar Case Study One</a></li>
-        <li><a href="/case-study/airdrie/">Solar Case Study Two</a></li>
+        <li><a href="/case-study/edmonton/">Case Study One</a></li>
+        <li><a href="/case-study/airdrie/">Case Study Two</a></li>
         <li><a href="/locations/edmonton/">Edmonton</a></li>
         <li><a href="/locations/calgary/">Calgary</a></li>
-      </ul>
-    </div>
-    <div class="gf-col">
-      <h3>About</h3>
-      <ul>
+      </ul></div>
+      <div class="footer-col"><h4>About</h4><ul>
         <li><a href="/about/">About Us</a></li>
         <li><a href="/contact/">Contact Us</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/privacy-policy/">Privacy Policy</a></li>
         <li><a href="/terms/">Terms and Conditions</a></li>
         <li><a href="/sitemap/">Sitemap</a></li>
-      </ul>
-    </div>
-    <div class="gf-col">
-      <h3>Social</h3>
-      <ul>
+      </ul></div>
+      <div class="footer-col"><h4>Social</h4><ul>
         <li><a href="https://www.facebook.com/albertasolarhomeowners" target="_blank" rel="noopener">Facebook</a></li>
         <li><a href="https://www.instagram.com/albertasolarhomeowners/" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://www.youtube.com/@albertasolaradvisors" target="_blank" rel="noopener">Youtube</a></li>
         <li><a href="https://www.tiktok.com/@albertasolarhomeowners" target="_blank" rel="noopener">Tiktok</a></li>
         <li><a href="https://www.linkedin.com/company/alberta-solar-homeowners/" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://goo.gl/maps/v1JTYr3K5gJPMZjY7" target="_blank" rel="noopener">Location</a></li>
-      </ul>
+      </ul></div>
     </div>
-  </div>
-  <div class="gf-bottom">
-    <p>© <span id="gf-year"></span> Alberta Solar Advisors | All Rights Reserved | Operated by Simple Tree Digital</p>
+    <div class="footer-bottom">
+      <p>© <span id="foot-yr"></span> Alberta Solar Advisors | All Rights Reserved | Operated by Simple Tree Digital</p>
+    </div>
   </div>
 </footer>
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Alberta Solar Advisors","url":"https://alberta-solar.org","telephone":"+18256025155","email":"Info@mail.solar-resource.org","address":{"@type":"PostalAddress","addressLocality":"Edmonton","addressRegion":"AB","addressCountry":"CA"},"openingHours":"Mo-Fr 09:00-17:00"}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Alberta Solar Advisors","url":"https://alberta-solar.org","telephone":"+18256025155","email":"Info@mail.solar-resource.org","address":{"@type":"PostalAddress","addressLocality":"Edmonton","addressRegion":"AB","addressCountry":"CA"},"openingHours":"Mo-Fr 09:00-17:00"}</script>
 
 <script>
-/* ── Survey ── */
+/* Survey */
 function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
 function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSurvey();});
 
-/* ── Nav dropdowns ── */
+/* Nav dropdowns */
 function toggleDrop(id){
   document.querySelectorAll('.gnav-item').forEach(function(item){
-    if(item.id===id){var o=item.classList.toggle('open');item.querySelector('button').setAttribute('aria-expanded',String(o));}
-    else{item.classList.remove('open');var b=item.querySelector('button');if(b)b.setAttribute('aria-expanded','false');}
+    if(item.id===id){var o=item.classList.toggle('open');var b=item.querySelector('[aria-haspopup]');if(b)b.setAttribute('aria-expanded',String(o));}
+    else{item.classList.remove('open');var b=item.querySelector('[aria-haspopup]');if(b)b.setAttribute('aria-expanded','false');}
   });
 }
 document.addEventListener('click',function(e){
   if(!e.target.closest('.gnav-item')){
-    document.querySelectorAll('.gnav-item.open').forEach(function(i){
-      i.classList.remove('open');var b=i.querySelector('button');if(b)b.setAttribute('aria-expanded','false');
-    });
+    document.querySelectorAll('.gnav-item.open').forEach(function(i){i.classList.remove('open');var b=i.querySelector('[aria-haspopup]');if(b)b.setAttribute('aria-expanded','false');});
   }
 });
 
-/* ── Mobile burger ── */
-var burger=document.getElementById('gnav-burger'),mob=document.getElementById('gnav-mobile');
-function closeMobile(){if(mob)mob.classList.remove('open');if(burger)burger.setAttribute('aria-expanded','false');}
-if(burger&&mob){
-  burger.addEventListener('click',function(){
-    var o=mob.classList.toggle('open');burger.setAttribute('aria-expanded',String(o));
-  });
-}
-document.querySelectorAll('#gnav-mobile a').forEach(function(a){a.addEventListener('click',closeMobile);});
+/* Burger */
+(function(){
+  var burger=document.getElementById('gnav-burger'),mob=document.getElementById('gnav-mobile');
+  if(burger&&mob){
+    burger.addEventListener('click',function(){var o=mob.classList.toggle('open');burger.setAttribute('aria-expanded',String(o));});
+    document.querySelectorAll('#gnav-mobile a').forEach(function(a){a.addEventListener('click',function(){mob.classList.remove('open');burger.setAttribute('aria-expanded','false');});});
+  }
+})();
 
-/* ── Nav scroll: add solid bg after hero on non-homepage scroll ── */
-/* (homepage keeps transparent over hero, then solid when scrolled past) */
+/* Nav: becomes fixed + white on scroll past hero */
 window.addEventListener('scroll',function(){
-  var gnav=document.getElementById('gnav');
-  if(window.scrollY>80){gnav.style.background='#fff';gnav.style.position='fixed';gnav.style.boxShadow='0 1px 0 #E5E6EA';}
-  else{gnav.style.background='transparent';gnav.style.position='absolute';gnav.style.boxShadow='none';}
-});
+  var nav=document.getElementById('gnav');
+  if(window.scrollY>60){
+    nav.style.position='fixed';nav.style.background='#fff';nav.style.boxShadow='0 1px 0 #E5E6EA';
+  } else {
+    nav.style.position='absolute';nav.style.background='transparent';nav.style.boxShadow='none';
+  }
+},{ passive: true });
 
-/* ── postMessage bridge ── */
+/* postMessage bridge */
 (function(){
   function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
   function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}
-  function sendCtx(fr){if(!fr||!fr.contentWindow)return;fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
   var fr=document.getElementById('sv-iframe');
-  if(fr)fr.addEventListener('load',function(){sendCtx(fr);});
+  if(fr){fr.addEventListener('load',function(){fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');});}
   window.addEventListener('message',function(e){
     if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(x){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',email:e.data.email,phone:e.data.phone,first_name:e.data.first_name,last_name:e.data.last_name});}
     if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
@@ -1225,7 +897,7 @@ window.addEventListener('scroll',function(){
   });
 })();
 
-document.getElementById('gf-year').textContent=new Date().getFullYear();
+document.getElementById('foot-yr').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>Solar Panels Calgary — Alberta Solar Advisors</title>
   <meta name="description" content="Calgary solar panels with ENMAX net billing and Solar Club access. CEIP currently paused in Calgary. Get a transparent proposal from Alberta Solar Advisors.">
   <link rel="canonical" href="https://alberta-solar.org/locations/calgary/">
-  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="icon" type="image/png" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/includes/site.css">
@@ -73,7 +73,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 56px 48px 56px 56px;
+      padding: 56px 48px 56px max(40px, calc((100vw - 1200px) / 2 + 40px));
     }
     .page-hero-trust {
       display: flex;
@@ -121,28 +121,35 @@
       max-width: 480px;
     }
     .page-hero-img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 48px 40px 0;
-    }
-    .page-hero-img-circle {
-      width: 100%;
-      aspect-ratio: 1;
-      max-width: 460px;
-      border-radius: 50%;
+      position: relative;
       overflow: hidden;
-      background: #d0daf0;
+      min-height: 420px;
+    }
+    .page-hero-img img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+    /* Remove circle wrapper - full bleed image */
+    .page-hero-img-circle {
+      position: absolute;
+      inset: 0;
+      border-radius: 0;
+      overflow: hidden;
+      background: none;
     }
     .page-hero-img-circle img {
       width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
+      object-fit: cover; object-position: center 30%;
     }
     @media (max-width: 860px) {
       .page-hero { grid-template-columns: 1fr; min-height: auto; }
       .page-hero-content { padding: 48px 24px 32px; }
-      .page-hero-img { padding: 0 24px 40px; }
-      .page-hero-img-circle { max-width: 100%; aspect-ratio: 16/9; border-radius: 16px; }
+      .page-hero-img { min-height: 240px; position: relative; }
     }
   </style>
 </head>
