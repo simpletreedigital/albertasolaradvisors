@@ -1,92 +1,68 @@
-<nav class="gnav" id="gnav" role="navigation" aria-label="Main navigation">
+<nav class="gnav" id="gnav">
   <div class="gnav-inner">
-    <a href="/" class="gnav-logo" aria-label="Alberta Solar Advisors home">
-      <img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" width="200" height="46">
-    </a>
-    <button class="gnav-burger" id="gnav-burger" aria-expanded="false" aria-controls="gnav-mobile" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="gnav-list" role="list">
-      <li class="gnav-item" id="drop-bills">
-        <button class="gnav-btn" onclick="toggleDrop('drop-bills')" aria-expanded="false" aria-haspopup="true">
-          Bill Breakdown <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
-        <ul class="gnav-drop" role="list">
-          <li><a href="/case-study/" class="gnav-drop-link">Bill Breakdown Overview</a></li>
-          <li><a href="/case-study/beaumont/" class="gnav-drop-link">Case Study – Beaumont</a></li>
-          <li><a href="/case-study/edmonton/" class="gnav-drop-link">Case Study – Edmonton</a></li>
-          <li><a href="/case-study/airdrie/" class="gnav-drop-link">Case Study – Airdrie</a></li>
+    <a href="/" class="gnav-logo" style="flex-shrink:0"><img src="https://alberta-solar.org/wp-content/uploads/2025/05/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" style="height:44px;width:auto;max-width:200px;object-fit:contain;flex-shrink:0"></a>
+    <button class="gnav-burger" id="gnav-burger" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="gnav-list">
+      <li class="gnav-item" id="drop-cases">
+        <button class="gnav-btn" onclick="toggleDrop('drop-cases')" aria-expanded="false" aria-haspopup="true">Case Studies <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
+        <ul class="gnav-drop">
+          <li><a href="/case-study/">Case Study Overview</a></li>
+          <li><a href="/case-study/beaumont/">Beaumont ,  Saves $25k</a></li>
+          <li><a href="/case-study/edmonton/">Edmonton ,  Saves $48k</a></li>
+          <li><a href="/case-study/airdrie/">Airdrie ,  Saves $40k</a></li>
+        </ul>
+      </li>
+      <li class="gnav-item" id="drop-services">
+        <button class="gnav-btn" onclick="toggleDrop('drop-services')" aria-expanded="false" aria-haspopup="true">Services <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
+        <ul class="gnav-drop">
+          <li><a href="/services/">Services Overview</a></li>
+          <li><a href="/services/solar-estimates/">Solar Estimates</a></li>
+          <li><a href="/services/commercial/">Commercial Solar</a></li>
+          <li><a href="/services/battery-storage/">Battery Storage</a></li>
+          <li><a href="/services/duct-sealing/">Duct Sealing</a></li>
         </ul>
       </li>
       <li class="gnav-item" id="drop-financing">
-        <button class="gnav-btn" onclick="toggleDrop('drop-financing')" aria-expanded="false" aria-haspopup="true">
-          Financing <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
-        <ul class="gnav-drop" role="list">
-          <li><a href="/financing/" class="gnav-drop-link">Financing Overview</a></li>
-          <li><a href="/financing/ceip/" class="gnav-drop-link">CEIP Loan</a></li>
-          <li><a href="/financing/greener-homes-loan/" class="gnav-drop-link">Canada Greener Homes Loan</a></li>
+        <button class="gnav-btn" onclick="toggleDrop('drop-financing')" aria-expanded="false" aria-haspopup="true">Financing <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
+        <ul class="gnav-drop">
+          <li><a href="/financing/">Financing Overview</a></li>
+          <li><a href="/financing/ceip/">CEIP Loan</a></li>
+          <li><a href="/financing/greener-homes-loan/">Canada Greener Homes Loan</a></li>
         </ul>
       </li>
       <li class="gnav-item" id="drop-incentives">
-        <button class="gnav-btn" onclick="toggleDrop('drop-incentives')" aria-expanded="false" aria-haspopup="true">
-          Incentives <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
-        <ul class="gnav-drop" role="list">
-          <li><a href="/incentives/" class="gnav-drop-link">Incentives Overview</a></li>
-          <li><a href="/financing/ceip/" class="gnav-drop-link">CEIP Loan</a></li>
-          <li><a href="/incentives/net-billing/" class="gnav-drop-link">Net Billing</a></li>
-          <li><a href="/incentives/the-solar-club/" class="gnav-drop-link">The Solar Club</a></li>
-          <li><a href="/blog/" class="gnav-drop-link">Updates</a></li>
+        <button class="gnav-btn" onclick="toggleDrop('drop-incentives')" aria-expanded="false" aria-haspopup="true">Incentives <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
+        <ul class="gnav-drop">
+          <li><a href="/incentives/">Incentives Overview</a></li>
+          <li><a href="/financing/ceip/">CEIP Loan</a></li>
+          <li><a href="/incentives/net-billing/">Net Billing</a></li>
+          <li><a href="/incentives/the-solar-club/">The Solar Club</a></li>
+          <li><a href="/blog/">Updates</a></li>
         </ul>
       </li>
-      <li class="gnav-item" id="drop-locations">
-        <button class="gnav-btn" onclick="toggleDrop('drop-locations')" aria-expanded="false" aria-haspopup="true">
-          Locations <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
-        <ul class="gnav-drop" role="list">
-          <li><a href="/locations/" class="gnav-drop-link">All Locations</a></li>
-          <li><a href="/locations/edmonton/" class="gnav-drop-link">Edmonton</a></li>
-          <li><a href="/locations/calgary/" class="gnav-drop-link">Calgary</a></li>
-          <li><a href="/locations/red-deer/" class="gnav-drop-link">Red Deer</a></li>
-          <li><a href="/locations/lethbridge/" class="gnav-drop-link">Lethbridge</a></li>
-          <li><a href="/locations/airdrie/" class="gnav-drop-link">Airdrie</a></li>
-        </ul>
-      </li>
-      <li class="gnav-item"><a href="/about/" class="gnav-link">About Us</a></li>
-      <li class="gnav-item"><a href="/contact/" class="gnav-link">Contact Us</a></li>
+      <li><a href="/about/" class="gnav-link">About</a></li>
+      <li><a href="/contact/" class="gnav-link">Contact</a></li>
     </ul>
-    <button class="gnav-cta" onclick="openSurvey()" aria-label="Get your free solar estimate">Get your free estimate</button>
+    <button class="gnav-cta" onclick="openSurvey()">Get your free estimate</button>
   </div>
-  <div class="gnav-mobile" id="gnav-mobile" role="dialog" aria-label="Mobile navigation">
-    <ul role="list">
-      <li><a href="/case-study/">Bill Breakdown</a></li>
-      <li><a href="/case-study/beaumont/">Case Study – Beaumont</a></li>
-      <li><a href="/case-study/edmonton/">Case Study – Edmonton</a></li>
-      <li><a href="/case-study/airdrie/">Case Study – Airdrie</a></li>
-      <li class="mob-divider"></li>
+  <div class="gnav-mobile" id="gnav-mobile">
+    <ul>
+      <li><a href="/case-study/">Case Study Overview</a></li>
+      <li><a href="/case-study/beaumont/">Beaumont Case Study</a></li>
+      <li><a href="/case-study/edmonton/">Edmonton Case Study</a></li>
+      <li><a href="/case-study/airdrie/">Airdrie Case Study</a></li>
+      <li><a href="/services/">Services Overview</a></li>
+      <li><a href="/services/solar-estimates/">Solar Estimates</a></li>
+      <li><a href="/services/commercial/">Commercial Solar</a></li>
       <li><a href="/financing/">Financing Overview</a></li>
       <li><a href="/financing/ceip/">CEIP Loan</a></li>
-      <li><a href="/financing/greener-homes-loan/">Greener Homes Loan</a></li>
-      <li class="mob-divider"></li>
-      <li><a href="/incentives/">Incentives Overview</a></li>
+      <li><a href="/incentives/">Incentives</a></li>
       <li><a href="/incentives/net-billing/">Net Billing</a></li>
       <li><a href="/incentives/the-solar-club/">The Solar Club</a></li>
-      <li class="mob-divider"></li>
       <li><a href="/locations/">All Locations</a></li>
-      <li><a href="/locations/edmonton/">Edmonton</a></li>
-      <li><a href="/locations/calgary/">Calgary</a></li>
-      <li><a href="/locations/red-deer/">Red Deer</a></li>
-      <li><a href="/locations/lethbridge/">Lethbridge</a></li>
-      <li><a href="/locations/airdrie/">Airdrie</a></li>
-      <li class="mob-divider"></li>
-      <li><a href="/services/">Services</a></li>
       <li><a href="/about/">About Us</a></li>
       <li><a href="/contact/">Contact Us</a></li>
-      <li><a href="/blog/">Blog</a></li>
     </ul>
-    <div class="mob-cta">
-      <button onclick="openSurvey()">Get your free estimate</button>
-    </div>
+    <div class="mob-cta"><button onclick="openSurvey()">Get your free estimate</button></div>
   </div>
 </nav>

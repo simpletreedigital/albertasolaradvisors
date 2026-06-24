@@ -116,6 +116,14 @@
   .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
   .sv-body{flex:1;overflow-y:auto;}
   .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+  
+  /* Compare grid - side by side */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
+  .compare-col{display:flex;flex-direction:column;gap:14px;}
+  .compare-col img{width:100%;border-radius:8px;border:1px solid var(--border);}
+  .bad li::before{content:'✗';color:#ef4444;font-weight:700;flex-shrink:0;}
+  .good li::before{content:'✓';color:#10b981;font-weight:700;flex-shrink:0;}
+  @media(max-width:680px){.compare-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -133,12 +141,11 @@
 
 <!-- HERO -->
 <div class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2025/10/airdrie-solar-case-study-production-graph.png')"></div>
   <div class="page-hero-left">
     <div class="breadcrumb"><a href="/">Home</a> › <a href="/incentives/">Incentives</a> › Net Billing</div>
     <div class="hero-trust">
-      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>Credits at full retail rate — not wholesale</div>
-      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>12-month rolling credit — summer surplus offsets winter bills</div>
+      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>Credits at full retail rate ,  not wholesale</div>
+      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>12-month rolling credit ,  summer surplus offsets winter bills</div>
     </div>
     <h1>Alberta Net Billing:<br><span>The #1 Solar ROI Accelerator</span></h1>
     <p class="hero-sub">Alberta's Micro-Generation Regulation lets you earn the full retail rate for every kilowatt-hour you export. This is the single most important financial factor that makes solar so compelling in Alberta.</p>
@@ -170,11 +177,11 @@
       <div class="content-body">
         <h2>What is Net Billing in Alberta?</h2>
         <p>Net billing is Alberta's billing arrangement under the provincial <strong>Micro-Generation Regulation</strong> that allows homeowners and businesses with solar energy systems to earn credits for the excess electricity they generate and send back to the grid.</p>
-        <p>Unlike traditional net metering used in other provinces that only pays wholesale prices (around 6¢/kWh), Alberta's net billing system compensates small-scale micro-generators (systems under 150 kW) at the <strong>full retail rate</strong> — currently around 12–18¢/kWh depending on your plan. That's the same rate you pay when you buy electricity from the grid.</p>
+        <p>Unlike traditional net metering used in other provinces that only pays wholesale prices (around 6¢/kWh), Alberta's net billing system compensates small-scale micro-generators (systems under 150 kW) at the <strong>full retail rate</strong> ,  currently around 12–18¢/kWh depending on your plan. That's the same rate you pay when you buy electricity from the grid.</p>
         <div class="highlight-box">
-          <p><strong>Key Fact:</strong> Retail-rate credits vs. wholesale-rate credits increase your lifetime solar profits by 462% — or over $31,900 on a typical Alberta home installation. This is why Alberta's net billing policy is critical to solar adoption in the province.</p>
+          <p><strong>Key Fact:</strong> Retail-rate credits vs. wholesale-rate credits increase your lifetime solar profits by 462% ,  or over $31,900 on a typical Alberta home installation. This is why Alberta's net billing policy is critical to solar adoption in the province.</p>
         </div>
-        <h2>How Net Billing Works — Step by Step</h2>
+        <h2>How Net Billing Works ,  Step by Step</h2>
         <div class="how-steps">
           <div class="how-step"><div class="how-step-num">1</div><div class="how-step-text"><h4>Solar Generation</h4><p>Your solar panels convert sunlight into DC electricity, which an inverter converts to usable AC power for your home or business.</p></div></div>
           <div class="how-step"><div class="how-step-num">2</div><div class="how-step-text"><h4>Self-Consumption First</h4><p>Your property uses the solar power first, automatically reducing the amount of electricity you need to purchase from the grid. This happens in real-time throughout the day.</p></div></div>
@@ -208,7 +215,7 @@
       </tbody>
     </table>
     <div class="highlight-box">
-      <p><strong>Important:</strong> While you earn credits for exported energy at the retail rate, you still pay fixed delivery charges (distribution, transmission, and admin fees) as long as you remain grid-connected. However, this is beneficial — these fees are a small price for using the grid as your backup energy source. <a href="/incentives/the-solar-club/">The Solar Club™</a> can help offset even these fixed fees.</p>
+      <p><strong>Important:</strong> While you earn credits for exported energy at the retail rate, you still pay fixed delivery charges (distribution, transmission, and admin fees) as long as you remain grid-connected. However, this is beneficial ,  these fees are a small price for using the grid as your backup energy source. <a href="/incentives/the-solar-club/">The Solar Club™</a> can help offset even these fixed fees.</p>
     </div>
     <div style="text-align:center;margin-top:32px"><button class="btn" onclick="openSurvey()">Get a Solar Quote &amp; Apply for Net Billing</button></div>
   </div>
@@ -220,13 +227,13 @@
     <h2 class="sec-title">8 Key Benefits of <span>Alberta's Net Billing System</span></h2>
     <p class="sec-sub">Here is why Alberta's net billing framework is one of the best in Canada for solar homeowners:</p>
     <div class="benefit-grid" style="margin-top:28px">
-      <div class="benefit-card"><h4>1. Retail Rate Credits</h4><p>Earn the same rate for exported energy as you pay for grid electricity — unlike most jurisdictions that only pay wholesale rates. This is the single most important factor making solar economically attractive in Alberta.</p></div>
+      <div class="benefit-card"><h4>1. Retail Rate Credits</h4><p>Earn the same rate for exported energy as you pay for grid electricity ,  unlike most jurisdictions that only pay wholesale rates. This is the single most important factor making solar economically attractive in Alberta.</p></div>
       <div class="benefit-card"><h4>2. Monthly Bill Offsets</h4><p>Credits automatically reduce your next month's electricity charges, providing immediate cash flow benefits. You see the financial return every single month from day one.</p></div>
       <div class="benefit-card"><h4>3. 12-Month Credit Banking</h4><p>Unused credits roll over month-to-month for up to 12 months, allowing summer surplus to offset winter consumption. Crucial in Alberta's seasonal climate where you'll generate 3–4x more power in July than January.</p></div>
       <div class="benefit-card"><h4>4. Annual Cash Compensation</h4><p>If you have leftover credits at the end of your 12-month cycle, your retailer pays you in cash for the unused balance. Systems are typically sized to avoid this, but it's an important safety net.</p></div>
-      <div class="benefit-card"><h4>5. Alberta's Sunshine Advantage</h4><p>With 312+ sunny days per year — the most in Canada — Alberta solar systems generate consistently strong credits. Calgary averages 2,396 sunshine hours annually; Edmonton sees 2,345 hours.</p></div>
+      <div class="benefit-card"><h4>5. Alberta's Sunshine Advantage</h4><p>With 312+ sunny days per year ,  the most in Canada ,  Alberta solar systems generate consistently strong credits. Calgary averages 2,396 sunshine hours annually; Edmonton sees 2,345 hours.</p></div>
       <div class="benefit-card"><h4>6. Grid as Virtual Battery</h4><p>Remain connected to the grid for backup power at night without expensive battery systems, while still earning credits when producing. No additional cost for this safety net.</p></div>
-      <div class="benefit-card"><h4>7. No Interconnection Fees</h4><p>Alberta's Micro-Generation Regulation prohibits utilities from charging homeowners for interconnection or bidirectional meter installation — saving $1,000–$3,000 vs. other provinces.</p></div>
+      <div class="benefit-card"><h4>7. No Interconnection Fees</h4><p>Alberta's Micro-Generation Regulation prohibits utilities from charging homeowners for interconnection or bidirectional meter installation ,  saving $1,000–$3,000 vs. other provinces.</p></div>
       <div class="benefit-card"><h4>8. Rate Volatility Protection</h4><p>Lock in your energy costs while grid rates historically increase 2–4% annually. Your savings grow larger every year as grid electricity becomes more expensive.</p></div>
     </div>
   </div>
@@ -235,7 +242,7 @@
 <!-- ROI TABLES -->
 <section class="sec sec--alt">
   <div class="inner">
-    <h2 class="sec-title">Net Billing <span>ROI — Real Numbers</span></h2>
+    <h2 class="sec-title">Net Billing <span>ROI ,  Real Numbers</span></h2>
     <p class="sec-sub">Based on a typical Alberta home with a $25,000 solar system, $180/month electricity bill, 90% solar coverage, and 12¢/kWh retail rate with 2% annual escalation:</p>
 
     <h3 style="font-family:var(--font);font-size:20px;font-weight:700;color:var(--dark);margin:28px 0 12px">25-Year ROI Calculator</h3>
@@ -243,12 +250,12 @@
       <table class="roi-table">
         <thead><tr><th>Time Period</th><th>Annual Savings</th><th>Cumulative Savings</th><th>System Cost Remaining</th><th>Net Position</th></tr></thead>
         <tbody>
-          <tr><td><strong>Initial Investment</strong></td><td>—</td><td>—</td><td>$25,000</td><td>-$25,000</td></tr>
+          <tr><td><strong>Initial Investment</strong></td><td>, </td><td>, </td><td>$25,000</td><td>-$25,000</td></tr>
           <tr><td>Year 1</td><td>$1,944</td><td>$1,944</td><td>$23,056</td><td>-$23,056</td></tr>
           <tr><td>Year 3</td><td>$2,023</td><td>$5,951</td><td>$19,049</td><td>-$19,049</td></tr>
           <tr><td>Year 5</td><td>$2,105</td><td>$10,145</td><td>$14,855</td><td>-$14,855</td></tr>
           <tr><td>Year 10</td><td>$2,311</td><td>$21,456</td><td>$3,544</td><td>-$3,544</td></tr>
-          <tr class="payback"><td><strong>Year 13 — Break-Even</strong></td><td>$2,461</td><td>$27,822</td><td>$0</td><td>+$2,822</td></tr>
+          <tr class="payback"><td><strong>Year 13 ,  Break-Even</strong></td><td>$2,461</td><td>$27,822</td><td>$0</td><td>+$2,822</td></tr>
           <tr><td>Year 15</td><td>$2,564</td><td>$32,893</td><td>$0</td><td>+$7,893</td></tr>
           <tr><td>Year 20</td><td>$2,832</td><td>$47,325</td><td>$0</td><td>+$22,325</td></tr>
           <tr><td><strong>Year 25</strong></td><td>$3,127</td><td>$63,821</td><td>$0</td><td><strong>+$38,821</strong></td></tr>
@@ -256,7 +263,7 @@
       </table>
     </div>
 
-    <h3 style="font-family:var(--font);font-size:20px;font-weight:700;color:var(--dark);margin:36px 0 12px">Alberta Net Billing vs. Wholesale Rate — Why It Matters</h3>
+    <h3 style="font-family:var(--font);font-size:20px;font-weight:700;color:var(--dark);margin:36px 0 12px">Alberta Net Billing vs. Wholesale Rate ,  Why It Matters</h3>
     <div style="overflow-x:auto">
       <table class="roi-table">
         <thead><tr><th>Metric</th><th>With Alberta Net Billing (Retail 12¢/kWh)</th><th>Without Net Billing (Wholesale 6¢/kWh)</th><th>Difference</th></tr></thead>
@@ -266,7 +273,7 @@
           <tr><td>Payback Period</td><td>12.9 years</td><td>25.7 years</td><td>12.8 years faster</td></tr>
           <tr><td>25-Year Total Savings</td><td>$63,821</td><td>$31,911</td><td>+$31,910</td></tr>
           <tr><td>Net Lifetime Profit</td><td>$38,821</td><td>$6,911</td><td>+$31,910 (462% more)</td></tr>
-          <tr><td>Investment Viability</td><td><span style="color:#10b981;font-weight:700">Excellent ROI</span></td><td><span style="color:#ef4444;font-weight:700">Marginal/Poor</span></td><td>—</td></tr>
+          <tr><td>Investment Viability</td><td><span style="color:#10b981;font-weight:700">Excellent ROI</span></td><td><span style="color:#ef4444;font-weight:700">Marginal/Poor</span></td><td>, </td></tr>
         </tbody>
       </table>
     </div>
@@ -305,7 +312,7 @@
         <h3>3. Choose the Right Electricity Retailer</h3>
         <p>Some Alberta retailers offer enhanced programs for micro-generators:</p>
         <ul class="check-list">
-          <li><strong>Solar Club™:</strong> High rate $0.30/kWh (May–Oct), low rate $0.0877/kWh (Nov–Apr) — <a href="/incentives/the-solar-club/">learn more</a></li>
+          <li><strong>Solar Club™:</strong> High rate $0.30/kWh (May–Oct), low rate $0.0877/kWh (Nov–Apr) ,  <a href="/incentives/the-solar-club/">learn more</a></li>
           <li>Seasonal rate programs that increase annual savings by 15–25%</li>
           <li>Flexible rate switching aligned with your production cycles</li>
           <li>Annual retailer review can add $200–$400 to yearly savings</li>
@@ -316,7 +323,7 @@
         <p style="font-size:12px;color:var(--muted);margin-top:8px;font-style:italic">Monthly solar production vs. consumption for an Airdrie home. Summer surplus builds credits that carry through winter.</p>
         <div style="margin-top:24px">
           <img src="https://alberta-solar.org/wp-content/uploads/2025/06/solar-club-rates.jpg" alt="Solar Club electricity rates seasonal Alberta" loading="lazy" style="width:100%;border-radius:12px;">
-          <p style="font-size:12px;color:var(--muted);margin-top:8px;font-style:italic">The Solar Club™ rates — $0.30/kWh in summer export months, $0.0877/kWh in winter import months.</p>
+          <p style="font-size:12px;color:var(--muted);margin-top:8px;font-style:italic">The Solar Club™ rates ,  $0.30/kWh in summer export months, $0.0877/kWh in winter import months.</p>
         </div>
       </div>
     </div>
@@ -337,7 +344,7 @@
       <div class="compare-col good">
         <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066.webp" alt="Home with solar net billing low electricity bill Alberta microgen credit" loading="lazy">
         <h3 style="font-family:var(--font);font-size:22px;font-weight:600">Your home with <span style="color:var(--blue)">solar net billing</span></h3>
-        <ul><li>Earn <strong>Micro-Generation Credits</strong> at retail rate</li><li><strong>12-month credit rollover</strong> — summer credits offset winter bills</li><li><strong>Ownership</strong> of your power generation system</li><li><strong>20+ years</strong> of low cost electricity after payback</li><li><strong>Protection</strong> against rising electricity rates</li><li><strong>Energy independence</strong> and savings</li></ul>
+        <ul><li>Earn <strong>Micro-Generation Credits</strong> at retail rate</li><li><strong>12-month credit rollover</strong> ,  summer credits offset winter bills</li><li><strong>Ownership</strong> of your power generation system</li><li><strong>20+ years</strong> of low cost electricity after payback</li><li><strong>Protection</strong> against rising electricity rates</li><li><strong>Energy independence</strong> and savings</li></ul>
       </div>
     </div>
   </div>
@@ -354,7 +361,7 @@
       <div class="faq-item"><button class="faq-q">Are there interconnection fees to start net billing in Alberta?</button><div class="faq-a">No. Alberta's Micro-Generation Regulation prohibits distribution utilities from charging homeowners for interconnection applications, studies, or bidirectional meter installation. This saves Alberta solar owners $1,000–$3,000 compared to homeowners in other provinces.</div></div>
       <div class="faq-item"><button class="faq-q">What happens to credits when I sell my house?</button><div class="faq-a">When you sell your home, any remaining credits are not automatically transferable. However, the new homeowner can apply to become a micro-generator and begin accumulating their own credits. This is typically disclosed as part of the real estate transaction and may add value to your property sale.</div></div>
       <div class="faq-item"><button class="faq-q">Will the net billing policy change?</button><div class="faq-a">The Micro-Generation Regulation is provincial legislation. As of 2026, there are no announced plans to reduce or eliminate retail-rate net billing. However, as more solar is installed, future changes are possible. Installing sooner rather than later typically means your interconnection agreement is established under current favourable terms.</div></div>
-      <div class="faq-item"><button class="faq-q">Which utilities in Alberta support net billing?</button><div class="faq-a">All wire owners in Alberta — including EPCOR (Edmonton), FortisAlberta (most rural and suburban areas), ATCO Electric (northern Alberta), and ENMAX (Calgary distribution) — are required to support micro-generation interconnection under provincial regulation. Medicine Hat has its own municipal utility that also participates.</div></div>
+      <div class="faq-item"><button class="faq-q">Which utilities in Alberta support net billing?</button><div class="faq-a">All wire owners in Alberta ,  including EPCOR (Edmonton), FortisAlberta (most rural and suburban areas), ATCO Electric (northern Alberta), and ENMAX (Calgary distribution) ,  are required to support micro-generation interconnection under provincial regulation. Medicine Hat has its own municipal utility that also participates.</div></div>
     </div>
   </div>
 </section>
