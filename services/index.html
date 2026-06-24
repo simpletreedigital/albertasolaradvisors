@@ -1,146 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solar Services ,  Alberta Solar Advisors</title>
-  <meta name="description" content="Solar panel installation, battery storage, and duct sealing for Alberta homeowners. Transparent proposals, CEIP-ready documentation, and no-pressure estimates.">
+  <title>Solar Services Alberta: Residential, Commercial, Battery & More | Alberta Solar Advisors</title>
+  <meta name="description" content="Alberta Solar Advisors offers residential and commercial solar installation, battery storage, duct sealing, and transparent solar estimates across Alberta.">
   <link rel="canonical" href="https://alberta-solar.org/services/">
-  <link rel="icon" type="image/png" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
+  <link rel="icon" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
+  <meta property="og:title" content="Solar Services Alberta">
+  <meta property="og:url" content="https://alberta-solar.org/services/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/includes/site.css">
   <script src="/includes/nav-footer-loader.js"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKGNP59');</script>
   <style>
-    :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:var(--font-body);color:var(--text);line-height:1.65;}
-    .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:50px;font-family:var(--font-head);font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid var(--blue);transition:background .2s,color .2s;}
-    .btn-teal{background:var(--teal);color:var(--dark);border-color:var(--teal);}
-    section{padding:56px 24px;}
-    .container{max-width:960px;margin:0 auto;}
-    h2{font-family:var(--font-head);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:#1a2744;margin-bottom:16px;}
-    h3{font-family:var(--font-head);font-size:1.15rem;font-weight:700;color:#1a2744;margin-bottom:8px;}
-    p{margin-bottom:16px;}
-    .service-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px;margin-top:32px;}
-    .svc-card{border:1px solid var(--border);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px;}
-    .svc-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--blue),var(--teal));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;}
-    .svc-card h3{font-size:1.2rem;margin:0;}
-    .svc-card p{color:var(--muted);font-size:.95rem;margin:0;flex:1;}
-    .svc-card a{display:inline-block;background:var(--blue);color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;align-self:flex-start;}
-    .process-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px;margin-top:28px;}
-    .step{display:flex;flex-direction:column;gap:10px;}
-    .step-num{width:40px;height:40px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0;}
-    .step h4{font-size:1rem;font-weight:700;color:var(--dark);margin:0;}
-    .step p{font-size:.9rem;color:var(--muted);margin:0;}
-    .trust-bar{background:var(--dark);color:#fff;padding:40px 24px;}
-    .trust-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
-    @media(max-width:640px){.trust-inner{grid-template-columns:1fr 1fr;}}
-    .trust-inner strong{display:block;font-size:1.6rem;font-weight:800;color:var(--teal);}
-    .trust-inner span{font-size:.85rem;color:rgba(255,255,255,.75);}
-    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
-    .cta-strip h2{color:#fff;margin-bottom:12px;}
-    .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
-    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
-    .sv-overlay.open{display:flex;}
-    .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
-    .sv-head{background:#01214a;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
-    .sv-head span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;}
-    .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
-    .sv-body{flex:1;overflow-y:auto;}
-    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
-  
-    /* ── Shared inner-page hero ── */
-    .page-hero {
-      background: #EEF2FF;
-      min-height: 500px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      overflow: hidden;
-    }
-    .page-hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 56px 48px 56px max(40px, calc((100vw - 1200px) / 2 + 40px));
-    }
-    .page-hero-trust {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-    .page-hero-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: .85rem;
-      font-weight: 500;
-      color: #313E5C;
-    }
-    .page-hero-trust-check {
-      width: 18px; height: 18px;
-      background: #3455A5;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .page-hero-trust-check svg { width: 10px; height: 10px; }
-    .breadcrumb {
-      font-size: .8rem;
-      color: #6b7280;
-      margin-bottom: 14px;
-    }
-    .breadcrumb a { color: #3455A5; text-decoration: none; }
-    .breadcrumb a:hover { text-decoration: underline; }
-    .page-hero h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
-      font-weight: 800;
-      line-height: 1.15;
-      color: #1a2744;
-      margin-bottom: 16px;
-    }
-    .page-hero h1 span { color: #3455A5; }
-    .page-hero .hero-sub {
-      font-size: .97rem;
-      color: #4b5563;
-      line-height: 1.7;
-      margin-bottom: 28px;
-      max-width: 480px;
-    }
-    .page-hero-img {
-      position: relative;
-      overflow: hidden;
-      min-height: 420px;
-    }
-    .page-hero-img img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      display: block;
-    }
-    /* Remove circle wrapper - full bleed image */
-    .page-hero-img-circle {
-      position: absolute;
-      inset: 0;
-      border-radius: 0;
-      overflow: hidden;
-      background: none;
-    }
-    .page-hero-img-circle img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 30%;
-    }
-    @media (max-width: 860px) {
-      .page-hero { grid-template-columns: 1fr; min-height: auto; }
-      .page-hero-content { padding: 48px 24px 32px; }
-      .page-hero-img { min-height: 240px; position: relative; }
-    }
+  :root{--blue:#3455A5;--dark:#01214A;--text:#313E5C;--muted:#6b7280;--hero-bg:#EEF2FF;--alt-bg:#F3F8FF;--cta-bg:#F3F5FA;--border:#E5E6EA;--font:'Montserrat',sans-serif;--font-btn:'Inter',sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font);color:var(--text);line-height:1.65;}
+  img{max-width:100%;height:auto;display:block;}
+  a{text-decoration:none;color:var(--blue);}
+  a:hover{text-decoration:underline;}
+  ul{list-style:none;}
+  p{margin-bottom:1em;}
+  p:last-child{margin-bottom:0;}
+  .inner{max-width:1200px;margin:0 auto;padding:0 40px;}
+  @media(max-width:900px){.inner{padding:0 24px;}}
+  .btn{display:inline-block;font-family:var(--font-btn);font-size:15px;font-weight:600;background:var(--blue);color:#fff;border:1px solid var(--blue);border-radius:50px;padding:14px 32px;cursor:pointer;transition:background .2s,color .2s;line-height:1.2;}
+  .btn:hover{background:#fff;color:var(--blue);}
+  /* PAGE HEADER */
+  .page-header{background:var(--hero-bg);padding:80px 0 60px;}
+  .page-header h1{font-family:var(--font);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--dark);margin-bottom:14px;}
+  .page-header h1 span{color:var(--blue);}
+  .page-header p{font-size:18px;color:var(--text);max-width:620px;line-height:1.7;}
+  /* SERVICE CARDS GRID */
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;padding:60px 0;}
+  .svc-card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow .2s,transform .15s;}
+  .svc-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.09);transform:translateY(-2px);}
+  .svc-card-img{height:220px;overflow:hidden;background:var(--alt-bg);}
+  .svc-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
+  .svc-card:hover .svc-card-img img{transform:scale(1.04);}
+  .svc-card-body{padding:28px;}
+  .svc-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:#EEF2FF;padding:4px 10px;border-radius:12px;margin-bottom:10px;}
+  .svc-card h2{font-family:var(--font);font-size:1.35rem;font-weight:700;color:var(--dark);margin-bottom:10px;line-height:1.25;}
+  .svc-card p{font-size:.93rem;color:var(--muted);line-height:1.65;margin-bottom:18px;}
+  .svc-card .btn{font-size:14px;padding:11px 24px;}
+  @media(max-width:760px){.services-grid{grid-template-columns:1fr;}}
+  /* CTA */
+  .cta-section{background:var(--cta-bg);position:relative;overflow:hidden;padding:70px 0;text-align:center;}
+  .cta-bg-img{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.07;pointer-events:none;}
+  .cta-rel{position:relative;z-index:1;}
+  .cta-rel h2{font-family:var(--font);font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;color:var(--dark);margin-bottom:12px;}
+  .cta-rel p{font-size:16px;color:var(--text);max-width:600px;margin:0 auto 28px;line-height:1.65;}
+  /* POPUP */
+  .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
+  .sv-overlay.open{display:flex;}
+  .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
+  .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+  .sv-head span{font-family:var(--font);font-weight:700;font-size:.9rem;}
+  .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
+  .sv-body{flex:1;overflow-y:auto;}
+  .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
   </style>
 </head>
 <body>
@@ -155,135 +75,95 @@
 </div>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
-    <div class="page-hero">
-    <div class="page-hero-content">
-      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Services</div>
-      <div class="page-hero-trust">
-        <div class="page-hero-trust-item">
-          <div class="page-hero-trust-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
-          Solar, battery, duct sealing
-        </div>
-        <div class="page-hero-trust-item">
-          <div class="page-hero-trust-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>
-          Licensed Alberta installers
-        </div>
-      </div>
-      <h1>Solar Services for<br><span>Alberta Homeowners</span></h1>
-      <p class="hero-sub">Solar panel installation, battery storage, and duct sealing. Every proposal includes transparent costs, production estimates, and break-even timelines.</p>
-      <div>
-        <button class="btn-primary" onclick="openSurvey()">Get My Free Estimate</button>
-      </div>
-    </div>
-    <div class="page-hero-img">
-      <div class="page-hero-img-circle">
-        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png" alt="Solar panel installation battery storage services Alberta homeowners Edmonton Calgary" loading="eager">
-      </div>
-    </div>
+
+<div class="page-header">
+  <div class="inner">
+    <h1>Solar Services for <span>Alberta Homeowners &amp; Businesses</span></h1>
+    <p>From your first free estimate to commercial ground-mount installations, battery backup systems, and home energy efficiency improvements. Everything we do is transparent, no-pressure, and built around your actual numbers.</p>
   </div>
+</div>
 
+<div class="inner">
+  <div class="services-grid">
 
-
-  <section>
-    <div class="container">
-      <h2>Our Services</h2>
-      <p>We focus on clean energy upgrades that make financial sense for Alberta homeowners given current electricity rates, available incentive programs, and local climate conditions.</p>
-      <div class="service-cards">
-
-        <div class="svc-card">
-          <div class="svc-icon">&#9728;</div>
-          <h3>Solar Panel Installation</h3>
-          <p>Rooftop and ground-mount solar for residential homes across Alberta. We handle everything from proposal through permit, utility interconnection, and activation. CEIP-ready documentation included where applicable.</p>
-          <a href="/services/">Learn More</a>
-        </div>
-
-        <div class="svc-card">
-          <div class="svc-icon">&#128267;</div>
-          <h3>Battery Storage</h3>
-          <p>Home battery systems that store excess solar production for evening and overnight use, or provide backup power during outages. Eligible for inclusion in CEIP financing in most participating municipalities.</p>
-          <a href="/services/battery-storage/">Learn More</a>
-        </div>
-
-        <div class="svc-card">
-          <div class="svc-icon">&#127968;</div>
-          <h3>Duct Sealing</h3>
-          <p>Air sealing for forced-air duct systems that reduces heating and cooling losses before you size a solar system. Reducing load first means a smaller system delivers the same result, improving the economics of the whole project.</p>
-          <a href="/services/duct-sealing/">Learn More</a>
-        </div>
-
+    <div class="svc-card">
+      <div class="svc-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/05/financial-model-ROI-comparison-chart-alberta-solar-org.png" alt="Alberta solar estimate proposal financial model ROI" loading="lazy">
+      </div>
+      <div class="svc-card-body">
+        <span class="svc-tag">Start Here</span>
+        <h2>Solar Estimates</h2>
+        <p>A free, no-obligation solar proposal built on your actual electricity bills. Covers custom system sizing, equipment options, incentive eligibility, financing comparison, monthly and lifetime savings, and your exact break-even year.</p>
+        <a href="/services/solar-estimates/" class="btn">Learn What's Included</a>
       </div>
     </div>
-  </section>
 
-  <div class="trust-bar">
-    <div class="trust-inner">
-      <div><strong>1,355+</strong><span>Homes Installed</span></div>
-      <div><strong>12</strong><span>Cities Served</span></div>
-      <div><strong>$45,000+</strong><span>Avg. Lifetime Savings</span></div>
-      <div><strong>25 yr</strong><span>Panel Warranty</span></div>
-    </div>
-  </div>
-
-  <section style="background:var(--light-bg);">
-    <div class="container">
-      <h2>How the Process Works</h2>
-      <p>From first contact to system activation, here is what to expect when you work with us.</p>
-      <div class="process-steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h4>Free Estimate</h4>
-          <p>We collect your electricity bill details and roof information and build a site-specific production and savings model. No obligation, no sales pressure.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h4>Proposal Review</h4>
-          <p>You receive a transparent proposal with system size, projected production, annual savings, financing options, and break-even timeline, all explained line by line.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h4>Permits and CEIP</h4>
-          <p>We handle building permit submission and, where applicable, CEIP application documentation. You don't need to navigate municipal processes yourself.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h4>Installation</h4>
-          <p>Our crews install the system, typically in one to two days for a standard rooftop installation. All electrical work is performed by licensed electricians.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">5</div>
-          <h4>Interconnection</h4>
-          <p>We coordinate with your utility for net billing interconnection approval and activation. You start receiving credits for exported power as soon as the utility completes their process.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">6</div>
-          <h4>Ongoing Monitoring</h4>
-          <p>Your system includes production monitoring so you can verify output against projections. We're available for any performance questions after activation.</p>
-        </div>
+    <div class="svc-card">
+      <div class="svc-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-01.png" alt="Residential solar panel installation Alberta home Edmonton Calgary" loading="lazy">
+      </div>
+      <div class="svc-card-body">
+        <span class="svc-tag">Residential</span>
+        <h2>Residential Solar Installation</h2>
+        <p>Solar panel installation for Alberta homes, from initial estimate through CEIP application, permitting, installation, and utility activation. Licensed installers, transparent proposals, and real case study data from local homes.</p>
+        <a href="/" class="btn">Get a Free Estimate</a>
       </div>
     </div>
-  </section>
 
-  <div class="cta-strip">
-    <h2>Ready to See What the Numbers Look Like for Your Home?</h2>
-    <p>Start with a free estimate. We'll show you a site-specific savings model before you make any decisions.</p>
-    <button class="btn-primary btn-teal" onclick="openSurvey()">Get My Free Solar Estimate</button>
+    <div class="svc-card">
+      <div class="svc-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/alberta-groundmount-sqr.png" alt="Commercial solar panels Alberta ground mount farm business installation" loading="lazy">
+      </div>
+      <div class="svc-card-body">
+        <span class="svc-tag">Commercial</span>
+        <h2>Commercial Solar</h2>
+        <p>Solar for Alberta businesses, farms, warehouses, and multi-family properties. Systems from 10 kW to 1+ MW. Access federal CCA Class 43.2 deductions, the 30% federal Investment Tax Credit, and net billing for significant operating cost reduction.</p>
+        <a href="/services/commercial/" class="btn">Commercial Solar Details</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/solar-battery-storage-alberta.jpeg" alt="Solar battery storage Alberta home backup power" loading="lazy">
+      </div>
+      <div class="svc-card-body">
+        <span class="svc-tag">Add-On</span>
+        <h2>Battery Storage</h2>
+        <p>Add battery backup to your solar system for energy independence and power security during outages. Pair with solar to maximize self-consumption, reduce grid reliance, and protect against power interruptions.</p>
+        <a href="/services/battery-storage/" class="btn">Battery Storage Details</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-img">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Aeroseal-Duct-Sealing-768x355-1.webp" alt="Duct sealing Alberta home energy efficiency Aeroseal" loading="lazy">
+      </div>
+      <div class="svc-card-body">
+        <span class="svc-tag">Energy Efficiency</span>
+        <h2>Duct Sealing</h2>
+        <p>Professional duct sealing to reduce HVAC energy waste, improve air quality, and lower heating and cooling costs. Complements solar by reducing your overall energy consumption baseline, improving your solar offset percentage.</p>
+        <a href="/services/duct-sealing/" class="btn">Duct Sealing Details</a>
+      </div>
+    </div>
+
   </div>
+</div>
+
+<section class="cta-section">
+  <div class="cta-bg-img" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png')"></div>
+  <div class="inner cta-rel">
+    <h2>Not sure where to start?</h2>
+    <p>Fill out our short form and we'll help you figure out which services make sense for your home or business. Free, no-obligation, no pressure.</p>
+    <button class="btn" onclick="openSurvey()">Get My Free Solar Estimate</button>
+  </div>
+</section>
 </main>
 <script>
 function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
 function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
-(function(){
-  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
-  function getParam(n){return new URLSearchParams(window.location.search).get(n)||''}
-  function sendContext(iframe){if(!iframe||!iframe.contentWindow)return;iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');}
-  var iframe=document.getElementById('sv-iframe');
-  if(iframe)iframe.addEventListener('load',function(){sendContext(iframe);});
-  window.addEventListener('message',function(e){
-    if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(err){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name,'last_name':e.data.last_name});}
-    if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}
-    if(e.data&&e.data.type==='setHeight'){var fr=document.getElementById('sv-iframe');if(fr)fr.style.height=e.data.height+'px';}
-  });
-})();
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSurvey();});
+(function(){function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}var fr=document.getElementById('sv-iframe');if(fr){fr.addEventListener('load',function(){fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');});}window.addEventListener('message',function(e){if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(x){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',email:e.data.email,phone:e.data.phone,first_name:e.data.first_name,last_name:e.data.last_name});}if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}if(e.data&&e.data.type==='setHeight'){var f=document.getElementById('sv-iframe');if(f)f.style.height=e.data.height+'px';}});})();
 </script>
 </body>
 </html>

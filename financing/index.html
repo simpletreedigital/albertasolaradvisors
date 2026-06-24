@@ -1,492 +1,916 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alberta Solar Financing Options & ROI Comparison | Alberta Solar Advisors</title>
-  <meta name="description" content="Compare Alberta solar financing options: CEIP, Simple Bridge Loan, HELOC, and cash purchase. 25-year ROI comparison for a typical 8kW system.">
+  <title>Alberta Solar Financial Options &amp; ROI Comparison - Alberta Solar Advisors</title>
+  <meta name="description" content="Compare Alberta solar financing options: Cash, CEIP Loan, Simple Bridge Loan, HELOC, and Conventional Loan. 25-year ROI comparison with Chart.js graph.">
   <link rel="canonical" href="https://alberta-solar.org/financing/">
-  <link rel="icon" type="image/png" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
-  <meta property="og:title" content="Alberta Solar Financing Options & ROI Comparison | Alberta Solar Advisors">
-  <meta property="og:description" content="Compare CEIP, bridge loans, HELOC, and cash purchase for your Alberta solar investment. Transparent 25-year savings projections.">
-  <meta property="og:type" content="website">
+  <link rel="icon" href="https://alberta-solar.org/wp-content/uploads/2025/05/cropped-logo-color__white-alberta-solar-500px.png">
+  <meta property="og:title" content="Alberta Solar Financial Options &amp; ROI Comparison">
+  <meta property="og:image" content="https://alberta-solar.org/wp-content/uploads/2025/09/banff-solar-home.jpg">
   <meta property="og:url" content="https://alberta-solar.org/financing/">
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKGNP59');</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-40LNZFDCCG"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-40LNZFDCCG');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/includes/site.css">
   <script src="/includes/nav-footer-loader.js"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKGNP59');</script>
   <style>
-    :root{--blue:#1a56db;--teal:#16bdca;--dark:#0d1b2a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;--nav-h:68px}
-    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;align-items:center;justify-content:center;padding:20px}
-    .sv-overlay.open{display:flex}
-    .sv-modal{background:#fff;border-radius:14px;width:100%;max-width:620px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 25px 60px rgba(0,0,0,.25)}
-    .sv-modal-head{background:var(--dark);padding:18px 22px;display:flex;align-items:center;justify-content:space-between}
-    .sv-modal-head h2{color:#fff;font-size:1rem;font-weight:600;margin:0}
-    .sv-close{background:none;border:none;color:rgba(255,255,255,.7);font-size:1.6rem;cursor:pointer;padding:2px 8px;line-height:1}
-    .sv-modal-body{flex:1;overflow:auto}
-    .sv-modal-body iframe{display:block;width:100%;border:none;min-height:540px}
-
-    .page-hero{background:linear-gradient(135deg,var(--dark),#0f2744);color:#fff;padding:64px 20px 48px;text-align:center}
-    .page-hero-inner{max-width:760px;margin:0 auto}
-    .page-hero .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:700;margin-bottom:12px}
-    .page-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:16px;letter-spacing:-.02em}
-    .page-hero p{font-size:1rem;color:rgba(255,255,255,.75);max-width:580px;margin:0 auto 28px;line-height:1.65}
-    .hero-bullets{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:28px}
-    .hero-bullet{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:7px 14px;border-radius:8px;font-size:.82rem;color:rgba(255,255,255,.85)}
-    .hero-bullet::before{content:'✓';color:var(--teal);font-weight:700}
-    .btn-primary{background:var(--blue);color:#fff;font-size:1rem;font-weight:700;padding:13px 30px;border-radius:10px;border:none;cursor:pointer;transition:background .15s;display:inline-block;text-decoration:none}
-    .btn-primary:hover{background:#1648c7}
-    .hero-img-wrap{margin-top:40px;border-radius:14px;overflow:hidden;max-height:380px}
-    .hero-img-wrap img{width:100%;object-fit:cover}
-
-    section{padding:64px 20px}
-    .sec-inner{max-width:1100px;margin:0 auto}
-    .sec-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);font-weight:700;margin-bottom:10px}
-    h2.sec-h2{font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:800;color:var(--dark);margin-bottom:16px;letter-spacing:-.02em;line-height:1.2}
-    .sec-lead{font-size:1rem;color:var(--muted);max-width:660px;line-height:1.65;margin-bottom:28px}
-
-    /* Comparison table */
-    .fin-table-wrap{overflow-x:auto;margin:28px 0}
-    .fin-table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:700px}
-    .fin-table th{background:var(--dark);color:#fff;padding:12px 16px;text-align:left;font-weight:600;font-size:.8rem;white-space:nowrap}
-    .fin-table td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
-    .fin-table tr:last-child td{border-bottom:none}
-    .fin-table tr:hover td{background:#f8fafc}
-    .fin-table .hl td:first-child{font-weight:700;color:var(--blue)}
-    .fin-table .bad td{background:#fef2f2}
-    .fin-table .bad td:nth-child(4){color:#ef4444;font-weight:700}
-    .fin-note{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:12px;line-height:1.6}
-
-    /* Chart */
-    .chart-section{background:#f8fafc}
-    .chart-wrap{background:#fff;border-radius:14px;padding:28px;border:1px solid var(--border);margin-top:28px}
-    .chart-wrap canvas{max-height:420px}
-    .chart-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
-    .chart-legend-item{display:flex;align-items:center;gap:7px;font-size:.8rem;color:var(--text)}
-    .chart-legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
-    .chart-insights{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin-top:20px}
-    .chart-insights h3{font-size:1rem;font-weight:700;margin-bottom:14px;color:var(--dark)}
-    .chart-insights ul{display:flex;flex-direction:column;gap:10px}
-    .chart-insights li{display:flex;align-items:flex-start;gap:8px;font-size:.88rem;color:var(--text);line-height:1.55}
-    .chart-insights li::before{content:'•';color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px}
-
-    /* Financing type cards */
-    .fin-types{background:#fff}
-    .fin-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
-    .fin-card{border:1px solid var(--border);border-radius:14px;padding:28px}
-    .fin-card h3{font-size:1.05rem;font-weight:700;margin-bottom:14px;color:var(--dark);display:flex;align-items:center;gap:8px}
-    .fin-card p{font-size:.9rem;color:var(--muted);line-height:1.65;margin-bottom:12px}
-    .fin-card ul{display:flex;flex-direction:column;gap:8px}
-    .fin-card li{display:flex;align-items:flex-start;gap:8px;font-size:.87rem;color:var(--text);line-height:1.5}
-    .fin-card li::before{content:'→';color:var(--blue);flex-shrink:0}
-    .fin-card.featured{border-color:var(--blue);background:#f0f5ff}
-    .badge{display:inline-block;background:var(--blue);color:#fff;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em}
-
-    /* Bridge loan table */
-    .bridge-table{width:100%;border-collapse:collapse;font-size:.86rem;margin:16px 0}
-    .bridge-table th{background:#f3f4f6;padding:10px 14px;text-align:left;font-weight:600;font-size:.8rem;color:var(--dark)}
-    .bridge-table td{padding:10px 14px;border-bottom:1px solid var(--border)}
-    .bridge-table tr:last-child td{border-bottom:none}
-
-    /* Internal links */
-    .internal-links{background:#f8fafc;border-top:1px solid var(--border)}
-    .il-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-    .il-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:20px;transition:border-color .15s}
-    .il-card:hover{border-color:var(--blue)}
-    .il-card h3{font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:6px}
-    .il-card p{font-size:.82rem;color:var(--muted)}
-    .il-card a{display:block;font-size:.82rem;color:var(--blue);font-weight:600;margin-top:10px}
-
-    /* CTA */
-    .cta-strip{background:var(--dark);padding:64px 20px;text-align:center}
-    .cta-strip h2{color:#fff;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;margin-bottom:14px;letter-spacing:-.02em}
-    .cta-strip p{color:rgba(255,255,255,.7);font-size:.95rem;max-width:520px;margin:0 auto 28px;line-height:1.65}
-
-    @media(max-width:760px){.fin-cards{grid-template-columns:1fr}.il-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:500px){.il-grid{grid-template-columns:1fr}}
-  </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"Alberta Solar Financing Options","url":"https://alberta-solar.org/financing/","description":"Compare CEIP, bridge loans, HELOC, and cash purchase for Alberta solar financing with 25-year ROI analysis.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://alberta-solar.org/"},{"@type":"ListItem","position":2,"name":"Financing","item":"https://alberta-solar.org/financing/"}]}}
-  </script>
+  :root{--blue:#3455A5;--dark:#01214A;--text:#313E5C;--muted:#6b7280;--hero-bg:#EEF2FF;--alt-bg:#F3F8FF;--cta-bg:#F3F5FA;--border:#E5E6EA;--font:'Montserrat',sans-serif;--font-btn:'Inter',sans-serif;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font);color:var(--text);line-height:1.65;}
+  img{max-width:100%;height:auto;display:block;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  ul{list-style:none;}
+  p{margin-bottom:1em;}
+  p:last-child{margin-bottom:0;}
+  .inner{max-width:1200px;margin:0 auto;padding:0 40px;}
+  @media(max-width:900px){.inner{padding:0 24px;}}
+  .btn{display:inline-block;font-family:var(--font-btn);font-size:15px;font-weight:600;background:var(--blue);color:#fff;border:1px solid var(--blue);border-radius:50px;padding:14px 32px;cursor:pointer;transition:background .2s,color .2s;line-height:1.2;}
+  .btn:hover{background:#fff;color:var(--blue);}
+  .page-hero{background:var(--hero-bg);display:grid;grid-template-columns:1fr 1fr;min-height:480px;overflow:hidden;}
+  .page-hero-left{padding:100px 60px 160px max(40px,calc((100vw - 1200px)/2 + 40px));display:flex;flex-direction:column;justify-content:flex-start;}
+  .page-hero-right{position:relative;overflow:hidden;}
+  .page-hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+  .breadcrumb{font-size:13px;color:rgba(1,33,74,.55);margin-bottom:14px;}
+  .breadcrumb a{color:var(--blue);}
+  .hero-check-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+  .hero-check-item{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--text);}
+  .hc{width:20px;height:20px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .hc svg{width:10px;height:8px;}
+  .page-hero h1{font-size:clamp(1.9rem,3.8vw,52px);font-weight:700;color:var(--dark);line-height:1.1;margin-bottom:18px;}
+  .page-hero .hero-sub{font-size:18px;color:var(--text);margin-bottom:12px;line-height:1.7;max-width:520px;}
+  .hero-note{font-size:14px;color:var(--text);margin-bottom:24px;line-height:1.6;}
+  @media(max-width:860px){.page-hero{grid-template-columns:1fr;min-height:auto;}.page-hero-left{padding:48px 24px 40px;}.page-hero-right{min-height:260px;}}
+  .sec{padding:60px 0;}
+  .sec-white{background:#fff;}
+  .sec-alt{background:var(--alt-bg);}
+  .sec-h2{font-size:32px;font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.2;}
+  .sec-h2 span{color:var(--blue);}
+  .trust-bar{background:#fff;padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .trust-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;}
+  .ti{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;}
+  .ti img{width:44px;height:44px;object-fit:contain;}
+  .ti span{font-size:11px;font-weight:600;color:var(--text);line-height:1.3;}
+  @media(max-width:760px){.trust-grid{grid-template-columns:repeat(3,1fr);}}
+  .content-h2{font-size:22px;font-weight:700;color:var(--dark);margin:32px 0 10px;line-height:1.25;}
+  .body-p{font-size:16px;color:var(--text);line-height:1.8;margin-bottom:.9em;}
+  .body-ul{display:flex;flex-direction:column;gap:7px;margin:12px 0 16px;}
+  .body-ul li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text);line-height:1.55;}
+  .body-ul li::before{content:'•';color:var(--blue);font-weight:700;flex-shrink:0;}
+  .widget-block{margin:32px 0;overflow-x:auto;}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
+  .compare-col{display:flex;flex-direction:column;gap:14px;}
+  .compare-col img{width:100%;border-radius:8px;border:1px solid var(--border);}
+  .compare-col h3{font-size:22px;font-weight:600;color:var(--text);}
+  .compare-col h3 span{color:var(--blue);}
+  .compare-col ul{display:flex;flex-direction:column;gap:8px;}
+  .compare-col li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text);line-height:1.5;}
+  .bad li::before{content:'✗';color:#ef4444;font-weight:700;flex-shrink:0;}
+  .good li::before{content:'✓';color:#10b981;font-weight:700;flex-shrink:0;}
+  @media(max-width:680px){.compare-grid{grid-template-columns:1fr;}}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:28px;}
+  .step-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:40px;margin:10px;display:flex;flex-direction:column;gap:14px;}
+  .step-card img{width:60px;height:60px;object-fit:contain;}
+  .step-card h3{font-size:22px;font-weight:600;color:var(--text);line-height:1.3;}
+  .step-card p{font-size:16px;color:var(--muted);margin:0;line-height:1.6;}
+  @media(max-width:768px){.steps-grid{grid-template-columns:1fr;}}
+  .savings-layout{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:start;}
+  .savings-list{display:flex;flex-direction:column;gap:8px;margin:14px 0 24px;}
+  .savings-list li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text);}
+  .savings-list li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;}
+  @media(max-width:800px){.savings-layout{grid-template-columns:1fr;}}
+  .icons-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;}
+  .icon-item{margin:8px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .icon-item img{width:68px;height:68px;object-fit:contain;}
+  .icon-item h3{font-size:20px;font-weight:600;color:var(--text);line-height:1.3;}
+  @media(max-width:640px){.icons-grid{grid-template-columns:repeat(2,1fr);}}
+  .cta-sec{background:var(--cta-bg);position:relative;overflow:hidden;padding:70px 0;text-align:center;}
+  .cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.07;pointer-events:none;}
+  .cta-rel{position:relative;z-index:1;}
+  .cta-rel h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;color:var(--dark);margin-bottom:12px;}
+  .cta-rel p{font-size:16px;color:var(--text);max-width:640px;margin:0 auto 28px;line-height:1.65;}
+  .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
+  .sv-overlay.open{display:flex;}
+  .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
+  .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+  .sv-head span{font-weight:700;font-size:.9rem;}
+  .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
+  .sv-body{flex:1;overflow-y:auto;}
+  .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+</style>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div class="sv-overlay" id="sv-overlay" role="dialog" aria-modal="true" aria-label="Get your free solar estimate">
-  <div class="sv-modal">
-    <div class="sv-modal-head">
-      <h2>Get a Solar Proposal &amp; Apply for Incentives</h2>
-      <button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button>
-    </div>
-    <div class="sv-modal-body">
-      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" style="border:none;width:100%;" scrolling="no" id="wXWcjC5PUMdssOdN9uge" title="survey"></iframe>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get a Solar Quote &amp; Compare Financing</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
       <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
     </div>
   </div>
 </div>
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
-  <section class="page-hero">
-    <div class="page-hero-inner">
-      <div class="eyebrow">Alberta Solar Financing</div>
-      <h1>Alberta Solar Financing ROI Comparison</h1>
-      <p>Solar panels in Alberta make strong financial sense thanks to high electricity rates, ample sun, and net billing policy. The Canada Greener Homes Loan has ended. These are the current options that actually work.</p>
-      <div class="hero-bullets">
-        <span class="hero-bullet">Federal Interest Free Loan Has Ended</span>
-        <span class="hero-bullet">CEIP Available in Select Cities</span>
-        <span class="hero-bullet">New Bridge Loan Program Available</span>
+
+<div class="page-hero">
+  <div class="page-hero-left">
+    <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Financing</div>
+    <div class="hero-check-list">
+      <div class="hero-check-item"><div class="hc"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>Federal Interest Free Loan Has Ended</div>
+      <div class="hero-check-item"><div class="hc"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>Compare New Solar Financial Options</div>
+    </div>
+    <h1>Alberta Solar Financing ROI Comparison</h1>
+    <p class="hero-sub">Solar panels in Alberta are economical for a multitude of reasons: high electricity rates, coupled with ample sun, and compelling net billing policy, are why solar economics in Alberta make extreme financial sense.</p>
+    <p class="hero-note"><strong>The Canada Greener Homes Loan has ended. There are new comparable loan options. Read below.</strong></p>
+    <button class="btn" onclick="openSurvey()">Get a Solar Quote &amp; Compare Financing</button>
+  </div>
+  <div class="page-hero-right">
+    <img src="https://alberta-solar.org/wp-content/uploads/2025/09/banff-solar-home.jpg" alt="Solar financing Alberta options Banff solar home" loading="eager" fetchpriority="high">
+  </div>
+</div>
+
+<section class="trust-bar">
+  <div class="inner">
+    <div class="trust-grid">
+      <div class="ti"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-1.png" alt="Licensed Installers" loading="lazy"><span>Licensed Installers</span></div>
+      <div class="ti"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-2.png" alt="Transparent Proposals" loading="lazy"><span>Transparent Proposals</span></div>
+      <div class="ti"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-3.png" alt="Solar Club Experts" loading="lazy"><span>Solar Club Experts</span></div>
+      <div class="ti"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-4.png" alt="1355+ Homes Served" loading="lazy"><span>1,355+ Homes Served</span></div>
+      <div class="ti"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-5.png" alt="Net Billing Experts" loading="lazy"><span>Net Billing Experts</span></div>
+      <div class="ti"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/trust-icons-6.png" alt="Free Estimate" loading="lazy"><span>Free Estimate</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white">
+  <div class="inner">
+    <h2 class="sec-h2">25 Year Solar <span>Financing Comparison</span></h2>
+    <p class="body-p">The <strong>25-Year Solar Financing Comparison Table</strong> helps Alberta homeowners understand the long-term financial outcomes of going solar with four common financing options: Cash Purchase, CEIP Loan, Conventional Loan, and a HELOC-Style Loan. Each row represents a different financing model; each column breaks down a key financial metric for a typical 8 kW system in Alberta.</p>
+    <div class="widget-block">
+      <style>
+  body { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; background-color: #ffffff; padding: 20px; }
+  .solar-financing-table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 20px 0; box-shadow: 0 0 12px rgba(0,0,0,0.05); }
+  .solar-financing-table thead { background-color: #003366; color: white; text-transform: uppercase; }
+  .solar-financing-table th, .solar-financing-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #ddd; }
+  .solar-financing-table tbody tr:nth-child(even) { background-color: #f9f9f9; }
+  .solar-financing-table td.savings { color: #2e7d32; font-weight: bold; }
+  .solar-financing-table td.negative { color: #d32f2f; font-weight: bold; }
+  .solar-financing-table caption { caption-side: top; font-size: 20px; font-weight: bold; color: #003366; margin-bottom: 10px; }
+  @media (max-width: 767px){ .solar-financing-table th, .solar-financing-table td { padding: 6px 10px; } .solar-financing-table{font-size:12px;} }
+  .muted-note { display:block; font-size:12px; opacity:0.85; margin-top:4px; }
+  .table-note { font-size:12px; color:#555; margin-top:6px; }
+</style>
+
+<div class="table" style="overflow-x:auto;">
+<table class="solar-financing-table">
+  <caption>25-Year Solar Investment Comparison (8kW System - $25,000)</caption>
+  <thead>
+    <tr>
+      <th>Financing Option</th>
+      <th>Down Payment</th>
+      <th>Monthly Payment (Avg)</th>
+      <th>Total Interest Paid</th>
+      <th>25-Year Net Savings</th>
+      <th>Break-Even Year</th>
+      <th>ROI %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cash Purchase</strong></td>
+      <td>$25,000</td>
+      <td>$0</td>
+      <td>$0</td>
+      <td class="savings">$40,650</td>
+      <td>Year 11</td>
+      <td class="savings">263%</td>
+    </tr>
+
+    <tr>
+      <td><strong>Alberta CEIP (3.75%, 20-Year)</strong><br>
+          <span class="muted-note">Property-tax financing; no upfront cost. Rate varies by municipality (used Calgary 2025).</span></td>
+      <td>$0</td>
+      <td>$148</td>
+      <td>$10,573</td>
+      <td class="savings">$34,180</td>
+      <td>Year 12</td>
+      <td class="savings">238%</td>
+    </tr>
+
+    <tr>
+      <td><strong>Simple Bridge Loan (12mo @ 4.99%)</strong><br>
+          <span class="muted-note">Then refinance to HELOC @ 5.5%</span></td>
+      <td>$0</td>
+      <td>
+        Year 1: $166<br>
+        Years 2-20: $179<span class="muted-note"> (HELOC refi)</span>
+      </td>
+      <td>$8,240</td>
+      <td class="savings">$32,410</td>
+      <td>Year 12</td>
+      <td class="savings">230%</td>
+    </tr>
+
+    <tr>
+      <td><strong>Simple Bridge Enhanced (24mo @ 4.99%)</strong><br>
+          <span class="muted-note">Then refinance to mortgage @ 4.5%</span></td>
+      <td>$0</td>
+      <td>
+        Years 1-2: $166<br>
+        Years 3-25: $158<span class="muted-note"> (mortgage refi)</span>
+      </td>
+      <td>$6,890</td>
+      <td class="savings">$33,760</td>
+      <td>Year 12</td>
+      <td class="savings">235%</td>
+    </tr>
+
+    <tr>
+      <td><strong>HELOC Direct (5.5%, 20-Year)</strong></td>
+      <td>$0</td>
+      <td>$179</td>
+      <td>$17,960</td>
+      <td class="savings">$22,690</td>
+      <td>Year 13</td>
+      <td class="savings">191%</td>
+    </tr>
+
+    <tr>
+      <td><strong>Conventional Loan (7%, 15-Year)</strong></td>
+      <td>$0</td>
+      <td>$224</td>
+      <td>$15,320</td>
+      <td class="savings">$25,330</td>
+      <td>Year 13</td>
+      <td class="savings">201%</td>
+    </tr>
+
+    <tr>
+      <td><strong>No Solar (Status Quo)</strong><br>
+          <span class="muted-note">Continue paying utility bills</span></td>
+      <td>$0</td>
+      <td>$153<span class="muted-note"> (escalating)</span></td>
+      <td>N/A</td>
+      <td class="negative">-$65,650</td>
+      <td>Never</td>
+      <td class="negative">0%</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="table-note">
+  <em><strong>Assumptions:</strong> 8kW system producing 10,200 kWh/year, 18¢/kWh all-in electricity rate with 2.5% annual escalation, 80% self-consumption rate, 0.5% annual system degradation. Break-even based on simple payback vs $25,000 system cost.</em><br>
+  <em><strong>CEIP specifics:</strong> Repayment is collected via your property-tax bill and can transfer to the new owner on sale (financing attaches to the property).</em>
+</div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="inner">
+    <div class="widget-block">
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alberta Solar Financing 25-Year ROI Comparison</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 0;
+    }
+    .chart-container {
+      position: relative;
+      height: auto;
+      min-height: 800px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 20px 20px 40px 20px;
+    }
+    .chart-canvas {
+      position: relative;
+      height: 500px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .chart-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+    .chart-subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .legend-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+    .legend-color {
+      width: 20px;
+      height: 16px;
+      border-radius: 2px;
+      margin-right: 8px;
+    }
+    .legend-dashed {
+      background: repeating-linear-gradient(
+        to right,
+        currentColor,
+        currentColor 8px,
+        transparent 8px,
+        transparent 16px
+      );
+    }
+    .key-insights {
+      margin-top: 25px;
+      padding: 20px;
+      background: #e8f5e8;
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 1.6;
+      border: 1px solid #c8e6c9;
+      clear: both;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .key-insights h3 {
+      margin: 0 0 10px 0;
+      color: #2e7d32;
+    }
+    .assumptions {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <div class="chart-title">Alberta Solar Financing 25-Year ROI Comparison</div>
+    <div class="chart-subtitle">8kW System ($25,000) — Cumulative Net Savings Over Time</div>
+
+    <div class="chart-canvas">
+      <canvas id="roiChart"></canvas>
+    </div>
+
+    <!-- UPDATED LEGEND FOR NEW FINANCING OPTIONS (added CEIP) -->
+    <div class="legend-info">
+      <div class="legend-item">
+        <div class="legend-color" style="background:#2e7d32;"></div>
+        <span><strong>Cash Purchase:</strong> Break-even ~Year 12 (upfront payment, no loan)</span>
       </div>
-      <button class="btn-primary" onclick="openSurvey()">Get a solar quote &amp; compare financing</button>
-      <div class="hero-img-wrap">
-        <img src="https://alberta-solar.org/wp-content/uploads/2025/09/banff-solar-home.jpg" alt="Solar panels on Alberta home" loading="eager" width="760" height="380">
+      <div class="legend-item">
+        <div class="legend-color" style="background:#4caf50;"></div>
+        <span><strong>Alberta CEIP (3.75%, 20-Year):</strong> Break-even ~Year 12 (paid via property tax)</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background:#009688;"></div>
+        <span><strong>Simple Bridge Loan:</strong> Break-even Year 12 (12mo @ 4.99%, then HELOC)</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background:#1976d2;"></div>
+        <span><strong>Simple Bridge Enhanced:</strong> Break-even Year 12 (24mo @ 4.99%, then mortgage)</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background:#ff9800;"></div>
+        <span><strong>Conventional Loan (7%, 15-Year):</strong> Break-even Year 13</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background:#7b1fa2;"></div>
+        <span><strong>HELOC Direct (5.5%, 20-Year):</strong> Break-even Year 13</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color legend-dashed" style="color:#d32f2f;"></div>
+        <span><strong>No Solar (Status Quo):</strong> Cumulative electricity costs</span>
       </div>
     </div>
-  </section>
 
-  <!-- Comparison table -->
-  <section>
-    <div class="sec-inner">
-      <div class="sec-label">25-Year Comparison</div>
-      <h2 class="sec-h2">25-Year Solar Financing Comparison</h2>
-      <p class="sec-lead">This table compares the long-term financial outcomes of going solar with four common financing options for a typical 8 kW system in Alberta priced at $25,000.</p>
-      <div class="fin-table-wrap">
-        <table class="fin-table">
-          <thead>
-            <tr>
-              <th>Financing Option</th>
-              <th>Down Payment</th>
-              <th>Monthly Payment (Avg)</th>
-              <th>Total Interest Paid</th>
-              <th>25-Year Net Savings</th>
-              <th>Break-Even Year</th>
-              <th>ROI %</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="hl">
-              <td>Cash Purchase</td>
-              <td>$25,000</td>
-              <td>$0</td>
-              <td>$0</td>
-              <td>$40,650</td>
-              <td>Year 11</td>
-              <td>263%</td>
-            </tr>
-            <tr class="hl">
-              <td>Alberta CEIP (3.75%, 20-Year)<br><small style="font-weight:400;color:#6b7280">Property-tax financing; no upfront cost</small></td>
-              <td>$0</td>
-              <td>$148</td>
-              <td>$10,573</td>
-              <td>$34,180</td>
-              <td>Year 12</td>
-              <td>238%</td>
-            </tr>
-            <tr>
-              <td>Simple Bridge Loan (12mo @ 4.99%)<br><small style="color:#6b7280">Then refinance to HELOC @ 5.5%</small></td>
-              <td>$0</td>
-              <td>$166–$179</td>
-              <td>$8,240</td>
-              <td>$32,410</td>
-              <td>Year 12</td>
-              <td>230%</td>
-            </tr>
-            <tr>
-              <td>Simple Bridge Enhanced (24mo @ 4.99%)<br><small style="color:#6b7280">Then refinance to mortgage @ 4.5%</small></td>
-              <td>$0</td>
-              <td>$158–$166</td>
-              <td>$6,890</td>
-              <td>$33,760</td>
-              <td>Year 12</td>
-              <td>235%</td>
-            </tr>
-            <tr>
-              <td>HELOC Direct (5.5%, 20-Year)</td>
-              <td>$0</td>
-              <td>$179</td>
-              <td>$17,960</td>
-              <td>$22,690</td>
-              <td>Year 13</td>
-              <td>191%</td>
-            </tr>
-            <tr>
-              <td>Conventional Loan (7%, 15-Year)</td>
-              <td>$0</td>
-              <td>$224</td>
-              <td>$15,320</td>
-              <td>$25,330</td>
-              <td>Year 13</td>
-              <td>201%</td>
-            </tr>
-            <tr class="bad">
-              <td>No Solar (Status Quo)</td>
-              <td>$0</td>
-              <td>$153 (escalating)</td>
-              <td>N/A</td>
-              <td>-$65,650</td>
-              <td>Never</td>
-              <td>0%</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="key-insights">
+      <h3>Key Insights</h3>
+      • CEIP adds another $0-down path with similar break-even timing as other efficient options.<br>
+      • Cash purchase still finishes with the highest 25-year net savings.<br>
+      • Bridge and CEIP tracks remain competitive in both payback and long-term returns.<br>
+      • All solar financing paths dramatically outperform continuing to pay escalating utility bills.
+      <div class="assumptions">
+        <strong>Updated Assumptions:</strong> 8kW system producing 10,200 kWh/year, 18¢/kWh all-in rate with 2.5% annual escalation, 80% self-consumption, 0.5%/yr degradation.<br>
+        — Simple Bridge: Year 1 = $1,992; Years 2–20 = $2,148/yr (HELOC @ 5.5%)<br>
+        — Simple Bridge Enhanced: Years 1–2 = $1,992/yr; Years 3–25 = $1,896/yr (mortgage @ 4.5%)<br>
+        — Conventional (7%): $2,688/yr for 15 years<br>
+        — HELOC Direct (5.5%): $2,148/yr for 20 years<br>
+        — <strong>CEIP (3.75%, 20-Year): $1,776/yr for Years 1–20</strong> (paid via property tax; rate varies by municipality)
       </div>
-      <p class="fin-note">8kW system producing 10,200 kWh/year, 18&#162;/kWh all-in electricity rate with 2.5% annual escalation, 80% self-consumption rate, 0.5% annual system degradation. Break-even based on simple payback vs $25,000 system cost. CEIP specifics: Repayment collected via your property-tax bill and can transfer to the new owner on sale. These are estimates only. Individual results vary.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- Chart -->
-  <section class="chart-section">
-    <div class="sec-inner">
-      <div class="sec-label">Visual Comparison</div>
-      <h2 class="sec-h2">Alberta Solar Financing 25-Year ROI Comparison</h2>
-      <p class="sec-lead">8kW System ($25,000) ,  Cumulative net savings over time. The point where each line crosses zero is your break-even year.</p>
-      <div class="chart-wrap">
-        <canvas id="roiChart" aria-label="25-year ROI comparison chart for Alberta solar financing options"></canvas>
-        <div class="chart-legend" id="chartLegend"></div>
+  <script>
+    // Calculate 25-year projections with updated Alberta data (now includes CEIP)
+    function calculateUpdatedAlbertaScenarios() {
+      const years = [];
+      for (let i = 0; i <= 25; i++) years.push(i);
+
+      const baseAnnualSavings = 1836; // Year 1 savings (10,200 kWh × $0.18)
+      const inflationRate = 0.025;    // electricity inflation (2.5%)
+      const degradationRate = 0.005;  // solar output degradation (0.5%)
+
+      function getAnnualSavings(year) {
+        if (year === 0) return 0;
+        const inflated = baseAnnualSavings * Math.pow(1 + inflationRate, year - 1);
+        const degraded = Math.pow(1 - degradationRate, year - 1);
+        return inflated * degraded;
+      }
+
+      function cumulativeSeries({ upfront = 0, paymentByYear }) {
+        const series = [];
+        for (let y = 0; y <= 25; y++) {
+          if (y === 0) {
+            series.push(upfront); // e.g., -25000 for cash
+          } else {
+            let cum = upfront;
+            for (let i = 1; i <= y; i++) {
+              const savings = getAnnualSavings(i);
+              const payment = paymentByYear(i);
+              cum += (savings - payment);
+            }
+            series.push(cum);
+          }
+        }
+        return series;
+      }
+
+      // Cash: upfront -25k, no loan payments
+      const cashPurchase = cumulativeSeries({
+        upfront: -25000,
+        paymentByYear: () => 0
+      });
+
+      // CEIP (3.75%, 20-Year): $1,776/yr payments for Years 1–20
+      const ceip = cumulativeSeries({
+        upfront: 0,
+        paymentByYear: (year) => (year <= 20 ? 1776 : 0)
+      });
+
+      // Simple Bridge Loan: 12mo @ 4.99%, then HELOC @ 5.5% for 19 years
+      const simpleBridge = cumulativeSeries({
+        upfront: 0,
+        paymentByYear: (year) => {
+          if (year === 1) return 1992;                 // 12 months @ $166/mo
+          if (year >= 2 && year <= 20) return 2148;    // HELOC @ 5.5%
+          return 0;
+        }
+      });
+
+      // Simple Bridge Enhanced: 24mo @ 4.99%, then mortgage @ 4.5% for 23 years
+      const simpleBridgeEnhanced = cumulativeSeries({
+        upfront: 0,
+        paymentByYear: (year) => {
+          if (year <= 2) return 1992;                  // 24 months @ $166/mo
+          if (year >= 3 && year <= 25) return 1896;    // mortgage @ 4.5%
+          return 0;
+        }
+      });
+
+      // Conventional Loan (7%, 15-Year)
+      const conventionalLoan = cumulativeSeries({
+        upfront: 0,
+        paymentByYear: (year) => (year <= 15 ? 2688 : 0)
+      });
+
+      // HELOC Direct (5.5%, 20-Year)
+      const helocDirect = cumulativeSeries({
+        upfront: 0,
+        paymentByYear: (year) => (year <= 20 ? 2148 : 0)
+      });
+
+      // No Solar: cumulative electricity costs (as "missed savings")
+      const noSolar = (function() {
+        const series = [];
+        for (let y = 0; y <= 25; y++) {
+          if (y === 0) series.push(0);
+          else {
+            let cum = 0;
+            for (let i = 1; i <= y; i++) {
+              cum -= getAnnualSavings(i);
+            }
+            series.push(cum);
+          }
+        }
+        return series;
+      })();
+
+      return { years, cashPurchase, ceip, simpleBridge, simpleBridgeEnhanced, conventionalLoan, helocDirect, noSolar };
+    }
+
+    const allData = calculateUpdatedAlbertaScenarios();
+
+    const ctx = document.getElementById('roiChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: allData.years,
+        datasets: [
+          {
+            label: 'Cash Purchase',
+            data: allData.cashPurchase,
+            borderColor: '#2e7d32',
+            backgroundColor: 'rgba(46,125,50,0.1)',
+            borderWidth: 3,
+            tension: 0.1,
+            fill: false
+          },
+          {
+            label: 'Alberta CEIP (3.75%, 20-Year)',
+            data: allData.ceip,
+            borderColor: '#4caf50',
+            backgroundColor: 'rgba(76,175,80,0.1)',
+            borderWidth: 3,
+            tension: 0.1,
+            fill: false
+          },
+          {
+            label: 'Simple Bridge Loan',
+            data: allData.simpleBridge,
+            borderColor: '#009688',
+            backgroundColor: 'rgba(0,150,136,0.1)',
+            borderWidth: 3,
+            tension: 0.1,
+            fill: false
+          },
+          {
+            label: 'Simple Bridge Enhanced',
+            data: allData.simpleBridgeEnhanced,
+            borderColor: '#1976d2',
+            backgroundColor: 'rgba(25,118,210,0.1)',
+            borderWidth: 3,
+            tension: 0.1,
+            fill: false
+          },
+          {
+            label: 'Conventional Loan (7%, 15-Year)',
+            data: allData.conventionalLoan,
+            borderColor: '#ff9800',
+            backgroundColor: 'rgba(255,152,0,0.1)',
+            borderWidth: 3,
+            tension: 0.1,
+            fill: false
+          },
+          {
+            label: 'HELOC Direct (5.5%, 20-Year)',
+            data: allData.helocDirect,
+            borderColor: '#7b1fa2',
+            backgroundColor: 'rgba(123,31,162,0.1)',
+            borderWidth: 3,
+            tension: 0.1,
+            fill: false
+          },
+          {
+            label: 'No Solar (Status Quo)',
+            data: allData.noSolar,
+            borderColor: '#d32f2f',
+            backgroundColor: 'rgba(211,47,47,0.08)',
+            borderWidth: 4,
+            tension: 0.1,
+            borderDash: [10,5],
+            fill: false,
+            pointRadius: 0,
+            pointHoverRadius: 6
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { intersect: false, mode: 'index' },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const v = context.parsed.y;
+                const label = context.dataset.label;
+                return (v < 0) ? `${label}: -$${Math.abs(v).toLocaleString()}` : `${label}: $${v.toLocaleString()}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: { display: true, text: 'Years Since Installation', font: { size: 14, weight: 'bold' } },
+            grid: { color: 'rgba(0,0,0,0.1)' }
+          },
+          y: {
+            title: { display: true, text: 'Cumulative Net Savings ($)', font: { size: 14, weight: 'bold' } },
+            grid: { color: 'rgba(0,0,0,0.1)' },
+            ticks: {
+              callback: function(value) {
+                return (value < 0) ? `-$${Math.abs(value).toLocaleString()}` : `$${value.toLocaleString()}`;
+              }
+            }
+          }
+        },
+        elements: { point: { radius: 0, hoverRadius: 5 } }
+      }
+    });
+  </script>
+</body>
+</html>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white">
+  <div class="inner">
+    <h2 class="sec-h2">Financing Types <span>Explained</span></h2>
+
+    <h2 class="content-h2">Cash Purchase</h2>
+    <p class="body-p">With a <strong>cash purchase</strong>, the homeowner pays the full system cost upfront. There are no ongoing loan payments, which means the savings from solar begin immediately and accumulate with no deductions.</p>
+    <ul class="body-ul">
+      <li>Annual Utility Offset: Based on an 8kW system producing approximately 9,600 kWh annually at Alberta's average residential electricity cost of $0.258/kWh, the system offsets approximately $2,476.80 in Year 1</li>
+      <li>25-Year Cumulative Utility Offset: approximately $90,302</li>
+      <li>Net 25-Year Savings: $90,302 minus $20,000 = <strong>$70,302</strong></li>
+      <li>Break-Even Year: Around <strong>Year 8</strong></li>
+    </ul>
+    <p class="body-p"><strong>Best for:</strong> Homeowners with cash on hand looking for the highest lifetime return and no monthly payments.</p>
+
+    <img src="https://alberta-solar.org/wp-content/uploads/2025/09/Solar_Panels_And_Snow.jpg" alt="Solar panels in snow Alberta winter net billing economics" loading="lazy" style="width:100%;border-radius:12px;margin:28px 0;">
+
+    <h2 class="content-h2">Simple Bridge Loan Program</h2>
+    <p class="body-p">Our financing partner <strong>Financeit</strong> makes it easy to get started with solar panels. Think of it as a <strong>bridge loan</strong>: you start with small, flexible monthly payments now, and later you can switch into a longer-term option like a mortgage, HELOC, or CEIP loan. This way, you don't have to wait. You can install solar today and have time to choose the best long-term structure.</p>
+    <p class="body-p"><strong>Available Financeit bridge terms:</strong></p>
+    <div class="widget-block">
+      <!-- Financing Options Table -->
+<div class="as-table-wrap">
+  <table class="as-table">
+    <thead>
+      <tr>
+        <th>Option</th>
+        <th>Term</th>
+        <th>Rate</th>
+        <th>Monthly Payment</th>
+        <th>Best For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">#1</td>
+        <td>6 months</td>
+        <td>0%</td>
+        <td>$105</td>
+        <td>Short bridge, lowest payment</td>
+      </tr>
+      <tr>
+        <td>6–12 months</td>
+        <td>4.99%</td>
+        <td>$166</td>
+        <td>Flexible bridge option</td>
+      </tr>
+      <tr>
+        <td>#2</td>
+        <td>12 months</td>
+        <td>4.99%</td>
+        <td>$166</td>
+        <td>Standard program</td>
+      </tr>
+      <tr>
+        <td>#3</td>
+        <td>24 months</td>
+        <td>6.99%</td>
+        <td>$195</td>
+        <td>More time to plan</td>
+      </tr>
+      <tr>
+        <td>#4</td>
+        <td>36 months</td>
+        <td>7.99%</td>
+        <td>$210</td>
+        <td>Longest term bridge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<style>
+  /* Container allows horizontal scroll on small screens */
+  .as-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Base table styling (kept neutral to inherit your site's fonts/colors) */
+  .as-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+    overflow: hidden; /* rounds corners for thead */
+  }
+
+  .as-table thead th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding: 14px 16px;
+    background: #f6f9fb;            /* light header background */
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    white-space: nowrap;
+  }
+
+  .as-table tbody td {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    vertical-align: top;
+  }
+
+  /* Zebra rows */
+  .as-table tbody tr:nth-child(even) td {
+    background: #fbfdff;
+  }
+
+  /* Emulate accent color cues similar to financing page */
+  .as-table tbody td:nth-child(4) { /* Monthly Payment column */
+    font-weight: 600;
+  }
+
+  /* Tighten up on small screens */
+  @media (max-width: 640px) {
+    .as-table thead th,
+    .as-table tbody td {
+      padding: 12px 12px;
+      font-size: 0.92rem;
+    }
+    .as-table thead th:nth-child(3),
+    .as-table thead th:nth-child(4),
+    .as-table tbody td:nth-child(3),
+    .as-table tbody td:nth-child(4) {
+      white-space: nowrap;
+    }
+  }
+</style>
+
+    </div>
+
+    <h2 class="content-h2">Alberta CEIP Loan</h2>
+    <p class="body-p">Alberta's <a href="/financing/ceip/">Clean Energy Improvement Program (CEIP)</a> lets you finance your solar system through your property tax bill. No upfront cost, competitive fixed interest rate (varies by municipality), and the financing stays with the property if you sell.</p>
+    <ul class="body-ul">
+      <li>No upfront payment required</li>
+      <li>Repaid via property tax bill over 10-20 years depending on municipality</li>
+      <li>Rate currently ranges from 2.7% to 6% depending on city</li>
+      <li>Financing attaches to the property, not the homeowner</li>
+    </ul>
+    <p class="body-p"><strong>Best for:</strong> Homeowners who want $0 down and prefer a payment structure tied to their property.</p>
+
+    <h2 class="content-h2">HELOC (Home Equity Line of Credit)</h2>
+    <p class="body-p">If you have equity in your home, a HELOC lets you borrow against it at a lower interest rate than an unsecured loan. You draw what you need, when you need it, and repay on your schedule. Current rates are typically 5.5-6.5%.</p>
+    <p class="body-p"><strong>Best for:</strong> Homeowners with significant home equity looking for flexible repayment.</p>
+
+    <h2 class="content-h2">Conventional Loan</h2>
+    <p class="body-p">A standard personal or solar-specific loan from a financial institution. Rates are typically higher than CEIP or HELOC (6-9%), but approval is straightforward and doesn't require home equity.</p>
+    <p class="body-p"><strong>Best for:</strong> Homeowners who want a fixed payment schedule and don't qualify for CEIP or prefer not to use home equity.</p>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;">
+      <div>
+        <h2 class="sec-h2">Solar ROI vs <span>Continuing to Pay Your Utility</span></h2>
+        <p class="body-p">Over the next decade, you'll spend about $30,000 on electricity whether you choose solar or not. The difference? With solar, you're investing in your own power system instead of endlessly paying your utility company. Post break-even, you pay a near $0 electricity bill for 20+ years, all while protecting yourself from rising energy costs.</p>
+        <ul class="savings-list" style="margin-top:14px">
+          <li>Save upwards $45,000 in lifetime electricity costs</li>
+          <li>Protect your monthly finances from energy price increases</li>
+          <li>Offset up to 100% of energy usage with solar</li>
+        </ul>
+        <button class="btn" onclick="openSurvey()" style="margin-top:24px">Get a Solar Quote &amp; Compare Financing</button>
       </div>
-      <div class="chart-insights">
-        <h3>Key Insights</h3>
+      <div>
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/05/financial-model-ROI-comparison-chart-alberta-solar-org.png" alt="Alberta solar 25 year ROI financial model comparison chart" loading="lazy" style="width:100%;border-radius:12px;">
+        <img src="https://alberta-solar.org/wp-content/uploads/2025/09/enmax-monthly-electricity-rates.png" alt="ENMAX monthly electricity rates Alberta comparison" loading="lazy" style="width:100%;border-radius:12px;margin-top:16px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="inner">
+    <h2 class="sec-h2">Power your home <span>the right way</span></h2>
+    <p class="body-p">No matter what, you're likely to spend around $30,000 on electricity over the next 10 years. The difference is where that money goes.</p>
+    <div class="compare-grid">
+      <div class="compare-col bad">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25065-1.webp" alt="Home without solar energy high electricity bill Alberta" loading="lazy">
+        <h3>Your home <span> without solar energy</span></h3>
         <ul>
-          <li>CEIP adds a $0-down path with similar break-even timing to other efficient options.</li>
-          <li>Cash purchase finishes with the highest 25-year net savings, but requires upfront capital.</li>
-          <li>Bridge Loan and CEIP tracks remain competitive in both payback period and long-term return.</li>
-          <li>All solar financing paths dramatically outperform continuing to pay escalating utility bills.</li>
-          <li>The "No Solar" line loses $65,650+ in electricity costs over 25 years with no equity built.</li>
+          <li><strong>$250</strong> average monthly electricity bill</li>
+          <li><strong>10-Year Cost:</strong> $30,000 (assuming no rate increases)</li>
+          <li><strong>Continued dependence</strong> on utility companies</li>
+          <li><strong>No long-term savings</strong> or added home value</li>
         </ul>
       </div>
-      <p class="fin-note" style="margin-top:16px">These numbers are estimates and may vary depending on your usage, location, and incentive eligibility.</p>
-    </div>
-  </section>
-
-  <!-- Financing type explanations -->
-  <section class="fin-types">
-    <div class="sec-inner">
-      <div class="sec-label">Financing Options Explained</div>
-      <h2 class="sec-h2">Which financing option is right for you?</h2>
-      <div class="fin-cards">
-        <div class="fin-card featured">
-          <h3>&#x1F3E1; Alberta CEIP Loan <span class="badge">No Upfront Cost</span></h3>
-          <p>The Clean Energy Improvement Program is a unique financing tool that lets homeowners pay for solar through their property tax bill, with no separate loan to manage and often competitive interest rates subsidized by municipalities.</p>
-          <ul>
-            <li>No upfront cost, no separate bank loan</li>
-            <li>Repayment attached to your property, transferable on sale</li>
-            <li>Currently available in Edmonton, Airdrie, St. Albert, Lethbridge, and more</li>
-            <li>Calgary expected to reopen in 2026</li>
-            <li>Rate varies by municipality (Calgary 2025 rate: 3.75%)</li>
-          </ul>
-          <div style="margin-top:16px"><a href="/financing/ceip/" class="btn-primary" style="font-size:.88rem;padding:10px 20px">Learn about CEIP</a></div>
-        </div>
-        <div class="fin-card">
-          <h3>&#x1F4B3; Simple Bridge Loan Program</h3>
-          <p>Our financing partner Financeit makes it easy to get started with solar today. Think of it as a bridge loan: start with small, flexible monthly payments, then switch to a mortgage, HELOC, or CEIP loan later.</p>
-          <div style="overflow-x:auto;margin:14px 0">
-            <table class="bridge-table">
-              <thead><tr><th>Option</th><th>Term</th><th>Rate</th><th>Monthly</th></tr></thead>
-              <tbody>
-                <tr><td>#1</td><td>6 months</td><td>0%</td><td>$105</td></tr>
-                <tr><td>#1</td><td>6–12 months</td><td>4.99%</td><td>$166</td></tr>
-                <tr><td>#2</td><td>12 months</td><td>4.99%</td><td>$166</td></tr>
-                <tr><td>#3</td><td>24 months</td><td>6.99%</td><td>$195</td></tr>
-                <tr><td>#4</td><td>36 months</td><td>7.99%</td><td>$210</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="fin-card">
-          <h3>&#x1F4B5; Cash Purchase</h3>
-          <p>The homeowner pays the full $25,000 system cost upfront. With no ongoing loan payments, savings begin immediately and accumulate without deductions. Highest 25-year net savings of all options.</p>
-          <ul>
-            <li>Annual utility offset of $2,476+ in Year 1</li>
-            <li>25-year net savings: $40,650+</li>
-            <li>Break-even around Year 11</li>
-            <li>Best for homeowners with available capital</li>
-          </ul>
-        </div>
-        <div class="fin-card">
-          <h3>&#x1F3E6; HELOC-Style Loan (20-Year, 5.5%)</h3>
-          <p>Finance through a Home Equity Line of Credit or similar secured product. Lower monthly payments over a longer term for homeowners with existing equity.</p>
-          <ul>
-            <li>Monthly payment: ~$179/month</li>
-            <li>Total paid over 20 years: ~$32,097</li>
-            <li>25-year net savings: $22,690</li>
-            <li>Calgary special: 5-year interest-free loan available from a private lender</li>
-          </ul>
-        </div>
+      <div class="compare-col good">
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066.webp" alt="Home with solar net billing low electricity bill Alberta" loading="lazy">
+        <h3>Your home with <span> net billing solar energy</span></h3>
+        <ul>
+          <li><strong>No upfront cost</strong> CEIP solar loan payment</li>
+          <li><strong>Ownership</strong> of your power generation system</li>
+          <li><strong>20+ years</strong> of low cost electricity after loan payoff</li>
+          <li><strong>Protection</strong> against future rate hikes</li>
+          <li><strong>Energy independence</strong> and savings</li>
+        </ul>
       </div>
     </div>
-  </section>
+    <div style="margin-top:32px;text-align:center">
+      <button class="btn" onclick="openSurvey()">Get a Solar Quote &amp; Compare Financing</button>
+    </div>
+  </div>
+</section>
 
-  <!-- Image -->
-  <section style="padding:0">
-    <img src="/images/Solar_Panels_And_Snow.jpg" alt="Solar panels on Alberta home in winter" loading="lazy" width="1200" height="500" style="width:100%;height:400px;object-fit:cover">
-  </section>
+<section style="background:#fff;padding:30px 0 40px">
+  <div class="inner">
+    <div style="padding:20px 0"><h2 class="sec-h2">Maximize your energy savings <span>in three simple steps</span></h2></div>
+    <div class="steps-grid">
+      <div class="step-card"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25065-1.svg" alt="" loading="lazy"><h3>Request your free solar savings estimate</h3><p>An energy consultant will help design the perfect system for your home's unique energy needs.</p></div>
+      <div class="step-card"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066-2.svg" alt="" loading="lazy"><h3>Create your personalized solar investment plan</h3><p>We offer a variety of financing options to make solar more affordable to fit your budget.</p></div>
+      <div class="step-card"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-25066-3.svg" alt="" loading="lazy"><h3>Let our expert solar team handle the rest</h3><p>From incentives applications, installation to activation, our experts are with you every step of the way.</p></div>
+    </div>
+  </div>
+</section>
 
-  <!-- Compare without/with -->
-  <section>
-    <div class="sec-inner">
-      <div class="sec-label">The Bottom Line</div>
-      <h2 class="sec-h2">Power your home the right way</h2>
-      <p class="sec-lead">Over the next decade, you'll spend about $30,000 on electricity whether you choose solar or not. With solar, that money builds an asset instead of disappearing into utility bills.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px">
-        <div style="background:#fef2f2;border:2px solid #fecaca;border-radius:14px;padding:28px">
-          <h3 style="font-weight:700;margin-bottom:16px">&#x26a0; Without solar</h3>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="display:flex;gap:8px;font-size:.9rem"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span> $250/month average bill, escalating</li>
-            <li style="display:flex;gap:8px;font-size:.9rem"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span> $30,000+ in costs over 10 years</li>
-            <li style="display:flex;gap:8px;font-size:.9rem"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span> No upside protection against rate hikes</li>
-            <li style="display:flex;gap:8px;font-size:.9rem"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span> No asset value added to your home</li>
-          </ul>
-        </div>
-        <div style="background:#f0fdf4;border:2px solid #bbf7d0;border-radius:14px;padding:28px">
-          <h3 style="font-weight:700;margin-bottom:16px">&#x2600; With solar net billing</h3>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="display:flex;gap:8px;font-size:.9rem"><span style="color:#22c55e;font-weight:700;flex-shrink:0">✓</span> No upfront cost through CEIP</li>
-            <li style="display:flex;gap:8px;font-size:.9rem"><span style="color:#22c55e;font-weight:700;flex-shrink:0">✓</span> MicroGen credits from net billing each month</li>
-            <li style="display:flex;gap:8px;font-size:.9rem"><span style="color:#22c55e;font-weight:700;flex-shrink:0">✓</span> 20+ years of low-cost electricity post-payoff</li>
-            <li style="display:flex;gap:8px;font-size:.9rem"><span style="color:#22c55e;font-weight:700;flex-shrink:0">✓</span> Protection against future rate increases</li>
-          </ul>
-        </div>
+<section class="sec sec-alt">
+  <div class="inner">
+    <div class="savings-layout">
+      <div>
+        <h2 class="sec-h2">Explore financial options and <span>solar savings potential</span></h2>
+        <p class="body-p">Energy costs are expected to keep rising, but yours don't have to. Take the first step towards energy independence by getting your free, personalized solar savings estimate before programs end.</p>
+        <ul class="savings-list">
+          <li>Save upwards $45,000 in lifetime electricity costs</li>
+          <li>Protect your monthly finances from energy price increases</li>
+          <li>Offset up to 100% of energy usage with solar</li>
+        </ul>
+        <button class="btn" onclick="openSurvey()">Get your free estimate</button>
       </div>
-      <div style="margin-top:32px">
-        <button class="btn-primary" onclick="openSurvey()">Get a solar quote for your Alberta home</button>
+      <div>
+        <img src="https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-01.png" alt="Alberta Solar Advisors residential solar installation Edmonton Calgary" loading="lazy" style="width:100%;border-radius:12px">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Internal links -->
-  <section class="internal-links">
-    <div class="sec-inner">
-      <h2 class="sec-h2">Learn more about Alberta solar incentives</h2>
-      <div class="il-grid">
-        <div class="il-card">
-          <h3>CEIP Loan Details</h3>
-          <p>Full breakdown of how the Clean Energy Improvement Program works, which cities are open, and how to apply.</p>
-          <a href="/financing/ceip/">View CEIP guide &#8594;</a>
-        </div>
-        <div class="il-card">
-          <h3>Net Billing Explained</h3>
-          <p>How Alberta's Micro-Generation Regulation credits you for exported solar energy at the full retail rate.</p>
-          <a href="/incentives/net-billing/">Learn about net billing &#8594;</a>
-        </div>
-        <div class="il-card">
-          <h3>Real Homeowner Case Studies</h3>
-          <p>See actual numbers from Alberta homeowners, including investment, monthly savings, and break-even timelines.</p>
-          <a href="/case-study/">View case studies &#8594;</a>
-        </div>
-      </div>
+<section style="background:#fff;padding:30px 0 40px">
+  <div class="inner">
+    <div class="icons-grid">
+      <div class="icon-item"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-18-1.svg" alt="" loading="lazy"><h3>Apply for<br>remaining incentives</h3></div>
+      <div class="icon-item"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-3.svg" alt="" loading="lazy"><h3>Be Your Local Captain Planet</h3></div>
+      <div class="icon-item"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-4.svg" alt="" loading="lazy"><h3>Pay Year Around Low Bills with Net Billing</h3></div>
+      <div class="icon-item"><img src="https://alberta-solar.org/wp-content/uploads/2024/06/Frame-20-5.svg" alt="" loading="lazy"><h3>Own your home<br>energy system</h3></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="cta-strip">
-    <h2>Get your Alberta solar financing estimate</h2>
-    <p>Energy costs are expected to keep rising, but yours don't have to. Get your free personalized solar savings estimate before programs change.</p>
-    <button class="btn-primary" onclick="openSurvey()">Get your free estimate</button>
-  </section>
+<section class="cta-sec">
+  <div class="cta-bg" style="background-image:url('https://alberta-solar.org/wp-content/uploads/2024/07/albertasolar-SolarPics-05.png')"></div>
+  <div class="inner cta-rel">
+    <h2>Claim your <span style="color:var(--blue)">solar savings</span> before it's too late</h2>
+    <p>Across Alberta we've helped over 1,355+ homes and businesses go solar. Our installers service surrounding areas of Grand Prairie, Fort McMurray, Edmonton, Red Deer, Lethbridge, and Calgary. The CEIP and net billing solar program incentives won't last forever.</p>
+    <button class="btn" onclick="openSurvey()">Get a Solar Quote for Your Alberta Home</button>
+  </div>
+</section>
 </main>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
 function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
 function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSurvey();});
-(function(){
-  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
-  function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}
-  var iframe=document.getElementById('wXWcjC5PUMdssOdN9uge');
-  if(iframe){iframe.addEventListener('load',function(){iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');})}
-})();
-
-// Chart.js ROI chart
-(function(){
-  var labels=[];
-  for(var i=1;i<=25;i++)labels.push('Yr '+i);
-
-  var systemCost=25000;
-  var annualProduction=10200;
-  var baseRate=0.18;
-  var rateGrowth=0.025;
-  var selfConsumption=0.80;
-  var degradation=0.005;
-
-  function calcSavings(yr){
-    var rate=baseRate*Math.pow(1+rateGrowth,yr-1);
-    var prod=annualProduction*Math.pow(1-degradation,yr-1);
-    return prod*selfConsumption*rate;
-  }
-
-  function buildCumulative(annualPayments,years){
-    var data=[];var cum=0;
-    for(var yr=1;yr<=25;yr++){
-      var sav=calcSavings(yr);
-      var pay=yr<=years?annualPayments:0;
-      cum+=sav-pay;
-      data.push(Math.round(cum));
-    }
-    return data;
-  }
-
-  // Cash: upfront $25000, no annual
-  var cashData=[];var cashCum=-25000;
-  for(var yr=1;yr<=25;yr++){cashCum+=calcSavings(yr);cashData.push(Math.round(cashCum));}
-
-  // CEIP 3.75% 20yr: $148/mo = $1776/yr
-  var ceipData=buildCumulative(1776,20);
-  // Bridge: $166/mo yr1, then $179/mo yrs 2-20
-  var bridgeData=[];var bCum=0;
-  for(var yr=1;yr<=25;yr++){var pay=yr===1?1992:(yr<=20?2148:0);bCum+=calcSavings(yr)-pay;bridgeData.push(Math.round(bCum));}
-  // Conventional 7% 15yr: $2688/yr
-  var convData=buildCumulative(2688,15);
-  // HELOC 5.5% 20yr: $2148/yr
-  var helocData=buildCumulative(2148,20);
-  // No solar: negative cumulative
-  var noSolarData=[];var nsCum=0;
-  for(var yr=1;yr<=25;yr++){var rate=baseRate*Math.pow(1+rateGrowth,yr-1);nsCum-=rate*annualProduction;noSolarData.push(Math.round(nsCum));}
-
-  var datasets=[
-    {label:'Cash Purchase',data:cashData,borderColor:'#1a56db',backgroundColor:'rgba(26,86,219,.08)',tension:.3,pointRadius:0,borderWidth:2.5},
-    {label:'CEIP (3.75%, 20-yr)',data:ceipData,borderColor:'#16bdca',backgroundColor:'rgba(22,189,202,.08)',tension:.3,pointRadius:0,borderWidth:2.5},
-    {label:'Simple Bridge Loan',data:bridgeData,borderColor:'#10b981',backgroundColor:'rgba(16,185,129,.06)',tension:.3,pointRadius:0,borderWidth:2},
-    {label:'Conventional Loan (7%)',data:convData,borderColor:'#f59e0b',backgroundColor:'rgba(245,158,11,.06)',tension:.3,pointRadius:0,borderWidth:2},
-    {label:'HELOC Direct (5.5%)',data:helocData,borderColor:'#8b5cf6',backgroundColor:'rgba(139,92,246,.06)',tension:.3,pointRadius:0,borderWidth:2},
-    {label:'No Solar (Status Quo)',data:noSolarData,borderColor:'#ef4444',backgroundColor:'rgba(239,68,68,.06)',tension:.3,pointRadius:0,borderWidth:2,borderDash:[6,4]}
-  ];
-
-  var ctx=document.getElementById('roiChart').getContext('2d');
-  new Chart(ctx,{
-    type:'line',
-    data:{labels:labels,datasets:datasets},
-    options:{
-      responsive:true,
-      interaction:{mode:'index',intersect:false},
-      plugins:{
-        legend:{display:false},
-        tooltip:{callbacks:{label:function(c){return c.dataset.label+': $'+c.parsed.y.toLocaleString();}}}
-      },
-      scales:{
-        y:{
-          title:{display:true,text:'Cumulative Net Savings (CAD)',font:{size:11}},
-          ticks:{callback:function(v){return '$'+v.toLocaleString();}},
-          grid:{color:'rgba(0,0,0,.06)'}
-        },
-        x:{grid:{color:'rgba(0,0,0,.04)'}}
-      }
-    }
-  });
-
-  // Build legend
-  var legendEl=document.getElementById('chartLegend');
-  var colors=['#1a56db','#16bdca','#10b981','#f59e0b','#8b5cf6','#ef4444'];
-  var names=['Cash Purchase','CEIP (3.75%, 20-yr)','Simple Bridge Loan','Conventional Loan (7%)','HELOC Direct (5.5%)','No Solar (Status Quo)'];
-  names.forEach(function(n,i){
-    var item=document.createElement('div');
-    item.className='chart-legend-item';
-    item.innerHTML='<div class="chart-legend-dot" style="background:'+colors[i]+'"></div><span>'+n+'</span>';
-    legendEl.appendChild(item);
-  });
-})();
+(function(){function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}var fr=document.getElementById('sv-iframe');if(fr){fr.addEventListener('load',function(){fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');});}window.addEventListener('message',function(e){if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(x){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',email:e.data.email,phone:e.data.phone,first_name:e.data.first_name,last_name:e.data.last_name});}if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}if(e.data&&e.data.type==='setHeight'){var f=document.getElementById('sv-iframe');if(f)f.style.height=e.data.height+'px';}});})();
 </script>
 </body>
 </html>
