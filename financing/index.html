@@ -144,7 +144,26 @@
   </div>
 </section>
 
-<section class="sec sec-white">
+<section class="sec sec-alt" id="quick-answer">
+  <div class="inner">
+    <h2 class="sec-h2">Quick Answer: <span>Is Solar Worth It in Alberta?</span></h2>
+    <p class="body-p">Here is what the numbers look like for a typical Alberta home, using the real 8kW system pricing and financing terms detailed below. This is an illustrative example, not a guaranteed quote for your home.</p>
+
+    <h3 class="content-h2">How much does solar cost in Alberta?</h3>
+    <p class="body-p">An 8kW residential system, a common size for an Alberta home, runs approximately <strong>$25,000</strong> installed. That figure is the starting point for every financing path in the comparison below, whether you pay cash or finance it.</p>
+
+    <h3 class="content-h2">How does CEIP bring the monthly cost down?</h3>
+    <p class="body-p">Alberta's Clean Energy Improvement Program (CEIP) finances that same $25,000 system through your property tax bill with no upfront cost. On an 8kW system, that works out to roughly <strong>$148 per month</strong>, repaid over 20 years, with the financing attached to the property rather than the homeowner.</p>
+
+    <h3 class="content-h2">When does solar break even in Alberta?</h3>
+    <p class="body-p">Across the financing paths we track, break-even on an 8kW system generally lands around <strong>Year 11 to Year 13</strong>. A cash purchase breaks even fastest and finishes with the highest 25-year net savings, around <strong>$40,650</strong>. CEIP break-even lands around Year 12 with $0 down and a $148 monthly payment. By comparison, continuing to pay escalating utility bills with no solar costs an estimated <strong>$65,650</strong> more over the same 25 years.</p>
+
+    <p class="body-p">See the full <a href="#financing-comparison">25-year financing comparison</a> below for every option side by side.</p>
+    <button class="btn" onclick="openSurvey()">Get a Solar Quote &amp; Compare Financing</button>
+  </div>
+</section>
+
+<section class="sec sec-white" id="financing-comparison">
   <div class="inner">
     <h2 class="sec-h2">25 Year Solar <span>Financing Comparison</span></h2>
     <p class="body-p">The <strong>25-Year Solar Financing Comparison Table</strong> helps Alberta homeowners understand the long-term financial outcomes of going solar with four common financing options: Cash Purchase, CEIP Loan, Conventional Loan, and a HELOC-Style Loan. Each row represents a different financing model; each column breaks down a key financial metric for a typical 8 kW system in Alberta.</p>
@@ -904,6 +923,49 @@
     <button class="btn" onclick="openSurvey()">Get a Solar Quote for Your Alberta Home</button>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://alberta-solar.org/"},
+    {"@type": "ListItem", "position": 2, "name": "Financing", "item": "https://alberta-solar.org/financing/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does solar cost in Alberta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An 8kW residential system, a common size for an Alberta home, runs approximately $25,000 installed. That figure is the starting point for every financing path, whether you pay cash or finance it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does CEIP bring the monthly cost down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alberta's Clean Energy Improvement Program (CEIP) finances an 8kW solar system through your property tax bill with no upfront cost, working out to roughly $148 per month repaid over 20 years, with the financing attached to the property rather than the homeowner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does solar break even in Alberta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Break-even on an 8kW Alberta solar system generally lands around Year 11 to Year 13 depending on the financing path. A cash purchase breaks even fastest, around Year 11, with roughly $40,650 in 25-year net savings. CEIP break-even lands around Year 12 with $0 down. Continuing to pay escalating utility bills with no solar costs an estimated $65,650 more over the same 25 years."
+      }
+    }
+  ]
+}
+</script>
 </main>
 <script>
 function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
