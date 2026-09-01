@@ -342,6 +342,41 @@
     max-width: 680px;
     line-height: 1.65;
   }
+
+  /* ── FAQ accordion ── */
+  .sec-faq { background: #fff; padding: 60px 0; }
+  .faq-list { max-width: 800px; margin-top: 28px; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 4px;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+    cursor: pointer;
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--blue);
+    flex-shrink: 0;
+    transition: transform .2s;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p {
+    padding: 0 4px 20px;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 720px;
+  }
   .compare-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -498,6 +533,70 @@
   .step-emoji{font-size:44px;line-height:1;display:block;}
   .icon-emoji{font-size:52px;line-height:1;display:block;}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is solar actually worth it in Alberta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most Alberta homes it is. Alberta gets over 2,300 hours of annual sunlight, among the highest in Canada, and provincial electricity rates have climbed steadily for years. Combined with net billing credits and financing options like CEIP, a typical 7-8kW system can break even in roughly 11 to 13 years and continue producing savings well beyond that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do solar panels cost in Alberta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical residential system runs in the neighborhood of $15,000 to $30,000 installed, depending on system size and roof complexity. An 8kW system, a common size for an Alberta home, lands around $25,000. Financing through Alberta's Clean Energy Improvement Program (CEIP) can bring the effective monthly cost down significantly with no money down."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is CEIP and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CEIP, the Clean Energy Improvement Program, lets Alberta homeowners finance solar and other energy upgrades with no upfront cost. Repayment happens through your property tax bill over a term set by your municipality, and the financing stays attached to the property rather than the homeowner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is net billing and how does it lower my power bill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Net billing lets your solar system send excess electricity back to the grid in exchange for a credit, sometimes called a Microgen Credit, applied directly to your bill. In a real example, a $146.32 bill dropped to $21.16 after the credit, an 85% reduction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there government solar grants or rebates in Alberta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alberta doesn't currently have a province-wide solar rebate, but CEIP financing is available in participating municipalities, and several cities run their own local incentive programs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if a solar installer in Alberta is legitimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Look for licensed installers with a real local track record, transparent proposals that show your actual numbers rather than generic estimates, and manufacturer certifications from brands like Enphase, SolarEdge, and UNIRAC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do solar panels still work during Alberta winters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Solar panels perform well in cold temperatures, and snow typically slides off the smooth, angled surface faster than most homeowners expect. Production naturally dips on shorter winter days, but Alberta's long summer daylight hours and net billing credits help even out savings across the full year."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -781,6 +880,44 @@
         <span class="icon-emoji" aria-hidden="true">🏠</span>
         <h3>Own your home<br>energy system</h3>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec-faq">
+  <div class="inner">
+    <h2 class="sec-title">Alberta Solar <span>Frequently Asked Questions</span></h2>
+    <p class="sec-sub">Straight answers to the questions Alberta homeowners ask most before going solar.</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Is solar actually worth it in Alberta?</summary>
+        <p>For most Alberta homes it is. Alberta gets over 2,300 hours of annual sunlight, among the highest in Canada, and provincial electricity rates have climbed steadily for years. Combined with net billing credits and financing options like CEIP, a typical 7-8kW system can break even in roughly 11 to 13 years and continue producing savings well beyond that. The right answer still depends on your roof, your usage, and your municipality's programs, which is exactly what a free estimate is for.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How much do solar panels cost in Alberta?</summary>
+        <p>A typical residential system runs in the neighborhood of $15,000 to $30,000 installed, depending on system size and roof complexity. An 8kW system, a common size for an Alberta home, lands around $25,000. Financing through Alberta's Clean Energy Improvement Program (CEIP) can bring the effective monthly cost down significantly with no money down, since it's repaid through your property tax bill instead of a lump sum.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is CEIP and how does it work?</summary>
+        <p>CEIP, the Clean Energy Improvement Program, lets Alberta homeowners finance solar and other energy upgrades with no upfront cost. Repayment happens through your property tax bill over a term set by your municipality, and the financing stays attached to the property rather than the homeowner, so it can transfer to a new owner if you sell. Availability and rates vary by city, and program windows can open and close as municipal budgets are allocated, so it's worth checking current status for your area.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is net billing and how does it lower my power bill?</summary>
+        <p>Net billing lets your solar system send excess electricity back to the grid in exchange for a credit, sometimes called a Microgen Credit, applied directly to your bill. On a typical Alberta bill, that credit can offset the majority of your monthly charges, and in a real example we've documented, a $146.32 bill dropped to $21.16 after the credit, an 85% reduction. The exact savings depend on your system size, usage, and how much excess energy you produce.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are there government solar grants or rebates in Alberta?</summary>
+        <p>Alberta doesn't currently have a province-wide solar rebate, but CEIP financing is available in participating municipalities, and several cities run their own local incentive programs. We track which programs are open in which cities so you don't have to dig through municipal websites, see our <a href="/incentives/">incentives page</a> for what's currently available.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I know if a solar installer in Alberta is legitimate?</summary>
+        <p>Look for licensed installers with a real local track record, transparent proposals that show your actual numbers rather than generic estimates, and manufacturer certifications from brands like Enphase, SolarEdge, and UNIRAC. We've helped over 1,355+ homes and businesses across Alberta, from Edmonton and Calgary to Red Deer and Fort McMurray, and we only work with installers that meet our quality and performance standards.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do solar panels still work during Alberta winters?</summary>
+        <p>Yes. Solar panels perform well in cold temperatures, and snow typically slides off the smooth, angled surface faster than most homeowners expect. Production naturally dips on shorter winter days, but Alberta's long summer daylight hours and net billing credits help even out savings across the full year.</p>
+      </details>
     </div>
   </div>
 </section>
