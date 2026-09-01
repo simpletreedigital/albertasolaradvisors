@@ -8,6 +8,8 @@
   <link rel="canonical" href="https://alberta-solar.org/services/">
   <link rel="icon" href="/images/cropped-logo-color__white-alberta-solar-500px.png">
   <meta property="og:title" content="Solar Services Alberta">
+  <meta property="og:description" content="Alberta Solar Advisors offers residential and commercial solar installation, battery storage, duct sealing, and transparent solar estimates across Alberta.">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://alberta-solar.org/services/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,6 +166,26 @@ function closeSurvey(){document.getElementById('sv-overlay').classList.remove('o
 document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSurvey();});
 (function(){function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}var fr=document.getElementById('sv-iframe');if(fr){fr.addEventListener('load',function(){fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');});}window.addEventListener('message',function(e){if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(x){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',email:e.data.email,phone:e.data.phone,first_name:e.data.first_name,last_name:e.data.last_name});}if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}if(e.data&&e.data.type==='setHeight'){var f=document.getElementById('sv-iframe');if(f)f.style.height=e.data.height+'px';}});})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://alberta-solar.org/"},
+    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://alberta-solar.org/services/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Solar Services Alberta",
+  "url": "https://alberta-solar.org/services/",
+  "description": "Alberta Solar Advisors offers residential and commercial solar installation, battery storage, duct sealing, and transparent solar estimates across Alberta.",
+  "isPartOf": {"@type": "Organization", "name": "Alberta Solar Advisors", "url": "https://alberta-solar.org/"}
+}
 </script>
 </body>
 </html>
