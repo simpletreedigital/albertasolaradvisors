@@ -19,8 +19,8 @@
   <url><loc>https://alberta-solar.org/case-study/edmonton/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://alberta-solar.org/case-study/airdrie/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://alberta-solar.org/locations/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://alberta-solar.org/locations/edmonton/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://alberta-solar.org/locations/calgary/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://alberta-solar.org/edmonton/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://alberta-solar.org/calgary/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://alberta-solar.org/locations/red-deer/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alberta-solar.org/locations/lethbridge/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alberta-solar.org/locations/airdrie/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
