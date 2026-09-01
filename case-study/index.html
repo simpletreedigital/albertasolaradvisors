@@ -3,24 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alberta Solar Bill Breakdown Case Studies | Alberta Solar Advisors</title>
-  <meta name="description" content="Real Alberta solar case studies showing actual electricity bill savings. See before/after bills from Edmonton, Calgary, Airdrie, and Beaumont homeowners.">
+  <title>Alberta Solar Bill Breakdown: How Credits Slash Your Power Bill | Alberta Solar Advisors</title>
+  <meta name="description" content="See a real Alberta solar bill broken down line by line: energy charges, the Microgen Credit, and an 85% reduction in monthly cost. Real numbers, real net billing math.">
   <link rel="canonical" href="https://alberta-solar.org/case-study/">
   <link rel="icon" type="image/png" href="/images/cropped-logo-color__white-alberta-solar-500px.png">
+  <meta property="og:title" content="Bill Breakdown: How Solar Credits Slash Your Power Bill">
+  <meta property="og:description" content="A real Alberta electricity bill, broken down. See how the Microgen Credit turned a $146.32 bill into $21.16, an 85% reduction.">
+  <meta property="og:image" content="/images/example-solar-electric-bill-explanation-colors1000px.png">
+  <meta property="og:url" content="https://alberta-solar.org/case-study/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/includes/site.css">
   <script src="/includes/nav-footer-loader.js"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKGNP59');</script>
   <style>
-    :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
+    :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--alt-bg:#F3F8FF;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
     *{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:var(--font-body);color:var(--text);line-height:1.65;}
+    img{max-width:100%;height:auto;display:block;}
     .btn-primary{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:50px;font-family:var(--font-head);font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid var(--blue);transition:background .2s,color .2s;}
+    .btn-primary:hover{background:#fff;color:var(--blue);}
     .btn-teal{background:var(--teal);color:var(--dark);border-color:var(--teal);}
     section{padding:56px 24px;}
     .container{max-width:1000px;margin:0 auto;}
     h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--dark);margin-bottom:8px;}
     p{margin-bottom:16px;}
+    .content-h2{font-size:22px;font-weight:700;color:var(--dark);margin:32px 0 10px;line-height:1.25;}
+    .body-p{font-size:16px;color:var(--text);line-height:1.8;margin-bottom:.9em;}
+    .body-ul{display:flex;flex-direction:column;gap:7px;margin:12px 0 16px;}
+    .body-ul li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text);line-height:1.55;}
+    .body-ul li::before{content:'\2022';color:var(--blue);font-weight:700;flex-shrink:0;}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:40px;}
     .cs-card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);display:flex;flex-direction:column;transition:box-shadow .2s;}
     .cs-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.12);}
@@ -44,6 +56,40 @@
     .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
     .cta-strip h2{color:#fff;margin-bottom:12px;}
     .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .cta-sec{background:var(--light-bg);position:relative;overflow:hidden;padding:70px 24px;text-align:center;}
+    .cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.06;pointer-events:none;}
+    .cta-rel{position:relative;z-index:1;}
+    .cta-rel h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:800;color:var(--dark);margin-bottom:12px;}
+    .cta-rel p{font-size:16px;color:var(--text);max-width:640px;margin:0 auto 28px;line-height:1.65;}
+    .bill-box{background:#fff;border:1px solid var(--border);border-radius:16px;padding:32px;margin:24px 0;box-shadow:0 4px 20px rgba(0,0,0,.05);}
+    .bill-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--border);font-size:15px;}
+    .bill-row:last-child{border-bottom:none;}
+    .bill-row span:first-child{color:var(--text);}
+    .bill-row span:last-child{font-weight:700;color:var(--dark);}
+    .bill-row.subtotal{border-top:2px solid var(--dark);margin-top:6px;padding-top:14px;font-weight:700;}
+    .bill-row.credit span:last-child{color:#10b981;}
+    .bill-row.total{background:var(--alt-bg);margin:12px -32px -32px;padding:20px 32px;border-radius:0 0 16px 16px;font-size:1.15rem;}
+    .bill-row.total span:last-child{color:var(--blue);font-size:1.4rem;}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
+    .compare-col{display:flex;flex-direction:column;gap:14px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;}
+    .compare-col h3{font-size:20px;font-weight:700;color:var(--text);}
+    .compare-col h3 span{color:var(--blue);}
+    .compare-col ul{display:flex;flex-direction:column;gap:8px;}
+    .compare-col li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text);line-height:1.5;}
+    .bad li::before{content:'\2717';color:#ef4444;font-weight:700;flex-shrink:0;}
+    .good li::before{content:'\2713';color:#10b981;font-weight:700;flex-shrink:0;}
+    @media(max-width:680px){.compare-grid{grid-template-columns:1fr;}}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:28px;gap:20px;}
+    .step-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:14px;}
+    .step-card h3{font-size:20px;font-weight:700;color:var(--text);line-height:1.3;}
+    .step-card p{font-size:15px;color:var(--muted);margin:0;line-height:1.6;}
+    @media(max-width:768px){.steps-grid{grid-template-columns:1fr;}}
+    .icons-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;gap:16px;}
+    .icon-item{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;}
+    .icon-item h3{font-size:18px;font-weight:600;color:var(--text);line-height:1.3;}
+    @media(max-width:640px){.icons-grid{grid-template-columns:repeat(2,1fr);}}
+    .step-emoji{font-size:44px;line-height:1;display:block;}
+    .icon-emoji{font-size:48px;line-height:1;display:block;}
     .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
     .sv-overlay.open{display:flex;}
     .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
@@ -52,98 +98,23 @@
     .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
     .sv-body{flex:1;overflow-y:auto;}
     .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
-  
-    /* ── Shared inner-page hero ── */
-    .page-hero {
-      background: #EEF2FF;
-      min-height: 500px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      overflow: hidden;
-    }
-    .page-hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 56px 48px 56px max(40px, calc((100vw - 1200px) / 2 + 40px));
-    }
-    .page-hero-trust {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-    .page-hero-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: .85rem;
-      font-weight: 500;
-      color: #313E5C;
-    }
-    .page-hero-trust-check {
-      width: 18px; height: 18px;
-      background: #3455A5;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
+
+    /* Shared inner-page hero */
+    .page-hero { background: #EEF2FF; min-height: 500px; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; overflow: hidden; }
+    .page-hero-content { display: flex; flex-direction: column; justify-content: center; padding: 56px 48px 56px max(40px, calc((100vw - 1200px) / 2 + 40px)); }
+    .page-hero-trust { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+    .page-hero-trust-item { display: flex; align-items: center; gap: 8px; font-size: .85rem; font-weight: 500; color: #313E5C; }
+    .page-hero-trust-check { width: 18px; height: 18px; background: #3455A5; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .page-hero-trust-check svg { width: 10px; height: 10px; }
-    .breadcrumb {
-      font-size: .8rem;
-      color: #6b7280;
-      margin-bottom: 14px;
-    }
+    .breadcrumb { font-size: .8rem; color: #6b7280; margin-bottom: 14px; }
     .breadcrumb a { color: #3455A5; text-decoration: none; }
     .breadcrumb a:hover { text-decoration: underline; }
-    .page-hero h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
-      font-weight: 800;
-      line-height: 1.15;
-      color: #1a2744;
-      margin-bottom: 16px;
-    }
+    .page-hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.7rem, 3.2vw, 2.5rem); font-weight: 800; line-height: 1.18; color: #1a2744; margin-bottom: 16px; }
     .page-hero h1 span { color: #3455A5; }
-    .page-hero .hero-sub {
-      font-size: .97rem;
-      color: #4b5563;
-      line-height: 1.7;
-      margin-bottom: 28px;
-      max-width: 480px;
-    }
-    .page-hero-img {
-      position: relative;
-      overflow: hidden;
-      min-height: 420px;
-    }
-    .page-hero-img img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      display: block;
-    }
-    /* Remove circle wrapper - full bleed image */
-    .page-hero-img-circle {
-      position: absolute;
-      inset: 0;
-      border-radius: 0;
-      overflow: hidden;
-      background: none;
-    }
-    .page-hero-img-circle img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 30%;
-    }
-    @media (max-width: 860px) {
-      .page-hero { grid-template-columns: 1fr; min-height: auto; }
-      .page-hero-content { padding: 48px 24px 32px; }
-      .page-hero-img { min-height: 240px; position: relative; }
-    }
+    .page-hero .hero-sub { font-size: .97rem; color: #4b5563; line-height: 1.7; margin-bottom: 28px; max-width: 480px; }
+    .page-hero-img { position: relative; overflow: hidden; min-height: 420px; }
+    .page-hero-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+    @media (max-width: 860px) { .page-hero { grid-template-columns: 1fr; min-height: auto; } .page-hero-content { padding: 48px 24px 32px; } .page-hero-img { min-height: 240px; position: relative; } }
   </style>
 </head>
 <body>
@@ -158,7 +129,8 @@
 </div>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
-    <div class="page-hero">
+
+  <div class="page-hero">
     <div class="page-hero-content">
       <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Bill Breakdown</div>
       <div class="page-hero-trust">
@@ -171,30 +143,99 @@
           Upwards $45,000 in lifetime savings
         </div>
       </div>
-      <h1>Real Alberta Homeowners,<br><span>Real Solar Bill Savings</span></h1>
-      <p class="hero-sub">We walk you through actual electricity bills from Albertans who went solar. See the before, the after, and the math behind the savings.</p>
+      <h1>Bill Breakdown: How <span>Solar Credits Slash</span> Your Power Bill</h1>
+      <p class="hero-sub">If you're a homeowner in Alberta with solar panels, your electric bill likely looks different than it used to. One standout line item solar homeowners notice is a "Microgen" Credit, a key benefit of Alberta's net billing program that helps homeowners maximize their solar investment. Here's what each charge means and how solar dramatically reduces your monthly costs.</p>
       <div>
-        <button class="btn-primary" onclick="openSurvey()">See What Solar Does for Your Bill</button>
+        <button class="btn-primary" onclick="openSurvey()">Get a Solar Design &amp; Calculate Your ROI</button>
       </div>
     </div>
     <div class="page-hero-img">
-      <div class="page-hero-img-circle">
-        <img src="/images/example-solar-electric-bill-explanation-colors1000px.png" alt="Alberta solar homeowner electricity bill showing Microgen credit net billing savings" loading="eager">
-      </div>
+      <img src="/images/example-solar-electric-bill-explanation-colors1000px.png" alt="Alberta solar homeowner electricity bill showing Microgen credit net billing savings" loading="eager" fetchpriority="high">
     </div>
   </div>
-
-
 
   <section>
     <div class="container">
       <div class="summary-bar">
-        <div class="sum-item"><div class="sum-num">$2,000+</div><div class="sum-lbl">Avg. annual electricity savings</div></div>
+        <div class="sum-item"><div class="sum-num">85%</div><div class="sum-lbl">Bill reduction in this example</div></div>
         <div class="sum-item"><div class="sum-num">1,355+</div><div class="sum-lbl">Alberta homes served</div></div>
-        <div class="sum-item"><div class="sum-num">11-13 yrs</div><div class="sum-lbl">Typical payback period</div></div>
+        <div class="sum-item"><div class="sum-num">$45,000+</div><div class="sum-lbl">Potential lifetime savings</div></div>
       </div>
 
-      <h2 style="text-align:center;margin-top:8px;">Browse Our Case Studies</h2>
+      <h2>Charges Breakdown</h2>
+      <p class="body-p">Here's a simplified look at a typical real residential electricity bill for a solar homeowner in Edmonton who used <strong>651 kWh</strong> in one billing cycle.</p>
+
+      <div class="bill-box">
+        <div class="bill-row"><span>Energy</span><span>$69.99</span></div>
+        <div class="bill-row"><span>Regulated Transmission &amp; Distribution</span><span>$57.10</span></div>
+        <div class="bill-row"><span>Municipal &amp; Retailer Fees</span><span>$14.07</span></div>
+        <div class="bill-row"><span>Balancing Pool &amp; GST</span><span>$5.16</span></div>
+        <div class="bill-row subtotal"><span>Subtotal (before credits)</span><span>$146.32</span></div>
+        <div class="bill-row credit"><span>Microgen Credit</span><span>&minus;$56.44</span></div>
+        <div class="bill-row total"><span>Final Bill Total</span><span>$21.16</span></div>
+      </div>
+
+      <h3 class="content-h2">Microgen Credit: &minus;$56.44. This is where the magic happens.</h3>
+      <p class="body-p">This homeowner exported excess solar energy back to the grid that the home didn't use, and their utility credited them $56.44. That's the essence of net billing in Alberta: your solar panels don't just power your home, they earn you credits when you produce more than you consume.</p>
+
+      <h3 class="content-h2">Final Bill Total: $21.16, an 85% reduction</h3>
+      <p class="body-p">That's an <strong>85% reduction</strong> in electricity costs for this billing cycle, all thanks to solar and net billing. Because Alberta has ridiculously sunny summers, those export credits help offset the shorter days of winter, resulting in lower electric bills year-round.</p>
+      <p class="body-p">This is why it's important to have an experienced solar company size your system correctly for your home's usage, so you aren't overpaying for a system that's too big, but you're still generating enough to cover what you need plus a little extra to earn credits.</p>
+    </div>
+  </section>
+
+  <section style="background:var(--light-bg);">
+    <div class="container">
+      <h2>What Is the <span>Microgen Credit?</span></h2>
+      <p class="body-p">When your solar system produces more electricity than your home needs, the extra energy flows back into the grid. Your utility company tracks this and credits you for every kilowatt-hour exported. These credits directly reduce your bill.</p>
+      <p class="body-p">In Alberta, this process is called net billing under the Micro-Generation Regulation, and it's one of the fastest ways to offset the cost of going solar.</p>
+
+      <h2 style="margin-top:36px;">How Net Billing <span>Accelerates ROI</span></h2>
+      <p class="body-p">By generating excess power during sunny spring and summer months and banking credits, many homeowners:</p>
+      <ul class="body-ul">
+        <li>Offset 60&ndash;90% of their annual power costs</li>
+        <li>See payback periods drop by 5&ndash;10 years depending on usage</li>
+        <li>Lock in long-term protection against rising utility rates</li>
+      </ul>
+      <button class="btn-primary" onclick="openSurvey()">Get MicroGen Credits from Net Billing</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Your Home <span>With vs. Without Solar</span></h2>
+      <p class="body-p">Over the next decade, you'll spend about $30,000 on electricity whether you choose solar or not. The difference is where that money goes. With solar, you're investing in your own power system instead of endlessly paying your utility company. Post break-even, you pay a near $0 electric bill for 20+ years (plus the fixed grid connection fees), all while protecting yourself from rising energy costs.</p>
+      <div class="compare-grid">
+        <div class="compare-col bad">
+          <h3>Your home <span>without solar energy</span></h3>
+          <ul>
+            <li><strong>$250</strong> average monthly electricity bill</li>
+            <li><strong>10-Year Cost:</strong> $30,000 (assuming no rate increases)</li>
+            <li><strong>Continued dependence</strong> on utility companies</li>
+            <li><strong>No long-term savings</strong> or added home value</li>
+          </ul>
+        </div>
+        <div class="compare-col good">
+          <h3>Your home with <span>solar net billing</span></h3>
+          <ul>
+            <li>Get <strong>MicroGen Credits</strong> from net billing</li>
+            <li><strong>No upfront cost</strong> solar loan (CEIP)</li>
+            <li><strong>Ownership</strong> of your power generation system</li>
+            <li><strong>20+ years</strong> of low cost electricity after loan payoff</li>
+            <li><strong>Protection</strong> against future rate hikes</li>
+            <li><strong>Energy independence</strong> and savings</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:32px;text-align:center">
+        <button class="btn-primary" onclick="openSurvey()">Get a Solar Quote &amp; Get Net Billing</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--light-bg);">
+    <div class="container">
+      <h2 style="text-align:center;">See These Numbers <span>in a Real Home</span></h2>
       <p style="text-align:center;color:var(--muted);max-width:600px;margin:0 auto 8px;">Every case study includes the original electricity bill, the solar system specs, production data, and the post-solar bill comparison.</p>
 
       <div class="cards">
@@ -202,26 +243,26 @@
           <div class="cs-img"><img src="/images/bill-solar-case-study-edmonton.png" alt="Edmonton solar case study electricity bill" loading="lazy"></div>
           <div class="cs-body">
             <div class="cs-tag">Edmonton Case Study</div>
-            <h3>South Edmonton Home: $220/month Bill Cut to Near Zero</h3>
-            <p>An 8.4 kW system on a 2,200 sq ft home in south Edmonton. See the production graphs, export credits, and full financial model.</p>
+            <h3>Edmonton Family Cut Their Power Bill to Almost Zero</h3>
+            <p>A 10.35 kW system that took a $206/month bill to a monthly credit. Break-even by Year 9.</p>
             <div class="cs-stats">
-              <div class="cs-stat"><span class="val">$2,160</span><span class="lbl">Annual savings</span></div>
-              <div class="cs-stat"><span class="val">8.4 kW</span><span class="lbl">System size</span></div>
-              <div class="cs-stat"><span class="val">Yr 12</span><span class="lbl">Break-even</span></div>
+              <div class="cs-stat"><span class="val">$2,614</span><span class="lbl">Annual savings</span></div>
+              <div class="cs-stat"><span class="val">10.35 kW</span><span class="lbl">System size</span></div>
+              <div class="cs-stat"><span class="val">Yr 9</span><span class="lbl">Break-even</span></div>
             </div>
             <span class="cs-read">Read case study &rarr;</span>
           </div>
         </a>
 
         <a href="/case-study/airdrie/" class="cs-card">
-          <div class="cs-img"><img src="/images/airdrie-solar-case-study-1.png" alt="Airdrie solar case study installation" loading="lazy"></div>
+          <div class="cs-img"><img src="/images/airdrie-solar-case-study-bill.png" alt="Airdrie solar case study electricity bill" loading="lazy"></div>
           <div class="cs-body">
             <div class="cs-tag">Airdrie Case Study</div>
-            <h3>Airdrie Family Home: CEIP Financing, Day-One Savings</h3>
-            <p>A 9.6 kW system funded through Airdrie's CEIP program. This homeowner pays less per month than before solar, from day one.</p>
+            <h3>Airdrie Family Realizes Immediate Savings, CEIP Financed</h3>
+            <p>A 7.2 kW system funded through the CEIP program. This family pays less per month than before solar, from day one.</p>
             <div class="cs-stats">
-              <div class="cs-stat"><span class="val">$2,400</span><span class="lbl">Annual savings</span></div>
-              <div class="cs-stat"><span class="val">9.6 kW</span><span class="lbl">System size</span></div>
+              <div class="cs-stat"><span class="val">$1,630</span><span class="lbl">Annual savings</span></div>
+              <div class="cs-stat"><span class="val">7.2 kW</span><span class="lbl">System size</span></div>
               <div class="cs-stat"><span class="val">CEIP</span><span class="lbl">Financing</span></div>
             </div>
             <span class="cs-read">Read case study &rarr;</span>
@@ -229,15 +270,15 @@
         </a>
 
         <a href="/case-study/beaumont/" class="cs-card">
-          <div class="cs-img"><img src="/images/albertasolar-SolarPics-01.png" alt="Beaumont solar case study bill" loading="lazy"></div>
+          <div class="cs-img"><img src="/images/bill-case-study-site-3-ganesan.png" alt="Beaumont solar case study electricity bill" loading="lazy"></div>
           <div class="cs-body">
             <div class="cs-tag">Beaumont Case Study</div>
-            <h3>Beaumont Net-Zero Home: Summer Credits Fund Winter Bills</h3>
-            <p>A ground-mount solar array on an acreage near Beaumont. See how 12-month credit rollover eliminates almost all electricity costs year-round.</p>
+            <h3>Beaumont Home: Solar Club Rates Squeeze More From Net Billing</h3>
+            <p>A 6.48 kW rooftop system near Beaumont. See how the Solar Club rate program and CEIP loan lowered their monthly bill from $183.55 to $42.58.</p>
             <div class="cs-stats">
-              <div class="cs-stat"><span class="val">$2,800</span><span class="lbl">Annual savings</span></div>
-              <div class="cs-stat"><span class="val">12 kW</span><span class="lbl">System size</span></div>
-              <div class="cs-stat"><span class="val">Net Zero</span><span class="lbl">Outcome</span></div>
+              <div class="cs-stat"><span class="val">$1,690</span><span class="lbl">Annual savings</span></div>
+              <div class="cs-stat"><span class="val">6.48 kW</span><span class="lbl">System size</span></div>
+              <div class="cs-stat"><span class="val">Yr 11</span><span class="lbl">Break-even</span></div>
             </div>
             <span class="cs-read">Read case study &rarr;</span>
           </div>
@@ -246,27 +287,75 @@
     </div>
   </section>
 
-  <section style="background:var(--light-bg);">
+  <section style="background:#fff;">
     <div class="container">
-      <h2>How to Read an Alberta Solar Bill</h2>
-      <p>Alberta electricity bills have more line items than most provinces. Understanding what you're paying for before going solar helps you see exactly which charges disappear and which remain.</p>
-      <p>A typical Edmonton or Calgary residential bill includes: an energy charge (tied to AESO pool price on RRO or a contracted rate), a distribution charge from your wire owner (EPCOR, ENMAX, FortisAlberta), a transmission charge, an admin fee, a local access fee (municipal levy), and provincial and federal taxes.</p>
-      <p>When your solar system produces power, it first offsets the energy you would have drawn from the grid. The distribution and transmission charges are partially usage-dependent, so they also decrease as your net consumption drops. Your fixed charges (admin fees, minimum monthly charges) remain regardless of solar production.</p>
-      <p>The case studies below show how each of these line items changes after installation, not just the total bill number. See the full breakdown in our <a href="/case-study/edmonton/">Edmonton case study</a>.</p>
+      <h2 style="text-align:center;">Maximize your energy savings <span>in three simple steps</span></h2>
+      <div class="steps-grid">
+        <div class="step-card"><span class="step-emoji" aria-hidden="true">📝</span><h3>Request your free solar savings estimate</h3><p>An energy consultant will help design the perfect system for your home's unique energy needs.</p></div>
+        <div class="step-card"><span class="step-emoji" aria-hidden="true">💰</span><h3>Create your personalized solar investment plan</h3><p>We offer a variety of financing options to make solar more affordable to fit your budget.</p></div>
+        <div class="step-card"><span class="step-emoji" aria-hidden="true">✅</span><h3>Let our expert solar team handle the rest</h3><p>From incentives applications, installation to activation, our experts are with you every step of the way.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-sec">
+    <div class="cta-bg" style="background-image:url('/images/albertasolar-SolarPics-05.png')"></div>
+    <div class="container cta-rel">
+      <h2>Explore your home's <span style="color:var(--blue)">solar savings potential</span></h2>
+      <p>Energy costs are expected to keep rising, but yours don't have to. Take the first step towards energy independence by getting your free, personalized solar savings estimate before it's too late.</p>
+      <ul class="body-ul" style="max-width:480px;margin:0 auto 24px;text-align:left;">
+        <li>Save upwards $45,000 in lifetime electricity costs</li>
+        <li>Protect your monthly finances from energy price increases</li>
+        <li>Eliminate up to 100% of your monthly payment</li>
+      </ul>
+      <button class="btn-primary" onclick="openSurvey()">Get your free estimate</button>
+    </div>
+  </section>
+
+  <section style="background:#fff;padding:30px 24px 40px">
+    <div class="container">
+      <div class="icons-grid">
+        <div class="icon-item"><span class="icon-emoji" aria-hidden="true">🎁</span><h3>Apply for<br>remaining incentives</h3></div>
+        <div class="icon-item"><span class="icon-emoji" aria-hidden="true">🌍</span><h3>Be Your Local Captain Planet</h3></div>
+        <div class="icon-item"><span class="icon-emoji" aria-hidden="true">⚡</span><h3>Pay Year Around Low Bills with Net Billing</h3></div>
+        <div class="icon-item"><span class="icon-emoji" aria-hidden="true">🏠</span><h3>Own your home<br>energy system</h3></div>
+      </div>
     </div>
   </section>
 
   <div class="cta-strip">
-    <h2>See What Solar Does for Your Specific Bill</h2>
-    <p>Every home is different. We model your system based on your actual usage, roof profile, and location to show you realistic savings, not industry averages.</p>
-    <button class="btn-primary btn-teal" onclick="openSurvey()">Get My Free Bill Breakdown</button>
+    <h2>Claim your solar savings before it's too late</h2>
+    <p>Across Alberta we've helped over 1,355+ homes and businesses go solar. Our installers service surrounding areas of Grand Prairie, Fort McMurray, Edmonton, Red Deer, Lethbridge, and Calgary. The future of the CEIP Loan and net billing solar program is uncertain. Fill out our form today to receive a transparent solar quote personalized to your home and energy costs.</p>
+    <button class="btn-primary btn-teal" onclick="openSurvey()">Get a Solar Quote &amp; Apply for Net Billing</button>
   </div>
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://alberta-solar.org/"},
+    {"@type": "ListItem", "position": 2, "name": "Bill Breakdown", "item": "https://alberta-solar.org/case-study/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Bill Breakdown: How Solar Credits Slash Your Power Bill",
+  "url": "https://alberta-solar.org/case-study/",
+  "description": "See a real Alberta solar bill broken down line by line: energy charges, the Microgen Credit, and an 85% reduction in monthly cost.",
+  "isPartOf": {"@type": "Organization", "name": "Alberta Solar Advisors", "url": "https://alberta-solar.org/"}
+}
+</script>
 
 <script>
 function openSurvey(){document.getElementById('sv-overlay').classList.add('open');document.body.style.overflow='hidden';}
 function closeSurvey(){document.getElementById('sv-overlay').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('sv-overlay').addEventListener('click',function(e){if(e.target===this)closeSurvey();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSurvey();});
 (function(){
   function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
   function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}

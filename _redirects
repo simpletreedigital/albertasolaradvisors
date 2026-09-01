@@ -3,3 +3,17 @@
 
 # Proxy wp-content directly too for safety
 /wp-content/* https://alberta-solar.org/wp-content/:splat 200
+
+# Legacy WordPress blog permalinks were root-level (e.g. /post-slug/), the
+# rebuilt site organizes posts under /blog/[slug]/. Redirect each live
+# inbound URL to its new home to preserve SEO/link equity.
+/3-key-ideas/ /blog/3-key-ideas/ 301
+/albertas-net-metering-future/ /blog/albertas-net-metering-future/ 301
+/ceip-november-2025/ /blog/ceip-november-2025/ 301
+/how-to-vet-solar-installers/ /blog/how-to-vet-solar-installers/ 301
+/solar-panels-in-snow/ /blog/solar-panels-in-snow/ 301
+/how-much-runway-is-left-for-the-greener-homes-loan/ /blog/how-much-runway-is-left-for-the-greener-homes-loan/ 301
+
+# The blog folder for this post was previously named to match an older,
+# shorter slug. Keep that path working for anything still linking to it.
+/blog/how-much-runway-greener-homes/ /blog/how-much-runway-is-left-for-the-greener-homes-loan/ 301
