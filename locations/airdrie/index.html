@@ -124,6 +124,10 @@
   .partner-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;align-items:center;margin-top:20px;}
   .partner-grid img{width:100%;height:auto;max-height:60px;object-fit:contain;}
   @media(max-width:760px){.partner-grid{grid-template-columns:repeat(3,1fr);}}
+  .cta-partners{margin-top:36px;padding-top:24px;border-top:1px solid var(--border,#E5E6EA);}
+  .cta-partners-label{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#6b7280);margin-bottom:14px;}
+  .cta-partners-row{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:center;}
+  .cta-partners-row img{height:26px;width:auto;max-width:100px;object-fit:contain;opacity:.75;}
 </style>
 </head>
 <body>
@@ -161,20 +165,6 @@
       <div class="ti"><span class="ti-emoji" role="img" aria-label="1355 Alberta homes served solar">🏠</span><span>1,355+ Homes Served</span></div>
       <div class="ti"><span class="ti-emoji" role="img" aria-label="Net billing experts Alberta solar">⚡</span><span>Net Billing Experts</span></div>
       <div class="ti"><span class="ti-emoji" role="img" aria-label="Free solar estimate no obligation Alberta">📝</span><span>Free Estimate</span></div></div></section>
-<section class="sec sec-white" id="installer-partnerships">
-  <div class="inner">
-    <h2 class="sec-h2">Installer Partnerships</h2>
-    <div class="partner-grid">
-      <img src="/images/trust-icons-1.png" alt="SolarEdge Preferred Partner" loading="lazy" width="150" height="50">
-      <img src="/images/trust-icons-2.png" alt="5-Year Workmanship Warranty" loading="lazy" width="150" height="50">
-      <img src="/images/trust-icons-3.png" alt="SolarEdge Certified, No-Call RMA" loading="lazy" width="150" height="50">
-      <img src="/images/trust-icons-4.png" alt="Solar Alberta Member" loading="lazy" width="150" height="50">
-      <img src="/images/trust-icons-5.png" alt="Enphase Energy" loading="lazy" width="150" height="50">
-      <img src="/images/trust-icons-6.png" alt="UNIRAC Certified Installer" loading="lazy" width="150" height="50">
-    </div>
-  </div>
-</section>
-
 
 <section class="sec sec-white">
   <div class="pg-inner">
@@ -263,17 +253,26 @@
   </div>
 </section>
 
-
-
 <section class="cta-section">
   <div class="cta-bg" style="background-image:url('/images/albertasolar-SolarPics-05.png')"></div>
   <div class="pg-inner cta-inner">
     <h2>Get Your Free Airdrie Solar Estimate</h2>
     <p>We model your home against local utility rates, roof orientation, and shading to give you real savings and break-even numbers, specific to your property and circumstances.</p>
     <button class="btn" onclick="openSurvey()">Get My Free Airdrie Solar Estimate</button>
+    <div class="cta-partners">
+      <span class="cta-partners-label">Installer Partnerships</span>
+      <div class="cta-partners-row">
+        <img src="/images/trust-icons-1.png" alt="SolarEdge Preferred Partner" loading="lazy" width="90" height="30">
+        <img src="/images/trust-icons-2.png" alt="5-Year Workmanship Warranty" loading="lazy" width="90" height="30">
+        <img src="/images/trust-icons-3.png" alt="SolarEdge Certified, No-Call RMA" loading="lazy" width="90" height="30">
+        <img src="/images/trust-icons-4.png" alt="Solar Alberta Member" loading="lazy" width="90" height="30">
+        <img src="/images/trust-icons-5.png" alt="Enphase Energy" loading="lazy" width="90" height="30">
+        <img src="/images/trust-icons-6.png" alt="UNIRAC Certified Installer" loading="lazy" width="90" height="30">
+      </div>
+    </div>
+
   </div>
 </section>
-
 
 <script type="application/ld+json">
 {
