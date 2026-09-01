@@ -103,6 +103,9 @@
   .ti-emoji{font-size:38px;line-height:1;display:block;margin:0 auto;}
   .step-emoji{font-size:44px;line-height:1;display:block;}
   .icon-emoji{font-size:52px;line-height:1;display:block;}
+  .partner-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;align-items:center;margin-top:20px;}
+  .partner-grid img{width:100%;height:auto;max-height:60px;object-fit:contain;}
+  @media(max-width:760px){.partner-grid{grid-template-columns:repeat(3,1fr);}}
 </style>
 </head>
 <body>
@@ -138,15 +141,29 @@
 <section class="trust-bar">
   <div class="inner">
     <div class="trust-grid">
-      <div class="ti"><img src="/images/trust-icons-1.png" alt="Licensed Installers" loading="lazy" width="44" height="44"><span>Licensed Installers</span></div>
-      <div class="ti"><img src="/images/trust-icons-2.png" alt="Transparent Proposals" loading="lazy" width="44" height="44"><span>Transparent Proposals</span></div>
-      <div class="ti"><img src="/images/trust-icons-3.png" alt="Solar Club Experts" loading="lazy" width="44" height="44"><span>Solar Club Experts</span></div>
-      <div class="ti"><img src="/images/trust-icons-4.png" alt="1355+ Homes Served" loading="lazy" width="44" height="44"><span>1,355+ Homes Served</span></div>
-      <div class="ti"><img src="/images/trust-icons-5.png" alt="Net Billing Experts" loading="lazy" width="44" height="44"><span>Net Billing Experts</span></div>
-      <div class="ti"><img src="/images/trust-icons-6.png" alt="Free Estimate" loading="lazy" width="44" height="44"><span>Free Estimate</span></div>
+      <div class="ti"><span class="ti-emoji" role="img" aria-label="Licensed Installers">🛠️</span><span>Licensed Installers</span></div>
+      <div class="ti"><span class="ti-emoji" role="img" aria-label="Transparent Proposals">📋</span><span>Transparent Proposals</span></div>
+      <div class="ti"><span class="ti-emoji" role="img" aria-label="Solar Club Experts">☀️</span><span>Solar Club Experts</span></div>
+      <div class="ti"><span class="ti-emoji" role="img" aria-label="1355+ Homes Served">🏠</span><span>1,355+ Homes Served</span></div>
+      <div class="ti"><span class="ti-emoji" role="img" aria-label="Net Billing Experts">⚡</span><span>Net Billing Experts</span></div>
+      <div class="ti"><span class="ti-emoji" role="img" aria-label="Free Estimate">📝</span><span>Free Estimate</span></div>
     </div>
   </div>
 </section>
+<section class="sec sec-white" id="installer-partnerships">
+  <div class="inner">
+    <h2 class="sec-h2">Installer Partnerships</h2>
+    <div class="partner-grid">
+      <img src="/images/trust-icons-1.png" alt="SolarEdge Preferred Partner" loading="lazy" width="150" height="50">
+      <img src="/images/trust-icons-2.png" alt="5-Year Workmanship Warranty" loading="lazy" width="150" height="50">
+      <img src="/images/trust-icons-3.png" alt="SolarEdge Certified, No-Call RMA" loading="lazy" width="150" height="50">
+      <img src="/images/trust-icons-4.png" alt="Solar Alberta Member" loading="lazy" width="150" height="50">
+      <img src="/images/trust-icons-5.png" alt="Enphase Energy" loading="lazy" width="150" height="50">
+      <img src="/images/trust-icons-6.png" alt="UNIRAC Certified Installer" loading="lazy" width="150" height="50">
+    </div>
+  </div>
+</section>
+
 
 <section class="sec sec-alt" id="quick-answer">
   <div class="inner">
