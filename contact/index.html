@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/includes/site.css">
   <script src="/includes/nav-footer-loader.js"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKGNP59');</script>
   <style>
     :root{--blue:#3455A5;--teal:#16bdca;--dark:#01214a;--white:#fff;--text:#1f2937;--muted:#6b7280;--border:#E5E6EA;--light-bg:#f8f9fb;--font-body:'Inter',sans-serif;--font-head:'Montserrat',sans-serif;}
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -36,7 +37,17 @@
     .social-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;}
     .social-link{display:flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:.9rem;font-weight:600;}
     .social-link:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
-  
+    .btn-primary{display:inline-block;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;background:#3455A5;color:#fff;border:1px solid #3455A5;border-radius:50px;padding:14px 32px;cursor:pointer;transition:background .2s,color .2s;}
+    .btn-primary:hover{background:#fff;color:#3455A5;text-decoration:none;}
+    .sv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:center;justify-content:center;}
+    .sv-overlay.open{display:flex;}
+    .sv-box{background:#fff;border-radius:14px;width:min(680px,96vw);max-height:90vh;overflow:hidden;display:flex;flex-direction:column;}
+    .sv-head{background:var(--dark);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+    .sv-head span{font-weight:700;font-size:.9rem;}
+    .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
+    .sv-body{flex:1;overflow-y:auto;}
+    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+
     /* ── Shared inner-page hero ── */
     .page-hero {
       background: #EEF2FF;
@@ -132,6 +143,15 @@
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="sv-overlay" class="sv-overlay" role="dialog" aria-modal="true">
+  <div class="sv-box">
+    <div class="sv-head"><span>Get a Solar Proposal &amp; Apply for Incentives</span><button class="sv-close" onclick="closeSurvey()" aria-label="Close">&times;</button></div>
+    <div class="sv-body">
+      <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-overlay-iframe" scrolling="no" title="Solar estimate survey"></iframe>
+      <script src="https://book.alberta-solar.org/js/form_embed.js"></script>
+    </div>
+  </div>
+</div>
 <main>
     <div class="page-hero">
     <div class="page-hero-content">
@@ -149,7 +169,7 @@
       <h1>Contact Alberta Solar Advisors</h1>
       <p class="hero-sub">Get a free solar estimate, ask a question, or book a consultation. We're based in Edmonton and serve all major Alberta cities.</p>
       <div>
-        <button class="btn-primary" onclick="openSurvey()">Get My Free Solar Estimate</button>
+        <a href="#lead-form" class="btn-primary">Get My Free Solar Estimate</a>
       </div>
     </div>
     <div class="page-hero-img">
@@ -193,16 +213,17 @@
 
           <h2 style="margin-top:32px;">Follow Along</h2>
           <div class="social-row">
-            <a href="https://www.facebook.com/albertasolaradvisors" target="_blank" rel="noopener" class="social-link">Facebook</a>
-            <a href="https://www.instagram.com/albertasolaradvisors/" target="_blank" rel="noopener" class="social-link">Instagram</a>
+            <a href="https://www.facebook.com/albertasolarhomeowners" target="_blank" rel="noopener" class="social-link">Facebook</a>
+            <a href="https://www.instagram.com/albertasolarhomeowners/" target="_blank" rel="noopener" class="social-link">Instagram</a>
             <a href="https://www.youtube.com/@albertasolaradvisors" target="_blank" rel="noopener" class="social-link">YouTube</a>
-            <a href="https://www.linkedin.com/company/alberta-solar-advisors/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+            <a href="https://www.tiktok.com/@albertasolarhomeowners" target="_blank" rel="noopener" class="social-link">TikTok</a>
+            <a href="https://www.linkedin.com/company/alberta-solar-homeowners/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
           </div>
 
           <p style="margin-top:32px;font-size:.9rem;color:var(--muted);">Not ready for a call? Browse our <a href="/case-study/">real case studies</a> or our <a href="/financing/">financing comparison</a> to learn more before reaching out.</p>
         </div>
 
-        <div class="form-box">
+        <div class="form-box" id="lead-form">
           <h2>Start Your Free Solar Estimate</h2>
           <p>Takes 2 minutes. No obligation, no pressure call.</p>
           <iframe src="https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge" id="sv-iframe" scrolling="no" title="Solar estimate survey"></iframe>
@@ -217,6 +238,36 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d303582.861022972!2d-113.4927372!3d53.5266805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021d48003c3b1%3A0x7dbca523cf95d7f4!2sAlberta%20Solar%20Advisors!5e0!3m2!1sen!2sus!4v1782235123789!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Alberta Solar Advisors map"></iframe>
     </div>
   </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://alberta-solar.org/"},
+    {"@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://alberta-solar.org/contact/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Alberta Solar Advisors",
+  "url": "https://alberta-solar.org/contact/",
+  "telephone": "+18256025155",
+  "email": "Info@mail.solar-resource.org",
+  "address": {"@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA"},
+  "areaServed": {"@type": "State", "name": "Alberta"},
+  "sameAs": [
+    "https://www.facebook.com/albertasolarhomeowners",
+    "https://www.instagram.com/albertasolarhomeowners/",
+    "https://www.youtube.com/@albertasolaradvisors",
+    "https://www.tiktok.com/@albertasolarhomeowners",
+    "https://www.linkedin.com/company/alberta-solar-homeowners/"
+  ]
+}
+</script>
 </main>
 
 <script>

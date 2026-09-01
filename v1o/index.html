@@ -167,16 +167,17 @@
 <section class="hero">
   <div class="hero-left">
     <div class="hero-trust">
-      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>No Upfront Cost CEIP Loan</div>
-      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>Some Albertans Save $45,000+ in Lifetime Electricity Costs</div>
+      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>Federal Interest Free Loan Has Ended</div>
+      <div class="hero-trust-item"><div class="hero-check"><svg viewBox="0 0 10 8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4l3 3 5-6"/></svg></div>Pay for Solar with Alberta's CEIP Program</div>
     </div>
-    <h1>Reduce your Alberta home energy costs <span>up to $3,000 per year</span></h1>
+    <h1>Reduce your Alberta home energy costs <span>up to $3,000 per year*</span></h1>
     <p class="hero-body">Curious if solar makes financial sense for your Alberta home? Local incentives and net billing programs help you create substantial monthly energy savings, regardless of seasonal changes. Serving greater Edmonton, Red Deer, and Calgary.</p>
-    <p class="hero-note"><strong>January 2026 Update</strong> – No upfront cost solar through the CEIP, open for select cities</p>
+    <p class="hero-note"><strong>January 2026 Update:</strong> No upfront cost solar through the CEIP, open for select cities</p>
     <button class="btn" onclick="openSurvey()">Get your free solar estimate</button>
   </div>
   <div class="hero-right">
     <img src="/images/iPhone-14-15-Pro-Max-2.webp" alt="Alberta solar home mobile app solar estimate" loading="eager" fetchpriority="high">
+    <p style="font-size:12px;color:var(--muted);padding:8px 40px 0;text-align:right">*Actual savings vary by household and are based on energy consumption, system size, and utility rates.</p>
   </div>
 </section>
 
@@ -196,6 +197,7 @@
 <section class="sec-compare">
   <div class="inner">
     <h2 class="sec-title">Power your home <span>the right way</span></h2>
+    <p class="sec-sub" style="margin-bottom:20px">Over the next decade, you'll spend about $30,000 on electricity whether you choose solar or not. The difference? With solar, you're investing in your own power system instead of endlessly paying your utility company. Post breakeven years, you pay a near $0 electric bill for 20+ years, plus the fixed grid connection fees, all while protecting yourself from rising energy costs.</p>
     <div class="compare-grid">
       <div class="compare-col bad">
         <img src="/images/Frame-25065-1.webp" alt="Home without solar panels high electricity bill Alberta" loading="lazy">
@@ -251,16 +253,46 @@
   <div class="inner">
     <h2 class="sec-title">Claim your <span>solar savings</span> before it's too late</h2>
     <p class="sec-sub">Across Alberta we've helped over 1,355+ homes and businesses go solar. Our installers service surrounding areas of Grand Prairie, Fort McMurray, Edmonton, Red Deer, Lethbridge, and Calgary.</p>
-    <p class="sec-sub" style="margin:8px auto 28px">The CEIP and net billing solar program incentives won't last forever. Fill out our form today to receive a transparent solar quote that's personalized to your home.</p>
+    <p class="sec-sub" style="margin:8px auto 28px">The CEIP and net billing solar program incentives won't last forever, and are estimated to run out by November. Fill out our form today to receive a transparent solar quote that's personalized to your home.</p>
     <button class="btn" onclick="openSurvey()">Get your free estimate</button>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://alberta-solar.org/"},
+    {"@type": "ListItem", "position": 2, "name": "Alberta Solar Quote", "item": "https://alberta-solar.org/v1o/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Alberta Solar Advisors",
+  "url": "https://alberta-solar.org/v1o/",
+  "image": "/images/logo-color__white-alberta-solar-500px.png",
+  "telephone": "+18256025155",
+  "address": {"@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA"},
+  "areaServed": {"@type": "State", "name": "Alberta"},
+  "sameAs": [
+    "https://www.facebook.com/albertasolarhomeowners",
+    "https://www.instagram.com/albertasolarhomeowners/",
+    "https://www.youtube.com/@albertasolaradvisors",
+    "https://www.tiktok.com/@albertasolarhomeowners",
+    "https://www.linkedin.com/company/alberta-solar-homeowners/"
+  ]
+}
+</script>
 </main>
 
 <footer class="lfoot">
   <a href="/"><img src="/images/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors" width="160" height="37"></a>
   <div class="lfoot-links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></div>
-  <p>© <span id="yr"></span> Alberta-Solar.org | All Rights Reserved | Operated by Simple Tree Digital</p>
+  <p>© <span id="yr"></span> Alberta-Solar.org | All Rights Reserved | Owned &amp; Operated by Simple Tree Digital</p>
 </footer>
 
 <script>
