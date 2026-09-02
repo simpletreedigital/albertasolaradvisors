@@ -112,7 +112,20 @@
   .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
   .step-emoji{font-size:44px;line-height:1;display:block;}
   .icon-emoji{font-size:52px;line-height:1;display:block;}
+  .split-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;align-items:start;}
+  @media(max-width:760px){.split-col-grid{grid-template-columns:1fr;}}
+  .city-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;}
+  .city-card h3{font-size:19px;font-weight:700;color:var(--dark);margin-bottom:10px;}
+  .city-card p{font-size:15px;color:var(--text);line-height:1.7;margin-bottom:.8em;}
+  .city-card p:last-child{margin-bottom:0;}
+  .status-pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px;}
+  .status-pill.open{background:rgba(16,185,129,.12);color:#059669;}
+  .status-pill.paused{background:rgba(245,158,11,.12);color:#b45309;}
+  .chart-wrap{max-width:900px;margin:28px auto 0;background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;}
+  .chart-canvas-wrap{position:relative;height:380px;width:100%;}
+  .chart-legend-note{font-size:13px;color:var(--muted);margin-top:14px;text-align:center;}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKGNP59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -185,6 +198,68 @@
     </div>
   </div>
 </section>
+
+<section class="sec-explain" style="padding:60px 0">
+  <div class="inner">
+    <h2 class="sec-title">Calgary-Specific <span>Solar Incentives</span></h2>
+    <p class="sec-sub" style="margin-bottom:24px">Here's what's actually available for Calgary homeowners right now, not a generic province-wide list.</p>
+    <div class="split-col-grid">
+      <div class="city-card">
+        <span class="status-pill paused">Paused / Waitlist</span>
+        <h3>Calgary CEIP (5.70%, 20-Year)</h3>
+        <p>Calgary's Clean Energy Improvement Program residential intake is currently closed at capacity. <strong>Residential intake reopens September 22, 2026.</strong> Commercial CEIP launched March 2026 and is open now for business owners.</p>
+        <p>Calgary has the highest CEIP rate of any major Alberta municipality (5.70%) due to the highest demand in the province, but it's still well below conventional financing rates. When open, there's up to a 10% incentive on CEIP project costs.</p>
+        <p><a href="/financing/ceip/">Learn how CEIP financing works</a> or get on the list now so your paperwork is ready when residential intake reopens.</p>
+      </div>
+      <div class="city-card">
+        <h3>🏡 The Solar Club™</h3>
+        <p>Available to Calgary homeowners on Rate Alberta billing, the Solar Club lets you switch between two seasonal electricity rates: a higher $0.30/kWh buy-back rate in the summer months when your system produces a surplus, and a lower $0.0877/kWh usage rate in winter.</p>
+        <p>Timing your rate switch to match your production can accelerate your break-even by 3-4 years compared to a flat rate. <a href="/incentives/the-solar-club/">See how the Solar Club works</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-compare" style="padding:60px 0">
+  <div class="inner">
+    <h2 class="sec-title">Calgary Solar <span>Cost &amp; 25-Year ROI</span></h2>
+    <p class="sec-sub">An illustrative example for a typical 8kW system in Calgary, using the current 5.70% CEIP rate once residential intake reopens.</p>
+    <div class="chart-wrap">
+      <div class="chart-canvas-wrap"><canvas id="cityRoiChart"></canvas></div>
+      <p class="chart-legend-note">8kW system (~$25,000), 10,200 kWh/year production, $0.18/kWh all-in rate with 2.5% annual escalation. CEIP shown at Calgary's 5.70%, 20-year term.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  function buildChart(){
+    const years = []; for (let i=0;i<=25;i++) years.push(i);
+    const baseSavings = 1836, inflation = 0.025, degradation = 0.005;
+    function annualSavings(y){ if(y===0) return 0; return baseSavings*Math.pow(1+inflation,y-1)*Math.pow(1-degradation,y-1); }
+    function series(upfront, paymentByYear){
+      const out=[]; for(let y=0;y<=25;y++){ if(y===0){out.push(upfront);} else { let cum=upfront; for(let i=1;i<=y;i++){cum += annualSavings(i)-paymentByYear(i);} out.push(cum);} } return out;
+    }
+    const ceipPayment = (y)=> y<=20 ? 1789 : 0; // ~5.70%, 20yr on $25,000
+    const ceip = series(0, ceipPayment);
+    const noSolar = series(0, ()=>0).map((_,y)=>{ let cum=0; for(let i=1;i<=y;i++){cum -= annualSavings(i);} return cum; });
+    const ctx = document.getElementById('cityRoiChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: { labels: years, datasets: [
+        { label:'With Solar (Calgary CEIP 5.70%)', data: ceip, borderColor:'#3455A5', backgroundColor:'rgba(52,85,165,0.08)', borderWidth:3, tension:.1, fill:true, pointRadius:0, pointHoverRadius:5 },
+        { label:'No Solar (Status Quo)', data: noSolar, borderColor:'#d32f2f', backgroundColor:'rgba(211,47,47,0.05)', borderWidth:3, borderDash:[8,5], tension:.1, fill:false, pointRadius:0, pointHoverRadius:5 }
+      ]},
+      options: {
+        responsive:true, maintainAspectRatio:false, interaction:{intersect:false,mode:'index'},
+        plugins:{ legend:{position:'bottom'}, tooltip:{ callbacks:{ label:(c)=>{ const v=c.parsed.y; return `${c.dataset.label}: ${v<0?'-$'+Math.abs(Math.round(v)).toLocaleString():'$'+Math.round(v).toLocaleString()}`; } } } },
+        scales:{ x:{title:{display:true,text:'Years Since Installation'}}, y:{title:{display:true,text:'Cumulative Net ($)'}, ticks:{callback:(v)=> v<0 ? '-$'+Math.abs(v).toLocaleString() : '$'+v.toLocaleString()}} }
+      }
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', buildChart); else buildChart();
+})();
+</script>
 
 <section class="sec-steps">
   <div class="inner">
