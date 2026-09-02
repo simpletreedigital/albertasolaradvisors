@@ -36,26 +36,33 @@
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:40px;}
     .cs-card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);display:flex;flex-direction:column;transition:box-shadow .2s;}
     .cs-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.12);}
-    .cs-img{height:200px;overflow:hidden;background:#f3f4f6;}
+    .cs-img{display:block;height:200px;overflow:hidden;background:#f3f4f6;}
     .cs-img img{width:100%;height:100%;object-fit:cover;}
     .cs-body{padding:24px;flex:1;display:flex;flex-direction:column;}
     .cs-tag{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
     .cs-card h3{font-size:1.15rem;font-weight:800;margin-bottom:10px;color:var(--dark);}
+    .cs-card h3 a{color:inherit;text-decoration:none;}
+    .cs-card h3 a:hover{text-decoration:underline;}
     .cs-card p{font-size:.95rem;color:var(--muted);flex:1;margin-bottom:16px;}
     .cs-stats{display:flex;gap:16px;margin-top:auto;padding-top:16px;border-top:1px solid var(--border);}
     .cs-stat{text-align:center;}
     .cs-stat .val{display:block;font-size:1.3rem;font-weight:800;color:var(--blue);}
     .cs-stat .lbl{font-size:.75rem;color:var(--muted);}
-    .cs-read{display:inline-block;margin-top:16px;color:var(--blue);font-weight:700;font-size:.95rem;}
+    .cs-read{display:inline-block;margin-top:16px;color:var(--blue);font-weight:700;font-size:.95rem;text-decoration:none;}
+    .cs-read:hover{text-decoration:underline;}
     .summary-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--dark);border-radius:16px;overflow:hidden;margin:40px 0;}
     @media(max-width:640px){.summary-bar{grid-template-columns:1fr;}}
     .sum-item{padding:32px;text-align:center;border-right:1px solid rgba(255,255,255,.1);}
     .sum-item:last-child{border-right:none;}
     .sum-num{font-size:2.5rem;font-weight:900;color:var(--teal);}
     .sum-lbl{font-size:.9rem;color:rgba(255,255,255,.75);margin-top:4px;}
-    .cta-strip{background:var(--blue);color:#fff;text-align:center;padding:56px 24px;}
+    .cta-strip{position:relative;background:var(--blue);color:#fff;text-align:center;padding:56px 24px;overflow:hidden;}
+    .cta-strip-photo{position:absolute;inset:0;background-image:url('/images/banff-solar-home.jpg');background-size:cover;background-position:center;opacity:.16;}
+    .cta-strip>*:not(.cta-strip-photo){position:relative;z-index:1;}
     .cta-strip h2{color:#fff;margin-bottom:12px;}
     .cta-strip p{color:rgba(255,255,255,.85);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .cta-strip p a{color:#fff;text-decoration:underline;text-underline-offset:2px;}
+    .cta-strip p a:hover{color:#fff;opacity:.85;}
     .cta-sec{background:var(--light-bg);position:relative;overflow:hidden;padding:70px 24px;text-align:center;}
     .cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.06;pointer-events:none;}
     .cta-rel{position:relative;z-index:1;}
@@ -97,7 +104,7 @@
     .sv-head span{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;}
     .sv-close{background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;}
     .sv-body{flex:1;overflow-y:auto;}
-    .sv-body iframe{width:100%;min-height:520px;border:none;display:block;}
+    .sv-body iframe{width:100%;min-height:180px;border:none;display:block;}
 
     /* Shared inner-page hero */
     .page-hero { background: #EEF2FF; min-height: 500px; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; overflow: hidden; }
@@ -239,50 +246,50 @@
       <p style="text-align:center;color:var(--muted);max-width:600px;margin:0 auto 8px;">Every case study includes the original electricity bill, the solar system specs, production data, and the post-solar bill comparison.</p>
 
       <div class="cards">
-        <a href="/case-study/edmonton/" class="cs-card">
-          <div class="cs-img"><img src="/images/bill-solar-case-study-edmonton.png" alt="Edmonton solar case study electricity bill" loading="lazy"></div>
+        <div class="cs-card">
+          <a href="/case-study/edmonton/" class="cs-img"><img src="/images/bill-solar-case-study-edmonton.png" alt="Edmonton solar case study electricity bill" loading="lazy"></a>
           <div class="cs-body">
             <div class="cs-tag">Edmonton Case Study</div>
-            <h3>Edmonton Family Cut Their Power Bill to Almost Zero</h3>
+            <h3><a href="/case-study/edmonton/">Edmonton Family Cut Their Power Bill to Almost Zero</a></h3>
             <p>A 10.35 kW system that took a $206/month bill to a monthly credit for this <a href="/edmonton/">Edmonton solar</a> installation. Break-even by Year 9.</p>
             <div class="cs-stats">
               <div class="cs-stat"><span class="val">$2,614</span><span class="lbl">Annual savings</span></div>
               <div class="cs-stat"><span class="val">10.35 kW</span><span class="lbl">System size</span></div>
               <div class="cs-stat"><span class="val">Yr 9</span><span class="lbl">Break-even</span></div>
             </div>
-            <span class="cs-read">Read case study &rarr;</span>
+            <a href="/case-study/edmonton/" class="cs-read">Read case study &rarr;</a>
           </div>
-        </a>
+        </div>
 
-        <a href="/case-study/airdrie/" class="cs-card">
-          <div class="cs-img"><img src="/images/airdrie-solar-case-study-bill.png" alt="Airdrie solar case study electricity bill" loading="lazy"></div>
+        <div class="cs-card">
+          <a href="/case-study/airdrie/" class="cs-img"><img src="/images/airdrie-solar-case-study-bill.png" alt="Airdrie solar case study electricity bill" loading="lazy"></a>
           <div class="cs-body">
             <div class="cs-tag">Airdrie Case Study</div>
-            <h3>Airdrie Family Realizes Immediate Savings, CEIP Financed</h3>
+            <h3><a href="/case-study/airdrie/">Airdrie Family Realizes Immediate Savings, CEIP Financed</a></h3>
             <p>A 7.2 kW system funded through the CEIP program in <a href="/locations/airdrie/">Airdrie</a>. This family pays less per month than before solar, from day one.</p>
             <div class="cs-stats">
               <div class="cs-stat"><span class="val">$1,630</span><span class="lbl">Annual savings</span></div>
               <div class="cs-stat"><span class="val">7.2 kW</span><span class="lbl">System size</span></div>
               <div class="cs-stat"><span class="val">CEIP</span><span class="lbl">Financing</span></div>
             </div>
-            <span class="cs-read">Read case study &rarr;</span>
+            <a href="/case-study/airdrie/" class="cs-read">Read case study &rarr;</a>
           </div>
-        </a>
+        </div>
 
-        <a href="/case-study/beaumont/" class="cs-card">
-          <div class="cs-img"><img src="/images/bill-case-study-site-3-ganesan.png" alt="Beaumont solar case study electricity bill" loading="lazy"></div>
+        <div class="cs-card">
+          <a href="/case-study/beaumont/" class="cs-img"><img src="/images/bill-case-study-site-3-ganesan.png" alt="Beaumont solar case study electricity bill" loading="lazy"></a>
           <div class="cs-body">
             <div class="cs-tag">Beaumont Case Study</div>
-            <h3>Beaumont Home: Solar Club Rates Squeeze More From Net Billing</h3>
+            <h3><a href="/case-study/beaumont/">Beaumont Home: Solar Club Rates Squeeze More From Net Billing</a></h3>
             <p>A 6.48 kW rooftop system near Beaumont. See how the Solar Club rate program and CEIP loan lowered their monthly bill from $183.55 to $42.58.</p>
             <div class="cs-stats">
               <div class="cs-stat"><span class="val">$1,690</span><span class="lbl">Annual savings</span></div>
               <div class="cs-stat"><span class="val">6.48 kW</span><span class="lbl">System size</span></div>
               <div class="cs-stat"><span class="val">Yr 11</span><span class="lbl">Break-even</span></div>
             </div>
-            <span class="cs-read">Read case study &rarr;</span>
+            <a href="/case-study/beaumont/" class="cs-read">Read case study &rarr;</a>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -324,6 +331,7 @@
   </section>
 
   <div class="cta-strip">
+    <div class="cta-strip-photo"></div>
     <h2>Claim your solar savings before it's too late</h2>
     <p>Across Alberta we've helped over 1,355+ homes and businesses go solar. Our installers service surrounding areas of <a href="/locations/grande-prairie/">Grande Prairie</a>, <a href="/locations/fort-mcmurray/">Fort McMurray</a>, <a href="/edmonton/">Edmonton</a>, <a href="/locations/red-deer/">Red Deer</a>, <a href="/locations/lethbridge/">Lethbridge</a>, and <a href="/calgary/">Calgary</a>. The future of the CEIP Loan and net billing solar program is uncertain. Fill out our form today to receive a transparent solar quote personalized to your home and energy costs.</p>
     <button class="btn-primary btn-teal" onclick="openSurvey()">Get a Solar Quote &amp; Apply for Net Billing</button>
