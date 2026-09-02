@@ -61,6 +61,9 @@
   .body-ul li::before{content:'•';color:var(--blue);font-weight:700;flex-shrink:0;}
   .solar-club-img{margin:24px 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
   .solar-club-img img{width:100%;}
+  .split-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;align-items:start;}
+  .split-col-grid .content-h2:first-child{margin-top:0;}
+  @media(max-width:760px){.split-col-grid{grid-template-columns:1fr;}}
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
   .compare-col{display:flex;flex-direction:column;gap:14px;}
   .compare-col img{width:100%;border-radius:8px;border:1px solid var(--border);}
@@ -158,27 +161,33 @@
 
 <section class="sec sec-white">
   <div class="inner">
-    <h2 class="content-h2">Residential Solar Incentives</h2>
+    <h2 class="sec-h2" style="text-align:center">Residential Solar Incentives</h2>
 
-    <h2 class="content-h2">Canada Greener Homes Loan (Ended)</h2>
-    <p class="body-p"><strong>October 2025 Update: The Greener Homes Loan has now ended. There is no word yet if a new federal loan program will replace it. The next best option is now Alberta's CEIP loan program.</strong> Homeowners who prioritized the Greener Homes Loan received 10 years of interest-free financing to make their home more energy-efficient, including solar panel installations and other upgrades. <a href="https://natural-resources.canada.ca/energy-efficiency/homes/canada-greener-homes-initiative/canada-greener-homes-loan/24286" target="_blank" rel="noopener">Official page here</a>.</p>
+    <div class="split-col-grid">
+      <div>
+        <h2 class="content-h2">💵 Canada Greener Homes Loan (Ended)</h2>
+        <p class="body-p"><strong>October 2025 Update: The Greener Homes Loan has now ended. There is no word yet if a new federal loan program will replace it. The next best option is now Alberta's CEIP loan program.</strong> Homeowners who prioritized the Greener Homes Loan received 10 years of interest-free financing to make their home more energy-efficient, including solar panel installations and other upgrades. <a href="https://natural-resources.canada.ca/energy-efficiency/homes/canada-greener-homes-initiative/canada-greener-homes-loan/24286" target="_blank" rel="noopener">Official page here</a>.</p>
 
-    <h2 class="content-h2">Seniors Home Adaptation and Repair Program (SHARP)</h2>
-    <p class="body-p">Qualified senior homeowners in Alberta can access a low-interest home equity loan to help pay for home repairs, upgrades, and energy-saving improvements. If your income is limited and you don't meet the loan requirements, you may still be eligible for a grant instead. <a href="https://www.alberta.ca/seniors-home-adaptation-repair-program" target="_blank" rel="noopener">Program page here</a>.</p>
+        <h2 class="content-h2">🧓 Seniors Home Adaptation and Repair Program (SHARP)</h2>
+        <p class="body-p">Qualified senior homeowners in Alberta can access a low-interest home equity loan to help pay for home repairs, upgrades, and energy-saving improvements. If your income is limited and you don't meet the loan requirements, you may still be eligible for a grant instead. <a href="https://www.alberta.ca/seniors-home-adaptation-repair-program" target="_blank" rel="noopener">Program page here</a>.</p>
 
-    <h2 class="content-h2">CMHC's Eco Improvement</h2>
-    <p class="body-p">If you have a mortgage with CMHC, the CMHC Eco Improvement aims to reduce the environmental impact of housing by supporting energy-efficient improvements. Apply for a 25% partial premium refund if you're insured with CMHC and spending at least $20,000 in energy-efficient renovations. Available for both home buyers and individual condo buyers. <a href="https://www.cmhc-schl.gc.ca/consumers/home-buying/mortgage-loan-insurance-for-consumers/cmhc-eco-products/cmhc-eco-improvement" target="_blank" rel="noopener">More info here.</a></p>
+        <h2 class="content-h2">🏦 CMHC's Eco Improvement</h2>
+        <p class="body-p">If you have a mortgage with CMHC, the CMHC Eco Improvement aims to reduce the environmental impact of housing by supporting energy-efficient improvements. Apply for a 25% partial premium refund if you're insured with CMHC and spending at least $20,000 in energy-efficient renovations. Available for both home buyers and individual condo buyers. <a href="https://www.cmhc-schl.gc.ca/consumers/home-buying/mortgage-loan-insurance-for-consumers/cmhc-eco-products/cmhc-eco-improvement" target="_blank" rel="noopener">More info here.</a></p>
+      </div>
 
-    <h2 class="content-h2">The Solar Club</h2>
-    <p class="body-p"><a href="/incentives/the-solar-club/">The Solar Club</a> is a special energy rate program designed to maximize savings for Albertans who generate their own solar power. It offers the flexibility to switch between two electricity rates based on the season:</p>
-    <ul class="body-ul">
-      <li>A <strong>higher buy-back rate of $0.30/kWh</strong> during months when your system produces a solar surplus</li>
-      <li>A <strong>lower usage rate of $0.0877/kWh</strong> during the winter or when production dips</li>
-    </ul>
-    <p class="body-p">By timing your rate switch to match your solar output, homeowners can sell excess energy back to the grid at a premium and buy it at a lower cost when needed, sometimes accelerating your break-even by 3-4 years. Read more about the <a href="/incentives/the-solar-club/">Solar Club here</a>.</p>
+      <div>
+        <h2 class="content-h2">🏡 The Solar Club™</h2>
+        <p class="body-p"><a href="/incentives/the-solar-club/">The Solar Club</a> is a special energy rate program designed to maximize savings for Albertans who generate their own solar power. It offers the flexibility to switch between two electricity rates based on the season:</p>
+        <ul class="body-ul">
+          <li>A <strong>higher buy-back rate of $0.30/kWh</strong> during months when your system produces a solar surplus</li>
+          <li>A <strong>lower usage rate of $0.0877/kWh</strong> during the winter or when production dips</li>
+        </ul>
+        <p class="body-p">By timing your rate switch to match your solar output, homeowners can sell excess energy back to the grid at a premium and buy it at a lower cost when needed, sometimes accelerating your break-even by 3-4 years. Read more about the <a href="/incentives/the-solar-club/">Solar Club here</a>.</p>
 
-    <div class="solar-club-img">
-      <img src="/images/solar-club-rates.jpg" alt="Solar Club Alberta seasonal electricity rates high low switching" loading="lazy">
+        <div class="solar-club-img">
+          <img src="/images/solar-club-rates.jpg" alt="Solar Club Alberta seasonal electricity rates high low switching" loading="lazy">
+        </div>
+      </div>
     </div>
 
     <div style="margin-top:28px;text-align:center">
@@ -487,53 +496,65 @@
 
 <section class="sec sec-alt">
   <div class="inner">
-    <h2 class="sec-h2">Municipality Specific Programs</h2>
+    <h2 class="sec-h2" style="text-align:center">Municipality Specific Programs</h2>
 
-    <h2 class="content-h2">Clean Energy Improvement Program (Residential)</h2>
-    <p class="body-p">This program offers a low-interest financing option for energy upgrades, like solar, repaid conveniently through your property tax bill. To qualify, you'll need to complete energy evaluations before and after your improvements. You can also combine CEIP with other rebates to boost your savings. For some cities CEIP funding has ended. Inquire with us to see what the status is for your area. View our <a href="/financing/">Alberta solar financing</a> page to see how the ROI compares.</p>
+    <div class="split-col-grid">
+      <div>
+        <h2 class="content-h2">🏦 Clean Energy Improvement Program (Residential Stream)</h2>
+        <p class="body-p">This program offers a low-interest financing option for energy upgrades, like solar, repaid conveniently through your property tax bill. To qualify, you'll need to complete energy evaluations before and after your improvements. You can also combine CEIP with other rebates to boost your savings. For some cities CEIP funding has ended. Inquire with us to see what the status is for your area. View our <a href="/financing/">Alberta solar financing</a> page to see how the ROI compares.</p>
 
-    <h2 class="content-h2">Home Upgrades Program</h2>
-    <p class="body-p">Eligible households can receive customized energy efficiency upgrades at no cost, tailored to their specific needs. Qualification depends on household size and income. <a href="https://www.homeupgradesprogram.ca/" target="_blank" rel="noopener">This program</a> is currently available in Calgary, Canmore, and Edmonton.</p>
+        <h2 class="content-h2">🏔️ Banff Solar Incentive Program</h2>
+        <p class="body-p">The <a href="https://banff.ca/807/Solar-Incentive-Program" target="_blank" rel="noopener">Banff Solar Incentive Program</a> is a post-install rebate program, with the rebate amount based on system size installed. Residential property owners get a rebate of $450/kW of installed solar capacity, to a maximum of 20 kW ($9,000 maximum rebate). Commercial properties are eligible for $750/kW, up to $15,000.</p>
 
-    <h2 class="content-h2">Banff Solar Incentive Program</h2>
-    <p class="body-p">The <a href="https://banff.ca/807/Solar-Incentive-Program" target="_blank" rel="noopener">Banff Solar Incentive Program</a> is a post-install rebate program, with the rebate amount based on system size installed. Residential property owners get a rebate of $450/kW of installed solar capacity, to a maximum of 20 kW ($9,000 maximum rebate). Commercial properties are eligible for $750/kW, up to $15,000.</p>
+        <h2 class="content-h2">⛰️ Canmore: Solar Incentive Program</h2>
+        <p class="body-p"><em>The 2025 program closed. Applications for the 2026 program will open in February.</em></p>
+        <p class="body-p">Canmore is offering 20 rebates of $1,250 to help homeowners install new rooftop solar systems (minimum 3 kW). Available for single-family homes, duplexes, townhouses, and similar residences. <a href="https://www.canmore.ca/your-community/environmentandclimate/incentiveprograms" target="_blank" rel="noopener">Official page here</a>.</p>
 
-    <h2 class="content-h2">Canmore Solar Incentive Program</h2>
-    <p class="body-p"><em>The 2025 program closed. Applications for the 2026 program will open in February.</em></p>
-    <p class="body-p">Canmore is offering 20 rebates of $1,250 to help homeowners install new rooftop solar systems (minimum 3 kW). Available for single-family homes, duplexes, townhouses, and similar residences. <a href="https://www.canmore.ca/your-community/environmentandclimate/incentiveprograms" target="_blank" rel="noopener">Official page here</a>.</p>
+        <h2 class="content-h2">❌ St. Albert: Home Energy Efficiency Grant</h2>
+        <p class="body-p">Effective August 30, 2024, the Home Energy Efficiency Grant Program has been fully subscribed and is no longer accepting applications. This is why it's important to apply for available programs as soon as possible, since funding won't last forever.</p>
+      </div>
 
-    <h2 class="content-h2">Medicine Hat: HAT Smart Existing Homes Incentives</h2>
-    <p class="body-p">Homeowners in <a href="/locations/medicine-hat/">Medicine Hat</a> can receive up to $5,000 in rebates for approved energy-efficient upgrades under the <a href="https://www.medicinehat.ca/en/home-property-and-utilities/existing-homes.aspx" target="_blank" rel="noopener">Existing Homes Program</a>. <strong>New Homes Rebate:</strong> Get up to $10,000 in rebates for building a home that exceeds current energy code standards.</p>
+      <div>
+        <h2 class="content-h2">🏦 Home Upgrades Program</h2>
+        <p class="body-p">Eligible households can receive customized energy efficiency upgrades at no cost, tailored to their specific needs. Qualification depends on household size and income. <a href="https://www.homeupgradesprogram.ca/" target="_blank" rel="noopener">This program</a> is currently available in Calgary, Canmore, and Edmonton.</p>
 
-    <h2 class="content-h2">Wetaskiwin Solar Installation Grant Program</h2>
-    <p class="body-p">The <a href="https://wetaskiwin.ca/1303/Solar-Installation-Grant-Program" target="_blank" rel="noopener">2025 program offers</a> ten $5,000 grants for residents installing at least a 4 kW system, and five $5,000 grants for businesses and nonprofits installing at least a 5 kW system. Landlords can apply on behalf of rental properties using the business application.</p>
+        <h2 class="content-h2">🎣 Medicine Hat: HAT Smart Existing Homes Incentives</h2>
+        <p class="body-p">Homeowners in <a href="/locations/medicine-hat/">Medicine Hat</a> can receive up to $5,000 in rebates for approved energy-efficient upgrades under the <a href="https://www.medicinehat.ca/en/home-property-and-utilities/existing-homes.aspx" target="_blank" rel="noopener">Existing Homes Program</a>. <strong>New Homes Rebate:</strong> Get up to $10,000 in rebates for building a home that exceeds current energy code standards.</p>
 
-    <h2 class="content-h2">St. Albert: Home Energy Efficiency Grant (Closed)</h2>
-    <p class="body-p">Effective August 30, 2024, the Home Energy Efficiency Grant Program has been fully subscribed and is no longer accepting applications. This is why it's important to apply for available programs as soon as possible, since funding won't last forever.</p>
+        <h2 class="content-h2">🚜 Wetaskiwin: Solar Installation Grant Program</h2>
+        <p class="body-p">The <a href="https://wetaskiwin.ca/1303/Solar-Installation-Grant-Program" target="_blank" rel="noopener">2025 program offers</a> ten $5,000 grants for residents installing at least a 4 kW system, and five $5,000 grants for businesses and nonprofits installing at least a 5 kW system. Landlords can apply on behalf of rental properties using the business application.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="sec sec-white">
   <div class="inner">
-    <h2 class="sec-h2">Multi-Unit &amp; Commercial <span>Solar Incentives</span></h2>
+    <h2 class="sec-h2" style="text-align:center">Multi-Unit &amp; Commercial <span>Solar Incentives</span></h2>
 
-    <h2 class="content-h2">Edmonton Multi-Unit Solar Rebate</h2>
-    <p class="body-p">The City of Edmonton has added $1.2 million in new funding to support solar installations on multi-unit residential buildings (4+ dwellings). Applications reopened March 17, 2025 on a first-come, first-served basis. Eligible projects receive <strong>$0.50/watt, up to $4,000 per dwelling</strong> and a $100,000 annual cap per applicant. <a href="https://solarab.ca/" target="_blank" rel="noopener">Program page here.</a></p>
+    <div class="split-col-grid">
+      <div>
+        <h2 class="content-h2">Edmonton Multi-Unit Solar Rebate</h2>
+        <p class="body-p">The City of Edmonton has added $1.2 million in new funding to support solar installations on multi-unit residential buildings (4+ dwellings). Applications reopened March 17, 2025 on a first-come, first-served basis. Eligible projects receive <strong>$0.50/watt, up to $4,000 per dwelling</strong> and a $100,000 annual cap per applicant. <a href="https://solarab.ca/" target="_blank" rel="noopener">Program page here.</a></p>
 
-    <h2 class="content-h2">Canmore Commercial and Multi-Family Solar Incentive</h2>
-    <p class="body-p"><em>The 2025 program closed. Applications for the 2026 program will open in February.</em> Businesses and multi-family buildings can receive $750 per kW of solar installed, up to $20,000.</p>
+        <h2 class="content-h2">Canmore Commercial and Multi-Family Solar Incentive</h2>
+        <p class="body-p"><em>The 2025 program closed. Applications for the 2026 program will open in February.</em> Businesses and multi-family buildings can receive $750 per kW of solar installed, up to $20,000.</p>
 
-    <h2 class="content-h2">Calgary: Charge YYC Multi-Residential Pilot Program</h2>
-    <p class="body-p">This pilot program helps residents of condos, apartments, townhomes, and other multi-unit buildings plan and install EV chargers. In Phase 1, up to 60 applicants can receive $4,000 or 50% of costs, whichever is less, to create an EV charging road map. Ideal for property managers or condo boards looking to future-proof their buildings.</p>
+        <h2 class="content-h2">Calgary: Charge YYC Multi-Residential Pilot Program</h2>
+        <p class="body-p">This pilot program helps residents of condos, apartments, townhomes, and other multi-unit buildings plan and install EV chargers. In Phase 1, up to 60 applicants can receive $4,000 or 50% of costs, whichever is less, to create an EV charging road map. Ideal for property managers or condo boards looking to future-proof their buildings.</p>
+      </div>
 
-    <h2 class="content-h2">Strategic Energy Management for Industry (SEMI)</h2>
-    <p class="body-p">The SEMI program helps Alberta's industrial and manufacturing facilities lower energy costs, build internal expertise, and fund capital retrofits. Backed by $50 million from the Government of Alberta and Natural Resources Canada, SEMI offers training, expert support, and funding to boost efficiency and reduce emissions. The program is available until March 31, 2027.</p>
+      <div>
+        <h2 class="content-h2">🏦 Strategic Energy Management for Industry (SEMI)</h2>
+        <p class="body-p">The SEMI program helps Alberta's industrial and manufacturing facilities lower energy costs, build internal expertise, and fund capital retrofits. Backed by $50 million from the Government of Alberta and Natural Resources Canada, SEMI offers training, expert support, and funding to boost efficiency and reduce emissions. The program is available until March 31, 2027.</p>
 
-    <h2 class="content-h2">Clean Technology Investment Tax Credit (Federal)</h2>
-    <p class="body-p">The Federal <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/investment-tax-credits.html" target="_blank" rel="noopener">Clean Technology Investment Tax Credit</a> provides a 30% refundable investment tax credit for eligible clean technology property, including solar energy equipment, for qualifying Canadian businesses.</p>
+        <h2 class="content-h2">🏢 Clean Technology Investment Tax Credit (Federal)</h2>
+        <p class="body-p">The Federal <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/investment-tax-credits.html" target="_blank" rel="noopener">Clean Technology Investment Tax Credit</a> provides a 30% refundable investment tax credit for eligible clean technology property, including solar energy equipment, for qualifying Canadian businesses.</p>
 
-    <h2 class="content-h2">CCA Class 43.2 (Federal)</h2>
-    <p class="body-p">Alberta businesses can deduct 100% of eligible clean energy equipment costs in the first year under the Accelerated Investment Incentive through CCA Class 43.2. Solar panels, inverters, racking, and associated electrical work typically qualify. See our <a href="/services/commercial/">commercial solar page</a> for more details.</p>
+        <h2 class="content-h2">CCA Class 43.2 (Federal)</h2>
+        <p class="body-p">Alberta businesses can deduct 100% of eligible clean energy equipment costs in the first year under the Accelerated Investment Incentive through CCA Class 43.2. Solar panels, inverters, racking, and associated electrical work typically qualify. See our <a href="/services/commercial/">commercial solar page</a> for more details.</p>
+      </div>
+    </div>
   </div>
 </section>
 
