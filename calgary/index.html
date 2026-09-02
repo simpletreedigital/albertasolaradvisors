@@ -38,7 +38,7 @@
   .lh img{height:44px;width:auto;max-width:200px;object-fit:contain;}
   @media(max-width:600px){.lh{padding:10px 20px;}.lh img{height:36px;}}
   .hero{background:var(--hero-bg);display:grid;grid-template-columns:1fr 1fr;min-height:620px;overflow:hidden;}
-  .hero-left{padding:100px 60px 160px 40px;display:flex;flex-direction:column;justify-content:flex-start;}
+  .hero-left{padding:100px 80px 160px max(40px,calc((100vw - 1200px)/2 + 40px));display:flex;flex-direction:column;justify-content:flex-start;}
   .hero-trust{display:flex;flex-direction:column;gap:6px;margin-bottom:24px;}
   .hero-trust-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--text);}
   .hero-check{width:20px;height:20px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -175,9 +175,9 @@
 </section>
 
 <section class="sec-explain">
-  <div class="inner">
+  <div class="inner" style="text-align:center">
     <h2 class="sec-title">Power your home with a trusted <span>Calgary Solar Company</span></h2>
-    <p>Over the next decade, you'll spend about $30,000 on electricity whether you choose solar or not. The difference is that with solar, you're investing in your own power system instead of endlessly paying your utility company. After the 10-year investment period, you'll enjoy free electricity for 20+ years, all while protecting yourself from rising energy costs.</p>
+    <p style="margin-left:auto;margin-right:auto">Over the next decade, you'll spend about $30,000 on electricity whether you choose solar or not. The difference is that with solar, you're investing in your own power system instead of endlessly paying your utility company. After the 10-year investment period, you'll enjoy free electricity for 20+ years, all while protecting yourself from rising energy costs.</p>
   </div>
 </section>
 
