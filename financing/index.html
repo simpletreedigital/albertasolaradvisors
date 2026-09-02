@@ -60,6 +60,9 @@
   .body-ul li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text);line-height:1.55;}
   .body-ul li::before{content:'•';color:var(--blue);font-weight:700;flex-shrink:0;}
   .widget-block{margin:32px 0;overflow-x:auto;}
+  .split-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;align-items:start;}
+  .split-col-grid .content-h2:first-child{margin-top:0;}
+  @media(max-width:760px){.split-col-grid{grid-template-columns:1fr;}}
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
   .compare-col{display:flex;flex-direction:column;gap:14px;}
   .compare-col img{width:100%;border-radius:8px;border:1px solid var(--border);}
@@ -677,24 +680,69 @@
 
 <section class="sec sec-white">
   <div class="inner">
-    <h2 class="sec-h2">Financing Types <span>Explained</span></h2>
+    <h2 class="sec-h2" style="text-align:center">Financing Types <span>Explained</span></h2>
 
-    <h2 class="content-h2">Cash Purchase</h2>
-    <p class="body-p">With a <strong>cash purchase</strong>, the homeowner pays the full system cost upfront. There are no ongoing loan payments, which means the savings from solar begin immediately and accumulate with no deductions.</p>
-    <ul class="body-ul">
-      <li>Annual Utility Offset: Based on an 8kW system producing approximately 9,600 kWh annually at Alberta's average residential electricity cost of $0.258/kWh, the system offsets approximately $2,476.80 in Year 1</li>
-      <li>25-Year Cumulative Utility Offset: approximately $90,302</li>
-      <li>Net 25-Year Savings: $90,302 minus $20,000 = <strong>$70,302</strong></li>
-      <li>Break-Even Year: Around <strong>Year 8</strong></li>
-    </ul>
-    <p class="body-p"><strong>Best for:</strong> Homeowners with cash on hand looking for the highest lifetime return and no monthly payments.</p>
+    <div class="split-col-grid">
+      <div>
+        <h2 class="content-h2">💵 Cash Purchase</h2>
+        <p class="body-p">With a <strong>cash purchase</strong>, the homeowner pays the full $20,000 system cost upfront. There are no ongoing loan payments, which means the savings from solar begin immediately and accumulate with no deductions.</p>
+        <ul class="body-ul">
+          <li>Annual Utility Offset: Based on an 8kW system producing ~9,600 kWh annually and Alberta's average residential electricity cost of $0.258/kWh, the system offsets ~$2,476.80 in Year 1</li>
+          <li>Savings Growth: With a conservative 3% annual utility inflation, these savings grow each year</li>
+          <li>25-Year Cumulative Utility Offset: ~$90,302</li>
+          <li>Net 25-Year Savings: $90,302 – $20,000 = <strong>$70,302</strong></li>
+          <li>Break-Even Year: Around <strong>Year 8</strong>, when cumulative utility savings equal the initial investment</li>
+        </ul>
+        <p class="body-p"><strong>Best for:</strong> Homeowners with cash on hand looking for the highest lifetime return and no monthly payments.</p>
 
-    <img src="/images/Solar_Panels_And_Snow.jpg" alt="Solar panels in snow Alberta winter net billing economics" loading="lazy" style="width:100%;border-radius:12px;margin:28px 0;">
+        <img src="/images/Solar_Panels_And_Snow.jpg" alt="Solar panels in snow Alberta winter net billing economics" loading="lazy" style="width:100%;border-radius:12px;margin:28px 0;">
 
-    <h2 class="content-h2">Simple Bridge Loan Program</h2>
-    <p class="body-p">Our financing partner <strong>Financeit</strong> makes it easy to get started with solar panels. Think of it as a <strong>bridge loan</strong>: you start with small, flexible monthly payments now, and later you can switch into a longer-term option like a mortgage, HELOC, or CEIP loan. This way, you don't have to wait. You can install solar today and have time to choose the best long-term structure.</p>
-    <p class="body-p"><strong>Available Financeit bridge terms:</strong></p>
-    <div class="widget-block">
+        <h2 class="content-h2">💳 Conventional Loan (10-Year, 7% Interest)</h2>
+        <p class="body-p">This option models a personal or unsecured home improvement loan with a 7% interest rate and a 10-year amortization period.</p>
+        <ul class="body-ul">
+          <li>Annual Payment: Calculated using amortization formula = <strong>$2,847.55 per year</strong></li>
+          <li>Total Repaid Over 10 Years: $28,475.50</li>
+          <li>Net 25-Year Savings: $90,302 – $28,475.50 = <strong>$61,827</strong></li>
+          <li>Break-Even Year: Around <strong>Year 11</strong>, due to higher upfront cost from interest</li>
+        </ul>
+        <p class="body-p"><strong>Best for:</strong> Homeowners who don't qualify for Greener Homes or want shorter-term financing, but can afford a higher monthly commitment.</p>
+        <p class="body-p"><strong>Calgary Special:</strong> For Calgary area homeowners there is a 5 year interest free loan offered by a private lender.</p>
+
+        <h2 class="content-h2">🏦 Alberta CEIP (4.5%, 20-Year Property Tax Financing)</h2>
+        <p class="body-p">The <a href="/financing/ceip/">Clean Energy Improvement Program (CEIP)</a> is a unique financing tool that lets homeowners pay for solar panels through their property tax bill, no upfront cost, no separate loan to manage, and often at competitive interest rates subsidized by municipalities or energy efficiency agencies.</p>
+        <p class="body-p">For this model, we've assumed:</p>
+        <ul class="body-ul">
+          <li>A $20,000 system cost</li>
+          <li>A 4.5% fixed interest rate</li>
+          <li>A 20-year amortization</li>
+          <li>Annual electricity savings beginning at $2,476.80, growing 3% per year</li>
+        </ul>
+        <p class="body-p">The CEIP program is <strong>not available in every Alberta municipality</strong>. Each city must opt into the program and set its own rules, interest rates, and eligible project types. Book a call with our experts to learn about CEIP in your city.</p>
+
+        <h2 class="content-h2">🏡 Greener Homes Loan (Expired)</h2>
+        <p class="body-p">As of October 2025 Canada's Federal Greener Homes Program is no longer accepting applications. This program offered a 10-year, interest-free loan of up to $40,000, making it one of the most accessible and cost-effective ways to go solar.</p>
+        <ul class="body-ul">
+          <li>Loan Payment: $20,000 / 10 years = <strong>$2,000 per year</strong></li>
+          <li>Year 1 Net Cash Flow: $2,476 savings – $2,000 loan = <strong>$476 net gain</strong></li>
+          <li>25-Year Net Savings: Same total utility offset as cash purchase, minus the $20,000 repaid = <strong>$70,302</strong></li>
+          <li>Break-Even Year: Around <strong>Year 8</strong>, when cumulative savings reach $20,000</li>
+        </ul>
+        <p class="body-p"><strong>Best for:</strong> Homeowners without upfront capital who wanted to maximize ROI with no interest charges and strong early cash flow.</p>
+        <p class="body-p"><strong>What's the catch?</strong> Due to its popularity funding has been exhausted and it's no longer accepting applications. There's been no word if a federal replacement will arrive. Many are switching to the CEIP program.</p>
+
+        <img src="/images/financial-model-ROI-comparison-chart-alberta-solar-org.png" alt="Graph comparing solar financing options in Alberta" loading="lazy" style="width:100%;border-radius:12px;margin:12px 0;">
+      </div>
+
+      <div>
+        <h2 class="content-h2">🏡 Simple Bridge Loan Program</h2>
+        <p class="body-p">Our financing partner <strong>Financeit</strong> makes it easy to get started with solar panels. Think of it as a <strong>bridge loan</strong>: you start with small, flexible monthly payments now, and later you can switch into a longer-term option like a mortgage, HELOC, or CEIP loan. This way, you don't have to wait. You can install solar today and have time to choose the best long-term structure.</p>
+        <p class="body-p"><strong>Example: Old vs. New</strong></p>
+        <ul class="body-ul">
+          <li>Before (Greener Homes Loan): $25,000 system = $208/month at 0% interest</li>
+          <li>Now (Simple Bridge): $25,000 system = $166/month for the first year</li>
+        </ul>
+        <p class="body-p"><strong>Available Financeit bridge terms:</strong></p>
+        <div class="widget-block">
       <!-- Financing Options Table -->
 <div class="as-table-wrap">
   <table class="as-table">
@@ -811,23 +859,17 @@
 
     </div>
 
-    <h2 class="content-h2">Alberta CEIP Loan</h2>
-    <p class="body-p">Alberta's <a href="/financing/ceip/">Clean Energy Improvement Program (CEIP)</a> lets you finance your solar system through your property tax bill. No upfront cost, competitive fixed interest rate (varies by municipality), and the financing stays with the property if you sell.</p>
-    <ul class="body-ul">
-      <li>No upfront payment required</li>
-      <li>Repaid via property tax bill over 10-20 years depending on municipality</li>
-      <li>Rate currently ranges from 2.7% to 6% depending on city</li>
-      <li>Financing attaches to the property, not the homeowner</li>
-    </ul>
-    <p class="body-p"><strong>Best for:</strong> Homeowners who want $0 down and prefer a payment structure tied to their property.</p>
-
-    <h2 class="content-h2">HELOC (Home Equity Line of Credit)</h2>
-    <p class="body-p">If you have equity in your home, a HELOC lets you borrow against it at a lower interest rate than an unsecured loan. You draw what you need, when you need it, and repay on your schedule. Current rates are typically 5.5-6.5%.</p>
-    <p class="body-p"><strong>Best for:</strong> Homeowners with significant home equity looking for flexible repayment.</p>
-
-    <h2 class="content-h2">Conventional Loan</h2>
-    <p class="body-p">A standard personal or solar-specific loan from a financial institution. Rates are typically higher than CEIP or HELOC (6-9%), but approval is straightforward and doesn't require home equity.</p>
-    <p class="body-p"><strong>Best for:</strong> Homeowners who want a fixed payment schedule and don't qualify for CEIP or prefer not to use home equity.</p>
+        <h2 class="content-h2">🏦 HELOC-Style Loan (20-Year, 5% Interest)</h2>
+        <p class="body-p">This model assumes financing through a Home Equity Line of Credit or similar secured product with a longer term and lower interest rate.</p>
+        <ul class="body-ul">
+          <li>Annual Payment: Calculated over 20 years at 5% = <strong>$1,604.85 per year</strong></li>
+          <li>Total Paid Over 20 Years: ~$32,097</li>
+          <li>Net 25-Year Savings: $90,302 – $32,097 = <strong>$58,205</strong></li>
+          <li>Break-Even Year: Also around <strong>Year 8</strong>, as utility savings outpace slower repayment</li>
+        </ul>
+        <p class="body-p"><strong>Best for:</strong> Homeowners with home equity looking for lower monthly payments and a longer runway to pay off the system affordably.</p>
+      </div>
+    </div>
   </div>
 </section>
 
