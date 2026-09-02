@@ -94,6 +94,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   .body-ul li{display:flex;align-items:flex-start;gap:8px;font-size:15px;color:var(--text);line-height:1.55;}
   .body-ul li::before{content:'•';color:var(--blue);font-weight:700;flex-shrink:0;}
   .widget-block{margin:32px 0;overflow-x:auto;}
+  .qa-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start;}
+  .qa-image img{border-radius:12px;box-shadow:0 8px 24px rgba(1,33,74,.12);position:sticky;top:100px;}
+  @media(max-width:900px){.qa-layout{grid-template-columns:1fr;}.qa-image{order:-1;max-width:360px;}.qa-image img{position:static;}}
   .split-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;align-items:start;}
   .split-col-grid .content-h2:first-child{margin-top:0;}
   @media(max-width:760px){.split-col-grid{grid-template-columns:1fr;}}
@@ -194,20 +197,27 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 <section class="sec sec-alt" id="quick-answer">
   <div class="inner">
-    <h2 class="sec-h2">Quick Answer: <span>Is Solar Worth It in Alberta?</span></h2>
-    <p class="body-p">Here is what the numbers look like for a typical Alberta home, using the real 8kW system pricing and financing terms detailed below. This is an illustrative example, not a guaranteed quote for your home.</p>
+    <div class="qa-layout">
+      <div class="qa-text">
+        <h2 class="sec-h2">Quick Answer: <span>Is Solar Worth It in Alberta?</span></h2>
+        <p class="body-p">Here is what the numbers look like for a typical Alberta home, using the real 8kW system pricing and financing terms detailed below. This is an illustrative example, not a guaranteed quote for your home.</p>
 
-    <h3 class="content-h2">How much does solar cost in Alberta?</h3>
-    <p class="body-p">An 8kW residential system, a common size for an Alberta home, runs approximately <strong>$25,000</strong> installed. That figure is the starting point for every financing path in the comparison below, whether you pay cash or finance it.</p>
+        <h3 class="content-h2">How much does solar cost in Alberta?</h3>
+        <p class="body-p">An 8kW residential system, a common size for an Alberta home, runs approximately <strong>$25,000</strong> installed. That figure is the starting point for every financing path in the comparison below, whether you pay cash or finance it.</p>
 
-    <h3 class="content-h2">How does CEIP bring the monthly cost down?</h3>
-    <p class="body-p">Alberta's Clean Energy Improvement Program (CEIP) is the province's leading government solar program, financing that same $25,000 system through your property tax bill with no upfront cost. On an 8kW system, that works out to roughly <strong>$148 per month</strong>, repaid over 20 years, with the financing attached to the property rather than the homeowner. See the full breakdown of eligibility and other <a href="/incentives/">alberta solar incentives</a> before you apply.</p>
+        <h3 class="content-h2">How does CEIP bring the monthly cost down?</h3>
+        <p class="body-p">Alberta's Clean Energy Improvement Program (CEIP) is the province's leading government solar program, financing that same $25,000 system through your property tax bill with no upfront cost. On an 8kW system, that works out to roughly <strong>$148 per month</strong>, repaid over 20 years, with the financing attached to the property rather than the homeowner. See the full breakdown of eligibility and other <a href="/incentives/">alberta solar incentives</a> before you apply.</p>
 
-    <h3 class="content-h2">When does solar break even in Alberta?</h3>
-    <p class="body-p">Across the financing paths we track, break-even on an 8kW system generally lands around <strong>Year 11 to Year 13</strong>. A cash purchase breaks even fastest and finishes with the highest 25-year net savings, around <strong>$40,650</strong>. CEIP break-even lands around Year 12 with $0 down and a $148 monthly payment. By comparison, continuing to pay escalating utility bills with no solar costs an estimated <strong>$65,650</strong> more over the same 25 years.</p>
+        <h3 class="content-h2">When does solar break even in Alberta?</h3>
+        <p class="body-p">Across the financing paths we track, break-even on an 8kW system generally lands around <strong>Year 11 to Year 13</strong>. A cash purchase breaks even fastest and finishes with the highest 25-year net savings, around <strong>$40,650</strong>. CEIP break-even lands around Year 12 with $0 down and a $148 monthly payment. By comparison, continuing to pay escalating utility bills with no solar costs an estimated <strong>$65,650</strong> more over the same 25 years.</p>
 
-    <p class="body-p">See the full <a href="#financing-comparison">25-year financing comparison</a> below for every option side by side.</p>
-    <button class="btn" onclick="openSurvey()">Get a Solar Quote &amp; Compare Financing</button>
+        <p class="body-p">See the full <a href="#financing-comparison">25-year financing comparison</a> below for every option side by side.</p>
+        <button class="btn" onclick="openSurvey()">Get a Solar Quote &amp; Compare Financing</button>
+      </div>
+      <div class="qa-image">
+        <img src="/images/alberta-homes-with-solar-panels-1.png" alt="Alberta home with rooftop solar panel installation" loading="lazy">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -217,7 +227,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <p class="body-p">The <strong>25-Year Solar Financing Comparison Table</strong> helps Alberta homeowners understand the long-term financial outcomes of going solar with four common financing options: Cash Purchase, CEIP Loan, Conventional Loan, and a HELOC-Style Loan. Each row represents a different financing model; each column breaks down a key financial metric for a typical 8 kW system in Alberta.</p>
     <div class="widget-block">
       <style>
-  body { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; background-color: #ffffff; padding: 20px; }
   .solar-financing-table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 20px 0; box-shadow: 0 0 12px rgba(0,0,0,0.05); }
   .solar-financing-table thead { background-color: #003366; color: white; text-transform: uppercase; }
   .solar-financing-table th, .solar-financing-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #ddd; }
@@ -341,20 +350,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <section class="sec sec-alt">
   <div class="inner">
     <div class="widget-block">
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alberta Solar Financing 25-Year ROI Comparison</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      padding: 20px;
-      margin: 0;
-    }
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+      <style>
     .chart-container {
       position: relative;
       height: auto;
@@ -436,10 +433,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       font-size: 12px;
       color: #555;
     }
-  </style>
-</head>
-<body>
-  <div class="chart-container">
+      </style>
+      <div class="chart-container">
     <div class="chart-title">Alberta Solar Financing 25-Year ROI Comparison</div>
     <div class="chart-subtitle">8kW System ($25,000) — Cumulative Net Savings Over Time</div>
 
@@ -705,9 +700,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       }
     });
   </script>
-</body>
-</html>
-
     </div>
   </div>
 </section>
