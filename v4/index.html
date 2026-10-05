@@ -219,8 +219,8 @@
 
 <footer>&copy; Alberta Solar Advisors &mdash; local Alberta solar design, install, and support.</footer>
 
-<!-- SURVEY MODAL: embeds the existing live GHL survey widget already wired to this
-     GHL location (same widget id used on v2o), so no new backend plumbing is needed. -->
+<!-- SURVEY MODAL: embeds the custom survey.alberta-solar.org app (its own repo,
+     posts to GHL contacts/upsert via a Pages Function with real field IDs). -->
 <div class="survey-modal-overlay" id="surveyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Alberta Solar Quote">
   <div class="survey-modal-panel">
     <button class="sv-close-btn" id="svCloseBtn" aria-label="Close survey" type="button">&#215;</button>
@@ -236,7 +236,7 @@
   var closeBtn = document.getElementById('svCloseBtn');
   var frame = document.getElementById('as-survey-frame');
   var openers = document.querySelectorAll('.open-survey');
-  var BASE_URL = 'https://book.alberta-solar.org/widget/survey/wXWcjC5PUMdssOdN9uge';
+  var BASE_URL = 'https://survey.alberta-solar.org/';
   var frameLoaded = false, savedScrollY = 0;
 
   function buildFrameSrc() { return BASE_URL + (window.location.search || ''); }
@@ -270,6 +270,12 @@
     if (typeof e.data === 'string' && e.data.indexOf('resize::') === 0) {
       var h = parseInt(e.data.split('::')[1]);
       if (!isNaN(h)) frame.style.height = h + 'px';
+    }
+    // survey.alberta-solar.org posts this on a successful GHL submit (see its
+    // own index.html) -- honor its redirect_url instead of letting it navigate
+    // the iframe itself, same contract as the Orizon lander's modal.
+    if (e.data && e.data.type === 'lead_submitted' && e.data.redirect_url) {
+      setTimeout(function() { window.location.href = e.data.redirect_url; }, 400);
     }
   });
 })();
