@@ -524,7 +524,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSurvey(
   function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|;\s*)'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
   function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}
   var iframe=document.getElementById('wXWcjC5PUMdssOdN9uge');
-  if(iframe){iframe.addEventListener('load',function(){iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),gclid:getParam('gclid'),page_url:window.location.href},'*');});}
+  if(iframe){iframe.addEventListener('load',function(){iframe.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),gclid:getParam('gclid'),gbraid:getParam('gbraid'),wbraid:getParam('wbraid'),page_url:window.location.href},'*');});}
   window.addEventListener('message',function(e){
     if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');}catch(err){} window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'generate_lead','email':e.data.email,'phone':e.data.phone,'first_name':e.data.first_name});}
     if(e.data&&e.data.type==='redirect'&&e.data.url){setTimeout(function(){window.open(e.data.url,'_blank');closeSurvey();},500);}

@@ -202,7 +202,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeSurvey
   function getParam(n){return new URLSearchParams(window.location.search).get(n)||'';}
   ['north','south'].forEach(function(region){
     var fr=document.getElementById('sv-iframe-'+region);
-    if(fr){fr.addEventListener('load',function(){fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),page_url:window.location.href},'*');});}
+    if(fr){fr.addEventListener('load',function(){fr.contentWindow.postMessage({type:'sv_context',fbp:getCookie('_fbp'),fbc:getCookie('_fbc'),ga:getCookie('_ga'),fbclid:getParam('fbclid'),utm_source:getParam('utm_source'),utm_medium:getParam('utm_medium'),utm_campaign:getParam('utm_campaign'),utm_content:getParam('utm_content'),utm_term:getParam('utm_term'),gclid:getParam('gclid'),gbraid:getParam('gbraid'),wbraid:getParam('wbraid'),page_url:window.location.href},'*');});}
   });
   window.addEventListener('message',function(e){
     if(e.data&&e.data.type==='lead_submitted'){try{localStorage.setItem('ls-email',e.data.email||'');localStorage.setItem('ls-phone',e.data.phone||'');localStorage.setItem('ls-fname',e.data.first_name||'');localStorage.setItem('ls-lname',e.data.last_name||'');}catch(x){}window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',email:e.data.email,phone:e.data.phone,first_name:e.data.first_name,last_name:e.data.last_name});}
