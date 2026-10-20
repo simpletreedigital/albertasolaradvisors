@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1565c0">
+  <title>Alberta Solar: See Your Real Numbers</title>
+  <meta name="description" content="Net billing, the Solar Club, and CEIP financing explained in plain numbers. See what Alberta solar could save you, no pressure.">
+  <link rel="canonical" href="https://alberta-solar.org/v5/">
+  <link rel="icon" href="/images/cropped-logo-color__white-alberta-solar-500px.png">
+  <meta property="og:title" content="Alberta Solar: See Your Real Numbers">
+  <meta property="og:description" content="Net billing, the Solar Club, and CEIP financing explained in plain numbers.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://alberta-solar.org/v5/">
+  <meta property="og:image" content="/images/cropped-logo-color__white-alberta-solar-500px.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager (server container, matches v4/v2o/v1o -- unchanged) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://custom.alberta-solar.org/ahpkcmcuh.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','6i9w7om=aWQ9R1RNLVRLR05QNTk%3D&sort=desc');</script>
+  <!-- End Google Tag Manager -->
+  <!-- GA4 is server-side via GTM above. Do not add a gtag config here. -->
+
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:5038639,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <style>
+    /* Palette emulates survey.solar-advisors.org/v7: navy headings, blue accent,
+       Montserrat everywhere, white canvas, card-based proof blocks. */
+    :root{
+      --navy:#1a237e;--blue:#1565c0;--blue-dark:#0d47a1;--text:#0f172a;
+      --muted:#6a7f95;--sub:#3b4a5e;--line:#e8edf5;--line2:#e0e6f0;
+      --bg-soft:#f4f6fb;--red:#cc2b2b;--green:#1a8048;--white:#fff;
+      --shadow:0 4px 20px rgba(15,23,42,.08);--radius:12px;--max:880px;
+      --font:'Montserrat',sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);color:var(--text);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 36px));margin:0 auto}
+
+    /* Top bar */
+    .top-bar{background:#fff;border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:50}
+    .top-bar img{height:34px;width:auto;display:block}
+
+    /* Hero */
+    .hero{padding:56px 24px 36px;text-align:center}
+    .hero-inner{width:100%;max-width:720px;margin:0 auto}
+    .hero h1{font-size:clamp(28px,4.4vw,42px);font-weight:800;color:var(--text);line-height:1.15;letter-spacing:-.015em;margin-bottom:14px}
+    .hero-sub{font-size:18px;font-weight:500;color:var(--sub);line-height:1.5;margin-bottom:28px;max-width:600px;margin-left:auto;margin-right:auto}
+
+    .cta-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;max-width:520px;margin:0 auto}
+    .btn-primary{display:block;width:100%;background:var(--blue);color:#fff;border:none;border-radius:8px;padding:20px 28px;font-family:var(--font);font-size:17px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;cursor:pointer;transition:background .15s ease,transform .1s ease}
+    .btn-primary:hover{background:var(--blue-dark)}
+    .btn-primary:active{transform:translateY(1px)}
+    .btn-secondary{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;color:var(--sub);text-decoration:underline}
+
+    .hero-trust{font-size:14px;font-weight:700;color:var(--blue);margin-top:16px}
+    .proof-row{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+    .badge{background:var(--bg-soft);border:1px solid var(--line2);border-radius:999px;padding:5px 12px;font-weight:700;color:var(--navy)}
+
+    .trust-row{margin-top:26px}
+    .trust-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:10px}
+    .trust-logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px}
+    .trust-logos img{height:30px;width:auto;object-fit:contain}
+
+    /* Stat row (emulates v7's .stat-row) */
+    .proof-block{width:100%;background:#fff;padding:0 0 56px}
+    .pb-inner{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:44px;background:#fff;box-shadow:0 2px 12px rgba(15,23,42,.05)}
+    .stat-item{padding:22px 16px;text-align:center;border-right:1px solid var(--line)}
+    .stat-item:last-child{border-right:none}
+    .stat-num{font-size:28px;font-weight:800;color:var(--blue);line-height:1;letter-spacing:-.01em}
+    .stat-lbl{font-size:11px;font-weight:600;color:var(--muted);margin-top:5px;line-height:1.4;text-transform:uppercase;letter-spacing:.04em}
+
+    .pb-label{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+    .pb-title{font-size:clamp(20px,3vw,28px);font-weight:800;color:var(--text);line-height:1.2;margin-bottom:8px;letter-spacing:-.02em}
+    .pb-sub{font-size:15px;color:var(--sub);line-height:1.6;margin-bottom:24px;max-width:640px}
+
+    .ctx-bar{background:var(--bg-soft);border:1px solid var(--line2);border-radius:8px;padding:12px 18px;display:flex;flex-wrap:wrap;gap:6px 24px;margin-bottom:22px}
+    .ctx-item{font-size:12px;font-weight:700;color:var(--sub)}
+    .ctx-item span{color:var(--blue)}
+
+    /* Real-bill proof grid */
+    .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:40px}
+    .proof-card{background:#fff;border:1px solid var(--line2);border-radius:10px;overflow:hidden;box-shadow:0 3px 14px rgba(15,23,42,.06)}
+    .proof-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .proof-card-body{padding:16px}
+    .proof-card-body h3{font-size:15px;color:var(--navy);margin-bottom:4px}
+    .proof-card-body p{font-size:13px;color:var(--sub)}
+    .proof-metric{font-size:13px;font-weight:800;color:var(--green);margin-top:8px}
+
+    /* Solar Club / battery-style photo block */
+    .feature-block{margin:0 0 48px;border-radius:var(--radius);overflow:hidden;position:relative;background:#0a0f1e;box-shadow:0 4px 20px rgba(15,23,42,.14)}
+    .feature-block img{width:100%;display:block;max-height:340px;object-fit:cover;object-position:center;opacity:.95;background:#fff}
+    .feature-caption{padding:18px 22px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff}
+    .feature-caption-title{font-size:15px;font-weight:800;margin-bottom:4px;letter-spacing:-.01em}
+    .feature-caption-sub{font-size:13px;opacity:.85;line-height:1.55;font-weight:500}
+
+    /* Comparison table (emulates v7's .cmp-table) */
+    .cmp-wrap{overflow-x:auto;border-radius:10px;box-shadow:0 2px 12px rgba(15,23,42,.07);margin-bottom:14px}
+    .cmp-table{width:100%;border-collapse:collapse;background:#fff;font-family:var(--font)}
+    .cmp-table thead tr{background:var(--navy)}
+    .cmp-table th{padding:11px 14px;font-size:11px;font-weight:800;color:rgba(255,255,255,.85);text-align:center;text-transform:uppercase;letter-spacing:.06em}
+    .cmp-table th.lh{text-align:left;background:var(--bg-soft);color:var(--navy)}
+    .cmp-table th.col-stack{background:var(--green)}
+    .cmp-table th.col-billing{background:var(--blue)}
+    .cmp-table td{padding:11px 14px;font-size:13px;border-top:1px solid var(--line);text-align:center;vertical-align:middle;line-height:1.4}
+    .cmp-table td.lh{text-align:left;font-weight:700;color:var(--navy);background:#f8f9fd;font-size:12px}
+    .cmp-table td.col-stack{background:#f0faf4;color:var(--green);font-weight:800}
+    .cmp-table td.col-billing{background:#f0f6ff;color:var(--blue);font-weight:800}
+    .cmp-table td.col-utility{background:#fff5f5;color:#7f1d1d;font-weight:600}
+    .cmp-table th.col-utility{background:#7f1d1d}
+    .cmp-table .win{font-size:10px;font-weight:800;background:var(--green);color:#fff;padding:2px 6px;border-radius:4px;display:inline-block;margin-top:3px;letter-spacing:.03em}
+    .cmp-table .neutral{font-weight:600;color:var(--sub)}
+    .warn-tag{display:inline-block;font-size:10px;font-weight:800;background:#fef2f2;color:#c62828;border:1px solid #fca5a5;padding:2px 6px;border-radius:4px}
+    .cmp-note{font-size:11px;color:#94a3b8;line-height:1.6;margin-bottom:28px}
+
+    .pb-cta{text-align:center;padding-top:8px}
+    .pb-cta-btn{background:var(--red);color:#fff;border:none;border-radius:8px;padding:18px 40px;font-family:var(--font);font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;transition:background .15s;width:100%;max-width:480px}
+    .pb-cta-btn:hover{background:#b71c1c}
+    .pb-cta-note{font-size:12px;color:var(--muted);margin-top:10px;font-weight:600}
+
+    footer{background:#fff;border-top:1px solid var(--line);padding:20px 24px;text-align:center;font-size:13px;color:var(--muted);font-weight:500}
+    footer .links{margin-top:4px}
+    footer a{color:var(--blue);text-decoration:none;margin:0 8px;font-weight:600}
+    footer a:hover{text-decoration:underline}
+    footer .sep{color:#cbd5e1}
+
+    @media(max-width:700px){
+      .stat-row{grid-template-columns:1fr 1fr}
+      .stat-item:nth-child(2n){border-right:none}
+      .stat-item:nth-child(n+3){border-top:1px solid var(--line)}
+      .proof-grid{grid-template-columns:1fr}
+      .cmp-table th,.cmp-table td{padding:9px 10px;font-size:11px}
+    }
+    @media(max-width:600px){
+      .top-bar{padding:12px 18px}
+      .hero{padding:36px 18px 24px}
+    }
+
+    /* SURVEY MODAL (unchanged from /v4 -- same iframe app, same field mapping,
+       same redirect contract) */
+    .survey-modal-overlay{position:fixed;inset:0;background:rgba(26,35,126,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:9000}
+    .survey-modal-overlay.active{display:flex}
+    .survey-modal-panel{width:min(560px,100%);max-height:calc(100dvh - 32px);border-radius:18px;position:relative;overflow:hidden;background:#fff}
+    .sv-close-btn{position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:50%;background:rgba(26,35,126,.55);color:#fff;border:none;font-size:18px;cursor:pointer;z-index:10}
+    .sv-iframe-wrap{width:100%;max-height:calc(100dvh - 32px);overflow:hidden}
+    .sv-iframe-wrap iframe{width:100%;border:none;display:block;min-height:620px}
+  </style>
+</head>
+<body>
+
+<header class="top-bar">
+  <a href="#top"><img src="/images/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors"></a>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <h1>Paying $200+ a Month for Power? See What Solar Could Actually Save You.</h1>
+    <p class="hero-sub">Real numbers for your home: net billing credits, the Solar Club rate switch, and CEIP financing, explained before you talk to anyone.</p>
+
+    <div class="cta-card">
+      <button type="button" class="btn-primary open-survey">See My Solar Numbers</button>
+    </div>
+
+    <div class="hero-trust"><span aria-hidden="true">&#9889;</span> Takes 2 Minutes. No Pressure, No Commitment.</div>
+
+    <div class="proof-row">
+      <span>&#9733;&#9733;&#9733;&#9733;&#9733; 4.6 stars &middot; 400+ reviews</span>
+      <span class="badge">Net Billing</span>
+      <span class="badge">CEIP Ready</span>
+      <span class="badge">Local Alberta Install</span>
+    </div>
+
+    <div class="trust-row">
+      <div class="trust-label">Our Installer's Affiliations</div>
+      <div class="trust-logos">
+        <img src="/images/trust-icons-1.png" alt="SolarEdge Preferred Partner">
+        <img src="/images/trust-icons-5.png" alt="Enphase Energy">
+        <img src="/images/trust-icons-6.png" alt="UNIRAC Certified Installer">
+        <img src="/images/trust-icons-4.png" alt="Solar Alberta Member">
+        <img src="/images/trust-icons-3.png" alt="SolarEdge Certified No-Call RMA">
+        <img src="/images/trust-icons-2.png" alt="5 Years Workmanship Warranty">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof-block" id="proof-block">
+  <div class="pb-inner">
+
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-num">85%</div>
+        <div class="stat-lbl">Bill reduction, real net billing example</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">~$2,614</div>
+        <div class="stat-lbl">Year-one savings, Edmonton homeowner</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3&ndash;4 yrs</div>
+        <div class="stat-lbl">Faster payback with the Solar Club rate switch</div>
+      </div>
+    </div>
+
+    <div class="pb-label">Real Proposal Data</div>
+    <h2 class="pb-title">Real Alberta Bills. Real Savings.</h2>
+    <p class="pb-sub">These are actual customer bills, not projections. Once you upload yours, we'll build a proposal to match.</p>
+
+    <div class="ctx-bar">
+      <div class="ctx-item">Program: <span>Net Billing + The Solar Club</span></div>
+      <div class="ctx-item">Financing: <span>CEIP eligible (select cities)</span></div>
+      <div class="ctx-item">Install: <span>Local Alberta Crews</span></div>
+    </div>
+
+    <!-- PROPOSAL IMAGE PLACEHOLDER: drop the client's real proposal bill-comparison
+         graphic here (same treatment as the v7 .proposal-img-block) once supplied. -->
+
+    <div class="proof-grid">
+      <div class="proof-card">
+        <img src="/images/bill-solar-case-study-edmonton.png" alt="Edmonton solar case study bill">
+        <div class="proof-card-body">
+          <h3>Edmonton</h3>
+          <p>$206.08/month &rarr; a negative bill of about -$11.72/month.</p>
+          <div class="proof-metric">~$2,613.60/year saved</div>
+        </div>
+      </div>
+      <div class="proof-card">
+        <img src="/images/airdrie-solar-case-study-bill.png" alt="Airdrie solar case study bill">
+        <div class="proof-card-body">
+          <h3>Airdrie</h3>
+          <p>$192/month &rarr; about $56/month.</p>
+          <div class="proof-metric">~$1,630 in year-one savings</div>
+        </div>
+      </div>
+      <div class="proof-card">
+        <img src="/images/bill-case-study-site-3-ganesan.png" alt="Solar homeowner bill showing a credit balance after microgen credits">
+        <div class="proof-card-body">
+          <h3>Credit Balance, Not a Bill</h3>
+          <p>A microgen credit wiped out the charges, with a balance owed <em>to</em> the homeowner.</p>
+          <div class="proof-metric">Real net billing credit, one cycle</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-block">
+      <img src="/images/solar-club-electricity-rates.png" alt="Solar Club rate card: Pre-Solar 6.50c/kWh, Winter 8.77c/kWh, Summer 30.00c/kWh">
+      <div class="feature-caption">
+        <div class="feature-caption-title">The Solar Club&#8482;: Switch Rates, Keep the Spread</div>
+        <div class="feature-caption-sub">Summer export at $0.30/kWh, winter import at $0.0877/kWh, switched with 10 days' notice, no penalty. That spread is what stacks on top of net billing credits to shorten payback.</div>
+      </div>
+    </div>
+
+    <div class="pb-label" style="margin-top:4px">Program Comparison</div>
+    <h2 class="pb-title">Stacking Net Billing + The Solar Club vs. Paying the Utility</h2>
+    <p class="pb-sub">Net billing credits your summer surplus. The Solar Club lets you switch rates to capture the spread. Stacked together, they change what you pay the utility every month, not just in summer.</p>
+
+    <div class="cmp-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th class="lh">What Happens</th>
+            <th class="col-stack">Net Billing + Solar Club</th>
+            <th class="col-billing">Net Billing Only</th>
+            <th class="col-utility">Utility Only</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lh">Summer surplus power</td>
+            <td class="col-stack">Credited, then exported at the $0.30/kWh Club rate<br><span class="win">Highest credit value</span></td>
+            <td class="col-billing">Credited at standard microgen rate</td>
+            <td class="col-utility">N/A, no panels, no credit</td>
+          </tr>
+          <tr>
+            <td class="lh">Winter grid import</td>
+            <td class="col-stack">Switched to the $0.0877/kWh Club rate<br><span class="win">Lower cost per kWh</span></td>
+            <td class="col-billing">Standard import rate year-round</td>
+            <td class="col-utility">Full retail rate, every month</td>
+          </tr>
+          <tr>
+            <td class="lh">Real Edmonton example</td>
+            <td class="col-stack"><span class="win">-$11.72/mo</span><br><span style="font-size:10px;color:#555;font-weight:500">from a $206.08 bill</span></td>
+            <td class="col-billing">Lower bill, no rate-switch spread captured</td>
+            <td class="col-utility">$206.08/mo and rising with rates</td>
+          </tr>
+          <tr>
+            <td class="lh">Notice to change rate</td>
+            <td class="col-stack">10 days, no penalty</td>
+            <td class="col-billing">N/A</td>
+            <td class="col-utility">N/A</td>
+          </tr>
+          <tr>
+            <td class="lh">Payback speed</td>
+            <td class="col-stack"><span class="win">3&ndash;4 years faster</span></td>
+            <td class="col-billing">Standard solar payback timeline</td>
+            <td class="col-utility">No payback, ongoing cost only</td>
+          </tr>
+          <tr>
+            <td class="lh">Who it's for</td>
+            <td class="col-stack neutral">Homeowners who want the fastest payback and the biggest winter bill drop</td>
+            <td class="col-billing neutral">Homeowners who want solar savings without managing a rate switch</td>
+            <td class="col-utility neutral">Anyone fine with bills that only go up</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-note">Rates and examples reflect Alberta Solar Advisors customer data at time of publishing. Actual savings depend on system size, household usage, and utility rate changes. CEIP financing availability varies by city and program window.</p>
+
+    <div class="pb-cta">
+      <button class="pb-cta-btn open-survey" type="button">See My Numbers &rarr;</button>
+      <div class="pb-cta-note">Takes 2 minutes &middot; No pressure &middot; No commitment</div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  &copy; <span id="copy-year"></span> Alberta Solar Advisors
+  <div class="links">
+    <a href="/privacy-policy/">Privacy Policy</a>
+    <span class="sep">|</span>
+    <a href="/terms/">Terms</a>
+    <span class="sep">|</span>
+    <a href="/contact/">Contact Us</a>
+  </div>
+</footer>
+
+<!-- SURVEY MODAL: embeds the custom survey.alberta-solar.org app (its own repo,
+     posts to GHL contacts/upsert via a Pages Function with real field IDs).
+     Unchanged from /v4: same fields, same mapping, same redirect contract. -->
+<div class="survey-modal-overlay" id="surveyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Alberta Solar Quote">
+  <div class="survey-modal-panel">
+    <button class="sv-close-btn" id="svCloseBtn" aria-label="Close survey" type="button">&#215;</button>
+    <div class="sv-iframe-wrap">
+      <iframe src="about:blank" id="as-survey-frame" title="Alberta Solar Quote" width="100%" scrolling="no" style="min-height:620px;"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+(function() {
+  var modal = document.getElementById('surveyModal');
+  var closeBtn = document.getElementById('svCloseBtn');
+  var frame = document.getElementById('as-survey-frame');
+  var openers = document.querySelectorAll('.open-survey');
+  var BASE_URL = 'https://survey.alberta-solar.org/';
+  var frameLoaded = false, savedScrollY = 0;
+
+  function buildFrameSrc() { return BASE_URL + (window.location.search || ''); }
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    savedScrollY = window.scrollY || window.pageYOffset;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + savedScrollY + 'px';
+    document.body.style.left = '0'; document.body.style.right = '0';
+    document.body.style.overflowY = 'scroll';
+    if (!frameLoaded) { frame.src = buildFrameSrc(); frameLoaded = true; }
+  }
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.position = ''; document.body.style.top = '';
+    document.body.style.left = ''; document.body.style.right = ''; document.body.style.overflowY = '';
+    window.scrollTo(0, savedScrollY);
+  }
+  openers.forEach(function(btn) { btn.addEventListener('click', openModal); });
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
+
+  window.addEventListener('message', function(e) {
+    if (!frame) return;
+    if (e.data && e.data.type === 'setHeight') { frame.style.height = e.data.height + 'px'; }
+    if (typeof e.data === 'string' && e.data.indexOf('resize::') === 0) {
+      var h = parseInt(e.data.split('::')[1]);
+      if (!isNaN(h)) frame.style.height = h + 'px';
+    }
+    // survey.alberta-solar.org posts this on a successful GHL submit (see its
+    // own index.html) -- honor its redirect_url instead of letting it navigate
+    // the iframe itself, same contract as /v4 and the Orizon lander's modal.
+    if (e.data && e.data.type === 'lead_submitted' && e.data.redirect_url) {
+      setTimeout(function() { window.location.href = e.data.redirect_url; }, 400);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
