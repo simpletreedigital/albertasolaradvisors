@@ -590,6 +590,7 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
     // this same services.leadconnectorhq.com hook) so GHL's workflow
     // merge fields resolve correctly.
     var payload = {
+      lead_source: 'alberta-solar-v6',
       first_name: firstName,
       last_name: document.getElementById('lastName').value.trim(),
       email: email,
