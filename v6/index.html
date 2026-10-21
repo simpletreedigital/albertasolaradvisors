@@ -33,6 +33,21 @@
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+<!-- TrustedForm (same snippet as the solar-advisors.org v7 survey model) --
+     injects a hidden xxTrustedFormCertUrl input into #surveyForm on load;
+     read it at submit time and send it to the GHL webhook. -->
+<script type="text/javascript">
+  (function() {
+    var tf = document.createElement('script');
+    tf.type = 'text/javascript'; tf.async = true;
+    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+      '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
+      new Date().getTime() + Math.random();
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+  })();
+</script>
+<noscript><img src='https://api.trustedform.com/ns.gif' /></noscript>
+
 <style>
 :root{
   --blue:#3455A5;--dark:#01214A;--text:#313E5C;--muted:#667297;
@@ -570,7 +585,7 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
       how_much_is_your_monthly_electric_bill: state.billRange,
       utility: state.utility,
       adGroup: adGroup,
-      xxTrustedFormCertUrl: '',
+      xxTrustedFormCertUrl: (document.querySelector('input[name="xxTrustedFormCertUrl"]') || {}).value || '',
       gclick_id: qp('gclid'),
       gbraid: qp('gbraid'),
       wbraid: qp('wbraid'),
