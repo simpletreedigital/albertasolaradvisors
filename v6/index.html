@@ -464,6 +464,11 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
     // same convention used by the iframed v4 survey.
     return qp('utm_content') || qp('adgroup') || '';
   }
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
 
   function goToStep(n) {
     document.querySelectorAll('.slide').forEach(function(s) { s.classList.remove('active'); });
@@ -545,42 +550,54 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
     form.style.display = 'none';
     document.getElementById('spinner').style.display = 'block';
 
+    var now = new Date();
+    var adGroup = getAdGroup();
+
+    // Field names/shape match the GHL webhook-trigger contract already
+    // proven on the Orizon Alberta survey (alberta-orizon-survey worker ->
+    // this same services.leadconnectorhq.com hook) so GHL's workflow
+    // merge fields resolve correctly.
     var payload = {
-      firstName: firstName,
-      lastName: document.getElementById('lastName').value.trim(),
+      first_name: firstName,
+      last_name: document.getElementById('lastName').value.trim(),
       email: email,
       phone: phone,
-      address1: document.getElementById('address1').value.trim(),
-      postalCode: document.getElementById('postalCode').value.trim(),
+      address: document.getElementById('address1').value.trim(),
       city: document.getElementById('city').value.trim(),
-      date: new Date().toISOString().slice(0, 10),
-      homeowner: state.homeowner,
-      billRange: state.billRange,
+      province: 'AB',
+      postal_code: document.getElementById('postalCode').value.trim(),
+      do_you_own_your_home: state.homeowner,
+      how_much_is_your_monthly_electric_bill: state.billRange,
       utility: state.utility,
-      adGroup: getAdGroup(),
+      adGroup: adGroup,
+      xxTrustedFormCertUrl: '',
+      gclick_id: qp('gclid'),
+      gbraid: qp('gbraid'),
+      wbraid: qp('wbraid'),
       utm_source: qp('utm_source'),
       utm_medium: qp('utm_medium'),
       utm_campaign: qp('utm_campaign'),
       utm_content: qp('utm_content'),
       utm_term: qp('utm_term'),
-      gclid: qp('gclid'),
-      gbraid: qp('gbraid'),
-      wbraid: qp('wbraid'),
-      fbclid: qp('fbclid'),
       page_url: window.location.href,
-      referrer: document.referrer,
+      lead_date: now.getFullYear() + '-' + pad2(now.getMonth() + 1) + '-' + pad2(now.getDate()),
+      lead_time: pad2(now.getHours()) + ':' + pad2(now.getMinutes()),
+      fbc: getCookie('_fbc'),
+      fbp: getCookie('_fbp'),
+      fbclid: qp('fbclid'),
+      event_id: 'v6_' + Date.now() + '_' + Math.floor(Math.random() * 1000),
     };
 
-    // Same backend as every other lander on this domain (v4, lp-trust,
-    // lp-incentives, lp-cost, Orizon) -- GHL contacts/upsert + GA4 lead
-    // event stay wired exactly as they are today.
-    fetch('https://survey.alberta-solar.org/api/submit', {
+    // Posts straight to the GHL webhook trigger (same hook the Orizon
+    // Alberta survey posts to) -- CORS is open (access-control-allow-origin: *)
+    // so this works as a direct browser POST, no intermediary backend.
+    fetch('https://services.leadconnectorhq.com/hooks/yxhjPQyLrl3uFoy38jC4/webhook-trigger/QCwzOUvv7KHm8tp3dLuE', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
-    }).then(function(res) { return res.json(); }).then(function(data) {
-      if (!data.ok) throw new Error(data.error || 'submit_failed');
-      if (window.dataLayer) window.dataLayer.push({ event: 'generate_lead', ad_group: payload.adGroup });
+    }).then(function(res) {
+      if (!res.ok) throw new Error('submit_failed');
+      if (window.dataLayer) window.dataLayer.push({ event: 'generate_lead', ad_group: adGroup });
       var THANK_YOU_URL = 'https://go.alberta-solar.org/thank-you';
       setTimeout(function() { window.location.href = THANK_YOU_URL; }, 900);
       document.getElementById('spinner').innerHTML = '<div class="sv-heading" style="margin-bottom:8px;">You\'re all set!</div><div class="sv-subtext" style="margin-bottom:0;">Redirecting to your results&hellip;</div>';
