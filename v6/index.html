@@ -222,8 +222,19 @@ footer .sep{color:#cbd5e1}
           </div>
         </div>
 
-        <!-- Step 2: Bill range -->
+        <!-- Step 2: How long lived in home (field parity with the Orizon
+             survey: how_long_have_you_lived_in_your_home) -->
         <div class="slide" data-step="2">
+          <div class="sv-heading">How long have you lived in your home?</div>
+          <div class="opts cols-2">
+            <div class="opt" data-field="lengthOfResidence" data-value="Less than 3 Months">Less than 3 Months</div>
+            <div class="opt" data-field="lengthOfResidence" data-value="More than 3 Months">More than 3 Months</div>
+          </div>
+          <div class="sv-actions"><button type="button" id="sv-back-btn-2" data-back="1">&larr; Back</button></div>
+        </div>
+
+        <!-- Step 3: Bill range -->
+        <div class="slide" data-step="3">
           <div class="sv-heading">What's your average monthly electric bill?</div>
           <div class="sv-subtext">This is how we size your system and estimate savings.</div>
           <div class="opts cols-4">
@@ -232,11 +243,11 @@ footer .sep{color:#cbd5e1}
             <div class="opt" data-field="billRange" data-value="$150 - $250">$150&ndash;$250</div>
             <div class="opt" data-field="billRange" data-value="$250+">$250+</div>
           </div>
-          <div class="sv-actions"><button type="button" id="sv-back-btn" data-back="1">&larr; Back</button></div>
+          <div class="sv-actions"><button type="button" id="sv-back-btn-3" data-back="2">&larr; Back</button></div>
         </div>
 
-        <!-- Step 3: Utility -->
-        <div class="slide" data-step="3">
+        <!-- Step 4: Utility -->
+        <div class="slide" data-step="4">
           <div class="sv-heading">Who's your electric utility?</div>
           <div class="opts cols-2">
             <div class="opt" data-field="utility" data-value="ENMAX">ENMAX</div>
@@ -245,24 +256,24 @@ footer .sep{color:#cbd5e1}
             <div class="opt" data-field="utility" data-value="Fortis Alberta">Fortis Alberta</div>
             <div class="opt" data-field="utility" data-value="Not sure" style="grid-column:1/-1;">Not sure</div>
           </div>
-          <div class="sv-actions"><button type="button" id="sv-back-btn-3" data-back="2">&larr; Back</button></div>
+          <div class="sv-actions"><button type="button" id="sv-back-btn-4" data-back="3">&larr; Back</button></div>
         </div>
 
-        <!-- Step 4: Name -->
-        <div class="slide" data-step="4">
+        <!-- Step 5: Name -->
+        <div class="slide" data-step="5">
           <div class="sv-heading">What's your name?</div>
           <div class="sv-subtext">So we know who we're talking to.</div>
           <input type="text" class="sv-input" id="firstName" placeholder="First name" autocomplete="given-name">
           <input type="text" class="sv-input" id="lastName" placeholder="Last name" autocomplete="family-name">
           <div class="sv-err" id="errName">Please enter your first name.</div>
           <div class="sv-actions">
-            <button type="button" id="sv-next-btn" data-next="5" data-validate="name">Continue</button>
-            <button type="button" id="sv-back-btn-4" data-back="3">&larr; Back</button>
+            <button type="button" id="sv-next-btn" data-next="6" data-validate="name">Continue</button>
+            <button type="button" id="sv-back-btn-5" data-back="4">&larr; Back</button>
           </div>
         </div>
 
-        <!-- Step 5: Address -->
-        <div class="slide" data-step="5">
+        <!-- Step 6: Address -->
+        <div class="slide" data-step="6">
           <div class="sv-heading">Where's the home?</div>
           <div class="sv-subtext">Used to confirm your utility's net billing rules.</div>
           <input type="text" class="sv-input" id="address1" placeholder="Street address">
@@ -272,32 +283,32 @@ footer .sep{color:#cbd5e1}
           </div>
           <div class="sv-err" id="errAddress">Please enter your street address.</div>
           <div class="sv-actions">
-            <button type="button" id="sv-next-btn-5" data-next="6" data-validate="address">Continue</button>
-            <button type="button" id="sv-back-btn-5" data-back="4">&larr; Back</button>
+            <button type="button" id="sv-next-btn-6" data-next="7" data-validate="address">Continue</button>
+            <button type="button" id="sv-back-btn-6" data-back="5">&larr; Back</button>
           </div>
         </div>
 
-        <!-- Step 6: Phone -->
-        <div class="slide" data-step="6">
+        <!-- Step 7: Phone -->
+        <div class="slide" data-step="7">
           <div class="sv-heading">Best number to reach you?</div>
           <div class="sv-subtext">We'll text your numbers &mdash; no robocalls.</div>
           <input type="tel" class="sv-input" id="phone" placeholder="Phone" autocomplete="tel">
           <div class="sv-err" id="errPhone">Please enter a valid phone number.</div>
           <div class="sv-actions">
-            <button type="button" id="sv-next-btn-6" data-next="7" data-validate="phone">Continue</button>
-            <button type="button" id="sv-back-btn-6" data-back="5">&larr; Back</button>
+            <button type="button" id="sv-next-btn-7" data-next="8" data-validate="phone">Continue</button>
+            <button type="button" id="sv-back-btn-7" data-back="6">&larr; Back</button>
           </div>
         </div>
 
-        <!-- Step 7: Email + submit -->
-        <div class="slide" data-step="7">
+        <!-- Step 8: Email + submit -->
+        <div class="slide" data-step="8">
           <div class="sv-heading">Last step &mdash; where should we send it?</div>
           <div class="sv-subtext">No spam. Just your net billing + Solar Club numbers, while current rates and programs are still in place.</div>
           <input type="email" class="sv-input" id="email" placeholder="Email">
           <div class="sv-err" id="formErr">Please enter a valid email.</div>
           <div class="sv-actions">
             <button type="submit" id="submitBtn">Get My Solar Quote</button>
-            <button type="button" id="sv-back-btn-7" data-back="6">&larr; Back</button>
+            <button type="button" id="sv-back-btn-8" data-back="7">&larr; Back</button>
           </div>
         </div>
       </form>
@@ -474,8 +485,8 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
     });
   });
 
-  var state = { homeowner:'', billRange:'', utility:'' };
-  var totalSteps = 7;
+  var state = { homeowner:'', lengthOfResidence:'', billRange:'', utility:'' };
+  var totalSteps = 8;
   var form = document.getElementById('surveyForm');
   var progressBar = document.getElementById('prog');
 
@@ -588,6 +599,7 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
       province: 'AB',
       postal_code: document.getElementById('postalCode').value.trim(),
       do_you_own_your_home: state.homeowner,
+      how_long_have_you_lived_in_your_home: state.lengthOfResidence,
       how_much_is_your_monthly_electric_bill: state.billRange,
       utility: state.utility,
       adGroup: adGroup,
