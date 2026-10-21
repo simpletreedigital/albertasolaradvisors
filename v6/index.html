@@ -244,9 +244,12 @@ footer .sep{color:#cbd5e1}
         <div class="slide" data-step="5">
           <div class="sv-heading">Where's the home?</div>
           <div class="sv-subtext">Used to confirm your utility's net billing rules.</div>
-          <input type="text" class="sv-input" id="postalCode" placeholder="Postal code">
-          <input type="text" class="sv-input" id="city" placeholder="City">
-          <div class="sv-err" id="errAddress">Please enter your postal code.</div>
+          <input type="text" class="sv-input" id="address1" placeholder="Street address">
+          <div class="sv-row2">
+            <input type="text" class="sv-input" id="city" placeholder="City">
+            <input type="text" class="sv-input" id="postalCode" placeholder="Postal code">
+          </div>
+          <div class="sv-err" id="errAddress">Please enter your street address.</div>
           <div class="sv-actions">
             <button type="button" id="sv-next-btn-5" data-next="6" data-validate="address">Continue</button>
             <button type="button" id="sv-back-btn-5" data-back="4">&larr; Back</button>
@@ -495,7 +498,7 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
       return ok;
     },
     address: function() {
-      var ok = document.getElementById('postalCode').value.trim().length > 0;
+      var ok = document.getElementById('address1').value.trim().length > 0;
       document.getElementById('errAddress').style.display = ok ? 'none' : 'block';
       return ok;
     },
@@ -547,8 +550,10 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
       lastName: document.getElementById('lastName').value.trim(),
       email: email,
       phone: phone,
+      address1: document.getElementById('address1').value.trim(),
       postalCode: document.getElementById('postalCode').value.trim(),
       city: document.getElementById('city').value.trim(),
+      date: new Date().toISOString().slice(0, 10),
       homeowner: state.homeowner,
       billRange: state.billRange,
       utility: state.utility,
