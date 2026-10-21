@@ -163,6 +163,12 @@ h1,h2,h3,.btn{font-family:var(--font)}
 .sv-spinner{width:52px;height:52px;border:5px solid var(--line);border-top-color:var(--blue);border-radius:50%;margin:0 auto 20px;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* Google Places autocomplete dropdown */
+.pac-container{z-index:9999 !important;font-family:var(--font-body);border-radius:10px;border:1px solid var(--line);margin-top:2px;box-shadow:var(--shadow)}
+.pac-item{padding:12px 16px;font-size:14px;color:var(--dark);cursor:pointer;border-top:1px solid var(--bg)}
+.pac-item:hover{background:var(--bg)}
+.pac-item-query{color:var(--dark);font-weight:700}
+
 footer{padding:26px 0;text-align:center;font-size:13px;color:var(--muted)}
 footer .links{margin-top:4px}
 footer a{color:var(--blue);text-decoration:none;margin:0 8px;font-weight:600}
@@ -627,6 +633,37 @@ document.getElementById('copy-year').textContent = new Date().getFullYear();
   });
 })();
 </script>
+
+<!-- Google Places Autocomplete on the street-address field, same key already
+     live on solar-advisors.org and oyo-energy.ca. Restricted to Canada; fills
+     city + postal code from the selected place so GHL gets clean address data. -->
+<script>
+function initAutocomplete() {
+  var input = document.getElementById('address1');
+  if (!input || !window.google) return;
+  var ac = new google.maps.places.Autocomplete(input, {
+    types: ['address'],
+    componentRestrictions: { country: 'ca' },
+  });
+  ac.addListener('place_changed', function() {
+    var place = ac.getPlace();
+    if (!place.address_components) return;
+    var sn = '', rt = '', city = '', zip = '';
+    place.address_components.forEach(function(c) {
+      if (c.types.includes('street_number')) sn = c.long_name;
+      if (c.types.includes('route')) rt = c.long_name;
+      if (c.types.includes('locality') || c.types.includes('postal_town')) city = c.long_name;
+      if (c.types.includes('postal_code')) zip = c.long_name;
+    });
+    document.getElementById('address1').value = (sn + ' ' + rt).trim();
+    var cityField = document.getElementById('city');
+    var zipField = document.getElementById('postalCode');
+    if (cityField && city) cityField.value = city;
+    if (zipField && zip) zipField.value = zip;
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcKfNpLbha0iUiYZu18VQ1yj9Ljez_-XI&libraries=places&callback=initAutocomplete" async defer></script>
 
 </body>
 </html>
