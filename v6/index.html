@@ -62,15 +62,16 @@ h1,h2,h3,.btn{font-family:var(--font)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;font-size:15px;background:var(--blue);color:#fff;border:none;cursor:pointer;transition:.2s}
 .btn:hover{background:#2a4486;transform:translateY(-1px)}
 
-/* hero */
-.hero{padding:56px 0 40px;text-align:center}
+/* hero (headline + inline survey together, above the fold) */
+.hero{padding:36px 0 0;text-align:center}
 .hero-inner{width:100%;max-width:760px;margin:0 auto}
-.hero h1{font-size:clamp(28px,4.4vw,44px);line-height:1.15;font-weight:800;color:var(--dark);margin-bottom:14px}
-.hero-sub{font-size:17px;color:var(--muted);line-height:1.5;margin-bottom:28px;max-width:620px;margin-left:auto;margin-right:auto}
+.hero h1{font-size:clamp(24px,3.6vw,38px);line-height:1.18;font-weight:800;color:var(--dark);margin-bottom:10px}
+.hero-sub{font-size:16px;color:var(--muted);line-height:1.5;margin-bottom:0;max-width:620px;margin-left:auto;margin-right:auto}
 .hero .btn{font-size:16px;padding:0 32px;min-height:56px}
 .hero-trust{font-size:13px;font-weight:700;color:var(--blue);margin-top:14px}
-.trust-row{margin-top:26px}
-.trust-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:10px}
+.trust-row{padding:28px 0}
+.trust-row.in-hero{margin-top:0}
+.trust-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:10px;text-align:center}
 .trust-logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px}
 .trust-logos img{height:32px;width:auto;object-fit:contain}
 .proof-row{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
@@ -81,6 +82,11 @@ h1,h2,h3,.btn{font-family:var(--font)}
 .pb-label{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:8px;text-align:center}
 .pb-title{font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--dark);line-height:1.2;margin-bottom:10px;text-align:center}
 .pb-sub{font-size:15px;color:var(--muted);line-height:1.6;margin-bottom:28px;max-width:640px;margin:0 auto 32px;text-align:center}
+
+/* context bar, same pattern as v7's "real proposal" walkthrough */
+.ctx-bar{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 18px;display:flex;flex-wrap:wrap;gap:6px 24px;margin-bottom:22px}
+.ctx-item{font-size:12px;font-weight:700;color:var(--text)}
+.ctx-item span{color:var(--blue)}
 
 /* aerial / proposal image blocks */
 .img-block{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px}
@@ -113,15 +119,15 @@ h1,h2,h3,.btn{font-family:var(--font)}
 
 /* === SURVEY SECTION (v7 solar-advisors.org style: inline, card-less,
      full-width progress bar + option-card slides) === */
-#survey-section{background:var(--bg);padding:48px 0 60px;border-top:1px solid var(--line)}
-.prog-bar{height:6px;background:var(--line);width:100%;max-width:720px;margin:0 auto 0;border-radius:999px;overflow:hidden}
+#survey-section{background:var(--bg);padding:20px 0 40px}
+.prog-bar{height:6px;background:var(--line);width:100%;max-width:640px;margin:0 auto 0;border-radius:999px;overflow:hidden}
 .prog-fill{height:100%;background:var(--blue);width:14%;transition:width .4s ease}
-.survey-main{display:flex;justify-content:center;padding:40px 16px 0}
+.survey-main{display:flex;justify-content:center;padding:22px 16px 0}
 .survey-container{width:100%;max-width:640px}
 .slide{display:none}
 .slide.active{display:block}
-.sv-heading{font-size:clamp(22px,3.4vw,30px);font-weight:800;color:var(--dark);text-align:center;margin:0 0 10px;line-height:1.25}
-.sv-subtext{font-size:14px;color:var(--muted);text-align:center;margin:0 0 28px;line-height:1.5}
+.sv-heading{font-size:clamp(20px,3vw,26px);font-weight:800;color:var(--dark);text-align:center;margin:0 0 8px;line-height:1.25}
+.sv-subtext{font-size:14px;color:var(--muted);text-align:center;margin:0 0 20px;line-height:1.5}
 .opts{display:grid;gap:14px;margin-bottom:8px}
 .opts.cols-2{grid-template-columns:1fr 1fr}
 .opts.cols-4{grid-template-columns:repeat(4,1fr)}
@@ -171,112 +177,11 @@ footer .sep{color:#cbd5e1}
   <div class="wrap hero-inner">
     <h1>Paying $200+ a Month for Power? See What Solar Could Actually Save You.</h1>
     <p class="hero-sub">Real numbers for your Alberta home: net billing credits, the Solar Club rate switch, and CEIP financing &mdash; explained before you talk to anyone.</p>
-    <a href="#survey-section" class="btn start-survey">See My Numbers &rarr;</a>
-    <div class="hero-trust">&#9889; Takes 2 minutes &middot; No pressure, no commitment</div>
-    <div class="trust-row">
-      <div class="trust-label">Our Installer's Affiliations</div>
-      <div class="trust-logos">
-        <img src="/images/trust-icons-1.png" alt="SolarEdge Preferred Partner">
-        <img src="/images/trust-icons-5.png" alt="Enphase Energy">
-        <img src="/images/trust-icons-6.png" alt="UNIRAC Certified Installer">
-        <img src="/images/trust-icons-4.png" alt="Solar Alberta Member">
-        <img src="/images/trust-icons-3.png" alt="SolarEdge Certified No-Call RMA">
-        <img src="/images/trust-icons-2.png" alt="5 Years Workmanship Warranty">
-      </div>
-    </div>
-    <div class="proof-row">
-      <span>&#9733;&#9733;&#9733;&#9733;&#9733; 4.6 stars &middot; 400+ reviews</span>
-      <span class="badge">Net Billing</span>
-      <span class="badge">CEIP Ready</span>
-      <span class="badge">Local Alberta Install</span>
-    </div>
   </div>
 </section>
 
-<div class="proof-block" id="proof">
-  <div class="wrap">
-
-    <div class="stat-row">
-      <div class="stat-item"><div class="stat-num">85%</div><div class="stat-lbl">Bill Reduction, Edmonton Case</div></div>
-      <div class="stat-item"><div class="stat-num">$2,613</div><div class="stat-lbl">Yearly Savings, Real Example</div></div>
-      <div class="stat-item"><div class="stat-num">4.6&#9733;</div><div class="stat-lbl">400+ Reviews</div></div>
-      <div class="stat-item"><div class="stat-num">10 Days</div><div class="stat-lbl">Notice to Switch Solar Club Rate</div></div>
-    </div>
-
-    <div class="pb-label">Real Local Installs</div>
-    <h2 class="pb-title">A Real Alberta Rooftop, Not a Stock Photo</h2>
-    <p class="pb-sub">This is an actual aerial shot from one of our installer's Alberta projects &mdash; the same kind of system we'd be sizing for your roof.</p>
-    <div class="img-block"><img src="/images/alberta-home-solar-aerial.jpg" alt="Aerial view of an Alberta home with a rooftop solar panel installation"></div>
-    <p class="img-cap">Real rooftop solar install, Alberta &mdash; sized and permitted by a local installer.</p>
-
-    <div class="pb-label">Your Real Numbers</div>
-    <h2 class="pb-title">Solar Investment vs. Continuing to Pay the Utility</h2>
-    <p class="pb-sub">Based on a $200/month utility bill &mdash; a common starting point for the homeowners we quote &mdash; here's how the math plays out over time.</p>
-
-    <div class="cmp-wrap">
-      <table class="cmp-table">
-        <thead>
-          <tr>
-            <th class="lh">Over This Time Period</th>
-            <th class="col-util">Keep Paying the Utility</th>
-            <th class="col-solar">Go Solar (Net Billing + Solar Club)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="lh">Monthly bill today</td>
-            <td class="col-util">$200/mo</td>
-            <td class="col-solar">As low as &minus;$12/mo <span class="win">Credit balance</span></td>
-          </tr>
-          <tr>
-            <td class="lh">Year 1 cost</td>
-            <td class="col-util">$2,400</td>
-            <td class="col-solar">~$0&ndash;$600 <span class="win">Up to 85% reduction</span></td>
-          </tr>
-          <tr>
-            <td class="lh">Year 5 total paid</td>
-            <td class="col-util">~$13,260 <span class="warn">Rates rise over time</span></td>
-            <td class="col-solar">~$3,000&ndash;$5,000 depending on financing</td>
-          </tr>
-          <tr>
-            <td class="lh">Year 10 total paid</td>
-            <td class="col-util">~$29,350 <span class="warn">Compounding rate inflation</span></td>
-            <td class="col-solar">~$6,000&ndash;$10,000, often paid off via CEIP by now</td>
-          </tr>
-          <tr>
-            <td class="lh">Year 20 total paid</td>
-            <td class="col-util">~$79,320</td>
-            <td class="col-solar"><span class="win">~$10,000&ndash;$15,000 lifetime</span></td>
-          </tr>
-          <tr>
-            <td class="lh">What you own after 20 years</td>
-            <td class="col-util">Nothing &mdash; the meter keeps running</td>
-            <td class="col-solar"><span class="win">A paid-off system producing free power</span></td>
-          </tr>
-          <tr>
-            <td class="lh">Rate protection</td>
-            <td class="col-util">None &mdash; exposed to utility rate hikes</td>
-            <td class="col-solar">Solar Club lets you pick the better rate each season</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="cmp-note">Illustrative example based on a $200/month starting bill, Alberta's current net billing (Microgen Credit) rules, and the Solar Club&trade; seasonal rate switch, assuming a conservative 3&ndash;4% annual utility rate increase. Your real numbers depend on your roof, usage, and utility &mdash; we calculate those exactly in the quote below.</p>
-
-    <div class="pb-label">Your Numbers, On Paper</div>
-    <h2 class="pb-title">What a Real Alberta Proposal Looks Like</h2>
-    <p class="pb-sub">Before vs. after &mdash; the exact kind of before/after breakdown we build for your address.</p>
-    <div class="img-block"><img src="/images/alberta-solar-proposal-oct26-compare-pre-post.png" alt="Alberta solar proposal comparing pre-solar and post-solar monthly costs side by side"></div>
-    <p class="img-cap">Real Alberta homeowner proposal: pre-solar vs. post-solar monthly cost comparison.</p>
-
-    <div class="pb-cta">
-      <a href="#survey-section" class="btn start-survey" style="padding:0 40px;min-height:56px;font-size:16px;">Get My Solar Quote &rarr;</a>
-      <p style="font-size:12px;color:var(--muted);margin-top:10px;font-weight:600;">Takes 2 minutes &middot; No pressure &middot; No obligation</p>
-    </div>
-  </div>
-</div>
-
 <!-- ===================== SURVEY (inline, v7 solar-advisors.org style;
+     moved directly under the headline so the form is above the fold.
      questions + submit contract are v4's unchanged -- same
      https://survey.alberta-solar.org/api/submit endpoint, same payload
      shape, same dataLayer events, same GHL/thank-you redirect) ===================== -->
@@ -383,6 +288,138 @@ footer .sep{color:#cbd5e1}
   </div>
 </section>
 
+<!-- trust bar directly below the hero + survey combo -->
+<div class="trust-row">
+  <div class="wrap">
+    <div class="trust-label">Our Installer's Affiliations</div>
+    <div class="trust-logos">
+      <img src="/images/trust-icons-1.png" alt="SolarEdge Preferred Partner">
+      <img src="/images/trust-icons-5.png" alt="Enphase Energy">
+      <img src="/images/trust-icons-6.png" alt="UNIRAC Certified Installer">
+      <img src="/images/trust-icons-4.png" alt="Solar Alberta Member">
+      <img src="/images/trust-icons-3.png" alt="SolarEdge Certified No-Call RMA">
+      <img src="/images/trust-icons-2.png" alt="5 Years Workmanship Warranty">
+    </div>
+    <div class="proof-row">
+      <span>&#9733;&#9733;&#9733;&#9733;&#9733; 4.6 stars &middot; 400+ reviews</span>
+      <span class="badge">Net Billing</span>
+      <span class="badge">CEIP Ready</span>
+      <span class="badge">Local Alberta Install</span>
+    </div>
+  </div>
+</div>
+
+<div class="proof-block" id="proof">
+  <div class="wrap">
+
+    <!-- Edmonton proposal walkthrough, same "here's a real proposal" pattern as v7 -->
+    <div class="pb-label">Real Proposal Data</div>
+    <h2 class="pb-title">This Is a Real Solar Proposal for a Home in Edmonton</h2>
+    <p class="pb-sub">No stock numbers. This is what net billing and the Solar Club rate switch actually did to one Edmonton homeowner's bill, side by side.</p>
+    <div class="ctx-bar">
+      <div class="ctx-item">Location: <span>Edmonton, AB (EPCOR)</span></div>
+      <div class="ctx-item">Program: <span>Net Billing + Solar Club&trade;</span></div>
+      <div class="ctx-item">Utility Bill Before Solar: <span>$206.08/mo</span></div>
+      <div class="ctx-item">Bill After Solar: <span>&minus;$11.72/mo</span></div>
+    </div>
+    <div class="img-block"><img src="/images/alberta-solar-proposal-oct26-compare-pre-post.png" alt="Alberta solar proposal comparing an Edmonton homeowner's pre-solar and post-solar monthly costs side by side"></div>
+    <p class="img-cap">Edmonton homeowner: $206.08/mo before &rarr; a credit balance of about &minus;$11.72/mo after &mdash; roughly $2,613.60/year saved.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-num">85%</div><div class="stat-lbl">Bill Reduction, Edmonton Case</div></div>
+      <div class="stat-item"><div class="stat-num">$2,613</div><div class="stat-lbl">Yearly Savings, Real Example</div></div>
+      <div class="stat-item"><div class="stat-num">4.6&#9733;</div><div class="stat-lbl">400+ Reviews</div></div>
+      <div class="stat-item"><div class="stat-num">10 Days</div><div class="stat-lbl">Notice to Switch Solar Club Rate</div></div>
+    </div>
+
+    <div class="pb-label">Real Local Installs</div>
+    <h2 class="pb-title">A Real Alberta Rooftop, Not a Stock Photo</h2>
+    <p class="pb-sub">This is an actual aerial shot from one of our installer's Alberta projects &mdash; the same kind of system we'd be sizing for your roof.</p>
+    <div class="img-block"><img src="/images/alberta-home-solar-aerial-16x9.jpg" alt="Aerial view of an Alberta home with a rooftop solar panel installation"></div>
+    <p class="img-cap">Real rooftop solar install, Alberta &mdash; sized and permitted by a local installer.</p>
+
+    <div class="pb-label">Your Real Numbers</div>
+    <h2 class="pb-title">Solar Investment vs. Continuing to Pay the Utility</h2>
+    <p class="pb-sub">Based on a $200/month utility bill &mdash; a common starting point for the homeowners we quote &mdash; here's how the math plays out over time.</p>
+
+    <div class="cmp-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th class="lh">Over This Time Period</th>
+            <th class="col-util">Keep Paying the Utility</th>
+            <th class="col-solar">Go Solar (Net Billing + Solar Club)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lh">Monthly bill today</td>
+            <td class="col-util">$200/mo</td>
+            <td class="col-solar">As low as &minus;$12/mo <span class="win">Credit balance</span></td>
+          </tr>
+          <tr>
+            <td class="lh">Year 1 cost</td>
+            <td class="col-util">$2,400</td>
+            <td class="col-solar">~$0&ndash;$600 <span class="win">Up to 85% reduction</span></td>
+          </tr>
+          <tr>
+            <td class="lh">Year 5 total paid</td>
+            <td class="col-util">~$13,260 <span class="warn">Rates rise over time</span></td>
+            <td class="col-solar">~$3,000&ndash;$5,000 depending on financing</td>
+          </tr>
+          <tr>
+            <td class="lh">Year 10 total paid</td>
+            <td class="col-util">~$29,350 <span class="warn">Compounding rate inflation</span></td>
+            <td class="col-solar">~$6,000&ndash;$10,000, often paid off via CEIP by now</td>
+          </tr>
+          <tr>
+            <td class="lh">Year 20 total paid</td>
+            <td class="col-util">~$79,320</td>
+            <td class="col-solar"><span class="win">~$10,000&ndash;$15,000 lifetime</span></td>
+          </tr>
+          <tr>
+            <td class="lh">What you own after 20 years</td>
+            <td class="col-util">Nothing &mdash; the meter keeps running</td>
+            <td class="col-solar"><span class="win">A paid-off system producing free power</span></td>
+          </tr>
+          <tr>
+            <td class="lh">Rate protection</td>
+            <td class="col-util">None &mdash; exposed to utility rate hikes</td>
+            <td class="col-solar">Solar Club lets you pick the better rate each season</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-note">Illustrative example based on a $200/month starting bill, Alberta's current net billing (Microgen Credit) rules, and the Solar Club&trade; seasonal rate switch, assuming a conservative 3&ndash;4% annual utility rate increase. Your real numbers depend on your roof, usage, and utility &mdash; we calculate those exactly in the quote below.</p>
+
+    <div class="pb-cta">
+      <a href="#survey-section" class="btn start-survey" style="padding:0 40px;min-height:56px;font-size:16px;">Get My Solar Quote &rarr;</a>
+      <p style="font-size:12px;color:var(--muted);margin-top:10px;font-weight:600;">Takes 2 minutes &middot; No pressure &middot; No obligation</p>
+    </div>
+  </div>
+</div>
+
+<!-- second trust bar, below the proof content and above the final CTA -->
+<div class="trust-row" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="trust-label">Our Installer's Affiliations</div>
+    <div class="trust-logos">
+      <img src="/images/trust-icons-1.png" alt="SolarEdge Preferred Partner">
+      <img src="/images/trust-icons-5.png" alt="Enphase Energy">
+      <img src="/images/trust-icons-6.png" alt="UNIRAC Certified Installer">
+      <img src="/images/trust-icons-4.png" alt="Solar Alberta Member">
+      <img src="/images/trust-icons-3.png" alt="SolarEdge Certified No-Call RMA">
+      <img src="/images/trust-icons-2.png" alt="5 Years Workmanship Warranty">
+    </div>
+    <div class="proof-row">
+      <span>&#9733;&#9733;&#9733;&#9733;&#9733; 4.6 stars &middot; 400+ reviews</span>
+      <span class="badge">Net Billing</span>
+      <span class="badge">CEIP Ready</span>
+      <span class="badge">Local Alberta Install</span>
+    </div>
+  </div>
+</div>
+
 <!-- fixed lowered-opacity neighborhood illustration, same mechanism as solar-advisors.org v7 -->
 <div class="bg-illustration" aria-hidden="true">
   <img src="/images/bg-alberta-neighborhood-illustration.png" alt="">
@@ -397,6 +434,7 @@ footer .sep{color:#cbd5e1}
     <span class="sep">|</span>
     <a href="/contact/">Contact Us</a>
   </div>
+  <p style="margin-top:8px;font-size:12px;color:var(--muted);">Owned and operated by Simple Tree Digital LLC.</p>
 </footer>
 
 <script>
