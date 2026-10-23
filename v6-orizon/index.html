@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#00B9C9">
+<title>Alberta Solar: See Your Real Numbers | Orizon Energy &amp; Alberta Solar Advisors</title>
+<meta name="description" content="Net billing, the Solar Club, and CEIP financing explained in plain numbers. See what Alberta solar could save you vs. your current utility bill, no pressure. Based in Edmonton and Calgary.">
+<link rel="canonical" href="https://alberta-solar.org/v6-orizon/">
+<link rel="icon" href="/images/cropped-logo-color__white-alberta-solar-500px.png">
+<meta property="og:title" content="Alberta Solar: See Your Real Numbers | Orizon Energy">
+<meta property="og:description" content="Net billing, the Solar Club, and CEIP financing explained in plain numbers.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alberta-solar.org/v6-orizon/">
+<meta property="og:image" content="/images/cropped-logo-color__white-alberta-solar-500px.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager (server container, matches v1o/v2o/v4) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://custom.alberta-solar.org/ahpkcmcuh.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','6i9w7om=aWQ9R1RNLVRLR05QNTk%3D&sort=desc');</script>
+<!-- End Google Tag Manager -->
+<!-- GA4 is server-side via GTM above. Do not add a gtag config here. -->
+
+<script>
+  (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:5038639,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- TrustedForm (same snippet as the solar-advisors.org v7 survey model) --
+     injects a hidden xxTrustedFormCertUrl input into #surveyForm on load;
+     read it at submit time and send it to the GHL webhook. -->
+<script type="text/javascript">
+  (function() {
+    var tf = document.createElement('script');
+    tf.type = 'text/javascript'; tf.async = true;
+    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+      '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
+      new Date().getTime() + Math.random();
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+  })();
+</script>
+<noscript><img src='https://api.trustedform.com/ns.gif' /></noscript>
+
+<style>
+:root{
+  --blue:#3455A5;--dark:#01214A;--text:#313E5C;--muted:#667297;
+  --bg:#F3FBFC;--white:#fff;--teal:#00B9C9;--teal-dark:#0894A0;--orizon-navy:#1B243A;--line:#E5E6EA;
+  --shadow:0 20px 50px rgba(1,33,74,.10);--radius:18px;--max:1140px;
+  --font:'Montserrat',sans-serif;--font-body:'Inter',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:#fff;line-height:1.6;min-height:100vh;display:flex;flex-direction:column;position:relative;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+h1,h2,h3,.btn{font-family:var(--font)}
+
+/* fixed, lowered-opacity neighborhood illustration behind the whole page,
+   same pattern as the solar-advisors.org v7 survey model */
+.bg-illustration{position:fixed;bottom:0;left:0;right:0;width:100%;pointer-events:none;z-index:0;opacity:.16;line-height:0}
+.bg-illustration img{width:100%;height:auto;display:block}
+.bg-illustration::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 55%);pointer-events:none}
+.top-bar,.hero,.proof-block,#survey-section,footer{position:relative;z-index:1}
+
+/* top bar */
+.top-bar{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--teal);padding:14px 0;position:sticky;top:0;z-index:50}
+.top-bar-inner{width:min(var(--max),calc(100% - 32px));margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.top-bar img{height:34px;width:auto;display:block}
+.logo-lockup{display:flex;align-items:center;gap:12px}
+.logo-lockup .sep{width:1px;height:26px;background:var(--line)}
+.logo-lockup .orizon-logo{height:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;font-size:15px;background:var(--teal);color:#fff;border:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
+
+/* hero (headline + inline survey together, above the fold) */
+.hero{padding:36px 0 0;text-align:center}
+.hero-inner{width:100%;max-width:760px;margin:0 auto}
+.hero h1{font-size:clamp(24px,3.6vw,38px);line-height:1.18;font-weight:800;color:var(--dark);margin-bottom:10px}
+.hero-sub{font-size:16px;color:var(--muted);line-height:1.5;margin-bottom:0;max-width:620px;margin-left:auto;margin-right:auto}
+.hero .btn{font-size:16px;padding:0 32px;min-height:56px}
+.hero-trust{font-size:13px;font-weight:700;color:var(--teal-dark);margin-top:14px}
+.trust-row{padding:28px 0}
+.trust-row.in-hero{margin-top:0}
+.trust-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:10px;text-align:center}
+.trust-logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px}
+.trust-logos img{height:32px;width:auto;object-fit:contain}
+.proof-row{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.badge{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-weight:700;color:var(--dark)}
+
+/* proof block */
+.proof-block{padding:12px 0 56px}
+.pb-label{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal-dark);margin-bottom:8px;text-align:center}
+.pb-title{font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--dark);line-height:1.2;margin-bottom:10px;text-align:center}
+.pb-sub{font-size:15px;color:var(--muted);line-height:1.6;margin-bottom:28px;max-width:640px;margin:0 auto 32px;text-align:center}
+
+/* context bar, same pattern as v7's "real proposal" walkthrough */
+.ctx-bar{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 18px;display:flex;flex-wrap:wrap;gap:6px 24px;margin-bottom:22px}
+.ctx-item{font-size:12px;font-weight:700;color:var(--text)}
+.ctx-item span{color:var(--blue)}
+
+/* aerial / proposal image blocks */
+.img-block{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px}
+.img-block img{width:100%;display:block}
+.img-cap{font-size:13px;color:var(--muted);text-align:center;margin-bottom:40px}
+
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:44px;background:#fff;box-shadow:var(--shadow)}
+.stat-item{padding:20px 14px;text-align:center;border-right:1px solid var(--line)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-size:26px;font-weight:800;color:var(--teal-dark);line-height:1}
+.stat-lbl{font-size:11px;font-weight:700;color:var(--muted);margin-top:5px;text-transform:uppercase;letter-spacing:.04em}
+
+/* comparison table: keep paying utility vs go solar */
+.cmp-wrap{overflow-x:auto;border-radius:14px;box-shadow:var(--shadow);margin-bottom:16px}
+.cmp-table{width:100%;border-collapse:collapse;background:#fff}
+.cmp-table thead tr{background:var(--dark)}
+.cmp-table th{padding:14px 16px;font-size:12px;font-weight:800;color:rgba(255,255,255,.88);text-align:center;text-transform:uppercase;letter-spacing:.05em}
+.cmp-table th.lh{text-align:left;background:var(--bg);color:var(--dark)}
+.cmp-table th.col-util{background:#7f1d1d}
+.cmp-table th.col-solar{background:var(--teal)}
+.cmp-table td{padding:13px 16px;font-size:14px;border-top:1px solid var(--line);text-align:center;vertical-align:middle;line-height:1.45}
+.cmp-table td.lh{text-align:left;font-weight:700;color:var(--dark);background:#FAFBFF;font-size:13px}
+.cmp-table td.col-util{background:#FFF5F5;color:#7f1d1d;font-weight:700}
+.cmp-table td.col-solar{background:#F0FDFB;color:#0b7a6e;font-weight:800}
+.cmp-table .win{font-size:10px;font-weight:800;background:#1a8048;color:#fff;padding:2px 7px;border-radius:4px;display:inline-block;margin-top:4px;letter-spacing:.03em}
+.cmp-table .warn{font-size:10px;font-weight:800;background:#fef2f2;color:#c62828;border:1px solid #fca5a5;padding:2px 7px;border-radius:4px;display:inline-block;margin-top:4px}
+.cmp-note{font-size:12px;color:#94a3b8;line-height:1.6;margin-bottom:40px}
+
+.pb-cta{text-align:center;padding-top:8px;margin-bottom:8px}
+
+/* === SURVEY SECTION (v7 solar-advisors.org style: inline, card-less,
+     full-width progress bar + option-card slides) === */
+#survey-section{background:var(--bg);padding:20px 0 40px}
+.prog-bar{height:6px;background:var(--line);width:100%;max-width:640px;margin:0 auto 0;border-radius:999px;overflow:hidden}
+.prog-fill{height:100%;background:var(--teal);width:14%;transition:width .4s ease}
+.survey-main{display:flex;justify-content:center;padding:22px 16px 0}
+.survey-container{width:100%;max-width:640px}
+.slide{display:none}
+.slide.active{display:block}
+.sv-heading{font-size:clamp(20px,3vw,26px);font-weight:800;color:var(--dark);text-align:center;margin:0 0 8px;line-height:1.25}
+.sv-subtext{font-size:14px;color:var(--muted);text-align:center;margin:0 0 20px;line-height:1.5}
+.opts{display:grid;gap:14px;margin-bottom:8px}
+.opts.cols-2{grid-template-columns:1fr 1fr}
+.opts.cols-4{grid-template-columns:repeat(4,1fr)}
+.opt{background:#fff;border:2px solid var(--line);border-radius:12px;padding:20px 16px;cursor:pointer;transition:all .15s ease;display:flex;align-items:center;justify-content:center;text-align:center;min-height:68px;font-weight:700;color:var(--dark);font-size:15px}
+.opt:hover{border-color:var(--teal);box-shadow:0 4px 16px rgba(0,185,201,.14);transform:translateY(-1px)}
+.opt.selected{border-color:var(--teal);background:#E6F8FA}
+.sv-input{width:100%;border:2px solid var(--line);border-radius:10px;padding:16px 18px;font-family:var(--font-body);font-size:16px;color:var(--dark);background:#fff;outline:none;margin-bottom:12px;font-weight:500}
+.sv-input:focus{border-color:var(--teal)}
+.sv-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sv-err{font-size:13px;color:#c0392b;margin:-4px 0 12px;display:none;font-weight:600}
+.sv-hint{font-size:13px;color:var(--muted);margin-bottom:18px;text-align:center}
+.sv-actions{margin-top:22px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.sv-actions [id^="sv-next-btn"],.sv-actions #submitBtn{width:100%;max-width:480px;background:var(--teal);color:#fff;font-family:var(--font);font-size:18px;font-weight:800;letter-spacing:.01em;padding:20px 24px;border:none;border-radius:999px;cursor:pointer;transition:.2s}
+.sv-actions [id^="sv-next-btn"]:hover,.sv-actions #submitBtn:hover{background:var(--teal-dark)}
+.sv-actions [id^="sv-next-btn"]:disabled,.sv-actions #submitBtn:disabled{opacity:.5;cursor:not-allowed}
+.sv-actions [id^="sv-back-btn"]{background:none;border:none;color:var(--muted);font-family:var(--font);font-size:15px;font-weight:700;cursor:pointer;padding:10px 16px;text-decoration:underline}
+.sv-spinner-wrap{text-align:center;padding:40px 0}
+.sv-spinner{width:52px;height:52px;border:5px solid var(--line);border-top-color:var(--teal);border-radius:50%;margin:0 auto 20px;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Google Places autocomplete dropdown */
+.pac-container{z-index:9999 !important;font-family:var(--font-body);border-radius:10px;border:1px solid var(--line);margin-top:2px;box-shadow:var(--shadow)}
+.pac-item{padding:12px 16px;font-size:14px;color:var(--dark);cursor:pointer;border-top:1px solid var(--bg)}
+.pac-item:hover{background:var(--bg)}
+.pac-item-query{color:var(--dark);font-weight:700}
+
+footer{padding:26px 0;text-align:center;font-size:13px;color:var(--muted)}
+footer .links{margin-top:4px}
+footer a{color:var(--teal-dark);text-decoration:none;margin:0 8px;font-weight:600}
+footer a:hover{text-decoration:underline}
+footer .sep{color:#cbd5e1}
+
+@media(max-width:900px){.stat-row{grid-template-columns:1fr 1fr}.stat-item:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:640px){
+  .hero{padding:40px 0 28px}
+  .opts.cols-4{grid-template-columns:1fr 1fr}
+  .sv-row2{grid-template-columns:1fr}
+  .cmp-table th,.cmp-table td{padding:10px 10px;font-size:12px}
+  .bg-illustration{opacity:.1}
+}
+</style>
+</head>
+<body>
+
+<header class="top-bar">
+  <div class="top-bar-inner">
+    <a href="#top" class="logo-lockup">
+      <img src="/images/logo-color__white-alberta-solar-500px.png" alt="Alberta Solar Advisors">
+      <span class="sep"></span>
+      <img class="orizon-logo" src="/images/orizon-logo-navy.svg" alt="Orizon Energy">
+    </a>
+    <a href="#survey-section" class="btn start-survey">Get My Solar Quote</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <h1>Own Your Electricity. It's Not Free, But Cheaper than Paying the Utility Forever</h1>
+    <p class="hero-sub">Alberta homeowners are locking in on sub $40/month electric bills for 30 years. Enter your postcode to see your numbers.</p>
+    <p class="hero-trust">Orizon Energy &middot; Based in Edmonton and Calgary</p>
+  </div>
+</section>
+
+<!-- ===================== SURVEY (inline, v7 solar-advisors.org style;
+     moved directly under the headline so the form is above the fold.
+     questions + submit contract are v4's unchanged -- same
+     https://survey.alberta-solar.org/api/submit endpoint, same payload
+     shape, same dataLayer events, same GHL/thank-you redirect) ===================== -->
+<section id="survey-section">
+  <div class="prog-bar"><div class="prog-fill" id="prog"></div></div>
+  <div class="survey-main">
+    <div class="survey-container">
+
+      <form id="surveyForm">
+        <!-- Step 1: Homeowner -->
+        <div class="slide active" data-step="1">
+          <div class="sv-heading">Do you own your home?</div>
+          <div class="sv-subtext">Alberta solar incentives generally require homeownership.</div>
+          <div class="opts cols-2">
+            <div class="opt" data-field="homeowner" data-value="Yes">Yes, I own my home</div>
+            <div class="opt" data-field="homeowner" data-value="No">No / renting</div>
+          </div>
+        </div>
+
+        <!-- Step 2: How long lived in home (field parity with the Orizon
+             survey: how_long_have_you_lived_in_your_home) -->
+        <div class="slide" data-step="2">
+          <div class="sv-heading">How long have you lived in your home?</div>
+          <div class="opts cols-2">
+            <div class="opt" data-field="lengthOfResidence" data-value="Less than 3 Months">Less than 3 Months</div>
+            <div class="opt" data-field="lengthOfResidence" data-value="More than 3 Months">More than 3 Months</div>
+          </div>
+          <div class="sv-actions"><button type="button" id="sv-back-btn-2" data-back="1">&larr; Back</button></div>
+        </div>
+
+        <!-- Step 3: Bill range -->
+        <div class="slide" data-step="3">
+          <div class="sv-heading">What's your average monthly electric bill?</div>
+          <div class="sv-subtext">This is how we size your system and estimate savings.</div>
+          <div class="opts cols-4">
+            <div class="opt" data-field="billRange" data-value="Under $120">Under $120</div>
+            <div class="opt" data-field="billRange" data-value="$120 - $150">$120&ndash;$150</div>
+            <div class="opt" data-field="billRange" data-value="$150 - $250">$150&ndash;$250</div>
+            <div class="opt" data-field="billRange" data-value="$250+">$250+</div>
+          </div>
+          <div class="sv-actions"><button type="button" id="sv-back-btn-3" data-back="2">&larr; Back</button></div>
+        </div>
+
+        <!-- Step 4: Utility -->
+        <div class="slide" data-step="4">
+          <div class="sv-heading">Who's your electric utility?</div>
+          <div class="opts cols-2">
+            <div class="opt" data-field="utility" data-value="ENMAX">ENMAX</div>
+            <div class="opt" data-field="utility" data-value="EPCOR">EPCOR</div>
+            <div class="opt" data-field="utility" data-value="ATCO">ATCO</div>
+            <div class="opt" data-field="utility" data-value="Fortis Alberta">Fortis Alberta</div>
+            <div class="opt" data-field="utility" data-value="Not sure" style="grid-column:1/-1;">Not sure</div>
+          </div>
+          <div class="sv-actions"><button type="button" id="sv-back-btn-4" data-back="3">&larr; Back</button></div>
+        </div>
+
+        <!-- Step 5: Name -->
+        <div class="slide" data-step="5">
+          <div class="sv-heading">What's your name?</div>
+          <div class="sv-subtext">So we know who we're talking to.</div>
+          <input type="text" class="sv-input" id="firstName" placeholder="First name" autocomplete="given-name">
+          <input type="text" class="sv-input" id="lastName" placeholder="Last name" autocomplete="family-name">
+          <div class="sv-err" id="errName">Please enter your first name.</div>
+          <div class="sv-actions">
+            <button type="button" id="sv-next-btn" data-next="6" data-validate="name">Continue</button>
+            <button type="button" id="sv-back-btn-5" data-back="4">&larr; Back</button>
+          </div>
+        </div>
+
+        <!-- Step 6: Address -->
+        <div class="slide" data-step="6">
+          <div class="sv-heading">Where's the home?</div>
+          <div class="sv-subtext">Used to confirm your utility's net billing rules.</div>
+          <input type="text" class="sv-input" id="address1" placeholder="Street address">
+          <div class="sv-row2">
+            <input type="text" class="sv-input" id="city" placeholder="City">
+            <input type="text" class="sv-input" id="postalCode" placeholder="Postal code">
+          </div>
+          <div class="sv-err" id="errAddress">Please enter your street address.</div>
+          <div class="sv-actions">
+            <button type="button" id="sv-next-btn-6" data-next="7" data-validate="address">Continue</button>
+            <button type="button" id="sv-back-btn-6" data-back="5">&larr; Back</button>
+          </div>
+        </div>
+
+        <!-- Step 7: Phone -->
+        <div class="slide" data-step="7">
+          <div class="sv-heading">Best number to reach you?</div>
+          <div class="sv-subtext">We'll text your numbers &mdash; no robocalls.</div>
+          <input type="tel" class="sv-input" id="phone" placeholder="Phone" autocomplete="tel">
+          <div class="sv-err" id="errPhone">Please enter a valid phone number.</div>
+          <div class="sv-actions">
+            <button type="button" id="sv-next-btn-7" data-next="8" data-validate="phone">Continue</button>
+            <button type="button" id="sv-back-btn-7" data-back="6">&larr; Back</button>
+          </div>
+        </div>
+
+        <!-- Step 8: Email + submit -->
+        <div class="slide" data-step="8">
+          <div class="sv-heading">Last step &mdash; where should we send it?</div>
+          <div class="sv-subtext">No spam. Just your net billing + Solar Club numbers, while current rates and programs are still in place.</div>
+          <input type="email" class="sv-input" id="email" placeholder="Email">
+          <div class="sv-err" id="formErr">Please enter a valid email.</div>
+          <div class="sv-actions">
+            <button type="submit" id="submitBtn">Get My Solar Quote</button>
+            <button type="button" id="sv-back-btn-8" data-back="7">&larr; Back</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="sv-spinner-wrap" id="spinner" style="display:none;">
+        <div class="sv-spinner"></div>
+        <div class="sv-heading" style="margin-bottom:8px;font-size:20px;">Submitting your info&hellip;</div>
+        <div class="sv-subtext" style="margin-bottom:0;">Please wait while we match you with a local installer.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- trust bar directly below the hero + survey combo -->
+<div class="trust-row">
+  <div class="wrap">
+    <div class="proof-row">
+      <span>&#9733;&#9733;&#9733;&#9733;&#9733; 4.6 stars &middot; 400+ reviews</span>
+      <span class="badge">Net Billing</span>
+      <span class="badge">CEIP Ready</span>
+      <span class="badge">Based in Edmonton &amp; Calgary</span>
+    </div>
+  </div>
+</div>
+
+<div class="proof-block" id="proof">
+  <div class="wrap">
+
+    <!-- Edmonton proposal walkthrough, same "here's a real proposal" pattern as v7 -->
+    <div class="pb-label">Real Proposal Data</div>
+    <h2 class="pb-title">This Is a Real Solar Proposal for a Home in Edmonton</h2>
+    <p class="pb-sub">No stock numbers. This is what net billing and the Solar Club rate switch actually did to one Edmonton homeowner's bill, side by side.</p>
+    <div class="ctx-bar">
+      <div class="ctx-item">Location: <span>Edmonton, AB (EPCOR)</span></div>
+      <div class="ctx-item">Program: <span>Net Billing + Solar Club&trade;</span></div>
+      <div class="ctx-item">Utility Bill Before Solar: <span>$206.08/mo</span></div>
+      <div class="ctx-item">Bill After Solar: <span>&minus;$11.72/mo</span></div>
+    </div>
+    <div class="img-block"><img src="/images/alberta-solar-proposal-oct26-compare-pre-post.png" alt="Alberta solar proposal comparing an Edmonton homeowner's pre-solar and post-solar monthly costs side by side"></div>
+    <p class="img-cap">Edmonton homeowner: $206.08/mo before &rarr; a credit balance of about &minus;$11.72/mo after &mdash; roughly $2,613.60/year saved.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-num">85%</div><div class="stat-lbl">Bill Reduction, Edmonton Case</div></div>
+      <div class="stat-item"><div class="stat-num">$2,613</div><div class="stat-lbl">Yearly Savings, Real Example</div></div>
+      <div class="stat-item"><div class="stat-num">4.6&#9733;</div><div class="stat-lbl">400+ Reviews</div></div>
+      <div class="stat-item"><div class="stat-num">10 Days</div><div class="stat-lbl">Notice to Switch Solar Club Rate</div></div>
+    </div>
+
+    <div class="pb-label">Your Real Numbers</div>
+    <h2 class="pb-title">Solar Investment vs. Continuing to Pay the Utility</h2>
+    <p class="pb-sub">Based on a $200/month utility bill &mdash; a common starting point for the homeowners we quote &mdash; here's how the math plays out over time.</p>
+
+    <div class="cmp-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th class="lh">Over This Time Period</th>
+            <th class="col-solar">Go Solar (Net Billing + Solar Club)</th>
+            <th class="col-util">Keep Paying the Utility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lh">Monthly bill today</td>
+            <td class="col-solar">As low as &minus;$12/mo <span class="win">Credit balance</span></td>
+            <td class="col-util">$200/mo</td>
+          </tr>
+          <tr>
+            <td class="lh">Break-even point</td>
+            <td class="col-solar"><span class="win">~Year 5&ndash;6</span></td>
+            <td class="col-util">&mdash;</td>
+          </tr>
+          <tr>
+            <td class="lh">Year 1 cost</td>
+            <td class="col-solar">~$0&ndash;$600 <span class="win">Up to 85% reduction</span></td>
+            <td class="col-util">$2,400</td>
+          </tr>
+          <tr>
+            <td class="lh">Year 5 total paid</td>
+            <td class="col-solar">~$3,000&ndash;$5,000 depending on financing</td>
+            <td class="col-util">~$13,260 <span class="warn">Rates rise over time</span></td>
+          </tr>
+          <tr>
+            <td class="lh">Year 10 total paid</td>
+            <td class="col-solar">~$6,000&ndash;$10,000, often paid off via CEIP by now</td>
+            <td class="col-util">~$29,350 <span class="warn">Compounding rate inflation</span></td>
+          </tr>
+          <tr>
+            <td class="lh">Year 20 total paid</td>
+            <td class="col-solar"><span class="win">~$10,000&ndash;$15,000 lifetime</span></td>
+            <td class="col-util">~$79,320</td>
+          </tr>
+          <tr>
+            <td class="lh">What you own after 20 years</td>
+            <td class="col-solar"><span class="win">A paid-off system producing free power</span></td>
+            <td class="col-util">Nothing &mdash; the meter keeps running</td>
+          </tr>
+          <tr>
+            <td class="lh">Rate protection</td>
+            <td class="col-solar">Solar Club lets you pick the better rate each season</td>
+            <td class="col-util">None &mdash; exposed to utility rate hikes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-note">Illustrative example based on a $200/month starting bill, Alberta's current net billing (Microgen Credit) rules, and the Solar Club&trade; seasonal rate switch, assuming a conservative 3&ndash;4% annual utility rate increase. Break-even point is an estimate of when cumulative solar cost drops below cumulative utility cost for this example; actual payback depends on system size, financing, and usage. Your real numbers depend on your roof, usage, and utility &mdash; we calculate those exactly in the quote below.</p>
+
+    <div class="pb-cta">
+      <a href="#survey-section" class="btn start-survey" style="padding:0 40px;min-height:56px;font-size:16px;">Get My Solar Quote &rarr;</a>
+      <p style="font-size:12px;color:var(--muted);margin-top:10px;font-weight:600;">Takes 2 minutes &middot; No pressure &middot; No obligation</p>
+    </div>
+  </div>
+</div>
+
+<!-- second trust bar, below the proof content and above the final CTA -->
+<div class="trust-row" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="proof-row">
+      <span>&#9733;&#9733;&#9733;&#9733;&#9733; 4.6 stars &middot; 400+ reviews</span>
+      <span class="badge">Net Billing</span>
+      <span class="badge">CEIP Ready</span>
+      <span class="badge">Based in Edmonton &amp; Calgary</span>
+    </div>
+  </div>
+</div>
+
+<!-- fixed lowered-opacity neighborhood illustration, same mechanism as solar-advisors.org v7 -->
+<div class="bg-illustration" aria-hidden="true">
+  <img src="/images/bg-alberta-neighborhood-illustration.png" alt="">
+</div>
+
+<footer>
+  &copy; <span id="copy-year"></span> Orizon Energy &amp; Alberta Solar Advisors &middot; Based in Edmonton and Calgary
+  <div class="links">
+    <a href="/privacy-policy/">Privacy Policy</a>
+    <span class="sep">|</span>
+    <a href="/terms/">Terms</a>
+    <span class="sep">|</span>
+    <a href="/contact/">Contact Us</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+(function() {
+  // scroll to the inline survey instead of opening a modal -- no separate
+  // iframe/postMessage contract is needed since the form now lives on this
+  // page directly, so build the ctx object from THIS page's own URL/UTMs.
+  document.querySelectorAll('.start-survey').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('survey-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  var state = { homeowner:'', lengthOfResidence:'', billRange:'', utility:'' };
+  var totalSteps = 8;
+  var form = document.getElementById('surveyForm');
+  var progressBar = document.getElementById('prog');
+
+  function qp(name) { return new URLSearchParams(window.location.search).get(name) || ''; }
+  function getAdGroup() {
+    // utm_content carries the ad group id/name per Google Ads valuetrack ({adgroupid}),
+    // same convention used by the iframed v4 survey.
+    return qp('utm_content') || qp('adgroup') || '';
+  }
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+
+  function goToStep(n) {
+    document.querySelectorAll('.slide').forEach(function(s) { s.classList.remove('active'); });
+    document.querySelector('.slide[data-step="' + n + '"]').classList.add('active');
+    progressBar.style.width = (n / totalSteps * 100) + '%';
+    if (window.dataLayer) window.dataLayer.push({ event: 'survey_step_view', step: n });
+  }
+
+  document.querySelectorAll('.opt').forEach(function(opt) {
+    opt.addEventListener('click', function() {
+      var field = opt.dataset.field, value = opt.dataset.value;
+      state[field] = value;
+      var step = opt.closest('.slide');
+      step.querySelectorAll('.opt').forEach(function(o) { o.classList.remove('selected'); });
+      opt.classList.add('selected');
+      var next = parseInt(step.dataset.step, 10) + 1;
+      setTimeout(function() { goToStep(next); }, 150);
+    });
+  });
+
+  document.querySelectorAll('[data-back]').forEach(function(b) {
+    b.addEventListener('click', function() { goToStep(parseInt(b.dataset.back, 10)); });
+  });
+
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var PHONE_RE = /\d{7,}/;
+
+  var validators = {
+    name: function() {
+      var ok = document.getElementById('firstName').value.trim().length > 0;
+      document.getElementById('errName').style.display = ok ? 'none' : 'block';
+      return ok;
+    },
+    address: function() {
+      var ok = document.getElementById('address1').value.trim().length > 0;
+      document.getElementById('errAddress').style.display = ok ? 'none' : 'block';
+      return ok;
+    },
+    phone: function() {
+      var v = document.getElementById('phone').value.trim();
+      var ok = PHONE_RE.test(v.replace(/\D/g, ''));
+      document.getElementById('errPhone').style.display = ok ? 'none' : 'block';
+      return ok;
+    },
+  };
+
+  document.querySelectorAll('[data-next]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var check = validators[btn.dataset.validate];
+      if (check && !check()) return;
+      goToStep(parseInt(btn.dataset.next, 10));
+    });
+  });
+
+  // Enter key inside a text input advances/submits the CURRENT step's own
+  // button rather than implicitly firing the form's one submit button.
+  form.querySelectorAll('input').forEach(function(input) {
+    input.addEventListener('keydown', function(e) {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      var step = input.closest('.slide');
+      var btn = step.querySelector('[data-next], [type="submit"]');
+      if (btn) btn.click();
+    });
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var firstName = document.getElementById('firstName').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var errEl = document.getElementById('formErr');
+    if (!EMAIL_RE.test(email)) { errEl.style.display = 'block'; return; }
+    errEl.style.display = 'none';
+
+    var submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    form.style.display = 'none';
+    document.getElementById('spinner').style.display = 'block';
+
+    var now = new Date();
+    var adGroup = getAdGroup();
+
+    // Field names/shape match the GHL webhook-trigger contract already
+    // proven on the Orizon Alberta survey (alberta-orizon-survey worker ->
+    // this same services.leadconnectorhq.com hook) so GHL's workflow
+    // merge fields resolve correctly.
+    var payload = {
+      lead_source: 'alberta-solar-v6-orizon',
+      first_name: firstName,
+      last_name: document.getElementById('lastName').value.trim(),
+      email: email,
+      phone: phone,
+      address: document.getElementById('address1').value.trim(),
+      city: document.getElementById('city').value.trim(),
+      province: 'AB',
+      postal_code: document.getElementById('postalCode').value.trim(),
+      do_you_own_your_home: state.homeowner,
+      how_long_have_you_lived_in_your_home: state.lengthOfResidence,
+      how_much_is_your_monthly_electric_bill: state.billRange,
+      utility: state.utility,
+      adGroup: adGroup,
+      xxTrustedFormCertUrl: (document.querySelector('input[name="xxTrustedFormCertUrl"]') || {}).value || '',
+      gclick_id: qp('gclid'),
+      gbraid: qp('gbraid'),
+      wbraid: qp('wbraid'),
+      utm_source: qp('utm_source'),
+      utm_medium: qp('utm_medium'),
+      utm_campaign: qp('utm_campaign'),
+      utm_content: qp('utm_content'),
+      utm_term: qp('utm_term'),
+      page_url: window.location.href,
+      lead_date: now.getFullYear() + '-' + pad2(now.getMonth() + 1) + '-' + pad2(now.getDate()),
+      lead_time: pad2(now.getHours()) + ':' + pad2(now.getMinutes()),
+      fbc: getCookie('_fbc'),
+      fbp: getCookie('_fbp'),
+      fbclid: qp('fbclid'),
+      event_id: 'v6orizon_' + Date.now() + '_' + Math.floor(Math.random() * 1000),
+    };
+
+    // Posts straight to the GHL webhook trigger (same hook the Orizon
+    // Alberta survey posts to) -- CORS is open (access-control-allow-origin: *)
+    // so this works as a direct browser POST, no intermediary backend.
+    fetch('https://services.leadconnectorhq.com/hooks/yxhjPQyLrl3uFoy38jC4/webhook-trigger/QCwzOUvv7KHm8tp3dLuE', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }).then(function(res) {
+      if (!res.ok) throw new Error('submit_failed');
+      if (window.dataLayer) window.dataLayer.push({ event: 'generate_lead', ad_group: adGroup });
+      var THANK_YOU_URL = 'https://go.alberta-solar.org/thank-you';
+      setTimeout(function() { window.location.href = THANK_YOU_URL; }, 900);
+      document.getElementById('spinner').innerHTML = '<div class="sv-heading" style="margin-bottom:8px;">You\'re all set!</div><div class="sv-subtext" style="margin-bottom:0;">Redirecting to your results&hellip;</div>';
+    }).catch(function(err) {
+      form.style.display = 'block';
+      document.getElementById('spinner').style.display = 'none';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get My Solar Quote';
+      errEl.textContent = 'Something went wrong — please try again.';
+      errEl.style.display = 'block';
+    });
+  });
+})();
+</script>
+
+<!-- Google Places Autocomplete on the street-address field, same key already
+     live on solar-advisors.org and oyo-energy.ca. Restricted to Canada; fills
+     city + postal code from the selected place so GHL gets clean address data. -->
+<script>
+function initAutocomplete() {
+  var input = document.getElementById('address1');
+  if (!input || !window.google) return;
+  var ac = new google.maps.places.Autocomplete(input, {
+    types: ['address'],
+    componentRestrictions: { country: 'ca' },
+  });
+  ac.addListener('place_changed', function() {
+    var place = ac.getPlace();
+    if (!place.address_components) return;
+    var sn = '', rt = '', city = '', zip = '';
+    place.address_components.forEach(function(c) {
+      if (c.types.includes('street_number')) sn = c.long_name;
+      if (c.types.includes('route')) rt = c.long_name;
+      if (c.types.includes('locality') || c.types.includes('postal_town')) city = c.long_name;
+      if (c.types.includes('postal_code')) zip = c.long_name;
+    });
+    document.getElementById('address1').value = (sn + ' ' + rt).trim();
+    var cityField = document.getElementById('city');
+    var zipField = document.getElementById('postalCode');
+    if (cityField && city) cityField.value = city;
+    if (zipField && zip) zipField.value = zip;
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcKfNpLbha0iUiYZu18VQ1yj9Ljez_-XI&libraries=places&callback=initAutocomplete" async defer></script>
+
+</body>
+</html>
